@@ -331,7 +331,7 @@ MonoBehaviour:
   _examine: {fileID: 1462183331}
   _fadeIn: {fileID: 1331765158}
   _fadeOut: {fileID: 1331765157}
-  _song: SteelSamurai
+  _song: Gumshoe
 --- !u!1 &231216261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,7 +1085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &964935479
 SpriteRenderer:
   m_ObjectHideFlags: 0
