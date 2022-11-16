@@ -6,6 +6,7 @@ using TMPro;
 public class CursorMovement : MonoBehaviour
 {
     [SerializeField] private GameObject[] _buttons;
+    [SerializeField] private GameObject[] _examiningColliders;
     [SerializeField] private GameObject _cursor;
     [SerializeField] private GameObject _transparent;
     [SerializeField] private GameObject _corner;
@@ -19,17 +20,13 @@ public class CursorMovement : MonoBehaviour
 
     bool _turnedOff;
     bool _firstTime = true;
-    
-    private MusicManager _musicManager;
-    private SoundManager _soundManager;
-    private bool _continueSong = false;
-    [SerializeField] string _song = "SteelSamurai";
 
     void Start()
     {
-        _musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();
-        _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
-        _musicManager.Play(_song);
+        for(int i = 0; i < _examiningColliders.Length; i++)
+        {
+            _examiningColliders[i].SetActive(false);
+        }
     }
     
     void Update()
@@ -50,7 +47,7 @@ public class CursorMovement : MonoBehaviour
                 }
                 else
                 {
-                    _soundManager.Play("select");
+                    SoundEffectManager.PlaySound("move");
                     _selection--;
                     _cursor.transform.position = _buttons[_selection].transform.position;
                 }
@@ -64,7 +61,7 @@ public class CursorMovement : MonoBehaviour
                 }
                 else
                 {
-                    _soundManager.Play("select");
+                    SoundEffectManager.PlaySound("move");
                     _selection++;
                     _cursor.transform.position = _buttons[_selection].transform.position;
                 }
@@ -98,15 +95,19 @@ public class CursorMovement : MonoBehaviour
     {
         _selection = 0;
         _cursor.transform.position = _buttons[0].transform.position;
-        _soundManager.Play("confirm");
+        SoundEffectManager.PlaySound("select");
         StartCoroutine(TurnOff(_transparent));
         StartCoroutine(TurnOff(_corner));
         _fadeOut.startFading();
         _turnedOff = true;
-        _buttons[0].SetActive(false);
-        _buttons[1].SetActive(false);
-        _buttons[2].SetActive(false);
-        _buttons[3].SetActive(false);
+        for(int i = 0; i < _examiningColliders.Length; i++)
+        {
+            _examiningColliders[i].SetActive(true);
+        }
+        for(int i = 0; i < _buttons.Length; i++)
+        {
+            _buttons[i].SetActive(false);
+        }
         _examine.Examining();
     }
 
@@ -114,7 +115,7 @@ public class CursorMovement : MonoBehaviour
     {
         _selection = 1;
         _cursor.transform.position = _buttons[1].transform.position;
-        _soundManager.Play("confirm");
+        SoundEffectManager.PlaySound("select");
         StartCoroutine(TurnOn(_transparent));
         StartCoroutine(TurnOn(_corner));
         _fadeIn.startFading();
@@ -124,14 +125,14 @@ public class CursorMovement : MonoBehaviour
     {
         _selection = 2;
         _cursor.transform.position = _buttons[2].transform.position;
-        _soundManager.Play("confirm");
+        SoundEffectManager.PlaySound("select");
     }
 
     public void PresBtn()
     {
         _selection = 3;
         _cursor.transform.position = _buttons[3].transform.position;
-        _soundManager.Play("confirm");
+        SoundEffectManager.PlaySound("select");
     }
 
     IEnumerator TurnOff(GameObject _item)
@@ -139,7 +140,7 @@ public class CursorMovement : MonoBehaviour
         for(float i = 1f; i >= -0.05f; i -= 0.05f)
         {
             _item.transform.localScale = new Vector2(1, i);
-            yield return new WaitForSeconds(0.005f);
+            yield return null;
         }
         yield return new WaitForSeconds(0.15f);
     }

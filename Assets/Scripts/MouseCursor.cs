@@ -30,9 +30,4 @@ public class MouseCursor : MonoBehaviour
     {
         _soTrue = true;
     }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("Passed through!");
-    }
 }
