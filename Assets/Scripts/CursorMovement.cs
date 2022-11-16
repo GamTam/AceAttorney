@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class CursorMovement : MonoBehaviour
 {
@@ -21,6 +22,11 @@ public class CursorMovement : MonoBehaviour
     bool _turnedOff;
     bool _firstTime = true;
     
+    private PlayerInput _playerInput;
+    private InputAction _left;
+    private InputAction _right;
+    private InputAction _select;
+    
     private MusicManager _musicManager;
     private SoundManager _soundManager;
     private bool _continueSong = false;
@@ -28,6 +34,13 @@ public class CursorMovement : MonoBehaviour
 
     void Start()
     {
+        _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
+        _playerInput.SwitchCurrentActionMap("Menu");
+        
+        _left = _playerInput.actions["Left"];
+        _right = _playerInput.actions["Right"];
+        _select = _playerInput.actions["Select"];
+        
         _musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();
         _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
         _musicManager.Play(_song);
@@ -48,7 +61,7 @@ public class CursorMovement : MonoBehaviour
         if(_turnedOff == false)
         {
             //Left or A
-            if(Input.GetKeyDown(KeyCode.A))
+            if(_left.triggered)
             {
                 if(_selection == 0)
                 {
@@ -62,7 +75,7 @@ public class CursorMovement : MonoBehaviour
                 }
             }
             //Right or D
-            else if(Input.GetKeyDown(KeyCode.D))
+            else if(_right.triggered)
             {
                 if(_selection == 3)
                 {
@@ -76,7 +89,7 @@ public class CursorMovement : MonoBehaviour
                 }
             }
 
-            if(Input.GetKeyDown(KeyCode.Return))
+            if(_select.triggered)
             {
                 //_buttons[_selection].onClick.Invoke();
                 switch(_selection)
@@ -106,7 +119,7 @@ public class CursorMovement : MonoBehaviour
         _cursor.transform.position = _buttons[0].transform.position;
         _soundManager.Play("confirm");
         StartCoroutine(TurnOff(_transparent));
-        StartCoroutine(TurnOff(_corner));
+        // StartCoroutine(TurnOff(_corner));
         _fadeOut.startFading();
         _turnedOff = true;
         for(int i = 0; i < _examiningColliders.Length; i++)
