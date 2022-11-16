@@ -6,16 +6,22 @@ using UnityEngine.InputSystem;
 
 public class CursorMovement : MonoBehaviour
 {
+    [Header("UI Elements")]
     [SerializeField] private GameObject[] _buttons;
-    [SerializeField] private GameObject[] _examiningColliders;
     [SerializeField] private GameObject _cursor;
     [SerializeField] private GameObject _transparent;
     [SerializeField] private GameObject _corner;
 
-    [SerializeField] private Examine _examine;
+    [Header("Explore Elements")] 
+    [SerializeField] private GameObject _investigationCursor;
+    [SerializeField] private GameObject[] _examiningColliders;
     
+    [Header("Transition")]
     [SerializeField] private FadingIn _fadeIn;
     [SerializeField] private FadingOut _fadeOut;
+    
+    [Header("Misc.")]
+    [SerializeField] string _song = "SteelSamurai";
 
     int _selection = 0;
 
@@ -30,7 +36,6 @@ public class CursorMovement : MonoBehaviour
     private MusicManager _musicManager;
     private SoundManager _soundManager;
     private bool _continueSong = false;
-    [SerializeField] string _song = "SteelSamurai";
 
     void Start()
     {
@@ -130,7 +135,8 @@ public class CursorMovement : MonoBehaviour
         {
             _buttons[i].SetActive(false);
         }
-        _examine.Examining();
+        
+        Instantiate(_investigationCursor);
     }
 
     public void MovBtn()
