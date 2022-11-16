@@ -331,7 +331,7 @@ MonoBehaviour:
   _examine: {fileID: 1462183331}
   _fadeIn: {fileID: 1331765158}
   _fadeOut: {fileID: 1331765157}
-  _song: Gumshoe
+  _song: TwistInvestigation
 --- !u!1 &231216261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,7 +1085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &964935479
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1474,7 +1474,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282756295}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -975, y: -542.3343, z: 0}
+  m_LocalPosition: {x: -974.08, y: -532.19, z: 0}
   m_LocalScale: {x: 0.3315, y: 0.3315, z: 0.3315}
   m_Children: []
   m_Father: {fileID: 1592886620}
