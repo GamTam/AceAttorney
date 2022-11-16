@@ -20,9 +20,18 @@ public class CursorMovement : MonoBehaviour
 
     bool _turnedOff;
     bool _firstTime = true;
+    
+    private MusicManager _musicManager;
+    private SoundManager _soundManager;
+    private bool _continueSong = false;
+    [SerializeField] string _song = "SteelSamurai";
 
     void Start()
     {
+        _musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();
+        _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
+        _musicManager.Play(_song);
+        
         for(int i = 0; i < _examiningColliders.Length; i++)
         {
             _examiningColliders[i].SetActive(false);
@@ -47,7 +56,7 @@ public class CursorMovement : MonoBehaviour
                 }
                 else
                 {
-                    SoundEffectManager.PlaySound("move");
+                    _soundManager.Play("select");
                     _selection--;
                     _cursor.transform.position = _buttons[_selection].transform.position;
                 }
@@ -61,7 +70,7 @@ public class CursorMovement : MonoBehaviour
                 }
                 else
                 {
-                    SoundEffectManager.PlaySound("move");
+                    _soundManager.Play("select");
                     _selection++;
                     _cursor.transform.position = _buttons[_selection].transform.position;
                 }
@@ -95,7 +104,7 @@ public class CursorMovement : MonoBehaviour
     {
         _selection = 0;
         _cursor.transform.position = _buttons[0].transform.position;
-        SoundEffectManager.PlaySound("select");
+        _soundManager.Play("confirm");
         StartCoroutine(TurnOff(_transparent));
         StartCoroutine(TurnOff(_corner));
         _fadeOut.startFading();
@@ -115,7 +124,7 @@ public class CursorMovement : MonoBehaviour
     {
         _selection = 1;
         _cursor.transform.position = _buttons[1].transform.position;
-        SoundEffectManager.PlaySound("select");
+        _soundManager.Play("confirm");
         StartCoroutine(TurnOn(_transparent));
         StartCoroutine(TurnOn(_corner));
         _fadeIn.startFading();
@@ -125,14 +134,14 @@ public class CursorMovement : MonoBehaviour
     {
         _selection = 2;
         _cursor.transform.position = _buttons[2].transform.position;
-        SoundEffectManager.PlaySound("select");
+        _soundManager.Play("confirm");
     }
 
     public void PresBtn()
     {
         _selection = 3;
         _cursor.transform.position = _buttons[3].transform.position;
-        SoundEffectManager.PlaySound("select");
+        _soundManager.Play("confirm");
     }
 
     IEnumerator TurnOff(GameObject _item)
