@@ -6,6 +6,7 @@ using TMPro;
 public class CursorMovement : MonoBehaviour
 {
     [SerializeField] private GameObject[] _buttons;
+    [SerializeField] private GameObject[] _examiningColliders;
     [SerializeField] private GameObject _cursor;
     [SerializeField] private GameObject _transparent;
     [SerializeField] private GameObject _corner;
@@ -30,6 +31,11 @@ public class CursorMovement : MonoBehaviour
         _musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();
         _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
         _musicManager.Play(_song);
+        
+        for(int i = 0; i < _examiningColliders.Length; i++)
+        {
+            _examiningColliders[i].SetActive(false);
+        }
     }
     
     void Update()
@@ -103,10 +109,14 @@ public class CursorMovement : MonoBehaviour
         StartCoroutine(TurnOff(_corner));
         _fadeOut.startFading();
         _turnedOff = true;
-        _buttons[0].SetActive(false);
-        _buttons[1].SetActive(false);
-        _buttons[2].SetActive(false);
-        _buttons[3].SetActive(false);
+        for(int i = 0; i < _examiningColliders.Length; i++)
+        {
+            _examiningColliders[i].SetActive(true);
+        }
+        for(int i = 0; i < _buttons.Length; i++)
+        {
+            _buttons[i].SetActive(false);
+        }
         _examine.Examining();
     }
 
@@ -139,7 +149,7 @@ public class CursorMovement : MonoBehaviour
         for(float i = 1f; i >= -0.05f; i -= 0.05f)
         {
             _item.transform.localScale = new Vector2(1, i);
-            yield return new WaitForSeconds(0.005f);
+            yield return null;
         }
         yield return new WaitForSeconds(0.15f);
     }
