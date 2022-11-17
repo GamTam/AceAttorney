@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPresentable: 0
   evidence: {fileID: 0}
-  dialogueText: <name:Phoneix>No your honour! Here is my bar card!
+  dialogueText: '<color=#6ebdf0>(But I''m not sure how I''m
+
+    gonna get Maya out
+    of this one.)'

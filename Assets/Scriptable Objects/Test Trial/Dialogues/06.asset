@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPresentable: 0
   evidence: {fileID: 0}
-  dialogueText: <name:Judge>The court will reconvine after a brief recess.
+  dialogueText: '<color=#6ebdf0>(The victim wasn''t even in
+
+    the same state as
+    us!)'

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPresentable: 0
   evidence: {fileID: 0}
-  dialogueText: <name:Judge>Order in the court. Here begins the trial of Walter White.
-    Do we have the attorney present?
+  dialogueText: "<name:Judge>Court is now in session for \nthe trial of Ms. Maya
+    Fey.<p:normal>\nAgain."

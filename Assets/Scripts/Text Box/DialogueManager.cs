@@ -40,10 +40,11 @@ public class DialogueManager : MonoBehaviour
         _tempBox.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
         
         TMP_Text[] texts = _tempBox.GetComponentsInChildren<TMP_Text>();
+        _advanceButton = _tempBox.GetComponentInChildren<Animator>().gameObject;
 
         textBox = texts[0];
         _nameBox = texts[1];
-        // _advanceButton.enabled = false;
+        _advanceButton.SetActive(false);
         dialogueVertexAnimator = new DialogueVertexAnimator(textBox);
 
         _prevActionMap = _playerInput.currentActionMap.name;
@@ -63,11 +64,12 @@ public class DialogueManager : MonoBehaviour
         _tempBox.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
 
         TMP_Text[] texts = _tempBox.GetComponentsInChildren<TMP_Text>();
+        _advanceButton = _tempBox.GetComponentInChildren<Animator>().gameObject;
 
         textBox = texts[0];
         _nameBox = texts[1];
-        // _advanceButton.enabled = false;
-        dialogueVertexAnimator = new DialogueVertexAnimator(textBox/*, audioSourceGroup*/);
+        _advanceButton.SetActive(false);
+        dialogueVertexAnimator = new DialogueVertexAnimator(textBox);
 
         _prevActionMap = _playerInput.currentActionMap.name;
         _playerInput.SwitchCurrentActionMap("TextBox");
@@ -98,66 +100,9 @@ public class DialogueManager : MonoBehaviour
         {
             if (!dialogueVertexAnimator.textAnimating)
             {
-                // _advanceButton.enabled = true;
+                _advanceButton.SetActive(true);
             }
         }
-    }
-
-    public void NextLineSO()
-    {
-        if (dialogueVertexAnimator.textAnimating)
-        {
-            dialogueVertexAnimator.QuickEnd();
-            return;
-        }
-
-        if (lines.Count == 0)
-        {
-            EndDialogue();
-            return;
-        }
-
-        if (movingText)
-        {
-            return;
-        }
-
-        this.EnsureCoroutineStopped(ref typeRoutine);
-        dialogueVertexAnimator.textAnimating = false;
-        List<DialogueCommand> commands =
-            DialogueUtility.ProcessInputString(lines.Dequeue(), out string totalTextMessage);
-            
-        isThisDialoguePresentable = this.isPresentable.Dequeue();
-
-        TextAlignOptions[] textAlignInfo = SeparateOutTextAlignInfo(commands);
-        String nameInfo = SeparateOutNameInfo(commands);
-
-        for (int i = 0; i < textAlignInfo.Length; i++)
-        {
-            TextAlignOptions info = textAlignInfo[i];
-            if (info == TextAlignOptions.topCenter)
-            {
-                textBox.alignment = TextAlignmentOptions.Top;
-            }
-            else if (info == TextAlignOptions.midCenter)
-            {
-                textBox.alignment = TextAlignmentOptions.Center;
-            }
-            else if (info == TextAlignOptions.left)
-            {
-                textBox.alignment = TextAlignmentOptions.TopLeft;
-            }
-            else if (info == TextAlignOptions.right)
-            {
-                textBox.alignment = TextAlignmentOptions.TopRight;
-            }
-        }
-
-        if (nameInfo != null) _nameBox.text = nameInfo;
-
-        // _advanceButton.enabled = false;
-        typeRoutine =
-            StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, typingClip, null));
     }
 
     private Coroutine typeRoutine = null;
@@ -213,7 +158,7 @@ public class DialogueManager : MonoBehaviour
         
         Debug.Log(_typingClip);
 
-        // _advanceButton.enabled = false;
+        _advanceButton.SetActive(false);
         typeRoutine =
             StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, _typingClip, null));
     }

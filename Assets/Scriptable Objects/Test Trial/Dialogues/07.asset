@@ -10,13 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
-  m_Name: 05
+  m_Name: 07
   m_EditorClassIdentifier: 
   isPresentable: 0
   evidence: {fileID: 0}
-  dialogueText: '<color=#6ebdf0>(How do you happen to end up
+  dialogueText: '<name:Judge>Mr. Wright, are you okay?<p:normal>
 
-    with seven different
-    eyewitness accounts
-
-    of you stabbing someone?)'
+    You seem more<p:short><sp:1>
+    sweaty <sp:2>than usual.'

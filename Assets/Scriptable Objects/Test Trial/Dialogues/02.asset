@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPresentable: 0
   evidence: {fileID: 0}
-  dialogueText: <name:Phoneix>Yes, honourable judge. I am here presenting my client,
-    Walter Hartwel White.
+  dialogueText: '<name:Edgeworth>The prosecution is ready,
+
+    Your Honor.'

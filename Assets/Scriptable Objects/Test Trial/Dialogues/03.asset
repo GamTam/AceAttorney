@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPresentable: 1
   evidence: {fileID: 11400000, guid: 27e20ef9f0a9be843a78068ee1d16f7e, type: 2}
-  dialogueText: <name:Judge>I thought your name was Saul Goodman!?
+  dialogueText: '<name:Phoenix>The defense is ready,
+
+    Your Honor.'
