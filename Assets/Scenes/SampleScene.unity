@@ -1051,7 +1051,7 @@ MonoBehaviour:
     Object 1...'
   - "<name:Maya><sound:blipfemale>Did you know that this was \nthe <color=red>first
     object</color> that the devs \nmade for this demo?"
-  - '<sound:blipmale><name:Phoenix><color=#6ebdf0>(Thanks, Maya...)<p:normal>
+  - '<sound:blipmale><name:Phoenix>Thanks, Maya...<p:normal><color=#6ebdf0>
 
     (VERY
     insightful...)'
