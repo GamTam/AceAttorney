@@ -217,8 +217,9 @@ MonoBehaviour:
 
     a lot
     of the first one...'
-  - <name:Phoenix><sound:blipmale>Maya.
-  - <name:Phoenix>This is the same sprite.
+  - '<name:Phoenix><sound:blipmale>Maya.<p:normal>
+
+    This is the same sprite.'
   - <name:Maya><sound:blipfemale>Well that would explain it!
   - <sound:blipmale><name:Phoenix><color=#6ebdf0>(Sometimes I worry about this girl.)
 --- !u!212 &122437845
