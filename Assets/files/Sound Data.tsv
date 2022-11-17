@@ -2,3 +2,5 @@
 select	false
 confirm	false
 checkpoint	false
+blipmale	false
+blipfemale	false

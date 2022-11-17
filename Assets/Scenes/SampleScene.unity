@@ -210,9 +210,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogue:
-  - '<name:Phoenix>Hmm...<p:normal>
+  - '<sound:blipmale><name:Phoenix>Hmm...<p:normal>
 
     Object 2...'
+  - '<name:Maya><sound:blipfemale>Y''know,<p:tiny> this one reminds me
+
+    a lot
+    of the first one...'
+  - <name:Phoenix><sound:blipmale>Maya.
+  - <name:Phoenix>This is the same sprite.
+  - <name:Maya><sound:blipfemale>Well that would explain it!
+  - <sound:blipmale><name:Phoenix><color=#6ebdf0>(Sometimes I worry about this girl.)
 --- !u!212 &122437845
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -394,7 +402,7 @@ MonoBehaviour:
   - {fileID: 1730829494}
   _fadeIn: {fileID: 1331765158}
   _fadeOut: {fileID: 1331765157}
-  _song: Explore
+  _song: SteelSamurai
 --- !u!1 &231216261
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,9 +449,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogue:
-  - '<name:Phoenix>Hmm...<p:normal>
+  - '<sound:blipmale><name:Phoenix>Hmm...<p:normal>
 
     Object 3...'
+  - '<sound:blipmale><name:Phoenix>According to some ancient philosophers,<p:tiny>
+
+    three
+    is the luckiest number.'
+  - '<sound:blipfemale><name:Maya>Hey Nick!<p:normal>
+
+    Look at what I found!'
+  - <sound:blipmale><name:Phoenix><sp:1>Maya no!
+  - That's dangerous!
+  - '<sound:blipfemale><name:Maya><sp:2><anim:wave>Woah, Nick!<p:normal>
+
+    I don''t
+    feel so good!</anim>'
 --- !u!212 &231216264
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1025,9 +1046,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogue:
-  - '<name:Phoenix>Hmm...<p:normal>
+  - '<sound:blipmale><name:Phoenix>Hmm...<p:normal>
 
     Object 1...'
+  - "<name:Maya><sound:blipfemale>Did you know that this was \nthe <color=red>first
+    object</color> that the devs \nmade for this demo?"
+  - '<sound:blipmale><name:Phoenix><color=#6ebdf0>(Thanks, Maya...)<p:normal>
+
+    (VERY
+    insightful...)'
 --- !u!1 &783372748
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,7 +1470,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _textBoxPrefab: {fileID: 3409057346996304509, guid: 4e89df09d9b03544bb8ec808070b80e5, type: 3}
-  typingClip: {fileID: 0}
 --- !u!1 &1331765153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1701,8 +1727,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d979eb47ce04ff45a2753b2df8c6b3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cursorPrefab: {fileID: 0}
-  _examine: []
 --- !u!1 &1592886616
 GameObject:
   m_ObjectHideFlags: 0
@@ -2117,9 +2141,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dialogue:
-  - '<name:Phoenix>Hmm...<p:normal>
+  - '<sound:blipfemale><name:Maya>Hmm...<p:normal>
 
-    <anim:shake>Object 4...</anim>'
+    Object 4...'
+  - '<sound:blipmale><name:Phoenix>Hey!<p:normal>
+
+    That''s what I was supposed
+    to say!'
+  - '<sound:blipfemale><name:Maya>Sorry Nick,<p:tiny> guess I''m the new
+
+    Nick
+    now!'
+  - '<sound:blipmale><name:Phoenix>I-<p:short> I-<p:short> I-<p:normal>
+
+    Okay...'
+  - <sound:blipfemale><name:Maya><anim:shake>N-<p:short> N-<p:short> Nick!</anim>
+  - <anim:shake>Earthquake!</anim>
+  - <anim:shake>We need to take cover!</anim>
+  - '<sound:blipmale><name:Phoenix>No, Maya.<p:normal>
+
+    You''re on a shakeweight.'
+  - '<sound:blipfemale><name:Maya><anim:shake>Oh.<p:normal>
+
+    Guess I should step
+    off.</anim>'
+  - <anim:shake>Eh,<p:tiny> I'll do it later.</anim>
 --- !u!212 &1730829497
 SpriteRenderer:
   m_ObjectHideFlags: 0

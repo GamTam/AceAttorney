@@ -21,6 +21,8 @@ public class DialogueUtility : MonoBehaviour
     private static readonly Regex alignRegex = new Regex(ALIGN_REGEX_STRING);
     private const string NAME_REGEX_STRING = "<name:(?<name>" + REMAINDER_REGEX + ")>";
     private static readonly Regex nameRegex = new Regex(NAME_REGEX_STRING);
+    private const string SOUND_REGEX_STRING = "<sound:(?<sound>" + REMAINDER_REGEX + ")>";
+    private static readonly Regex soundRegex = new Regex(SOUND_REGEX_STRING);
     private const string SPEAKER_REGEX_STRING = "<face:(?<face>" + REMAINDER_REGEX + ")>";
     private static readonly Regex speakerRegex = new Regex(SPEAKER_REGEX_STRING);
     private const string SPEAK_DIR_REGEX_STRING = "<facing:(?<dir>" + REMAINDER_REGEX + ")>";
@@ -44,6 +46,7 @@ public class DialogueUtility : MonoBehaviour
         processedMessage = HandleAnimStartTags(processedMessage, result);
         processedMessage = HandleAnimEndTags(processedMessage, result);
         processedMessage = HandleNameTags(processedMessage, result);
+        processedMessage = HandleSoundTags(processedMessage, result);
         processedMessage = HandleAlignTags(processedMessage, result);
         processedMessage = HandleSpeakerTags(processedMessage, result);
         processedMessage = HandleFacingTags(processedMessage, result);
@@ -99,6 +102,23 @@ public class DialogueUtility : MonoBehaviour
             });
         }
         processedMessage = Regex.Replace(processedMessage, NAME_REGEX_STRING, "");
+        return processedMessage;
+    }
+    
+    private static string HandleSoundTags(string processedMessage, List<DialogueCommand> result)
+    {
+        MatchCollection nameMatches = soundRegex.Matches(processedMessage);
+        foreach (Match match in nameMatches)
+        {
+            string stringVal = match.Groups["sound"].Value;
+            result.Add(new DialogueCommand
+            {
+                position = VisibleCharactersUpToIndex(processedMessage, match.Index),
+                type = DialogueCommandType.Sound,
+                stringValue = stringVal
+            });
+        }
+        processedMessage = Regex.Replace(processedMessage, SOUND_REGEX_STRING, "");
         return processedMessage;
     }
 
@@ -266,6 +286,7 @@ public enum DialogueCommandType
     AnimEnd,
     Align,
     Name,
+    Sound,
     Speaker,
     SpeakerFace
 }

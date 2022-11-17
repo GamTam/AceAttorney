@@ -14,11 +14,10 @@ public class DialogueManager : MonoBehaviour
     private GameObject _advanceButton;
     private TMP_Text textBox;
     private TMP_Text _nameBox;
-    public AudioClip typingClip;
-    //public AudioSourceGroup audioSourceGroup;
     private Queue<string> lines;
     private PlayerInput _playerInput;
     private string _prevActionMap;
+    private string _typingClip = "blipmale";
 
     private DialogueVertexAnimator dialogueVertexAnimator;
     private bool movingText;
@@ -39,7 +38,7 @@ public class DialogueManager : MonoBehaviour
         textBox = texts[0];
         _nameBox = texts[1];
         // _advanceButton.enabled = false;
-        dialogueVertexAnimator = new DialogueVertexAnimator(textBox/*, audioSourceGroup*/);
+        dialogueVertexAnimator = new DialogueVertexAnimator(textBox);
 
         _prevActionMap = _playerInput.currentActionMap.name;
         _playerInput.SwitchCurrentActionMap("TextBox");
@@ -94,6 +93,7 @@ public class DialogueManager : MonoBehaviour
             DialogueUtility.ProcessInputString(lines.Dequeue(), out string totalTextMessage);
         TextAlignOptions[] textAlignInfo = SeparateOutTextAlignInfo(commands);
         String nameInfo = SeparateOutNameInfo(commands);
+        String soundInfo = SeparateOutSoundInfo(commands);
 
         for (int i = 0; i < textAlignInfo.Length; i++)
         {
@@ -117,10 +117,13 @@ public class DialogueManager : MonoBehaviour
         }
         
         if (nameInfo != null) _nameBox.text = nameInfo;
+        if (soundInfo != null) _typingClip = soundInfo;
+        
+        Debug.Log(_typingClip);
 
         // _advanceButton.enabled = false;
         typeRoutine =
-            StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, typingClip, null));
+            StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, _typingClip, null));
     }
     
     private TextAlignOptions[] SeparateOutTextAlignInfo(List<DialogueCommand> commands) {
@@ -143,10 +146,20 @@ public class DialogueManager : MonoBehaviour
         }
         return null;
     }
+    
+    private String SeparateOutSoundInfo(List<DialogueCommand> commands) {
+        for (int i = 0; i < commands.Count; i++) {
+            DialogueCommand command = commands[i];
+            if (command.type == DialogueCommandType.Sound) {
+                return command.stringValue;
+            }
+        }
+        return null;
+    }
 
     void EndDialogue()
     {
-        StartCoroutine(dialogueVertexAnimator.AnimateTextIn(new List<DialogueCommand>(), "", typingClip, null));
+        StartCoroutine(dialogueVertexAnimator.AnimateTextIn(new List<DialogueCommand>(), "", _typingClip, null));
         Destroy(_tempBox);
         _playerInput.SwitchCurrentActionMap(_prevActionMap);
     }

@@ -10,19 +10,22 @@ public class DialogueVertexAnimator {
 
     private readonly TMP_Text textBox;
     private readonly float textAnimationScale;
-    //private readonly AudioSourceGroup audioSourceGroup;
-    public DialogueVertexAnimator(TMP_Text _textBox/*, AudioSourceGroup _audioSourceGroup*/) {
+    
+    private SoundManager _soundManager;
+    
+    float secondsPerCharacter = 2f / 60f;
+    public DialogueVertexAnimator(TMP_Text _textBox) {
         textBox = _textBox;
-        //audioSourceGroup = _audioSourceGroup;
         textAnimationScale = textBox.fontSize;
+        
+        _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
     }
 
     private static readonly Color32 clear = new Color32(0, 0, 0, 0);
     private const float CHAR_ANIM_TIME = 0.07f;
     private static readonly Vector3 vecZero = Vector3.zero;
-    public IEnumerator AnimateTextIn(List<DialogueCommand> commands, string processedMessage, AudioClip voice_sound, Action onFinish) {
+    public IEnumerator AnimateTextIn(List<DialogueCommand> commands, string processedMessage, string voice_sound, Action onFinish) {
         textAnimating = true;
-        float secondsPerCharacter = 3f / 60f;
         float timeOfLastCharacter = 0;
 
         TextAnimInfo[] textAnimInfo = SeparateOutTextAnimInfo(commands);
@@ -124,7 +127,7 @@ public class DialogueVertexAnimator {
                         timeOfLastCharacter = Time.unscaledTime + command.floatValue;
                         break;
                     case DialogueCommandType.TextSpeedChange:
-                        secondsPerCharacter = 1f / command.floatValue;
+                        secondsPerCharacter = command.floatValue / 60f;
                         break;
                 }
                 commands.RemoveAt(i);
@@ -173,11 +176,11 @@ public class DialogueVertexAnimator {
 
     private float timeUntilNextDialogueSound = 0;
     private float lastDialogueSound = 0;
-    private void PlayDialogueSound(AudioClip voice_sound) {
+    private void PlayDialogueSound(String voice_sound) {
         if (Time.unscaledTime - lastDialogueSound > timeUntilNextDialogueSound) {
-            timeUntilNextDialogueSound = UnityEngine.Random.Range(0.02f, 0.08f);
+            timeUntilNextDialogueSound = 4/60f;
             lastDialogueSound = Time.unscaledTime;
-            //audioSourceGroup.PlayFromNextSource(voice_sound); //Use Multiple Audio Sources to allow playing multiple sounds at once
+            _soundManager.Play(voice_sound); //Use Multiple Audio Sources to allow playing multiple sounds at once
         }
     }
 
