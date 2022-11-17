@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPresentable: 0
   evidence: {fileID: 0}
-  dialogueText: '<color=#6ebdf0>(How do you happen to end up
+  dialogueText: '<color=#6ebdf0>(How do you end up with seven
 
-    with seven different
-    eyewitness accounts
+    different eyewitness
+    accounts
 
     of you stabbing someone?)'
