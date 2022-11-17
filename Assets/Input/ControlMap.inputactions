@@ -11,7 +11,8 @@
                     "id": "dbfec7b2-ac52-4b8e-a112-0ed6fadabd1f",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Right",
@@ -19,7 +20,8 @@
                     "id": "e9862380-eed7-4bba-b7b1-050a1dfe3c4f",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Select",
@@ -27,7 +29,8 @@
                     "id": "5445a479-eb5d-4857-9275-c2f928bb9997",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -142,7 +145,26 @@
                     "id": "976a3d92-3aeb-471a-885d-0640c28d9c8a",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PresentEvidence",
+                    "type": "Button",
+                    "id": "f2c0029e-60ec-4653-b592-685afae5e3c7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "WrongEvidence",
+                    "type": "Button",
+                    "id": "61a5f00a-3d5f-4e4f-8239-6fd2b49bb4f1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -189,6 +211,28 @@
                     "action": "Advance",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "77c50885-5385-4196-9429-7147b879bc23",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PresentEvidence",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b2289a3d-8ea7-4de8-9697-e3b0900fa5d5",
+                    "path": "<Keyboard>/o",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WrongEvidence",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -202,7 +246,8 @@
                     "id": "3c9e2cdf-50df-45a9-8dd2-01b2d2f4172d",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -229,7 +274,8 @@
                     "id": "b25e65ba-e925-48f2-8457-961f8849a06c",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "MoveVector",
@@ -237,7 +283,8 @@
                     "id": "5fe4016b-702c-4edd-95b3-fb15172a3ab0",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Select",
@@ -245,7 +292,8 @@
                     "id": "eee1b961-5756-498c-b878-631604bc6afb",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -444,6 +492,34 @@
                     "processors": "",
                     "groups": "Mouse",
                     "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Trial",
+            "id": "3f5bdcc7-18b9-40a8-ab47-3d216d27e9b5",
+            "actions": [
+                {
+                    "name": "PresentingEvidence",
+                    "type": "Button",
+                    "id": "39242901-62f8-425f-9249-deccaaf410f3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6eeee0ec-289a-4c85-9549-30978d2f802a",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "PresentingEvidence",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

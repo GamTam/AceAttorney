@@ -22,8 +22,14 @@ public class DialogueManager : MonoBehaviour
     private DialogueVertexAnimator dialogueVertexAnimator;
     private bool movingText;
     private InputAction _advanceText;
+
+    // Izzy
+    private bool isThisDialoguePresentable;
+    private Queue<bool> isPresentable;
+
     void Awake() {
         lines = new Queue<string>();
+        isPresentable = new Queue<bool>();
         _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         _advanceText = _playerInput.actions["Advance"];
     }
@@ -52,6 +58,35 @@ public class DialogueManager : MonoBehaviour
         NextLine();
     }
 
+    public void StartTextSO(DialogueSO[] dialogues) {
+        _tempBox = Instantiate(_textBoxPrefab);
+        _tempBox.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
+
+        TMP_Text[] texts = _tempBox.GetComponentsInChildren<TMP_Text>();
+
+        textBox = texts[0];
+        _nameBox = texts[1];
+        // _advanceButton.enabled = false;
+        dialogueVertexAnimator = new DialogueVertexAnimator(textBox/*, audioSourceGroup*/);
+
+        _prevActionMap = _playerInput.currentActionMap.name;
+        _playerInput.SwitchCurrentActionMap("TextBox");
+        lines.Clear();
+
+        foreach (DialogueSO dialogue in dialogues)
+        {
+            lines.Enqueue(dialogue.dialogueText);
+            isPresentable.Enqueue(dialogue.isPresentable);
+            // currentDialogue = dialogue;
+        }
+
+        NextLine();
+    }
+
+    public bool GetCurrentPresentablity() {
+        return isThisDialoguePresentable;
+    }
+
     private void Update()
     {
         if (_advanceText.triggered)
@@ -66,6 +101,63 @@ public class DialogueManager : MonoBehaviour
                 // _advanceButton.enabled = true;
             }
         }
+    }
+
+    public void NextLineSO()
+    {
+        if (dialogueVertexAnimator.textAnimating)
+        {
+            dialogueVertexAnimator.QuickEnd();
+            return;
+        }
+
+        if (lines.Count == 0)
+        {
+            EndDialogue();
+            return;
+        }
+
+        if (movingText)
+        {
+            return;
+        }
+
+        this.EnsureCoroutineStopped(ref typeRoutine);
+        dialogueVertexAnimator.textAnimating = false;
+        List<DialogueCommand> commands =
+            DialogueUtility.ProcessInputString(lines.Dequeue(), out string totalTextMessage);
+            
+        isThisDialoguePresentable = this.isPresentable.Dequeue();
+
+        TextAlignOptions[] textAlignInfo = SeparateOutTextAlignInfo(commands);
+        String nameInfo = SeparateOutNameInfo(commands);
+
+        for (int i = 0; i < textAlignInfo.Length; i++)
+        {
+            TextAlignOptions info = textAlignInfo[i];
+            if (info == TextAlignOptions.topCenter)
+            {
+                textBox.alignment = TextAlignmentOptions.Top;
+            }
+            else if (info == TextAlignOptions.midCenter)
+            {
+                textBox.alignment = TextAlignmentOptions.Center;
+            }
+            else if (info == TextAlignOptions.left)
+            {
+                textBox.alignment = TextAlignmentOptions.TopLeft;
+            }
+            else if (info == TextAlignOptions.right)
+            {
+                textBox.alignment = TextAlignmentOptions.TopRight;
+            }
+        }
+
+        if (nameInfo != null) _nameBox.text = nameInfo;
+
+        // _advanceButton.enabled = false;
+        typeRoutine =
+            StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, typingClip, null));
     }
 
     private Coroutine typeRoutine = null;
