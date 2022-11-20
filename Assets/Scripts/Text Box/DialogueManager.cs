@@ -22,6 +22,7 @@ public class DialogueManager : MonoBehaviour
     private DialogueVertexAnimator dialogueVertexAnimator;
     private bool movingText;
     private InputAction _advanceText;
+    private SoundManager _soundManager;
 
     // Izzy
     private bool isThisDialoguePresentable;
@@ -32,6 +33,7 @@ public class DialogueManager : MonoBehaviour
         isPresentable = new Queue<bool>();
         _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         _advanceText = _playerInput.actions["Advance"];
+        _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
     }
 
     public void StartText(String[] linesIn)
@@ -56,7 +58,7 @@ public class DialogueManager : MonoBehaviour
             lines.Enqueue(line);
         }
         
-        NextLine();
+        NextLine(true);
     }
 
     public void StartTextSO(DialogueSO[] dialogues) {
@@ -82,7 +84,7 @@ public class DialogueManager : MonoBehaviour
             // currentDialogue = dialogue;
         }
 
-        NextLine();
+        NextLine(true);
     }
 
     public bool GetCurrentPresentablity() {
@@ -106,12 +108,14 @@ public class DialogueManager : MonoBehaviour
     }
 
     private Coroutine typeRoutine = null;
-    public void NextLine() {
+    public void NextLine(bool firstTime = false) {
         if (dialogueVertexAnimator.textAnimating)
         {
             dialogueVertexAnimator.QuickEnd();
             return;
         }
+        
+        if (!firstTime) _soundManager.Play("textboxAdvance");
         
         if (lines.Count == 0)
         {
@@ -123,7 +127,7 @@ public class DialogueManager : MonoBehaviour
         {
             return;
         }
-
+        
         this.EnsureCoroutineStopped(ref typeRoutine);
         dialogueVertexAnimator.textAnimating = false;
         List<DialogueCommand> commands =
