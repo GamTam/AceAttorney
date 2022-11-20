@@ -1,10 +1,10 @@
 Name	Intro Point	Loop Point 
 SteelSamurai	3.209	56.352
-Court	4.308	52.386	
+Court	10.536	58.533	
 CrossEx	0.715	46.427
-CrossExFast	1.341	58.650
+CrossExFast	1.341	58.656445
 DetentionCenter	13.705	61.71
-Eplain	2.176	71.994
+Explain	2.176	71.994
 Explore	2.397	50.388
 Gumshoe	0.270	54.821
 Lobby	2.396	35.993
@@ -13,7 +13,7 @@ Objection	24.5	48.505
 Opening	0	-1
 Pursuit	7.799	46.198
 PursuitVariation	2.218	40.618
-Suspense	7.588	35.295
+Suspense	7.928590	35.357207
 Twist	1.328	34.662
-TwistInvestigation	5.496	57.498
+TwistInvestigation	5.496000	57.495433
 Win	1.537	50.771
