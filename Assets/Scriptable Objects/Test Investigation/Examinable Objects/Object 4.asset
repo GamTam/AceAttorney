@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
+  m_Name: Object 4
+  m_EditorClassIdentifier: 
+  dialogueText:
+  - '<sound:blipfemale><name:Maya>Hmm...<p:normal>
+
+    Object 4...'
+  - "<sound:blipmale><name:Phoenix>Hey!<p:normal>\r\nThat's what I was going to\r
+    say!"
+  - "<sound:blipfemale><name:Maya>Sorry Nick,<p:tiny> but I guess you're\r\ngonna\r
+    be out of business soon..."
+  - "Because I'M the new Nick\r\n\rfrom now on!"
+  - <sound:blipmale><name:Phoenix>I-<p:short> I-<p:short> I-<p:normal> What?
+  - <sound:blipfemale><name:Maya>...
+  - <sound:blipmale><name:Phoenix>...
+  - '<sound:blipfemale><name:Maya><anim:shake>N-<p:short> N-<p:short> Nick!<p:normal>
+
+    Earthquake!</anim>'
+  - <anim:shake>We need to take cover!</anim>
+  - '<sound:blipmale><name:Phoenix>No, Maya.<p:normal>
+
+    There''s no earthquake.'
+  - You're on a vibration plate.
+  - '<sound:blipfemale><name:Maya><anim:shake>Oh.<p:normal>
+
+    Guess I should
+    step off,<p:tiny> then.</anim>'
+  - <anim:shake>Eh,<p:tiny> I'll do it later.</anim>
+  prevLine: {fileID: 0}
+  nextLine: {fileID: 0}
+  pressSequence: {fileID: 0}
+  wrongPresentSequence: {fileID: 0}
+  presentSequence: {fileID: 0}
+  evidence: []

@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    [TextArea(15, 20)] [SerializeField] private string[] _dialogue;
+    [SerializeField] private DialogueSO _dialogue;
 
     public void TriggerDialogue()
     {

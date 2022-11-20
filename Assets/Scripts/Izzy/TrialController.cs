@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class TrialController : MonoBehaviour
 {
-    [SerializeField] private TrialSO currentTrial;
+    [SerializeField] private DialogueSO currentTrial;
     [SerializeField] private GameObject scuffedEvidenceUI;
     [SerializeField] private GameObject scuffedWrongEvidenceUI;
     private DialogueManager dialogueManager;
@@ -34,7 +34,7 @@ public class TrialController : MonoBehaviour
     }
 
     public void StartTrial() {
-        dialogueManager.StartTextSO(currentTrial.listOfDialogues);
+        dialogueManager.StartText(currentTrial);
     }
 
     public IEnumerator PresentEvidence() {

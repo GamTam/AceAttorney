@@ -36,7 +36,7 @@ public class DialogueManager : MonoBehaviour
         _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
     }
 
-    public void StartText(String[] linesIn)
+    public void StartText(DialogueSO linesIn)
     {
         _tempBox = Instantiate(_textBoxPrefab);
         _tempBox.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
@@ -53,37 +53,11 @@ public class DialogueManager : MonoBehaviour
         _playerInput.SwitchCurrentActionMap("TextBox");
         lines.Clear();
         
-        foreach (string line in linesIn)
+        foreach (string line in linesIn.dialogueText)
         {
             lines.Enqueue(line);
         }
         
-        NextLine(true);
-    }
-
-    public void StartTextSO(DialogueSO[] dialogues) {
-        _tempBox = Instantiate(_textBoxPrefab);
-        _tempBox.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
-
-        TMP_Text[] texts = _tempBox.GetComponentsInChildren<TMP_Text>();
-        _advanceButton = _tempBox.GetComponentInChildren<Animator>().gameObject;
-
-        textBox = texts[0];
-        _nameBox = texts[1];
-        _advanceButton.SetActive(false);
-        dialogueVertexAnimator = new DialogueVertexAnimator(textBox);
-
-        _prevActionMap = _playerInput.currentActionMap.name;
-        _playerInput.SwitchCurrentActionMap("TextBox");
-        lines.Clear();
-
-        foreach (DialogueSO dialogue in dialogues)
-        {
-            lines.Enqueue(dialogue.dialogueText);
-            isPresentable.Enqueue(dialogue.isPresentable);
-            // currentDialogue = dialogue;
-        }
-
         NextLine(true);
     }
 

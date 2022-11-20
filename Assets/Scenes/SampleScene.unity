@@ -209,19 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ccdc3b7069cf34a9d1d90235b15cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogue:
-  - '<sound:blipmale><name:Phoenix>Hmm...<p:normal>
-
-    Object 2...'
-  - '<name:Maya><sound:blipfemale>Y''know,<p:tiny> this one reminds me
-
-    a lot
-    of the first one...'
-  - '<name:Phoenix><sound:blipmale>Maya.<p:normal>
-
-    This is the same sprite.'
-  - <name:Maya><sound:blipfemale>Well that would explain it!
-  - <sound:blipmale><name:Phoenix><color=#6ebdf0>(Sometimes I worry about this girl.)
+  _dialogue: {fileID: 11400000, guid: dcaa1a92e2edd054ba513f5d977a0a6d, type: 2}
 --- !u!212 &122437845
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -449,23 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ccdc3b7069cf34a9d1d90235b15cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogue:
-  - '<sound:blipmale><name:Phoenix>Hmm...<p:normal>
-
-    Object 3...'
-  - '<sound:blipmale><name:Phoenix>According to some ancient philosophers,<p:tiny>
-
-    three
-    is the luckiest number.'
-  - '<sound:blipfemale><name:Maya>Hey Nick!<p:normal>
-
-    Look at what I found!'
-  - <sound:blipmale><name:Phoenix><sp:1>Maya no!
-  - That's dangerous!
-  - '<sound:blipfemale><name:Maya><sp:2><anim:wave>Woah, Nick!<p:normal>
-
-    I don''t
-    feel so good!</anim>'
+  _dialogue: {fileID: 11400000, guid: edfb085ff676da24c9d56a2f619afaae, type: 2}
 --- !u!212 &231216264
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1046,16 +1018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ccdc3b7069cf34a9d1d90235b15cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogue:
-  - '<sound:blipmale><name:Phoenix>Hmm...<p:normal>
-
-    Object 1...'
-  - "<name:Maya><sound:blipfemale>Did you know that this was \nthe <color=red>first
-    object</color> that the devs \nmade for this demo?"
-  - '<sound:blipmale><name:Phoenix>Thanks, Maya...<p:normal><color=#6ebdf0>
-
-    (VERY
-    insightful...)'
+  _dialogue: {fileID: 11400000, guid: 059593bbcfbb145448296848a90ba297, type: 2}
 --- !u!1 &783372748
 GameObject:
   m_ObjectHideFlags: 0
@@ -2143,39 +2106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ccdc3b7069cf34a9d1d90235b15cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogue:
-  - '<sound:blipfemale><name:Maya>Hmm...<p:normal>
-
-    Object 4...'
-  - '<sound:blipmale><name:Phoenix>Hey!<p:normal>
-
-    That''s what I was going to
-    say!'
-  - '<sound:blipfemale><name:Maya>Sorry Nick,<p:tiny> but I guess you''re
-
-    gonna
-    be out of business soon...'
-  - 'Because I''M the new Nick
-
-    from now on!'
-  - <sound:blipmale><name:Phoenix>I-<p:short> I-<p:short> I-<p:normal> What?
-  - ...
-  - <sound:blipfemale><name:Maya>...
-  - '<sound:blipfemale><name:Maya><anim:shake>N-<p:short> N-<p:short> Nick!<p:normal>
-
-    Earthquake!</anim>'
-  - <anim:shake>We need to take cover!</anim>
-  - '<sound:blipmale><name:Phoenix>No, Maya.<p:normal>
-
-    There''s no earthquake.
-
-'
-  - You're on a vibration plate.
-  - '<sound:blipfemale><name:Maya><anim:shake>Oh.<p:normal>
-
-    Guess I should step
-    off.</anim>'
-  - <anim:shake>Eh,<p:tiny> I'll do it later.</anim>
+  _dialogue: {fileID: 11400000, guid: 1035f0af3fed142429740f6123371f20, type: 2}
 --- !u!212 &1730829497
 SpriteRenderer:
   m_ObjectHideFlags: 0
