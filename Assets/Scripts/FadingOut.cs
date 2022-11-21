@@ -21,6 +21,7 @@ public class FadingOut : MonoBehaviour
         {
             for(int i = 0; i < _textBoxes.Length; i++)
             {
+                if (_textBoxes[i] == null) continue;
                 Color Ex = _textBoxes[i].color;
                 Ex.a = f;
                 _textBoxes[i].color = Ex;

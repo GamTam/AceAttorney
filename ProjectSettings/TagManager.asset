@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Audio
+  - Controller Manager
+  - NPC
+  - UI
+  - Examinable
+  - Dialogue Manager
   layers:
   - Default
   - TransparentFX

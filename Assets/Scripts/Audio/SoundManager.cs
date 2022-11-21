@@ -33,6 +33,8 @@ public class SoundManager : MonoBehaviour
                 sound.source.loop = Convert.ToBoolean(entry.Value[0]);;
 
                 sounds.Add(sound);
+                
+                Debug.Log(sound.name);
             }
 
             i++;

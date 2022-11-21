@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
+  m_Name: Object 3
+  m_EditorClassIdentifier: 
+  dialogueText:
+  - '<sound:blipmale><name:Phoenix>Hmm...<p:normal>
+
+    Object 3...'
+  - '<sound:blipmale><name:Phoenix>According to some ancient philosophers,<p:tiny>
+
+    three
+    is the luckiest number.'
+  - '<sound:blipfemale><name:Maya>Hey Nick!<p:normal>
+
+    Look at what I found!'
+  - <sound:blipmale><name:Phoenix><sp:1>Maya no!
+  - That's dangerous!
+  - '<sound:blipfemale><name:Maya><sp:2><anim:wave>Woah, Nick!<p:normal>
+
+    I don''t
+    feel so good!</anim>'
+  prevLine: {fileID: 0}
+  nextLine: {fileID: 0}
+  pressSequence: {fileID: 0}
+  wrongPresentSequence: {fileID: 0}
+  presentSequence: {fileID: 0}
+  evidence: []

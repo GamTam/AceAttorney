@@ -1,38 +1,106 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MouseCursor : MonoBehaviour
 {
-    [SerializeField] private Renderer _cursorRenderer;
-    [SerializeField] private GameObject _cursoring;
-    [SerializeField] private Color _newColor;
+    private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Sprite _baseSprite;
+    [SerializeField] private Sprite _selectedSprite;
+    [SerializeField] private Sprite _selectedAgainSprite;
+    [SerializeField] private float _moveSpeed = 3;
+
+    private Camera _cam;
+    private DialogueTrigger _selectedObj;
 
     bool _soTrue = false;
 
+    private PlayerInput _playerInput;
+    private InputAction _mousePos;
+    private InputAction _vCursor;
+    private InputAction _select;
+    
     void Start()
     {
-        _cursorRenderer = _cursoring.GetComponent<Renderer>();
+        _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
+        _cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        
+        transform.position = new Vector3(_cam.transform.position.x, _cam.transform.position.y, transform.position.z);
+        _playerInput.SwitchCurrentActionMap("Investigation");
+
+        _mousePos = _playerInput.actions["Investigation/MousePos"];
+        _vCursor = _playerInput.actions["Investigation/MoveVector"];
+        _select = _playerInput.actions["Investigation/Select"];
+        
+        Debug.Log(_select);
+        
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(_soTrue == true)
+        Cursor.visible = false;
+        Vector2 cursorPos;
+
+        if (_playerInput.currentControlScheme == "Mouse")
         {
-            Cursor.visible = false;
-            Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            cursorPos = Camera.main.ScreenToWorldPoint(_mousePos.ReadValue<Vector2>());
             transform.position = cursorPos;
+        }
+        else
+        {
+            cursorPos = _vCursor.ReadValue<Vector2>();
+            transform.position = transform.position + (Vector3) (cursorPos * Time.deltaTime * _moveSpeed);
+        }
+
+        if (_select.triggered)
+        {
+            _selectedObj.TriggerDialogue();
+            _spriteRenderer.enabled = false;
+            _spriteRenderer.sprite = _selectedAgainSprite;
+        }
+
+        if (_playerInput.currentActionMap.name == "Investigation" && !_spriteRenderer.enabled)
+        {
+            if (_selectedObj == null)
+            {
+                _spriteRenderer.sprite = _baseSprite;
+            }
+            _spriteRenderer.enabled = true;
         }
     }
 
-    public void TrueMachine()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        _soTrue = true;
+        if (other.tag == "Examinable")
+        {
+            DialogueTrigger trigger = other.GetComponent<DialogueTrigger>();
+            
+            if (trigger._inspected)
+            {
+                _spriteRenderer.sprite = _selectedAgainSprite;
+            }
+            else
+            {
+                _spriteRenderer.sprite = _selectedSprite;
+            }
+            
+            _selectedObj = trigger;
+        }
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("Passed through!");
+        if (other.tag == "Examinable")
+        {
+            if (_selectedObj == other.GetComponent<DialogueTrigger>())
+            {
+                _spriteRenderer.sprite = _baseSprite;
+                _selectedObj = null;
+            }
+        }
     }
 }
