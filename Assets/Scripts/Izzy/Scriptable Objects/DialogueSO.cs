@@ -9,7 +9,9 @@ public class DialogueSO : ScriptableObject
     public DialogueSO nextLine;
     
     [Header("Optional")]
-    public Choice[] choices;
+    public Response[] responses;
+
+    public bool HasResponses => responses != null && responses.Length > 0;
     
     [Header("Cross Examination")] 
     public DialogueSO prevLine;
@@ -17,10 +19,4 @@ public class DialogueSO : ScriptableObject
     public DialogueSO wrongPresentSequence;
     public DialogueSO presentSequence;
     public EvidenceSO[] evidence;
-}
-
-public class Choice
-{
-    public string name;
-    public DialogueSO dialogue;
 }

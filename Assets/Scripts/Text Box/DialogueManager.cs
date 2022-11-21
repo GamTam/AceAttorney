@@ -24,6 +24,10 @@ public class DialogueManager : MonoBehaviour
     private InputAction _advanceText;
     private SoundManager _soundManager;
 
+    public ResponseHandler _responseHandler;
+    private DialogueSO _dialogue;
+    private bool _shownResponses;
+
     // Izzy
     private bool isThisDialoguePresentable;
     private Queue<bool> isPresentable;
@@ -38,8 +42,17 @@ public class DialogueManager : MonoBehaviour
 
     public void StartText(DialogueSO linesIn)
     {
+        _shownResponses = false;
+
+        if (_tempBox != null)
+        {
+            Destroy(_tempBox.gameObject);
+        }
+        
         _tempBox = Instantiate(_textBoxPrefab);
         _tempBox.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
+
+        _dialogue = linesIn;
         
         TMP_Text[] texts = _tempBox.GetComponentsInChildren<TMP_Text>();
         _advanceButton = _tempBox.GetComponentInChildren<Animator>().gameObject;
@@ -67,15 +80,21 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (_advanceText.triggered)
+        if (!(dialogueVertexAnimator == null) && !(_dialogue == null))
         {
-            NextLine();
-        }
-
-        if (!(dialogueVertexAnimator == null))
-        {
+            if (_advanceText.triggered)
+            {
+                if (!(lines.Count == 0 && _dialogue.HasResponses)) NextLine();
+            }
+            else if (!dialogueVertexAnimator.textAnimating && lines.Count == 0 && _dialogue.HasResponses && !_shownResponses)
+            {
+                _shownResponses = true;
+                NextLine();
+            }
+            
             if (!dialogueVertexAnimator.textAnimating)
             {
+                if (lines.Count == 0 && _dialogue.HasResponses) return;
                 _advanceButton.SetActive(true);
             }
         }
@@ -93,7 +112,14 @@ public class DialogueManager : MonoBehaviour
         
         if (lines.Count == 0)
         {
-            EndDialogue();
+            if (_dialogue.HasResponses)
+            {
+                _responseHandler.ShowResponses(_dialogue.responses);
+            }
+            else
+            {
+                EndDialogue();
+            }
             return;
         }
 
@@ -133,8 +159,6 @@ public class DialogueManager : MonoBehaviour
         
         if (nameInfo != null) _nameBox.text = nameInfo;
         if (soundInfo != null) _typingClip = soundInfo;
-        
-        Debug.Log(_typingClip);
 
         _advanceButton.SetActive(false);
         typeRoutine =

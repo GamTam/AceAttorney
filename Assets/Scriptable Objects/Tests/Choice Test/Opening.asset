@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: Opening
   m_EditorClassIdentifier: 
   dialogueText:
-  - <name:Judge><color=green>Have you ever had gay thoughts?
+  - <sound:blipmale><name:Judge>Mr. Wright...
+  - <color=green>Have you ever had gay thoughts?
   nextLine: {fileID: 0}
+  responses:
+  - _responseText: Yes
+    _dialogue: {fileID: 11400000, guid: cdffb79d636c6284ea0de3f5c9d5f946, type: 2}
+  - _responseText: No
+    _dialogue: {fileID: 11400000, guid: 8186f7ad20b49b948afd7770e0e7c7fd, type: 2}
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}

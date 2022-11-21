@@ -9,6 +9,7 @@ TagManager:
   - NPC
   - UI
   - Examinable
+  - Dialogue Manager
   layers:
   - Default
   - TransparentFX

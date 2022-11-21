@@ -14,7 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText:
   - <name:Phoenix>Yes I have, Your Honor.
+  - '<name:Judge>Would you mind telling the court
+
+    who it was about?'
+  - '<name:Phoenix>I-<p:short> I''d rather not,
+
+    Your Honor.'
   nextLine: {fileID: 0}
+  responses: []
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}

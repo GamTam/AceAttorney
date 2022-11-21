@@ -14,7 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText:
   - <name:Phoenix>No I have not, Your Honor.
+  - <name:Maya><sound:blipfemale>Nick,<p:normal> be honest with the Judge.
+  - I've seen you look at Edgeworth.
+  - <name:Phoenix><sound:blipmale>(This is NOT the time Maya.)
+  - <name:Edgeworth><sound:blipmale>?
   nextLine: {fileID: 0}
+  responses: []
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}
