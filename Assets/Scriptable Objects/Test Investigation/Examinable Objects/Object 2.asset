@@ -16,8 +16,10 @@ MonoBehaviour:
   - '<sound:blipmale><name:Phoenix>Hmm...<p:normal>
 
     Object 2...'
-  - "<name:Maya><sound:blipfemale>Y''know,<p:tiny> this one reminds me\r\na lot\r
-    of the first one..."
+  - '<name:Maya><sound:blipfemale>Y''know,<p:tiny> this one reminds me
+
+    a lot
+    of the first one...'
   - '<name:Phoenix><sound:blipmale>Maya.<p:normal>
 
     This is the same sprite.'

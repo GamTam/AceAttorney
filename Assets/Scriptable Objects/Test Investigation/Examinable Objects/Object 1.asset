@@ -16,10 +16,16 @@ MonoBehaviour:
   - '<sound:blipmale><name:Phoenix>Hmm...<p:normal>
 
     Object 1...'
-  - "<name:Maya><sound:blipfemale>Did you know that this was\nthe <color=red>first\r
-    object</color> that the devs\nmade for this demo?"
-  - "<sound:blipmale><name:Phoenix>Thanks, Maya...<p:normal><color=#6ebdf0>\r\n(VERY\r
-    insightful...)"
+  - '<name:Maya><sound:blipfemale>Did you know that this was
+
+    the <color=red>first
+    object</color> that the devs
+
+    made for this demo?'
+  - '<sound:blipmale><name:Phoenix>Thanks, Maya...<p:normal><color=#6ebdf0>
+
+    (VERY
+    insightful...)'
   prevLine: {fileID: 0}
   nextLine: {fileID: 0}
   pressSequence: {fileID: 0}

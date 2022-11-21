@@ -16,10 +16,14 @@ MonoBehaviour:
   - '<sound:blipfemale><name:Maya>Hmm...<p:normal>
 
     Object 4...'
-  - "<sound:blipmale><name:Phoenix>Hey!<p:normal>\r\nThat's what I was going to\r
-    say!"
-  - "<sound:blipfemale><name:Maya>Sorry Nick,<p:tiny> but I guess you're\r\ngonna\r
-    be out of business soon..."
+  - '<sound:blipmale><name:Phoenix>Hey!<p:normal>
+
+    That's what I was going
+    to say!'
+  - '<sound:blipfemale><name:Maya>Sorry Nick,<p:tiny> but I guess you''re
+
+    gonna
+    be out of business soon...'
   - "Because I'M the new Nick\r\n\rfrom now on!"
   - <sound:blipmale><name:Phoenix>I-<p:short> I-<p:short> I-<p:normal> What?
   - <sound:blipfemale><name:Maya>...
@@ -35,7 +39,7 @@ MonoBehaviour:
   - '<sound:blipfemale><name:Maya><anim:shake>Oh.<p:normal>
 
     Guess I should
-    step off,<p:tiny> then.</anim>'
+    step off then.</anim>'
   - <anim:shake>Eh,<p:tiny> I'll do it later.</anim>
   prevLine: {fileID: 0}
   nextLine: {fileID: 0}
