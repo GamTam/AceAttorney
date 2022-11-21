@@ -7,8 +7,9 @@ using UnityEngine.InputSystem;
 public class MouseCursor : MonoBehaviour
 {
     private SpriteRenderer _spriteRenderer;
-    [SerializeField] private Color _baseColor;
-    [SerializeField] private Color _selectedColor;
+    [SerializeField] private Sprite _baseSprite;
+    [SerializeField] private Sprite _selectedSprite;
+    [SerializeField] private Sprite _selectedAgainSprite;
     [SerializeField] private float _moveSpeed = 3;
 
     private Camera _cam;
@@ -57,8 +58,18 @@ public class MouseCursor : MonoBehaviour
 
         if (_select.triggered)
         {
-            Debug.Log("Eminem");
             _selectedObj.TriggerDialogue();
+            _spriteRenderer.enabled = false;
+            _spriteRenderer.sprite = _selectedAgainSprite;
+        }
+
+        if (_playerInput.currentActionMap.name == "Investigation" && !_spriteRenderer.enabled)
+        {
+            if (_selectedObj == null)
+            {
+                _spriteRenderer.sprite = _baseSprite;
+            }
+            _spriteRenderer.enabled = true;
         }
     }
 
@@ -66,8 +77,18 @@ public class MouseCursor : MonoBehaviour
     {
         if (other.tag == "Examinable")
         {
-            _spriteRenderer.color = _selectedColor;
-            _selectedObj = other.gameObject.GetComponent<DialogueTrigger>();
+            DialogueTrigger trigger = other.GetComponent<DialogueTrigger>();
+            
+            if (trigger._inspected)
+            {
+                _spriteRenderer.sprite = _selectedAgainSprite;
+            }
+            else
+            {
+                _spriteRenderer.sprite = _selectedSprite;
+            }
+            
+            _selectedObj = trigger;
         }
     }
 
@@ -75,8 +96,11 @@ public class MouseCursor : MonoBehaviour
     {
         if (other.tag == "Examinable")
         {
-            _spriteRenderer.color = _baseColor;
-            _selectedObj = null;
+            if (_selectedObj == other.GetComponent<DialogueTrigger>())
+            {
+                _spriteRenderer.sprite = _baseSprite;
+                _selectedObj = null;
+            }
         }
     }
 }

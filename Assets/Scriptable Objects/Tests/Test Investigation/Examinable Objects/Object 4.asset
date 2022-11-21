@@ -18,8 +18,8 @@ MonoBehaviour:
     Object 4...'
   - '<sound:blipmale><name:Phoenix>Hey!<p:normal>
 
-    That's what I was going
-    to say!'
+    That''s what I was going to
+    say!'
   - '<sound:blipfemale><name:Maya>Sorry Nick,<p:tiny> but I guess you''re
 
     gonna
@@ -38,11 +38,11 @@ MonoBehaviour:
   - You're on a vibration plate.
   - '<sound:blipfemale><name:Maya><anim:shake>Oh.<p:normal>
 
-    Guess I should
-    step off then.</anim>'
+    Guess I should step
+    off then.</anim>'
   - <anim:shake>Eh,<p:tiny> I'll do it later.</anim>
-  prevLine: {fileID: 0}
   nextLine: {fileID: 0}
+  prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}
   presentSequence: {fileID: 0}
