@@ -12,6 +12,7 @@ public class DialogueVertexAnimator {
     private readonly float textAnimationScale;
     
     private SoundManager _soundManager;
+    private MusicManager _musicManager;
     
     float secondsPerCharacter = 2f / 60f;
     public DialogueVertexAnimator(TMP_Text _textBox) {
@@ -19,6 +20,7 @@ public class DialogueVertexAnimator {
         textAnimationScale = textBox.fontSize;
         
         _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
+        _musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();
     }
 
     private static readonly Color32 clear = new Color32(0, 0, 0, 0);
@@ -129,6 +131,27 @@ public class DialogueVertexAnimator {
                     case DialogueCommandType.TextSpeedChange:
                         secondsPerCharacter = command.floatValue / 60f;
                         break;
+                    case DialogueCommandType.Sound:
+                        _soundManager.Play(command.stringValue);
+                        break;
+                    case DialogueCommandType.Music:
+                        switch (command.stringValue)
+                        {
+                            case "fadeout":
+                                _musicManager.fadeOut(1.5f);
+                                break;
+                            case "stop":
+                                _musicManager.fadeOut();
+                                break;
+                            case "continue":
+                                _musicManager.fadeIn();
+                                break;
+                            default:
+                                _musicManager.fadeOut();
+                                _musicManager.Play(command.stringValue);
+                                break;
+                        }
+                        break;
                 }
                 commands.RemoveAt(i);
                 i--;
@@ -180,7 +203,7 @@ public class DialogueVertexAnimator {
         if (Time.unscaledTime - lastDialogueSound > timeUntilNextDialogueSound) {
             timeUntilNextDialogueSound = 4/60f;
             lastDialogueSound = Time.unscaledTime;
-            _soundManager.Play(voice_sound); //Use Multiple Audio Sources to allow playing multiple sounds at once
+            _soundManager.Play(voice_sound);
         }
     }
 

@@ -63,7 +63,6 @@ public class MusicManager : MonoBehaviour
     public Music Play (string name)
     {
         Music s = allMusic.Find(x => x.name == name);
-        Debug.Log(s.name);
         if (s == null)
             return null;
 
@@ -98,10 +97,10 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    public void fadeOut()
+    public void fadeOut(float length=0.1f)
     {
         setPoint();
-        StartCoroutine(fadeTo(0.1f, 0, musicPlaying));
+        StartCoroutine(fadeTo(length, 0, musicPlaying));
     }
     
     public void fadeIn()

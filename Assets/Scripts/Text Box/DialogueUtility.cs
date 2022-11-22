@@ -25,6 +25,8 @@ public class DialogueUtility : MonoBehaviour
     private static readonly Regex textBlipRegex = new Regex(TEXTBLIP_REGEX_STRING);
     private const string SOUND_REGEX_STRING = "<se:(?<se>" + REMAINDER_REGEX + ")>";
     private static readonly Regex soundRegex = new Regex(SOUND_REGEX_STRING);
+    private const string MUSIC_REGEX_STRING = "<music:(?<music>" + REMAINDER_REGEX + ")>";
+    private static readonly Regex musicRegex = new Regex(MUSIC_REGEX_STRING);
     private const string SPEAKER_REGEX_STRING = "<face:(?<face>" + REMAINDER_REGEX + ")>";
     private static readonly Regex speakerRegex = new Regex(SPEAKER_REGEX_STRING);
     private const string SPEAK_DIR_REGEX_STRING = "<facing:(?<dir>" + REMAINDER_REGEX + ")>";
@@ -49,6 +51,8 @@ public class DialogueUtility : MonoBehaviour
         processedMessage = HandleAnimEndTags(processedMessage, result);
         processedMessage = HandleNameTags(processedMessage, result);
         processedMessage = HandleTextBlipTags(processedMessage, result);
+        processedMessage = HandleSoundTags(processedMessage, result);
+        processedMessage = HandleMusicTags(processedMessage, result);
         processedMessage = HandleAlignTags(processedMessage, result);
         processedMessage = HandleSpeakerTags(processedMessage, result);
         processedMessage = HandleFacingTags(processedMessage, result);
@@ -123,6 +127,41 @@ public class DialogueUtility : MonoBehaviour
         processedMessage = Regex.Replace(processedMessage, TEXTBLIP_REGEX_STRING, "");
         return processedMessage;
     }
+    
+    private static string HandleSoundTags(string processedMessage, List<DialogueCommand> result)
+    {
+        MatchCollection nameMatches = soundRegex.Matches(processedMessage);
+        foreach (Match match in nameMatches)
+        {
+            string stringVal = match.Groups["se"].Value;
+            result.Add(new DialogueCommand
+            {
+                position = VisibleCharactersUpToIndex(processedMessage, match.Index),
+                type = DialogueCommandType.Sound,
+                stringValue = stringVal
+            });
+        }
+        processedMessage = Regex.Replace(processedMessage, SOUND_REGEX_STRING, "");
+        return processedMessage;
+    }
+    
+    private static string HandleMusicTags(string processedMessage, List<DialogueCommand> result)
+    {
+        MatchCollection nameMatches = musicRegex.Matches(processedMessage);
+        foreach (Match match in nameMatches)
+        {
+            string stringVal = match.Groups["music"].Value;
+            result.Add(new DialogueCommand
+            {
+                position = VisibleCharactersUpToIndex(processedMessage, match.Index),
+                type = DialogueCommandType.Music,
+                stringValue = stringVal
+            });
+        }
+        processedMessage = Regex.Replace(processedMessage, MUSIC_REGEX_STRING, "");
+        return processedMessage;
+    }
+
 
     private static string HandleAlignTags(string processedMessage, List<DialogueCommand> result)
     {
@@ -289,6 +328,7 @@ public enum DialogueCommandType
     Align,
     Name,
     Sound,
+    Music,
     Speaker,
     SpeakerFace,
     TextBlip

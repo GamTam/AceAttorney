@@ -15,12 +15,13 @@ MonoBehaviour:
   dialogueText:
   - '<name:Phoenix><textse:blipmale>Looking out this window, you can
 
-    really see
-    the whole city.'
+    really
+    see the whole city.'
   - 'If by "Whole City,"<p:short> you mean
 
     "Gatewater Hotel."'
   nextLine: {fileID: 0}
+  responses: []
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}
