@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: Object 3
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<sound:blipmale><name:Phoenix>Hmm...<p:normal>
+  - '<textse:blipmale><name:Phoenix>Hmm...<p:normal>
 
     Object 3...'
-  - '<sound:blipmale><name:Phoenix>According to some ancient philosophers,<p:tiny>
+  - '<textse:blipmale><name:Phoenix>According to some ancient philosophers,<p:tiny>
 
     three
     is the luckiest number.'
-  - '<sound:blipfemale><name:Maya>Hey Nick!<p:normal>
+  - '<textse:blipfemale><name:Maya>Hey Nick!<p:normal>
 
     Look at what I found!'
-  - <sound:blipmale><name:Phoenix><sp:1>Maya no!
+  - <textse:blipmale><name:Phoenix><sp:1>Maya no!
   - That's dangerous!
-  - '<sound:blipfemale><name:Maya><sp:2><anim:wave>Woah, Nick!<p:normal>
+  - '<textse:blipfemale><name:Maya><sp:2><anim:wave>Woah, Nick!<p:normal>
 
     I don''t
     feel so good!</anim>'

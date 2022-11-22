@@ -134,7 +134,7 @@ public class DialogueManager : MonoBehaviour
             DialogueUtility.ProcessInputString(lines.Dequeue(), out string totalTextMessage);
         TextAlignOptions[] textAlignInfo = SeparateOutTextAlignInfo(commands);
         String nameInfo = SeparateOutNameInfo(commands);
-        String soundInfo = SeparateOutSoundInfo(commands);
+        String soundInfo = SeparateOutTextBlipInfo(commands);
 
         for (int i = 0; i < textAlignInfo.Length; i++)
         {
@@ -186,10 +186,10 @@ public class DialogueManager : MonoBehaviour
         return null;
     }
     
-    private String SeparateOutSoundInfo(List<DialogueCommand> commands) {
+    private String SeparateOutTextBlipInfo(List<DialogueCommand> commands) {
         for (int i = 0; i < commands.Count; i++) {
             DialogueCommand command = commands[i];
-            if (command.type == DialogueCommandType.Sound) {
+            if (command.type == DialogueCommandType.TextBlip) {
                 return command.stringValue;
             }
         }

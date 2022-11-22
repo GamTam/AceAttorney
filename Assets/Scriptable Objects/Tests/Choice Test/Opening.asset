@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Opening
   m_EditorClassIdentifier: 
   dialogueText:
-  - <sound:blipmale><name:Judge>Mr. Wright...
+  - <textse:blipmale><name:Judge>Mr. Wright...
   - <color=green>Have you ever had gay thoughts?
   nextLine: {fileID: 0}
   responses:

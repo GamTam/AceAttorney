@@ -13,24 +13,24 @@ MonoBehaviour:
   m_Name: Chair
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<name:Phoenix><sound:blipmale>This chair is the heart and soul of
+  - '<name:Phoenix><textse:blipmale>This chair is the heart and soul of
 
     Wright
     & Co. Law Offices.'
   - 'Every client we''ve ever had has seen
 
     that chair.'
-  - '<name:Maya><sound:blipfemale>Except for Larry,<p:short> Will Powers,<p:short>
+  - '<name:Maya><textse:blipfemale>Except for Larry,<p:short> Will Powers,<p:short>
 
     Edgeworth,<p:short>
     Lana Skye,<p:short> Maggy...'
-  - <name:Phoenix><sound:blipmale>Okay, some haven't...
-  - '<name:Maya><sound:blipfemale>Max Galactica,<p:short> Matt Engarde,<p:short>
+  - <name:Phoenix><textse:blipmale>Okay, some haven't...
+  - '<name:Maya><textse:blipfemale>Max Galactica,<p:short> Matt Engarde,<p:short>
 
     Ron
     DeLite,<p:short> Terry Fawles,<p:short> Iris...'
-  - <name:Phoenix><sound:blipmale><sp:1>I GET IT!
-  - '<name:Maya><sound:blipfemale><sp:2>Wocky Kitaki,<p:short> Machi Tobaye,<p:short>
+  - <name:Phoenix><textse:blipmale><sp:1>I GET IT!
+  - '<name:Maya><textse:blipfemale><sp:2>Wocky Kitaki,<p:short> Machi Tobaye,<p:short>
 
     Vera
     Misham...'

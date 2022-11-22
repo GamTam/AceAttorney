@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Window
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<name:Phoenix><sound:blipmale>Looking out this window, you can
+  - '<name:Phoenix><textse:blipmale>Looking out this window, you can
 
     really see
     the whole city.'

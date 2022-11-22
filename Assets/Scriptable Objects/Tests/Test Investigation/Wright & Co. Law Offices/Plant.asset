@@ -13,22 +13,22 @@ MonoBehaviour:
   m_Name: Plant
   m_EditorClassIdentifier: 
   dialogueText:
-  - <name:Phoenix><sound:blipmale>Come to think of it...
+  - <name:Phoenix><textse:blipmale>Come to think of it...
   - I don't think I've ever watered this plant!
   - Maya, have you been taking care of it?
-  - "<name:Maya><sound:blipfemale>No.<p:normal> Why would I take care of \nsome crusty
+  - "<name:Maya><textse:blipfemale>No.<p:normal> Why would I take care of \nsome crusty
     old plant?"
-  - <name:Phoenix><sound:blipmale>How has this plant stayed alive?
+  - <name:Phoenix><textse:blipmale>How has this plant stayed alive?
   - If you didn't water it,<p:short> and I didn't water it...
-  - '<name:???><sound:NaN><color=green>Nyeh heh heh!<p:normal>
+  - '<name:???><textse:NaN><color=green>Nyeh heh heh!<p:normal>
 
     Those simpletons
     will never find out
 
     that it is <color=red>I<color=green> who waters the
     plant!'
-  - <name:Phoenix><sound:blipmale>Did you hear something just now?
-  - <name:Maya><sound:blipfemale>Nope!
+  - <name:Phoenix><textse:blipmale>Did you hear something just now?
+  - <name:Maya><textse:blipfemale>Nope!
   nextLine: {fileID: 0}
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}

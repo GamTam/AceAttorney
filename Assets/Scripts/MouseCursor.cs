@@ -12,6 +12,8 @@ public class MouseCursor : MonoBehaviour
     [SerializeField] private Sprite _selectedAgainSprite;
     [SerializeField] private float _moveSpeed = 3;
 
+    [SerializeField] private DialogueTrigger _noClues;
+
     private Camera _cam;
     private DialogueTrigger _selectedObj;
 
@@ -33,6 +35,8 @@ public class MouseCursor : MonoBehaviour
         _mousePos = _playerInput.actions["Investigation/MousePos"];
         _vCursor = _playerInput.actions["Investigation/MoveVector"];
         _select = _playerInput.actions["Investigation/Select"];
+
+        _selectedObj = _noClues;
         
         Debug.Log(_select);
         
@@ -65,7 +69,7 @@ public class MouseCursor : MonoBehaviour
 
         if (_playerInput.currentActionMap.name == "Investigation" && !_spriteRenderer.enabled)
         {
-            if (_selectedObj == null)
+            if (_selectedObj == _noClues)
             {
                 _spriteRenderer.sprite = _baseSprite;
             }
@@ -99,7 +103,7 @@ public class MouseCursor : MonoBehaviour
             if (_selectedObj == other.GetComponent<DialogueTrigger>())
             {
                 _spriteRenderer.sprite = _baseSprite;
-                _selectedObj = null;
+                _selectedObj = _noClues;
             }
         }
     }

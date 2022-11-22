@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Painting
   m_EditorClassIdentifier: 
   dialogueText:
-  - <name:Phoenix><sound:blipmale>Y'know,<p:tiny> looking at that painting...
+  - <name:Phoenix><textse:blipmale>Y'know,<p:tiny> looking at that painting...
   - I'm not really a big fan.
   - I should probably get rid of it soon...
-  - '<name:Maya><sound:blipfemale><sp:1>Nick!<p:short>
+  - '<name:Maya><textse:blipfemale><sp:1>Nick!<p:short>
 
     What the heck!?'
   - That was Mia's favourite painting!
-  - '<name:Phoenix><sound:blipmale><sp:2>Okay,<p:tiny> okay.<p:normal>
+  - '<name:Phoenix><textse:blipmale><sp:2>Okay,<p:tiny> okay.<p:normal>
 
     I''ll
     leave it up.'

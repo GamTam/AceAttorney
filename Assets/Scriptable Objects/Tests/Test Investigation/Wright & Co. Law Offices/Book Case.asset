@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Book Case
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<name:phoenix><sound:blipmale>I should probably read
+  - '<name:phoenix><textse:blipmale>I should probably read
 
     these books at some
     point.'
