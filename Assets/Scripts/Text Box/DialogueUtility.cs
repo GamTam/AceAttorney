@@ -11,24 +11,37 @@ public class DialogueUtility : MonoBehaviour
     private const string REMAINDER_REGEX = "(.*?((?=>)|(/|$)))";
     private const string PAUSE_REGEX_STRING = "<p:(?<pause>" + REMAINDER_REGEX + ")>";
     private static readonly Regex pauseRegex = new Regex(PAUSE_REGEX_STRING);
+    
     private const string SPEED_REGEX_STRING = "<sp:(?<speed>" + REMAINDER_REGEX + ")>";
     private static readonly Regex speedRegex = new Regex(SPEED_REGEX_STRING);
+    
+    private const string SHAKE_REGEX_STRING = "<shake:(?<shake>" + REMAINDER_REGEX + ")>";
+    private static readonly Regex shakeRegex = new Regex(SHAKE_REGEX_STRING);
+    
     private const string ANIM_START_REGEX_STRING = "<anim:(?<anim>" + REMAINDER_REGEX + ")>";
     private static readonly Regex animStartRegex = new Regex(ANIM_START_REGEX_STRING);
+    
     private const string ANIM_END_REGEX_STRING = "</anim>";
     private static readonly Regex animEndRegex = new Regex(ANIM_END_REGEX_STRING);
+    
     private const string ALIGN_REGEX_STRING = "<align:(?<align>" + REMAINDER_REGEX + ")>";
     private static readonly Regex alignRegex = new Regex(ALIGN_REGEX_STRING);
+    
     private const string NAME_REGEX_STRING = "<name:(?<name>" + REMAINDER_REGEX + ")>";
     private static readonly Regex nameRegex = new Regex(NAME_REGEX_STRING);
+    
     private const string TEXTBLIP_REGEX_STRING = "<textse:(?<textse>" + REMAINDER_REGEX + ")>";
     private static readonly Regex textBlipRegex = new Regex(TEXTBLIP_REGEX_STRING);
+    
     private const string SOUND_REGEX_STRING = "<se:(?<se>" + REMAINDER_REGEX + ")>";
     private static readonly Regex soundRegex = new Regex(SOUND_REGEX_STRING);
+    
     private const string MUSIC_REGEX_STRING = "<music:(?<music>" + REMAINDER_REGEX + ")>";
     private static readonly Regex musicRegex = new Regex(MUSIC_REGEX_STRING);
+    
     private const string SPEAKER_REGEX_STRING = "<face:(?<face>" + REMAINDER_REGEX + ")>";
     private static readonly Regex speakerRegex = new Regex(SPEAKER_REGEX_STRING);
+    
     private const string SPEAK_DIR_REGEX_STRING = "<facing:(?<dir>" + REMAINDER_REGEX + ")>";
     private static readonly Regex speakDirRegex = new Regex(SPEAK_DIR_REGEX_STRING);
 
@@ -51,6 +64,7 @@ public class DialogueUtility : MonoBehaviour
         processedMessage = HandleAnimEndTags(processedMessage, result);
         processedMessage = HandleNameTags(processedMessage, result);
         processedMessage = HandleTextBlipTags(processedMessage, result);
+        processedMessage = HandleShakeTags(processedMessage, result);
         processedMessage = HandleSoundTags(processedMessage, result);
         processedMessage = HandleMusicTags(processedMessage, result);
         processedMessage = HandleAlignTags(processedMessage, result);
@@ -159,6 +173,27 @@ public class DialogueUtility : MonoBehaviour
             });
         }
         processedMessage = Regex.Replace(processedMessage, MUSIC_REGEX_STRING, "");
+        return processedMessage;
+    }
+
+    private static string HandleShakeTags(string processedMessage, List<DialogueCommand> result)
+    {
+        MatchCollection speedMatches = shakeRegex.Matches(processedMessage);
+        foreach (Match match in speedMatches)
+        {
+            string stringVal = match.Groups["shake"].Value;
+            if (!float.TryParse(stringVal, out float val))
+            {
+                val = 0.25f;
+            }
+            result.Add(new DialogueCommand
+            {
+                position = VisibleCharactersUpToIndex(processedMessage, match.Index),
+                type = DialogueCommandType.Shake,
+                floatValue = val
+            });
+        }
+        processedMessage = Regex.Replace(processedMessage, SHAKE_REGEX_STRING, "");
         return processedMessage;
     }
 
@@ -314,6 +349,7 @@ public struct DialogueCommand
     public int position;
     public DialogueCommandType type;
     public float floatValue;
+    public float floatValueTwo;
     public string stringValue;
     public TextAnimationType textAnimValue;
     public TextAlignOptions textAlignOptions;
@@ -331,7 +367,8 @@ public enum DialogueCommandType
     Music,
     Speaker,
     SpeakerFace,
-    TextBlip
+    TextBlip,
+    Shake
 }
 
 public enum TextAlignOptions

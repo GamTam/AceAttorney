@@ -69,6 +69,7 @@ public class MusicManager : MonoBehaviour
         musicPlaying = s;
 
         s.source.volume = 1;
+        s.source.time = 0;
         s.source.Play();
 
         return s;

@@ -152,6 +152,14 @@ public class DialogueVertexAnimator {
                                 break;
                         }
                         break;
+                    case DialogueCommandType.Shake:
+                        Shake[] objects = (Shake[]) GameObject.FindObjectsOfType(typeof(Shake));
+                        foreach (Shake obj in objects)
+                        {
+                            obj.maxShakeDuration = command.floatValue;
+                            obj.enabled = true;
+                        }
+                        break;
                 }
                 commands.RemoveAt(i);
                 i--;

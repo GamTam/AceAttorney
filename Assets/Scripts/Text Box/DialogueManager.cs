@@ -57,8 +57,8 @@ public class DialogueManager : MonoBehaviour
         TMP_Text[] texts = _tempBox.GetComponentsInChildren<TMP_Text>();
         _advanceButton = _tempBox.GetComponentInChildren<Animator>().gameObject;
 
-        textBox = texts[0];
-        _nameBox = texts[1];
+        textBox = texts[1];
+        _nameBox = texts[0];
         _advanceButton.SetActive(false);
         dialogueVertexAnimator = new DialogueVertexAnimator(textBox);
 
