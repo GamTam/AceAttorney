@@ -3559,10 +3559,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3947108760989920369, guid: ba3440121be8c3c428a96e9d113a01f1, type: 3}
-      propertyPath: orthographic size
-      value: 5.41
-      objectReference: {fileID: 0}
     - target: {fileID: 3947108760989920373, guid: ba3440121be8c3c428a96e9d113a01f1, type: 3}
       propertyPath: m_Name
       value: Maya
@@ -3578,6 +3574,10 @@ PrefabInstance:
     - target: {fileID: 4330520439661195069, guid: ba3440121be8c3c428a96e9d113a01f1, type: 3}
       propertyPath: m_Name
       value: Mouth
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330520439661195069, guid: ba3440121be8c3c428a96e9d113a01f1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5621399913412548133, guid: ba3440121be8c3c428a96e9d113a01f1, type: 3}
       propertyPath: m_Size.x
@@ -3596,12 +3596,28 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7095797236876315651, guid: ba3440121be8c3c428a96e9d113a01f1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7095797236876315651, guid: ba3440121be8c3c428a96e9d113a01f1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7095797236876315651, guid: ba3440121be8c3c428a96e9d113a01f1, type: 3}
       propertyPath: m_LocalPosition.z
       value: 7.82
       objectReference: {fileID: 0}
     - target: {fileID: 8164263710624557189, guid: ba3440121be8c3c428a96e9d113a01f1, type: 3}
+      propertyPath: m_Size.x
+      value: 1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164263710624557189, guid: ba3440121be8c3c428a96e9d113a01f1, type: 3}
+      propertyPath: m_Size.y
+      value: 1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164263710624557189, guid: ba3440121be8c3c428a96e9d113a01f1, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba3440121be8c3c428a96e9d113a01f1, type: 3}

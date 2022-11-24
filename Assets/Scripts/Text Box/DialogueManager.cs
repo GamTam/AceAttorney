@@ -33,6 +33,7 @@ public class DialogueManager : MonoBehaviour
     private string _currentAnim;
 
     [SerializeField] private SwapCharacters _swap;
+    private bool _startedText = true;
 
     // Izzy
     private bool isThisDialoguePresentable;
@@ -108,7 +109,10 @@ public class DialogueManager : MonoBehaviour
     }
 
     private Coroutine typeRoutine = null;
-    public void NextLine(bool firstTime = false) {
+    public void NextLine(bool firstTime = false)
+    {
+        if (!_startedText) return;
+        
         if (dialogueVertexAnimator.textAnimating)
         {
             dialogueVertexAnimator.QuickEnd();
@@ -189,6 +193,7 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator StartText(List<DialogueCommand> commands, string totalTextMessage, string faceInfo)
     {
+        _startedText = false;
         if (_prevChar != _char && _char != null)
         {
             _prevChar = _char;
@@ -206,7 +211,7 @@ public class DialogueManager : MonoBehaviour
         
         if (_char != null) _char.Play($"{_currentAnim}_talk");
         typeRoutine = StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, _typingClip, null));
-            
+        _startedText = true;
     }
     
     private TextAlignOptions[] SeparateOutTextAlignInfo(List<DialogueCommand> commands) {

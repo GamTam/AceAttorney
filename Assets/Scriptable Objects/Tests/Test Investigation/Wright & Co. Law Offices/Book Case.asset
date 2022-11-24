@@ -31,6 +31,13 @@ MonoBehaviour:
 
     Couldn''t
     you tell?'
+  - <name:Maya><face:Maya><textse:blipfemale>So that was a detective?
+  - <name:Phoenix><face:Phoenix><textse:blipmale>Yes!
+  - '<name:Maya><face:Maya><em:smug><textse:blipfemale>Nick, you haven''t done anything
+
+    illegal,<p:short>
+    have you?'
+  - <name:Phoenix><face:Phoenix><textse:blipmale>Not that I'm aware of.
   nextLine: {fileID: 0}
   responses: []
   prevLine: {fileID: 0}
