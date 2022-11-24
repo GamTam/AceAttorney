@@ -20,24 +20,27 @@ MonoBehaviour:
   - 'They''re just sitting here gathering dust
 
     at the moment.'
-  - '<name:Gumshoe><face:Gumshoe><em:happy>Hello it is I detective
+  - <name:Gumshoe><face:Gumshoe><em:happy>Hey there,<p:tiny> pal!
+  - '<name:Maya><face:Maya><em:think><textse:blipfemale>Gumshoe?<p:normal>
 
-    Dick Gumshoe
-    here to tell you
+    What
+    are you doing here?'
+  - '<name:Gumshoe><face:Gumshoe><textse:blipmale><em:happy>Heard you were talking
+    about
 
-    that you need to read.'
-  - <name:Maya><face:Maya><em:think><textse:blipfemale>Who was that?
-  - '<name:Phoenix><face:Phoenix><textse:blipmale>Detective Dick Gumshoe!<p:normal>
+    reading...'
+  - 'Y''know,<p:short> I used to be a bit of a reader
 
-    Couldn''t
-    you tell?'
-  - <name:Maya><face:Maya><textse:blipfemale>So that was a detective?
-  - <name:Phoenix><face:Phoenix><textse:blipmale>Yes!
-  - '<name:Maya><face:Maya><em:smug><textse:blipfemale>Nick, you haven''t done anything
+    myself.'
+  - Read all kinds of books...
+  - '<name:Maya><face:Maya><em:smug><textse:blipfemale>Have you tried reading one
+    of
 
-    illegal,<p:short>
-    have you?'
-  - <name:Phoenix><face:Phoenix><textse:blipmale>Not that I'm aware of.
+    Nick''s legal documents?'
+  - <name:Gumshoe><face:Gumshoe><textse:blipmale><em:happy>...
+  - Well, I gotta be going.
+  - See ya,<p:tiny> pal!
+  - <name:Phoenix><face:NaN><color=#6ebdf0>(He ran out of the building...)
   nextLine: {fileID: 0}
   responses: []
   prevLine: {fileID: 0}

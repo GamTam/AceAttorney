@@ -87,7 +87,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (!(dialogueVertexAnimator == null) && !(_dialogue == null))
+        if (!(dialogueVertexAnimator == null) && !(_dialogue == null) && _startedText)
         {
             if (_advanceText.triggered)
             {
@@ -111,8 +111,6 @@ public class DialogueManager : MonoBehaviour
     private Coroutine typeRoutine = null;
     public void NextLine(bool firstTime = false)
     {
-        if (!_startedText) return;
-        
         if (dialogueVertexAnimator.textAnimating)
         {
             dialogueVertexAnimator.QuickEnd();
@@ -186,7 +184,6 @@ public class DialogueManager : MonoBehaviour
         }
         
         if (emotionInfo != null) _currentAnim = emotionInfo;
-        _advanceButton.SetActive(false);
         
         StartCoroutine(StartText(commands, totalTextMessage, faceInfo));
     }
@@ -194,10 +191,11 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator StartText(List<DialogueCommand> commands, string totalTextMessage, string faceInfo)
     {
         _startedText = false;
-        if (_prevChar != _char && _char != null)
+        if (_prevChar != _char && (_char != null || faceInfo == "NaN"))
         {
+            Debug.Log("a");
             _prevChar = _char;
-            _swap.StartSwap(faceInfo);
+            _swap.StartSwap(faceInfo, fadeIn:faceInfo!="NaN");
             _tempBox.SetActive(false);
             
             while (!_swap._done)
@@ -209,6 +207,7 @@ public class DialogueManager : MonoBehaviour
             _tempBox.SetActive(true);
         }
         
+        _advanceButton.SetActive(false);
         if (_char != null) _char.Play($"{_currentAnim}_talk");
         typeRoutine = StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, _typingClip, null));
         _startedText = true;

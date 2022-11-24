@@ -29,7 +29,6 @@ public class SwapCharacters : MonoBehaviour
                 float a = _mesh.material.color.a;
                 _mesh.material.color = new Color(1f, 1f, 1f, a - (speed * Time.deltaTime));
                 
-                Debug.Log(_mesh.material.color.a);
                 yield return null;
             }
 
