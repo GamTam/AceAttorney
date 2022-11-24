@@ -1360,10 +1360,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 712753127}
     m_Modifications:
-    - target: {fileID: 1024846794563887702, guid: 7414b34839310a442b2f259db727dd81, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.102
-      objectReference: {fileID: 0}
     - target: {fileID: 1571405367857916539, guid: 7414b34839310a442b2f259db727dd81, type: 3}
       propertyPath: m_Size.x
       value: 6.03
@@ -1378,11 +1374,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2730196035083763041, guid: 7414b34839310a442b2f259db727dd81, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3947108759830423511, guid: 7414b34839310a442b2f259db727dd81, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
+      propertyPath: m_LocalPosition.y
+      value: -6.56
       objectReference: {fileID: 0}
     - target: {fileID: 3947108760989920368, guid: 7414b34839310a442b2f259db727dd81, type: 3}
       propertyPath: m_RootOrder
@@ -1432,17 +1428,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gumshoe
       objectReference: {fileID: 0}
-    - target: {fileID: 4012484183190120831, guid: 7414b34839310a442b2f259db727dd81, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4012484183190120831, guid: 7414b34839310a442b2f259db727dd81, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -6.56
-      objectReference: {fileID: 0}
     - target: {fileID: 4330520439661195069, guid: 7414b34839310a442b2f259db727dd81, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5621399913412548133, guid: 7414b34839310a442b2f259db727dd81, type: 3}
       propertyPath: m_Size.x
@@ -1453,37 +1441,17 @@ PrefabInstance:
       value: 0.77
       objectReference: {fileID: 0}
     - target: {fileID: 5621399913412548133, guid: 7414b34839310a442b2f259db727dd81, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5621399913412548133, guid: 7414b34839310a442b2f259db727dd81, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6185722548109251665, guid: 7414b34839310a442b2f259db727dd81, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.102
-      objectReference: {fileID: 0}
-    - target: {fileID: 6185722548109251665, guid: 7414b34839310a442b2f259db727dd81, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.362
+      propertyPath: m_LocalPosition.z
+      value: 9.29
       objectReference: {fileID: 0}
     - target: {fileID: 7059740418818995680, guid: 7414b34839310a442b2f259db727dd81, type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7095797236876315651, guid: 7414b34839310a442b2f259db727dd81, type: 3}
-      propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7095797236876315651, guid: 7414b34839310a442b2f259db727dd81, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -6.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 7935643099054955018, guid: 7414b34839310a442b2f259db727dd81, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 1118828078289388814, guid: fc05f73360fd7af4fb750b804ef4f8d0, type: 3}
     - target: {fileID: 8164263710624557189, guid: 7414b34839310a442b2f259db727dd81, type: 3}
       propertyPath: m_Size.x
       value: 1.62
@@ -3004,7 +2972,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.3863506
+  orthographic size: 5.346535
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3378,7 +3346,7 @@ GameObject:
   - component: {fileID: 1991476421}
   m_Layer: 3
   m_Name: Character Plane
-  m_TagString: Untagged
+  m_TagString: CharacterPlane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3590,6 +3558,10 @@ PrefabInstance:
     - target: {fileID: 3947108760989920368, guid: ba3440121be8c3c428a96e9d113a01f1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947108760989920369, guid: ba3440121be8c3c428a96e9d113a01f1, type: 3}
+      propertyPath: orthographic size
+      value: 5.41
       objectReference: {fileID: 0}
     - target: {fileID: 3947108760989920373, guid: ba3440121be8c3c428a96e9d113a01f1, type: 3}
       propertyPath: m_Name

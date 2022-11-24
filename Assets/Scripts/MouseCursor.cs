@@ -14,6 +14,8 @@ public class MouseCursor : MonoBehaviour
     private Camera _cam;
     private DialogueTrigger _selectedObj;
 
+    private SwapCharacters _swap;
+
     bool _soTrue = false;
 
     private PlayerInput _playerInput;
@@ -25,6 +27,7 @@ public class MouseCursor : MonoBehaviour
     {
         _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         _cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        _swap = GameObject.FindWithTag("CharacterPlane").GetComponent<SwapCharacters>();
         
         transform.position = new Vector3(_cam.transform.position.x, _cam.transform.position.y, transform.position.z);
         _playerInput.SwitchCurrentActionMap("Investigation");
@@ -70,6 +73,7 @@ public class MouseCursor : MonoBehaviour
             {
                 _spriteRenderer.sprite = _baseSprite;
             }
+            _swap.StartSwap(fadeIn:false);
             _spriteRenderer.enabled = true;
         }
     }

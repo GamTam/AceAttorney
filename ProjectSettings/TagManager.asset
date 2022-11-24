@@ -11,6 +11,7 @@ TagManager:
   - Examinable
   - Dialogue Manager
   - BackgroundCam
+  - CharacterPlane
   layers:
   - Default
   - TransparentFX
