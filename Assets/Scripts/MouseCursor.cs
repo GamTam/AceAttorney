@@ -16,8 +16,6 @@ public class MouseCursor : MonoBehaviour
 
     private SwapCharacters _swap;
 
-    bool _soTrue = false;
-
     private PlayerInput _playerInput;
     private InputAction _mousePos;
     private InputAction _vCursor;

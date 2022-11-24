@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="">
+    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="Textbox advance button now doesn't show up when a character appears!">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Gumshoe/happy_talk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Gumshoe/happy_talk.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Demo Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Demo Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Test Investigation/Wright &amp; Co. Law Offices/Book Case.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Test Investigation/Wright &amp; Co. Law Offices/Book Case.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SwapCharacters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SwapCharacters.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,9 +31,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Demo Scene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Test Scene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Demo Scene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Test Scene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7e35836373b74b12bde8ba7fa4d53641167088/64/694d14e8/Match.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Test Scene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Test Scene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Demo Scene.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2HbggE0WWlPeR0AECSQgnpl4Gxg" />
   <component name="ProjectLevelVcsManager">
@@ -94,7 +93,7 @@
       <workItem from="1668667673624" duration="1795000" />
       <workItem from="1668726244591" duration="602000" />
       <workItem from="1669161121666" duration="2271000" />
-      <workItem from="1669317206211" duration="3423000" />
+      <workItem from="1669317206211" duration="3559000" />
     </task>
     <task id="LOCAL-00001" summary="Audio Prefab">
       <created>1668559907702</created>
@@ -110,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668670548135</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Textbox advance button now doesn't show up when a character appears!">
+      <created>1669322226178</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669322226178</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +142,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Audio Prefab" />
     <MESSAGE value="Dialogue Sounds!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dialogue Sounds!" />
+    <MESSAGE value="Textbox advance button now doesn't show up when a character appears!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Textbox advance button now doesn't show up when a character appears!" />
   </component>
 </project>

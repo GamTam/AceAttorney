@@ -36,7 +36,6 @@ public class CursorMovement : MonoBehaviour
     
     private MusicManager _musicManager;
     private SoundManager _soundManager;
-    private bool _continueSong = false;
 
     void Start()
     {

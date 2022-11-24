@@ -193,7 +193,6 @@ public class DialogueManager : MonoBehaviour
         _startedText = false;
         if (_prevChar != _char && (_char != null || faceInfo == "NaN"))
         {
-            Debug.Log("a");
             _prevChar = _char;
             _swap.StartSwap(faceInfo, fadeIn:faceInfo!="NaN");
             _tempBox.SetActive(false);
