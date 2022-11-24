@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -51,7 +48,7 @@ public class MouseCursor : MonoBehaviour
 
         if (_playerInput.currentControlScheme == "Mouse")
         {
-            cursorPos = Camera.main.ScreenToWorldPoint(_mousePos.ReadValue<Vector2>());
+            cursorPos = _cam.ScreenToWorldPoint(_mousePos.ReadValue<Vector2>());
             transform.position = cursorPos;
         }
         else

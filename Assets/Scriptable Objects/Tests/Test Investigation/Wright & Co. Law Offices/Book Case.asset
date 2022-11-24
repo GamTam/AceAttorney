@@ -13,14 +13,26 @@ MonoBehaviour:
   m_Name: Book Case
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<name:phoenix><textse:blipmale>I should probably read
+  - '<name:Phoenix><textse:blipmale>I should probably read
 
     these books at some
     point.'
   - 'They''re just sitting here gathering dust
 
     at the moment.'
+  - '<name:Gumshoe><face:Gumshoe><em:happy>Hello it is I detective
+
+    Dick Gumshoe
+    here to tell you
+
+    that you need to read.'
+  - <name:Maya><face:Maya><em:think><textse:blipfemale>Who was that?
+  - '<name:Phoenix><face:Phoenix><textse:blipmale>Detective Dick Gumshoe!<p:normal>
+
+    Couldn''t
+    you tell?'
   nextLine: {fileID: 0}
+  responses: []
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}

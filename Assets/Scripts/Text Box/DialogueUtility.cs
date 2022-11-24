@@ -42,6 +42,9 @@ public class DialogueUtility : MonoBehaviour
     private const string SPEAKER_REGEX_STRING = "<face:(?<face>" + REMAINDER_REGEX + ")>";
     private static readonly Regex speakerRegex = new Regex(SPEAKER_REGEX_STRING);
     
+    private const string EMOTION_REGEX_STRING = "<em:(?<emotion>" + REMAINDER_REGEX + ")>";
+    private static readonly Regex emotionRegex = new Regex(EMOTION_REGEX_STRING);
+    
     private const string SPEAK_DIR_REGEX_STRING = "<facing:(?<dir>" + REMAINDER_REGEX + ")>";
     private static readonly Regex speakDirRegex = new Regex(SPEAK_DIR_REGEX_STRING);
 
@@ -60,16 +63,21 @@ public class DialogueUtility : MonoBehaviour
 
         processedMessage = HandlePauseTags(processedMessage, result);
         processedMessage = HandleSpeedTags(processedMessage, result);
+        
         processedMessage = HandleAnimStartTags(processedMessage, result);
         processedMessage = HandleAnimEndTags(processedMessage, result);
+        
         processedMessage = HandleNameTags(processedMessage, result);
+        processedMessage = HandleSpeakerTags(processedMessage, result);
+        processedMessage = HandleEmotionTags(processedMessage, result);
+        processedMessage = HandleFacingTags(processedMessage, result);
+        
         processedMessage = HandleTextBlipTags(processedMessage, result);
         processedMessage = HandleShakeTags(processedMessage, result);
         processedMessage = HandleSoundTags(processedMessage, result);
         processedMessage = HandleMusicTags(processedMessage, result);
+        
         processedMessage = HandleAlignTags(processedMessage, result);
-        processedMessage = HandleSpeakerTags(processedMessage, result);
-        processedMessage = HandleFacingTags(processedMessage, result);
 
         return result;
     }
@@ -96,7 +104,7 @@ public class DialogueUtility : MonoBehaviour
         MatchCollection nameMatches = speakerRegex.Matches(processedMessage);
         foreach (Match match in nameMatches)
         {
-            string stringVal = match.Groups["speaker"].Value;
+            string stringVal = match.Groups["face"].Value;
             result.Add(new DialogueCommand
             {
                 position = VisibleCharactersUpToIndex(processedMessage, match.Index),
@@ -197,6 +205,22 @@ public class DialogueUtility : MonoBehaviour
         return processedMessage;
     }
 
+    private static string HandleEmotionTags(string processedMessage, List<DialogueCommand> result)
+    {
+        MatchCollection centerStartMatches = emotionRegex.Matches(processedMessage);
+        foreach (Match match in centerStartMatches)
+        {
+            string stringVal = match.Groups["emotion"].Value;
+            result.Add(new DialogueCommand
+            {
+                position = VisibleCharactersUpToIndex(processedMessage, match.Index),
+                type = DialogueCommandType.Emotion,
+                stringValue = stringVal
+            });
+        }
+        processedMessage = Regex.Replace(processedMessage, EMOTION_REGEX_STRING, "");
+        return processedMessage;
+    }
 
     private static string HandleAlignTags(string processedMessage, List<DialogueCommand> result)
     {
@@ -368,7 +392,8 @@ public enum DialogueCommandType
     Speaker,
     SpeakerFace,
     TextBlip,
-    Shake
+    Shake,
+    Emotion
 }
 
 public enum TextAlignOptions

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 9053655812348025313}
   - component: {fileID: 5702499714868092678}
   - component: {fileID: 6473255464413195718}
-  - component: {fileID: 4153874185249490635}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -76,21 +75,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4153874185249490635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 125933847571420528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d96363a016dc4347a2fa4959b66a438, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _transform: {fileID: 9053655812348025313}
-  maxShakeDuration: 0
-  multiplier: 100
 --- !u!1 &341282129166114294
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +301,6 @@ GameObject:
   - component: {fileID: 3409057346012092178}
   - component: {fileID: 3409057346012092172}
   - component: {fileID: 3409057346012092179}
-  - component: {fileID: 4634784428749974701}
   m_Layer: 5
   m_Name: Name Tag
   m_TagString: Untagged
@@ -383,21 +366,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4634784428749974701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3409057346012092177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d96363a016dc4347a2fa4959b66a438, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _transform: {fileID: 3409057346012092178}
-  maxShakeDuration: 0
-  multiplier: 100
 --- !u!1 &3409057346996304509
 GameObject:
   m_ObjectHideFlags: 0

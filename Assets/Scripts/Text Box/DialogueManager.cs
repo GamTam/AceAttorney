@@ -28,6 +28,12 @@ public class DialogueManager : MonoBehaviour
     private DialogueSO _dialogue;
     private bool _shownResponses;
 
+    private Animator _char;
+    private Animator _prevChar;
+    private string _currentAnim;
+
+    [SerializeField] private SwapCharacters _swap;
+
     // Izzy
     private bool isThisDialoguePresentable;
     private Queue<bool> isPresentable;
@@ -94,6 +100,7 @@ public class DialogueManager : MonoBehaviour
             
             if (!dialogueVertexAnimator.textAnimating)
             {
+                if (_char != null) _char.Play($"{_currentAnim}_idle");
                 if (lines.Count == 0 && _dialogue.HasResponses) return;
                 _advanceButton.SetActive(true);
             }
@@ -135,6 +142,8 @@ public class DialogueManager : MonoBehaviour
         TextAlignOptions[] textAlignInfo = SeparateOutTextAlignInfo(commands);
         String nameInfo = SeparateOutNameInfo(commands);
         String soundInfo = SeparateOutTextBlipInfo(commands);
+        String faceInfo = SeparateOutFaceInfo(commands);
+        String emotionInfo = SeparateOutEmotionInfo(commands);
 
         for (int i = 0; i < textAlignInfo.Length; i++)
         {
@@ -159,10 +168,45 @@ public class DialogueManager : MonoBehaviour
         
         if (nameInfo != null) _nameBox.text = nameInfo;
         if (soundInfo != null) _typingClip = soundInfo;
-
+        
+        if (faceInfo != null)
+        {
+            try
+            {
+                _char = GameObject.Find(faceInfo).GetComponent<Animator>();
+            }
+            catch
+            {
+                _char = null;
+            }
+        }
+        
+        if (emotionInfo != null) _currentAnim = emotionInfo;
         _advanceButton.SetActive(false);
-        typeRoutine =
-            StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, _typingClip, null));
+        
+        StartCoroutine(StartText(commands, totalTextMessage, faceInfo));
+    }
+
+    private IEnumerator StartText(List<DialogueCommand> commands, string totalTextMessage, string faceInfo)
+    {
+        if (_prevChar != _char && _char != null)
+        {
+            _prevChar = _char;
+            _swap.StartSwap(faceInfo);
+            _tempBox.SetActive(false);
+            
+            while (!_swap._done)
+            {
+                yield return null;
+            }
+
+            yield return new WaitForSeconds(0.25f);
+            _tempBox.SetActive(true);
+        }
+        
+        if (_char != null) _char.Play($"{_currentAnim}_talk");
+        typeRoutine = StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, _typingClip, null));
+            
     }
     
     private TextAlignOptions[] SeparateOutTextAlignInfo(List<DialogueCommand> commands) {
@@ -195,6 +239,27 @@ public class DialogueManager : MonoBehaviour
         }
         return null;
     }
+    
+    private String SeparateOutFaceInfo(List<DialogueCommand> commands) {
+        for (int i = 0; i < commands.Count; i++) {
+            DialogueCommand command = commands[i];
+            if (command.type == DialogueCommandType.Speaker) {
+                return command.stringValue;
+            }
+        }
+        return null;
+    }
+    
+    private String SeparateOutEmotionInfo(List<DialogueCommand> commands) {
+        for (int i = 0; i < commands.Count; i++) {
+            DialogueCommand command = commands[i];
+            if (command.type == DialogueCommandType.Emotion) {
+                return command.stringValue;
+            }
+        }
+        return null;
+    }
+    
 
     void EndDialogue()
     {

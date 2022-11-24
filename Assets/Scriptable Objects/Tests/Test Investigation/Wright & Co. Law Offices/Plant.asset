@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText:
   - <name:Phoenix><textse:blipmale>Come to think of it...
-  - I don't think I've ever watered this plant!
+  - I don't think I've ever watered this plant...
   - Maya, have you been taking care of it?
-  - "<name:Maya><textse:blipfemale>No.<p:normal> Why would I take care of \nsome
-    crusty old plant?"
-  - <name:Phoenix><textse:blipmale>How has this plant stayed alive?
+  - "<name:Maya><face:Maya><em:think><textse:blipfemale>No.<p:normal> Why would I
+    take care of \nsome crusty old plant?"
+  - <name:Phoenix><face:Phoenix><textse:blipmale>How has this plant stayed alive?
   - If you didn't water it,<p:short> and I didn't water it...
   - "<name:???><textse:NaN><music:stop><color=green>Nyeh heh heh!<p:normal> Those
     simpletons will \nnever find out that it is I,<p:short><color=red> <se:reveal>Grenadine\nBondledorf<color=green><p:short>
@@ -27,9 +27,9 @@ MonoBehaviour:
   - <music:Suspense>Maya...
   - Did you hear something just now?
   - <name:Maya><textse:blipfemale>...
-  - <music:stop>Nope!
+  - <music:stop><face:Maya>Nope!
   - Not a thing!
-  - <name:Phoenix><textse:blipmale>...
+  - <name:Phoenix><face:Phoenix><textse:blipmale>...
   - <music:Maya>Alright...
   nextLine: {fileID: 0}
   responses: []

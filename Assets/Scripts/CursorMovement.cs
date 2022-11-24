@@ -22,6 +22,7 @@ public class CursorMovement : MonoBehaviour
     
     [Header("Misc.")]
     [SerializeField] string _song = "SteelSamurai";
+    [SerializeField] SwapCharacters _swap;
 
     int _selection = 0;
 
@@ -125,6 +126,7 @@ public class CursorMovement : MonoBehaviour
         _soundManager.Play("confirm");
         StartCoroutine(TurnOff(_transparent));
         // StartCoroutine(TurnOff(_corner));
+        _swap.StartSwap(fadeIn:false);
         _fadeOut.startFading();
         _turnedOff = true;
         for(int i = 0; i < _examiningColliders.Length; i++)
