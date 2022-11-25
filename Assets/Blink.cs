@@ -21,7 +21,6 @@ public class Blink : MonoBehaviour
 
         if (_timer <= 0)
         {
-            Debug.Log(_anim);
             _timer = Random.Range(1f, 7f);
             _anim.Play("Blink", 1, 0);
         }

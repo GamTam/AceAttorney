@@ -117,8 +117,6 @@ public class MusicManager : MonoBehaviour
             audioSource = musicPlaying;
         }
         
-        Debug.Log(audioSource.name);
-        
         float currentTime = 0;
         float start = audioSource.source.volume;
 

@@ -36,8 +36,6 @@ public class MouseCursor : MonoBehaviour
 
         _selectedObj = _noClues;
         
-        Debug.Log(_select);
-        
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
