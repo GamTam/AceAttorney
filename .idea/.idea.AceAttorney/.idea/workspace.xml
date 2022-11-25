@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="Minor Optimisations">
+    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="This is a Prefabricated Object">
+      <change afterPath="$PROJECT_DIR$/Assets/Anim/Blink.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Anim/Blink.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Blink.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Blink.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anim/Gumshoe/Gumshoe.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Gumshoe/Gumshoe.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anim/Gumshoe/happy_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Gumshoe/happy_idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anim/Gumshoe/happy_talk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Gumshoe/happy_talk.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anim/Maya/Maya.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Maya/Maya.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anim/Maya/smug_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Maya/smug_idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anim/Maya/smug_talk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Maya/smug_talk.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anim/Maya/think_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Maya/think_idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Anim/Maya/think_talk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Maya/think_talk.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Gumshoe/Gumshoe.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Gumshoe/Gumshoe.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Maya/Maya.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Maya/Maya.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,16 +42,19 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad0a7939819048a0a161f66558c9886726800/61/6cede232/Animator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Demo Scene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Test Scene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Demo Scene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Test Scene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7e35836373b74b12bde8ba7fa4d53641167088/64/694d14e8/Match.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Test Scene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Demo Scene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Test Scene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Demo Scene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Blink.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Test Scene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Test Scene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Demo Scene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Test Scene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Test Scene.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2HbggE0WWlPeR0AECSQgnpl4Gxg" />
   <component name="ProjectLevelVcsManager">
@@ -93,7 +111,7 @@
       <workItem from="1668667673624" duration="1795000" />
       <workItem from="1668726244591" duration="602000" />
       <workItem from="1669161121666" duration="2271000" />
-      <workItem from="1669317206211" duration="4845000" />
+      <workItem from="1669317206211" duration="6822000" />
     </task>
     <task id="LOCAL-00001" summary="Audio Prefab">
       <created>1668559907702</created>
@@ -123,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669329432158</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="This is a Prefabricated Object">
+      <created>1669341428644</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669341428644</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +176,7 @@
     <MESSAGE value="Dialogue Sounds!" />
     <MESSAGE value="Textbox advance button now doesn't show up when a character appears!" />
     <MESSAGE value="Minor Optimisations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor Optimisations" />
+    <MESSAGE value="This is a Prefabricated Object" />
+    <option name="LAST_COMMIT_MESSAGE" value="This is a Prefabricated Object" />
   </component>
 </project>
