@@ -1015,9 +1015,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  _talkingObjects:
+  - {fileID: 0}
   _fadeIn: {fileID: 5678902790800400923}
   _fadeOut: {fileID: 5678902790800400920}
-  _song: Maya
+  _song: SteelSamurai
   _swap: {fileID: 0}
 --- !u!1 &5678902791862978426
 GameObject:

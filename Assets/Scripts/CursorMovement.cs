@@ -15,6 +15,7 @@ public class CursorMovement : MonoBehaviour
     [Header("Explore Elements")] 
     [SerializeField] private GameObject _investigationCursor;
     [SerializeField] private GameObject[] _examiningColliders;
+    [SerializeField] private GameObject[] _talkingObjects;
     
     [Header("Transition")]
     [SerializeField] private FadingIn _fadeIn;
@@ -50,10 +51,8 @@ public class CursorMovement : MonoBehaviour
         _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
         _musicManager.Play(_song);
         
-        for(int i = 0; i < _examiningColliders.Length; i++)
-        {
-            _examiningColliders[i].SetActive(false);
-        }
+        DissappearArrays(_examiningColliders);
+        DissappearArrays(_talkingObjects);
     }
     
     void Update()
@@ -116,6 +115,20 @@ public class CursorMovement : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            //Attempted input code, but I dont think I can do it this way.
+
+            //if(Input.GetKeyDown(KeyCode.Escape))
+            //{
+            //    Debug.Log("SoTrue!");
+            //    _turnedOff = false;
+            //    _soundManager.Play("confirm");
+            //    StartCoroutine(TurnOn(_transparent));
+            //    AppearArrays(_buttons);
+            //    _fadeIn.startFading();
+            //}
+        }
     }
 
     public void ExBtn()
@@ -128,14 +141,8 @@ public class CursorMovement : MonoBehaviour
         _swap.StartSwap(fadeIn:false);
         _fadeOut.startFading();
         _turnedOff = true;
-        for(int i = 0; i < _examiningColliders.Length; i++)
-        {
-            _examiningColliders[i].SetActive(true);
-        }
-        for(int i = 0; i < _buttons.Length; i++)
-        {
-            _buttons[i].SetActive(false);
-        }
+        AppearArrays(_examiningColliders);
+        DissappearArrays(_buttons);
         
         Instantiate(_investigationCursor);
     }
@@ -146,7 +153,7 @@ public class CursorMovement : MonoBehaviour
         _cursor.transform.position = _buttons[1].transform.position;
         _soundManager.Play("confirm");
         StartCoroutine(TurnOn(_transparent));
-        StartCoroutine(TurnOn(_corner));
+        //StartCoroutine(TurnOn(_corner));
         _fadeIn.startFading();
     }
 
@@ -155,6 +162,11 @@ public class CursorMovement : MonoBehaviour
         _selection = 2;
         _cursor.transform.position = _buttons[2].transform.position;
         _soundManager.Play("confirm");
+        StartCoroutine(TurnOff(_transparent));
+        _fadeOut.startFading();
+        _turnedOff = true;
+        DissappearArrays(_buttons);
+        AppearArrays(_talkingObjects);
     }
 
     public void PresBtn()
@@ -162,6 +174,10 @@ public class CursorMovement : MonoBehaviour
         _selection = 3;
         _cursor.transform.position = _buttons[3].transform.position;
         _soundManager.Play("confirm");
+        StartCoroutine(TurnOff(_transparent));
+        _fadeOut.startFading();
+        _turnedOff = true;
+        DissappearArrays(_buttons);
     }
 
     IEnumerator TurnOff(GameObject _item)
@@ -182,5 +198,21 @@ public class CursorMovement : MonoBehaviour
             yield return new WaitForSeconds(0.005f);
         }
         yield return new WaitForSeconds(0.15f);
+    }
+
+    public void DissappearArrays(GameObject[] array)
+    {
+        for(int i = 0; i < array.Length; i++)
+        {
+            array[i].SetActive(false);
+        }
+    }
+
+    public void AppearArrays(GameObject[] array)
+    {
+        for(int i = 0; i < array.Length; i++)
+        {
+            array[i].SetActive(true);
+        }
     }
 }
