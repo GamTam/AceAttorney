@@ -19,7 +19,7 @@ MonoBehaviour:
     left click, it should take you down the normal path!
   nextLine: {fileID: 11400000, guid: 6fef82fec830390408f1bd2ceed18e05, type: 2}
   responses: []
-  prevLine: {fileID: 0}
+  prevLine: {fileID: 11400000, guid: c6079f3b355f1614292e42029b18e7f8, type: 2}
   pressSequence: {fileID: 11400000, guid: 490163662b2527d44bfe9c3722b96840, type: 2}
   wrongPresentSequence: {fileID: 0}
   presentSequence: {fileID: 0}

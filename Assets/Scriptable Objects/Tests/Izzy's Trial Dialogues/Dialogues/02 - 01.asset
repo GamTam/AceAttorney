@@ -16,7 +16,7 @@ MonoBehaviour:
   - <name:Clark>You can present evidence to this dialogue!
   nextLine: {fileID: 0}
   responses: []
-  prevLine: {fileID: 0}
+  prevLine: {fileID: 11400000, guid: b5f9186b9d8534c4e9f09605bcf02d5a, type: 2}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 11400000, guid: 1a4e75435d5f6514385a407cdbfb1680, type: 2}
   presentSequence: {fileID: 0}
