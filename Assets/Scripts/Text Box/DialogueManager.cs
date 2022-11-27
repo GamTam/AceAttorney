@@ -37,15 +37,16 @@ public class DialogueManager : MonoBehaviour
     private bool _skipFade;
 
     // Izzy
-    private bool isThisDialoguePresentable;
-    private Queue<bool> isPresentable;
+    private DialogueSO currentDialogue;
+    private CrossExamination crossExamination;
 
     void Awake() {
         lines = new Queue<string>();
-        isPresentable = new Queue<bool>();
         _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         _advanceText = _playerInput.actions["Advance"];
         _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
+
+        crossExamination = FindObjectOfType<CrossExamination>();
     }
 
     public void StartText(DialogueSO linesIn)
@@ -84,10 +85,6 @@ public class DialogueManager : MonoBehaviour
         NextLine(true);
     }
 
-    public bool GetCurrentPresentablity() {
-        return isThisDialoguePresentable;
-    }
-
     private void Update()
     {
         if (!(dialogueVertexAnimator == null) && !(_dialogue == null) && _startedText)
@@ -111,9 +108,15 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public DialogueSO ReturnCurrentDialogue() {
+        return currentDialogue;
+    }
+
     private Coroutine typeRoutine = null;
     public void NextLine(bool firstTime = false)
     {
+        currentDialogue = _dialogue;
+
         if (dialogueVertexAnimator.textAnimating)
         {
             dialogueVertexAnimator.QuickEnd();
@@ -124,7 +127,12 @@ public class DialogueManager : MonoBehaviour
         
         if (lines.Count == 0)
         {
-            if (_dialogue.HasResponses)
+            if (_dialogue.HasPresentSequence || _dialogue.HasWrongPresentSequence) return;
+            
+            if (_dialogue.HasNextLine) {
+                StartText(_dialogue.nextLine);
+            }
+            else if (_dialogue.HasResponses)
             {
                 _responseHandler.ShowResponses(_dialogue.responses);
             }

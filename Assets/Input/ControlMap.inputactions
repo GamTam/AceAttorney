@@ -189,7 +189,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "WrongEvidence",
+                    "name": "Press",
                     "type": "Button",
                     "id": "61a5f00a-3d5f-4e4f-8239-6fd2b49bb4f1",
                     "expectedControlType": "Button",
@@ -257,11 +257,11 @@
                 {
                     "name": "",
                     "id": "b2289a3d-8ea7-4de8-9697-e3b0900fa5d5",
-                    "path": "<Keyboard>/o",
+                    "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "WrongEvidence",
+                    "action": "Press",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -1,51 +1,57 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class TrialController : MonoBehaviour
 {
     [SerializeField] private DialogueSO currentTrial;
-    [SerializeField] private GameObject scuffedEvidenceUI;
-    [SerializeField] private GameObject scuffedWrongEvidenceUI;
+    [SerializeField] private int maxIncorrects = 5;
+
+    [SerializeField] private TextMeshProUGUI currentIncorrectsText;
+    [SerializeField] private TextMeshProUGUI maxIncorrectsText;
+
+    private int currentIncorrects = 0;
     private DialogueManager dialogueManager;
+    private CrossExamination crossExamination;
 
     private PlayerInput playerInput;
     private InputAction presentingEvidence;
-    private InputAction wrongEvidence;
 
     private void Start() {
         dialogueManager = FindObjectOfType<DialogueManager>();
-        scuffedEvidenceUI.SetActive(false);
-        scuffedWrongEvidenceUI.SetActive(false);
+        crossExamination = FindObjectOfType<CrossExamination>();
+
+        currentIncorrectsText.text = currentIncorrects.ToString();
+        maxIncorrectsText.text = maxIncorrects.ToString();
 
         playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         playerInput.SwitchCurrentActionMap("Textbox");
         presentingEvidence = playerInput.actions["Textbox/PresentEvidence"];
-        wrongEvidence = playerInput.actions["Textbox/WrongEvidence"];
     }
 
     private void Update() {
         if (presentingEvidence.triggered) {
-            StartCoroutine(PresentEvidence());
-        }
-        if (wrongEvidence.triggered) {
-            StartCoroutine(WrongEvidenceShown());
+            PresentEvidence();
         }
     }
 
     public void StartTrial() {
+        currentIncorrects = 0;
+        currentIncorrectsText.text = currentIncorrects.ToString();
+        
         dialogueManager.StartText(currentTrial);
     }
 
-    public IEnumerator PresentEvidence() {
-        scuffedEvidenceUI.SetActive(true);
-        yield return new WaitForSeconds(2f);
-        scuffedEvidenceUI.SetActive(false);
+    public void PresentEvidence() {
+        crossExamination.StartCrossExamination();
     }
 
-    public IEnumerator WrongEvidenceShown() {
-        scuffedWrongEvidenceUI.SetActive(true);
-        yield return new WaitForSeconds(2f);
-        scuffedWrongEvidenceUI.SetActive(false);
+    public void IncreaseIncorrects() {
+        currentIncorrects++;
+        currentIncorrectsText.text = currentIncorrects.ToString();
+
+        if (currentIncorrects >= maxIncorrects) {
+            print("AGHHHHH!!!!");
+        }
     }
 }

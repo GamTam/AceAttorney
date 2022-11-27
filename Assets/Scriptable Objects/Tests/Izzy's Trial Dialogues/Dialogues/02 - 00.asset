@@ -10,18 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
-  m_Name: Window
+  m_Name: 02 - 00
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<name:Phoenix><textse:blipmale>Looking out this window, you can
-
-    really
-    see the whole city.'
-  - 'If by "Whole City,"<p:short> you mean
-
-    <anim:wave>"Gatewater Hotel."</anim>'
+  - <name:Cake>And now this...
+  - <name:Cake>This has options!
   nextLine: {fileID: 0}
-  responses: []
+  responses:
+  - _responseText: Only 1 though
+    _dialogue: {fileID: 11400000, guid: 65ff9b24e67ec0b4093384523f5ac70b, type: 2}
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}
