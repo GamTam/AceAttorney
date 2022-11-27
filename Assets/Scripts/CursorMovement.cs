@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 using UnityEngine.InputSystem;
 
 public class CursorMovement : MonoBehaviour
@@ -36,12 +34,12 @@ public class CursorMovement : MonoBehaviour
     bool _talk;
     bool _present;
     bool _talking;
-    bool _firstTime = true;
     
     private PlayerInput _playerInput;
     private InputAction _left;
     private InputAction _right;
     private InputAction _select;
+    private InputAction _back;
     
     private MusicManager _musicManager;
     private SoundManager _soundManager;
@@ -54,25 +52,18 @@ public class CursorMovement : MonoBehaviour
         _left = _playerInput.actions["Left"];
         _right = _playerInput.actions["Right"];
         _select = _playerInput.actions["Select"];
+        _back = _playerInput.actions["Back"];
         
         _musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();
         _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
         _musicManager.Play(_song);
-        
-        DissappearArrays(_examiningColliders);
-        DissappearArrays(_talkingObjects);
-        DissappearArrays(_talkingButtons);
-        _cursorTalking.SetActive(false);
+
+        StartCoroutine(WaitThenFade());
     }
     
     void Update()
     {
-        if(_firstTime == true)
-        {
-            _fadeIn.startFading();
-            _firstTime = false;
-        }
-        if(_turnedOff == false)
+        if(!_turnedOff)
         {
             //Left or A
             if(_left.triggered)
@@ -119,8 +110,6 @@ public class CursorMovement : MonoBehaviour
                         break;
                     case 3:
                         PresBtn();
-                        break;    
-                    default:
                         break;
                 }
             }
@@ -129,19 +118,18 @@ public class CursorMovement : MonoBehaviour
         {
             //Attempted input code, but I dont think I can do it this way.
 
-            if(_left.triggered)
+            if(_back.triggered)
             {
                 _turnedOff = false;
-                _soundManager.Play("confirm");
+                _soundManager.Play("back");
                 StartCoroutine(TurnOn(_transparent));
                 AppearArrays(_buttons);
                 _fadeIn.startFading();
-                if(_examine == true)
+                if(_examine)
                 {
-                    DissappearArrays(_examiningColliders);
                     _examine = false;
                 }
-                else if(_talk == true)
+                else if(_talk)
                 {
                     _cursorTalking.SetActive(false);
                     DissappearArrays(_talkingButtons);
@@ -150,14 +138,14 @@ public class CursorMovement : MonoBehaviour
                 }
             }
 
-            if(_talking == true)
+            if(_talking)
             {
                 //TalkReturn();
                 _talking = false;
             }
         }
 
-        if(_talkingPhase == true)
+        if(_talkingPhase)
         {
             if(_left.triggered)
             {
@@ -189,20 +177,7 @@ public class CursorMovement : MonoBehaviour
 
             if(_select.triggered)
             {
-                switch(_selection)
-                {
-                    case 0:
-                        Talk1();
-                        break;
-                    case 1:
-                        Talk2();
-                        break;
-                    case 2:
-                        Talk3();
-                        break;  
-                    default:
-                        break;
-                }
+                Talk(_selection);
             }
         }
     }
@@ -262,32 +237,10 @@ public class CursorMovement : MonoBehaviour
         DissappearArrays(_buttons);
     }
 
-    public void Talk1()
+    public void Talk(int button)
     {
-        _selection = 0;
-        _cursorTalking.transform.position = _talkingButtons[0].transform.position;
-        _soundManager.Play("confirm");
-        _cursorTalking.SetActive(false);
-        DissappearArrays(_talkingButtons);
-        DissappearArrays(_talkingObjects);
-        _talking = true;
-    }
-
-    public void Talk2()
-    {
-        _selection = 1;
-        _cursorTalking.transform.position = _talkingButtons[1].transform.position;
-        _soundManager.Play("confirm");
-        _cursorTalking.SetActive(false);
-        DissappearArrays(_talkingButtons);
-        DissappearArrays(_talkingObjects);
-        _talking = true;
-    }
-
-    public void Talk3()
-    {
-        _selection = 2;
-        _cursorTalking.transform.position = _talkingButtons[2].transform.position;
+        _selection = button;
+        _cursorTalking.transform.position = _talkingButtons[button].transform.position;
         _soundManager.Play("confirm");
         _cursorTalking.SetActive(false);
         DissappearArrays(_talkingButtons);
@@ -322,6 +275,12 @@ public class CursorMovement : MonoBehaviour
             yield return new WaitForSeconds(0.005f);
         }
         yield return new WaitForSeconds(0.15f);
+    }
+
+    private IEnumerator WaitThenFade()
+    {
+        yield return new WaitForSeconds(0.1f);
+        _fadeIn.startFading();
     }
 
     public void DissappearArrays(GameObject[] array)

@@ -34,6 +34,7 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private SwapCharacters _swap;
     private bool _startedText = true;
+    private bool _skipFade;
 
     // Izzy
     private bool isThisDialoguePresentable;
@@ -56,6 +57,8 @@ public class DialogueManager : MonoBehaviour
             Destroy(_tempBox.gameObject);
         }
         
+        _char = GameObject.Find(_swap._charName).GetComponent<Animator>();
+        _prevChar = _char;
         _tempBox = Instantiate(_textBoxPrefab);
         _tempBox.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
 
@@ -136,7 +139,8 @@ public class DialogueManager : MonoBehaviour
         {
             return;
         }
-        
+
+        _skipFade = false;
         this.EnsureCoroutineStopped(ref typeRoutine);
         dialogueVertexAnimator.textAnimating = false;
         List<DialogueCommand> commands =
@@ -146,6 +150,7 @@ public class DialogueManager : MonoBehaviour
         String soundInfo = SeparateOutTextBlipInfo(commands);
         String faceInfo = SeparateOutFaceInfo(commands);
         String emotionInfo = SeparateOutEmotionInfo(commands);
+        _skipFade = CheckSkipFade(commands);
 
         for (int i = 0; i < textAlignInfo.Length; i++)
         {
@@ -194,16 +199,19 @@ public class DialogueManager : MonoBehaviour
         if (_prevChar != _char && (_char != null || faceInfo == "NaN"))
         {
             _prevChar = _char;
-            _swap.StartSwap(faceInfo, fadeIn:faceInfo!="NaN");
-            _tempBox.SetActive(false);
+            _swap.StartSwap(faceInfo, fadeIn:faceInfo != "NaN", skipFade:_skipFade);
+            if (!_skipFade) _tempBox.SetActive(false);
             
             while (!_swap._done)
             {
                 yield return null;
             }
 
-            yield return new WaitForSeconds(0.25f);
-            _tempBox.SetActive(true);
+            if (!_skipFade)
+            {
+                yield return new WaitForSeconds(0.25f);
+                _tempBox.SetActive(true);
+            }
         }
         
         _advanceButton.SetActive(false);
@@ -261,6 +269,16 @@ public class DialogueManager : MonoBehaviour
             }
         }
         return null;
+    }
+    
+    private bool CheckSkipFade(List<DialogueCommand> commands) {
+        for (int i = 0; i < commands.Count; i++) {
+            DialogueCommand command = commands[i];
+            if (command.type == DialogueCommandType.SkipFade) {
+                return true;
+            }
+        }
+        return false;
     }
     
 
