@@ -7,6 +7,7 @@ public class ResponseHandler : MonoBehaviour
 {
     [SerializeField] private RectTransform responseButton;
     private DialogueManager _dialogueManager;
+    private bool _shownResponses;
     
     private void Start()
     {

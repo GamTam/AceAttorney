@@ -57,9 +57,13 @@ public class DialogueManager : MonoBehaviour
         {
             Destroy(_tempBox.gameObject);
         }
-        
-        _char = GameObject.Find(_swap._charName).GetComponent<Animator>();
-        _prevChar = _char;
+
+        try
+        {
+            _char = GameObject.Find(_swap._charName).GetComponent<Animator>();
+            _prevChar = _char;
+        } catch {}
+
         _tempBox = Instantiate(_textBoxPrefab);
         _tempBox.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
 
@@ -91,11 +95,10 @@ public class DialogueManager : MonoBehaviour
         {
             if (_advanceText.triggered)
             {
-                if (!(lines.Count == 0 && _dialogue.HasResponses)) NextLine();
+                NextLine();
             }
             else if (!dialogueVertexAnimator.textAnimating && lines.Count == 0 && _dialogue.HasResponses && !_shownResponses)
             {
-                _shownResponses = true;
                 NextLine();
             }
             
@@ -116,6 +119,7 @@ public class DialogueManager : MonoBehaviour
     public void NextLine(bool firstTime = false)
     {
         currentDialogue = _dialogue;
+        if (_shownResponses) return;
 
         if (dialogueVertexAnimator.textAnimating)
         {
@@ -134,6 +138,7 @@ public class DialogueManager : MonoBehaviour
             }
             else if (_dialogue.HasResponses)
             {
+                _shownResponses = true;
                 _responseHandler.ShowResponses(_dialogue.responses);
             }
             else
