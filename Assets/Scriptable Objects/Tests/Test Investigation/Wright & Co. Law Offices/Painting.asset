@@ -16,18 +16,17 @@ MonoBehaviour:
   - <name:Phoenix><textse:blipmale>Y'know,<p:tiny> looking at that painting...
   - I'm not really a big fan.
   - I should probably get rid of it soon...
-  - '<name:Maya><textse:blipfemale><se:hit><shake:><sp:1>Nick!<p:normal> <shake:>
+  - '<name:Maya><face:Maya><em:think><textse:blipfemale><se:hit><shake:><sp:1>Nick!<p:normal>
+    <shake:>
 
-    What
-    the heck!?'
+    What the heck!?'
   - <shake:>That was Mia's favourite painting!
-  - '<name:Phoenix><textse:blipmale><sp:2>Okay,<p:tiny> okay.<p:normal>
-
-    I''ll
-    leave it up.'
-  - <color=#6ebdf0>(First chance I get,<p:tiny> it's going in the trash.)
   nextLine: {fileID: 0}
-  responses: []
+  responses:
+  - _responseText: Okay, I'll leave it up!
+    _dialogue: {fileID: 11400000, guid: 969de70e910bcdb48aa66d4bb1e47ca9, type: 2}
+  - _responseText: It's going in the trash!
+    _dialogue: {fileID: 11400000, guid: d465ab8c491fce542a02068a7c62d92f, type: 2}
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}
