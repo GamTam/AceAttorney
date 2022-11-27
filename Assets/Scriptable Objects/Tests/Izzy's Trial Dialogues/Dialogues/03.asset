@@ -10,20 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
-  m_Name: Window
+  m_Name: 03
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<name:Phoenix><textse:blipmale>Looking out this window, you can
-
-    really
-    see the whole city.'
-  - 'If by "Whole City,"<p:short> you mean
-
-    <anim:wave>"Gatewater Hotel."</anim>'
+  - <name:James>The previous evidence was wrong! Present now to be correct!
   nextLine: {fileID: 0}
   responses: []
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
-  wrongPresentSequence: {fileID: 0}
+  wrongPresentSequence: {fileID: 11400000, guid: c6079f3b355f1614292e42029b18e7f8, type: 2}
   presentSequence: {fileID: 0}
-  evidence: []
+  evidence:
+  - {fileID: 11400000, guid: 5a958d73438d99a46ba69f1e5c940d88, type: 2}

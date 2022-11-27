@@ -10,20 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
-  m_Name: Yes
+  m_Name: 04
   m_EditorClassIdentifier: 
   dialogueText:
-  - <name:Phoenix>Yes I have, Your Honor.
-  - '<name:Judge>Would you mind telling the court
-
-    who it was about?'
-  - '<name:Phoenix>I-<p:short> I''d rather not,
-
-    Your Honor.'
+  - <name:Jimothy>Oops! Wrong again! Present again!
   nextLine: {fileID: 0}
   responses: []
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}
-  presentSequence: {fileID: 0}
-  evidence: []
+  presentSequence: {fileID: 11400000, guid: 6df1cbb8e4823e6409d11da459e7a480, type: 2}
+  evidence:
+  - {fileID: 11400000, guid: 4239c1ec287d4a24eb648e3ff9fd6d68, type: 2}

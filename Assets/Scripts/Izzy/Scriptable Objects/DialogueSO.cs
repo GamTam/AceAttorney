@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Dialogue", menuName = "AceAttorney GDW/Dialogue")]
@@ -12,6 +11,7 @@ public class DialogueSO : ScriptableObject
     public Response[] responses;
 
     public bool HasResponses => responses != null && responses.Length > 0;
+    public bool HasNextLine => nextLine != null;
     
     [Header("Cross Examination")] 
     public DialogueSO prevLine;
@@ -19,4 +19,12 @@ public class DialogueSO : ScriptableObject
     public DialogueSO wrongPresentSequence;
     public DialogueSO presentSequence;
     public EvidenceSO[] evidence;
+
+    public bool HasPresentSequence => presentSequence != null;
+    public bool HasWrongPresentSequence => wrongPresentSequence != null;
+    public bool HasPressingSequence => pressSequence != null;
+
+    public EvidenceSO[] ReturnListOfEvidence() {
+        return evidence;
+    }
 }
