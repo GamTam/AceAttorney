@@ -47,6 +47,9 @@ public class DialogueUtility : MonoBehaviour
     
     private const string SPEAK_DIR_REGEX_STRING = "<facing:(?<dir>" + REMAINDER_REGEX + ")>";
     private static readonly Regex speakDirRegex = new Regex(SPEAK_DIR_REGEX_STRING);
+    
+    private const string SKIPFADE_DIR_REGEX_STRING = "<skipfade>";
+    private static readonly Regex skipFadeRegex = new Regex(SKIPFADE_DIR_REGEX_STRING);
 
     private static readonly Dictionary<string, float> pauseDictionary = new Dictionary<string, float>{
         { "tiny", .1f },
@@ -78,6 +81,8 @@ public class DialogueUtility : MonoBehaviour
         processedMessage = HandleMusicTags(processedMessage, result);
         
         processedMessage = HandleAlignTags(processedMessage, result);
+        
+        processedMessage = HandleSkipFadeTags(processedMessage, result);
 
         return result;
     }
@@ -311,6 +316,21 @@ public class DialogueUtility : MonoBehaviour
         return processedMessage;
     }
     
+    private static string HandleSkipFadeTags(string processedMessage, List<DialogueCommand> result)
+    {
+        MatchCollection skipFadeMatches = skipFadeRegex.Matches(processedMessage);
+        foreach (Match match in skipFadeMatches)
+        {
+            result.Add(new DialogueCommand
+            {
+                position = VisibleCharactersUpToIndex(processedMessage, match.Index),
+                type = DialogueCommandType.SkipFade,
+            });
+        }
+        processedMessage = Regex.Replace(processedMessage, SKIPFADE_DIR_REGEX_STRING, "");
+        return processedMessage;
+    }
+    
     private static TextAlignOptions GetTextAlignType(string stringVal)
     {
         TextAlignOptions result;
@@ -393,7 +413,8 @@ public enum DialogueCommandType
     SpeakerFace,
     TextBlip,
     Shake,
-    Emotion
+    Emotion,
+    SkipFade
 }
 
 public enum TextAlignOptions

@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
+  m_Name: Gumshoe
+  m_EditorClassIdentifier: 
+  dialogueText:
+  - '<name:Phoenix><textse:blipmale>Hey Maya,<p:normal>
+
+    have you seen Gumshoe
+    around?'
+  - '<name:Maya><face:Maya><em:think><textse:blipfemale>Gumshoe?<p:normal>
+
+    Nope!<p:normal>
+    Why would he be here Nick?'
+  - <name:Gumshoe><face:NaN><textse:blipmale>AAAAAAAAAAHHHHHHHHHHHHH!
+  - <name:Gumshoe><skipfade><face:Gumshoe><textse:blipmale><em:happy><se:hit><shake:><sp:1>Hey
+    pal!<p:normal> I heard I was needed so im here!
+  - <name:Maya><face:Maya><em:think><sp:2><textse:blipfemale>Gumshoe?
+  - <name:Maya><face:Maya><em:smug><se:hit><shake:><sp:1>What the heck are you doing
+    here!?
+  - <name:Phoenix><textse:blipmale><face:NaN><color=#6ebdf0><sp:2>(He just said why
+    he's here Maya...)
+  - <name:Phoenix>Anyways,<p:normal> I wanted to ask you something Detective Gumshoe.
+  - <name:Gumshoe><face:Gumshoe><textse:blipmale><em:happy>Okay,<p:short> ask away.
+  - <name:Maya><face:Maya><em:smug><textse:blipfemale><se:hit><shake:><sp:1>Are you
+    a himbo?
+  - <name:Gumshoe><face:Gumshoe><textse:blipmale><sp:2><em:happy>...
+  - <name:Phoenix><face:NaN><color=#6ebdf0>(He ran out of the building...)
+  - <name:Maya><face:Maya><em:smug><textse:blipfemale><sp:1> Oh okay bye!
+  nextLine: {fileID: 0}
+  responses: []
+  prevLine: {fileID: 0}
+  pressSequence: {fileID: 0}
+  wrongPresentSequence: {fileID: 0}
+  presentSequence: {fileID: 0}
+  evidence: []
