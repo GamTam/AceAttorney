@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
-  m_Name: 06
+  m_Name: 06 (End)
   m_EditorClassIdentifier: 
   dialogueText:
-  - <name:Cathy>This is normal sequence!
-  nextLine: {fileID: 11400000, guid: 3c59dc8fa3f35e54383284d0c15f9f8e, type: 2}
+  - <name:Izzy>This is it for now! Hope it was bug-free!
+  nextLine: {fileID: 0}
   responses: []
-  prevLine: {fileID: 0}
+  prevLine: {fileID: 11400000, guid: 6fef82fec830390408f1bd2ceed18e05, type: 2}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}
   presentSequence: {fileID: 0}

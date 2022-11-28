@@ -11,6 +11,7 @@ public class CrossExamination : MonoBehaviour
 
     private PlayerInput playerInput;
     private InputAction pressing;
+    private InputAction previousLine;
 
     private void Start() {
         dialogueManager = FindObjectOfType<DialogueManager>();
@@ -19,6 +20,7 @@ public class CrossExamination : MonoBehaviour
         playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         playerInput.SwitchCurrentActionMap("Textbox");
         pressing = playerInput.actions["Textbox/Press"];
+        previousLine = playerInput.actions["Textbox/PreviousLine"];
     }
 
     private void Update() {
@@ -26,6 +28,9 @@ public class CrossExamination : MonoBehaviour
 
         if (pressing.triggered) {
             Press();
+        }
+        if (previousLine.triggered) {
+            dialogueManager.StartText(currentDialogue.prevLine);
         }
     }
 

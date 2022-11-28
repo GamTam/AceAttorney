@@ -19,7 +19,7 @@ MonoBehaviour:
   responses:
   - _responseText: Only 1 though
     _dialogue: {fileID: 11400000, guid: 65ff9b24e67ec0b4093384523f5ac70b, type: 2}
-  prevLine: {fileID: 0}
+  prevLine: {fileID: 11400000, guid: 0d89e76e589538f4396f5d4a5a7e20bf, type: 2}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}
   presentSequence: {fileID: 0}
