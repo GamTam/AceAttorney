@@ -22,6 +22,7 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector] public DialogueVertexAnimator dialogueVertexAnimator;
     private bool movingText;
     private InputAction _advanceText;
+    private MusicManager _musicManager;
     private SoundManager _soundManager;
 
     public ResponseHandler _responseHandler;
@@ -49,6 +50,7 @@ public class DialogueManager : MonoBehaviour
         _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         _advanceText = _playerInput.actions["Advance"];
         _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
+        _musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();
 
         crossExamination = FindObjectOfType<CrossExamination>();
     }
@@ -229,6 +231,8 @@ public class DialogueManager : MonoBehaviour
                 textBox.alignment = TextAlignmentOptions.TopRight;
             }
         }
+
+        if (line.StopMusic) _musicManager.Stop();
         
         if (nameInfo != null) _nameBox.text = nameInfo;
         if (soundInfo != null) _typingClip = soundInfo;

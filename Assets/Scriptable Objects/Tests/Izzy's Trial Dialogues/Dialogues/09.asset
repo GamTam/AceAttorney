@@ -27,5 +27,6 @@ MonoBehaviour:
   prevLine: {fileID: 11400000, guid: 6b68c86dd4491de46ac0023a233064ee, type: 2}
   pressSequence: {fileID: 11400000, guid: 3bd5e559d9b89d6488e7fbca9be743de, type: 2}
   wrongPresentSequence: {fileID: 11400000, guid: 852dc18a4257aeb49b5c9874e8780077, type: 2}
-  presentSequence: {fileID: 0}
-  evidence: []
+  presentSequence: {fileID: 11400000, guid: 8f3454753c9042e4998714da27a46cc7, type: 2}
+  evidence:
+  - {fileID: 11400000, guid: 416f81d697033a64eb9078ab422f547c, type: 2}
