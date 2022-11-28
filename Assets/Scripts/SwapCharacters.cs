@@ -38,7 +38,7 @@ public class SwapCharacters : MonoBehaviour
 
         if (newChar != "NaN")
         {
-            _mesh.material.mainTexture = (Resources.Load($"Material/{newChar}Mat", typeof(Material)) as Material).mainTexture;
+            _mesh.material = Resources.Load($"Material/{newChar}Mat", typeof(Material)) as Material;
             _charName = newChar;
             if (!skipFade) yield return new WaitForSeconds(0.1f);
         }

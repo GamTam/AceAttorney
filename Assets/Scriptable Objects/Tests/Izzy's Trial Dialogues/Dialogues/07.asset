@@ -15,8 +15,11 @@ MonoBehaviour:
   dialogueText:
   - _name: Sahwit
     _knownName: 1
+    _char: NaN
+    _anim: default
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: '<color=green>However, the phone in her
 

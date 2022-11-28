@@ -206,8 +206,8 @@ public class DialogueManager : MonoBehaviour
         TextAlignOptions[] textAlignInfo = SeparateOutTextAlignInfo(commands);
         String nameInfo = line.KnownName ? line.Name : "???";
         String soundInfo = line.BlipSound;
-        String faceInfo = SeparateOutFaceInfo(commands);
-        String emotionInfo = SeparateOutEmotionInfo(commands);
+        String faceInfo = line.Char;
+        String emotionInfo = line.Anim;
         Interjection interjection = line.Interjection;
         _skipFade = line.SkipFade;
 
@@ -296,7 +296,6 @@ public class DialogueManager : MonoBehaviour
         {
             _tempBox.SetActive(false);
             yield return new WaitForSeconds(1);
-            _tempBox.SetActive(true);
             Destroy(obj);
         }
         
@@ -314,9 +313,10 @@ public class DialogueManager : MonoBehaviour
             if (!_skipFade)
             {
                 yield return new WaitForSeconds(0.25f);
-                _tempBox.SetActive(true);
             }
         }
+        
+        _tempBox.SetActive(true);
         
         _advanceButton.gameObject.SetActive(false);
         if (_char != null) _char.Play($"{_currentAnim}_talk");
@@ -333,26 +333,6 @@ public class DialogueManager : MonoBehaviour
             }
         }
         return tempResult.ToArray();
-    }
-    
-    private String SeparateOutFaceInfo(List<DialogueCommand> commands) {
-        for (int i = 0; i < commands.Count; i++) {
-            DialogueCommand command = commands[i];
-            if (command.type == DialogueCommandType.Speaker) {
-                return command.stringValue;
-            }
-        }
-        return null;
-    }
-    
-    private String SeparateOutEmotionInfo(List<DialogueCommand> commands) {
-        for (int i = 0; i < commands.Count; i++) {
-            DialogueCommand command = commands[i];
-            if (command.type == DialogueCommandType.Emotion) {
-                return command.stringValue;
-            }
-        }
-        return null;
     }
     
 

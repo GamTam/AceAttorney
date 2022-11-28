@@ -6,6 +6,8 @@ public class TBLine
 {
     [SerializeField] private string _name;
     [SerializeField] private bool _knownName = true;
+    [SerializeField] private string _char;
+    [SerializeField] private string _anim;
     [Header("")][SerializeField] private string _blipSound;
     [SerializeField] private bool _skipFade;
     [SerializeField] private bool _stopMusic;
@@ -13,6 +15,8 @@ public class TBLine
     [Header("")][SerializeField][TextArea(10, 5)] private string _dialogue;
 
     public string Name => _name;
+    public string Char => _char;
+    public string Anim => _anim;
     public bool KnownName => _knownName;
     public string BlipSound => _blipSound;
     public Interjection Interjection => _interjection;

@@ -15,46 +15,64 @@ MonoBehaviour:
   dialogueText:
   - _name: Phoenix
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 2
     _dialogue: '1:00 PM!
 
       Are you certain?'
   - _name: Sahwit
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: 'Yes.
 
       Absolutely.'
   - _name: Phoenix
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: '<color=#6ebdf0>(Hmm... He seems really
 
       confident.)'
   - _name: Mia
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipfemale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: <color=red><se:reveal>1:00 PM</color>?
   - _name: Mia
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipfemale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: 'Wright. Doesn''t that
 
       seem strange to you?'
   - _name: Mia
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipfemale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: '<se:realization>Present some <color=red>evidence</color>
 
