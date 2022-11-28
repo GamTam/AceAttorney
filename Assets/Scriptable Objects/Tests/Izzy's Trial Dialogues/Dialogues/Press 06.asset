@@ -13,20 +13,36 @@ MonoBehaviour:
   m_Name: Press 06
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<name:Phoenix>You "thought" to call the
+  - _name: Phoenix
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 2
+    _dialogue: 'You "thought" to call the
 
-    police? Does that mean you
+      police? Does that mean you
 
-    didn''t
-    actually call them?'
-  - '<name:Payne>Please, please... Listen to
+      didn''t
+      actually call them?'
+  - _name: Payne
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: 'Please, please... Listen to
 
-    the rest of the testimony.'
-  - 'You thought to call the
+      the rest of the testimony.'
+  - _name: Payne
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: 'You thought to call the
 
-    police... What happened next?'
+      police... What happened next?'
   nextLine: {fileID: 11400000, guid: 6fef82fec830390408f1bd2ceed18e05, type: 2}
   responses: []
+  isCrossExamination: 0
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}

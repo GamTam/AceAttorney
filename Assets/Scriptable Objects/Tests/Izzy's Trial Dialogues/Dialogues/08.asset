@@ -13,15 +13,19 @@ MonoBehaviour:
   m_Name: 08
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<textse:blipmale><name:Sahwit><color=green>I went to a nearby park and
+  - _name: Sahwit
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: '<color=green>I went to a nearby park and
 
-    found
-    a public phone.'
+      found a public phone.'
   nextLine: {fileID: 11400000, guid: 5f582a89f76f663438dc4b3cfe6c9247, type: 2}
   responses: []
   isCrossExamination: 1
   prevLine: {fileID: 11400000, guid: 6fef82fec830390408f1bd2ceed18e05, type: 2}
   pressSequence: {fileID: 11400000, guid: 83125b0059ba3064192f0a19b345138a, type: 2}
-  wrongPresentSequence: {fileID: 0}
+  wrongPresentSequence: {fileID: 11400000, guid: 852dc18a4257aeb49b5c9874e8780077, type: 2}
   presentSequence: {fileID: 0}
   evidence: []

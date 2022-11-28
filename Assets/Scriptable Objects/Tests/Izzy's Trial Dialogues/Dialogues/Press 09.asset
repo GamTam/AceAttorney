@@ -13,23 +13,53 @@ MonoBehaviour:
   m_Name: Press 09
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<name:Phoenix>1:00 PM!
+  - _name: Phoenix
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 2
+    _dialogue: '1:00 PM!
 
-    Are you certain?'
-  - '<name:Sahwit>Yes.
+      Are you certain?'
+  - _name: Sahwit
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: 'Yes.
 
-    Absolutely.'
-  - '<name:Phoenix><color=#6ebdf0>(Hmm... He seems really
+      Absolutely.'
+  - _name: Phoenix
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: '<color=#6ebdf0>(Hmm... He seems really
 
-    confident.)'
-  - <name:Mia><textse:blipfemale><color=red><se:reveal>1:00 PM</color>?
-  - 'Wright. Doesn''t that
+      confident.)'
+  - _name: Mia
+    _knownName: 1
+    _blipSound: blipfemale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: <color=red><se:reveal>1:00 PM</color>?
+  - _name: Mia
+    _knownName: 1
+    _blipSound: blipfemale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: 'Wright. Doesn''t that
 
-    seem strange to you?'
-  - '<se:realization>Present some <color=red>evidence</color>
+      seem strange to you?'
+  - _name: Mia
+    _knownName: 1
+    _blipSound: blipfemale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: '<se:realization>Present some <color=red>evidence</color>
 
-    to <color=red>contradict</color>
-    him!'
+      to
+      <color=red>contradict</color> him!'
   nextLine: {fileID: 11400000, guid: 16740be752e338448bdac7c37246d551, type: 2}
   responses: []
   isCrossExamination: 0

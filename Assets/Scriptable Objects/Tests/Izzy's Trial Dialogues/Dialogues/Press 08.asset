@@ -13,21 +13,42 @@ MonoBehaviour:
   m_Name: Press 08
   m_EditorClassIdentifier: 
   dialogueText:
-  - <name:Phoenix>Why use a public phone?
-  - '<name:Sahwit>Well, you see, I don''t
+  - _name: Phoenix
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 2
+    _dialogue: Why use a public phone?
+  - _name: Sahwit
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: 'Well, you see, I don''t
 
-    have a cell phone.'
-  - 'And, being in the middle of the
+      have a cell phone.'
+  - _name: Sahwit
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: 'And, being in the middle of the
 
-    afternoon, there was no answer
+      afternoon, there was no answer
 
-    at
-    the nearby apartments.'
-  - '<name:Phoenix>Ah, right... what time
+      at
+      the nearby apartments.'
+  - _name: Phoenix
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: 'Ah, right... what time
 
-    did you call again?'
+      did you call again?'
   nextLine: {fileID: 11400000, guid: 5f582a89f76f663438dc4b3cfe6c9247, type: 2}
   responses: []
+  isCrossExamination: 0
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}

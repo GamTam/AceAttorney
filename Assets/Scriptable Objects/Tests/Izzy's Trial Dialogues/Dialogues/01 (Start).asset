@@ -13,17 +13,22 @@ MonoBehaviour:
   m_Name: 01 (Start)
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<textse:blipmale><name:Sahwit><color=green>I was going door-to-door,
+  - _name: Sahwit
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: '<color=green>I was going door-to-door,
 
-    selling
-    subscriptions when I saw
+      selling subscriptions
+      when I saw
 
-    a man fleeing an apartment.'
+      a man fleeing an apartment.'
   nextLine: {fileID: 11400000, guid: b5f9186b9d8534c4e9f09605bcf02d5a, type: 2}
   responses: []
   isCrossExamination: 1
   prevLine: {fileID: 0}
   pressSequence: {fileID: 11400000, guid: 8441233167efdef408d5cd598c8d3792, type: 2}
-  wrongPresentSequence: {fileID: 0}
+  wrongPresentSequence: {fileID: 11400000, guid: 852dc18a4257aeb49b5c9874e8780077, type: 2}
   presentSequence: {fileID: 0}
   evidence: []

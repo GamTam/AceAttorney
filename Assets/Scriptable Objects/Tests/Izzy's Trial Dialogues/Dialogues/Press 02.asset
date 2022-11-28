@@ -13,21 +13,47 @@ MonoBehaviour:
   m_Name: Press 02
   m_EditorClassIdentifier: 
   dialogueText:
-  - <name:Phoenix>Half-open... you say?
-  - '<name:Sahwit>Yes, yes, the door was
+  - _name: Phoenix
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 2
+    _dialogue: Half-open... you say?
+  - _name: Sahwit
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: 'Yes, yes, the door was
 
-    open halfway. Yes.'
-  - 'I watched for a moment, but
+      open halfway. Yes.'
+  - _name: Sahwit
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: 'I watched for a moment, but
 
-    no one came close to the door.'
-  - '"That''s odd, in a big city
+      no one came close to the door.'
+  - _name: Sahwit
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: '"That''s odd, in a big city
 
-    like this," I thought...'
-  - '<name:Payne>I see.<p:tiny>
+      like this," I thought...'
+  - _name: Payne
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: 'I see.<p:tiny>
 
-    And what happened next?'
+      And what happened next?'
   nextLine: {fileID: 11400000, guid: 1a4e75435d5f6514385a407cdbfb1680, type: 2}
   responses: []
+  isCrossExamination: 0
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}

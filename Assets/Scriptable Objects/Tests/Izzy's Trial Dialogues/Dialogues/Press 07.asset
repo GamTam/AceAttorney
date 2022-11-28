@@ -13,33 +13,74 @@ MonoBehaviour:
   m_Name: Press 07
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<name:Phoenix>The phone in her apartment
+  - _name: Phoenix
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 2
+    _dialogue: 'The phone in her apartment
 
-    wasn''t working?'
-  - '<name:Sahwit>Yes. I mean, no.
+      wasn''t working?'
+  - _name: Sahwit
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: 'Yes. I mean, no.
 
-    No, it wasn''t. Right.'
-  - '<name:Phoenix>But you said you didn''t
+      No, it wasn''t. Right.'
+  - _name: Phoenix
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: 'But you said you didn''t
 
-    go into the apartment...
+      go into the apartment...
 
-    or
-    did you?'
-  - '<name:Sahwit>Oh, oh, that? I can explain
+      or
+      did you?'
+  - _name: Sahwit
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: 'Oh, oh, that? I can explain
 
-    that!'
-  - 'There was a cordless phone
+      that!'
+  - _name: Sahwit
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: 'There was a cordless phone
 
-    on a shelf in the entranceway.'
-  - 'I reached inside and tried
+      on a shelf in the entranceway.'
+  - _name: Sahwit
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: 'I reached inside and tried
 
-    using that to call...'
-  - '<name:Payne>And that phone wasn''t
+      using that to call...'
+  - _name: Payne
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: 'And that phone wasn''t
 
-    working, correct?'
-  - What happened next?
+      working, correct?'
+  - _name: Payne
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: What happened next?
   nextLine: {fileID: 11400000, guid: 6b68c86dd4491de46ac0023a233064ee, type: 2}
   responses: []
+  isCrossExamination: 0
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}

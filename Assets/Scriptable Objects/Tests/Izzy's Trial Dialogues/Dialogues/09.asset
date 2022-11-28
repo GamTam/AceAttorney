@@ -13,15 +13,19 @@ MonoBehaviour:
   m_Name: 09
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<textse:blipmale><name:Sahwit><color=green>I remember the time exactly:
+  - _name: Sahwit
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: '<color=green>I remember the time exactly:
 
-    It
-    was 1:00 PM.'
+      It was 1:00 PM.'
   nextLine: {fileID: 11400000, guid: 16740be752e338448bdac7c37246d551, type: 2}
   responses: []
   isCrossExamination: 1
   prevLine: {fileID: 11400000, guid: 6b68c86dd4491de46ac0023a233064ee, type: 2}
   pressSequence: {fileID: 11400000, guid: 3bd5e559d9b89d6488e7fbca9be743de, type: 2}
-  wrongPresentSequence: {fileID: 0}
+  wrongPresentSequence: {fileID: 11400000, guid: 852dc18a4257aeb49b5c9874e8780077, type: 2}
   presentSequence: {fileID: 0}
   evidence: []

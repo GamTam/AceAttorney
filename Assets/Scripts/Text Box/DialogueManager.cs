@@ -14,7 +14,7 @@ public class DialogueManager : MonoBehaviour
     private Animator _advanceButton;
     private TMP_Text textBox;
     private TMP_Text _nameBox;
-    private Queue<string> lines;
+    private Queue<TBLine> lines;
     private PlayerInput _playerInput;
     private string _prevActionMap;
     private string _typingClip = "blipmale";
@@ -42,7 +42,7 @@ public class DialogueManager : MonoBehaviour
     private CrossExamination crossExamination;
 
     void Awake() {
-        lines = new Queue<string>();
+        lines = new Queue<TBLine>();
         _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         _advanceText = _playerInput.actions["Advance"];
         _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
@@ -83,7 +83,7 @@ public class DialogueManager : MonoBehaviour
         _playerInput.SwitchCurrentActionMap("TextBox");
         lines.Clear();
         
-        foreach (string line in linesIn.dialogueText)
+        foreach (TBLine line in linesIn.dialogueText)
         {
             lines.Enqueue(line);
         }
@@ -191,16 +191,17 @@ public class DialogueManager : MonoBehaviour
         }
 
         _skipFade = false;
+        TBLine line = lines.Dequeue();
         this.EnsureCoroutineStopped(ref typeRoutine);
         dialogueVertexAnimator.textAnimating = false;
         List<DialogueCommand> commands =
-            DialogueUtility.ProcessInputString(lines.Dequeue(), out string totalTextMessage);
+            DialogueUtility.ProcessInputString(line.Dialogue, out string totalTextMessage);
         TextAlignOptions[] textAlignInfo = SeparateOutTextAlignInfo(commands);
-        String nameInfo = SeparateOutNameInfo(commands);
-        String soundInfo = SeparateOutTextBlipInfo(commands);
+        String nameInfo = line.KnownName ? line.Name : "???";
+        String soundInfo = line.BlipSound;
         String faceInfo = SeparateOutFaceInfo(commands);
         String emotionInfo = SeparateOutEmotionInfo(commands);
-        _skipFade = CheckSkipFade(commands);
+        _skipFade = line.SkipFade;
 
         for (int i = 0; i < textAlignInfo.Length; i++)
         {

@@ -13,17 +13,22 @@ MonoBehaviour:
   m_Name: 10
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<textse:blipmale><name:Sahwit><color=green>The man who ran was, without
+  - _name: Sahwit
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: '<color=green>The man who ran was, without
 
-    a
-    doubt, the defendant sitting
+      a doubt, the defendant
+      sitting
 
-    right over there.'
+      right over there.'
   nextLine: {fileID: 11400000, guid: 33f67d8d5b4cf554fb003272a3c6b67e, type: 2}
   responses: []
   isCrossExamination: 1
   prevLine: {fileID: 11400000, guid: 5f582a89f76f663438dc4b3cfe6c9247, type: 2}
   pressSequence: {fileID: 11400000, guid: ea01acbddc8c4fa4687014efb6774849, type: 2}
-  wrongPresentSequence: {fileID: 0}
+  wrongPresentSequence: {fileID: 11400000, guid: 852dc18a4257aeb49b5c9874e8780077, type: 2}
   presentSequence: {fileID: 0}
   evidence: []

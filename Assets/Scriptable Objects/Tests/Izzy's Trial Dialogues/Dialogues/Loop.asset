@@ -13,24 +13,45 @@ MonoBehaviour:
   m_Name: Loop
   m_EditorClassIdentifier: 
   dialogueText:
-  - <textse:blipfemale><name:Mia>That's all of it.
-  - 'There must be a contradiction
+  - _name: Mia
+    _knownName: 1
+    _blipSound: blipfemale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: That's all of it.
+  - _name: Mia
+    _knownName: 1
+    _blipSound: blipfemale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: 'There must be a contradiction
 
-    in there somewhere.'
-  - 'Examine the Court Recort with
+      in there somewhere.'
+  - _name: Mia
+    _knownName: 1
+    _blipSound: blipfemale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: 'Examine the Court Recort with
 
-    <color=red>Tab</color> if something strikes
+      <color=red>Tab</color> if something
+      strikes
 
-    you
-    as being suspicious.'
-  - 'Then,<p:short> find the evicence that
+      you as being suspicious.'
+  - _name: Mia
+    _knownName: 1
+    _blipSound: blipfemale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: 'Then,<p:short> find the evicence that
 
-    contradicts his testimony,<p:short>
+      contradicts his testimony,<p:short>
 
-    and
-    <color=red>present</color> it to the court!'
+      and
+      <color=red>present</color> it to the court!'
   nextLine: {fileID: 11400000, guid: 0d89e76e589538f4396f5d4a5a7e20bf, type: 2}
   responses: []
+  isCrossExamination: 0
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}

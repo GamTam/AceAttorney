@@ -10,32 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
-  m_Name: Press 10
+  m_Name: Wrong Objection
   m_EditorClassIdentifier: 
   dialogueText:
   - _name: Phoenix
     _knownName: 1
     _blipSound: blipmale
     _skipFade: 0
-    _interjection: 2
-    _dialogue: 'Are you absolutely,
+    _interjection: 1
+    _dialogue: 'The testimony...<p:normal>
 
-      100% positive?'
-  - _name: Sahwit
+      <sp:1><shake:>Contradicts the evidence!'
+  - _name: Judge
     _knownName: 1
     _blipSound: blipmale
     _skipFade: 0
     _interjection: 0
-    _dialogue: 'Yes, it was him.
-
-      No mistake about it.'
-  - _name: Payne
+    _dialogue: <sp:2>No.
+  - _name: Phoenix
     _knownName: 1
     _blipSound: blipmale
     _skipFade: 0
     _interjection: 0
-    _dialogue: The witness says he's certain!
-  nextLine: {fileID: 11400000, guid: 33f67d8d5b4cf554fb003272a3c6b67e, type: 2}
+    _dialogue: Fuck.
+  nextLine: {fileID: 11400000, guid: 0d89e76e589538f4396f5d4a5a7e20bf, type: 2}
   responses: []
   isCrossExamination: 0
   prevLine: {fileID: 0}

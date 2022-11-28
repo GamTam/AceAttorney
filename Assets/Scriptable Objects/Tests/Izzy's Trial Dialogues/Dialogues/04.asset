@@ -13,16 +13,21 @@ MonoBehaviour:
   m_Name: 04
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<textse:blipmale><name:Sahwit><color=green>Then I saw her lying there...
+  - _name: Sahwit
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 0
+    _dialogue: '<color=green>Then I saw her lying there...
 
-    A
-    woman... not moving... dead!'
+      A woman... not
+      moving... dead!'
   nextLine: {fileID: 11400000, guid: 6df1cbb8e4823e6409d11da459e7a480, type: 2}
   responses: []
   isCrossExamination: 1
   prevLine: {fileID: 11400000, guid: 1a4e75435d5f6514385a407cdbfb1680, type: 2}
   pressSequence: {fileID: 11400000, guid: da7899d280464a346a7f158cc819984d, type: 2}
-  wrongPresentSequence: {fileID: 0}
+  wrongPresentSequence: {fileID: 11400000, guid: 852dc18a4257aeb49b5c9874e8780077, type: 2}
   presentSequence: {fileID: 11400000, guid: 6df1cbb8e4823e6409d11da459e7a480, type: 2}
   evidence:
   - {fileID: 11400000, guid: 4239c1ec287d4a24eb648e3ff9fd6d68, type: 2}

@@ -4,7 +4,7 @@ using UnityEngine;
 public class DialogueSO : ScriptableObject 
 {
     [Header("Mandatory")]
-    [TextArea(10, 5)] public string[] dialogueText;
+    public TBLine[] dialogueText;
     public DialogueSO nextLine;
     
     [Header("Optional")]

@@ -12,6 +12,7 @@ public class CrossExamination : MonoBehaviour
     private DialogueSO currentDialogue;
 
     private PlayerInput playerInput;
+    private InputAction present;
     private InputAction pressing;
     private InputAction previousLine;
     private InputAction nextLine;
@@ -23,6 +24,7 @@ public class CrossExamination : MonoBehaviour
         playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         playerInput.SwitchCurrentActionMap("Textbox");
         pressing = playerInput.actions["Textbox/Press"];
+        present = playerInput.actions["Textbox/Present"];
         previousLine = playerInput.actions["Textbox/PreviousLine"];
         nextLine = playerInput.actions["Textbox/NextLine"];
         
@@ -35,6 +37,11 @@ public class CrossExamination : MonoBehaviour
 
         if (pressing.triggered) {
             Press();
+        }
+
+        if (present.triggered)
+        {
+            Present();
         }
 
         if (currentDialogue.HasPressingSequence)
@@ -55,17 +62,17 @@ public class CrossExamination : MonoBehaviour
         }
     }
 
-    public void StartCrossExamination() {
+    public void Present() {
         var correctEvidenceName = currentDialogue.ReturnListOfEvidence();
 
         foreach (EvidenceSO evidence in correctEvidenceName) {
             if (presentedEvidence.evidenceName == evidence.evidenceName) {
                 CorrectEvidenceShown();
-            }
-            else {
-                IncorrectEvidenceShown();
+                return;
             }
         }
+        
+        IncorrectEvidenceShown();
     }
 
     private void CorrectEvidenceShown() {
@@ -76,7 +83,9 @@ public class CrossExamination : MonoBehaviour
     }
 
     private void IncorrectEvidenceShown() {
-        if (currentDialogue.HasWrongPresentSequence) {
+        if (currentDialogue.HasWrongPresentSequence)
+        {
+            currentDialogue.wrongPresentSequence.nextLine = currentDialogue;
             dialogueManager.StartText(currentDialogue.wrongPresentSequence);
             trialController.IncreaseIncorrects();
         }
