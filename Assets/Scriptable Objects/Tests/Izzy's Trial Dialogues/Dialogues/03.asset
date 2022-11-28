@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: 03
   m_EditorClassIdentifier: 
   dialogueText:
-  - <name:James>The previous evidence was wrong! Present now to be correct!
-  nextLine: {fileID: 0}
+  - '<textse:blipmale><name:Sahwit><color=green>Thinking it strange, I looked
+
+    inside
+    the apartment.'
+  nextLine: {fileID: 11400000, guid: c6079f3b355f1614292e42029b18e7f8, type: 2}
   responses: []
-  prevLine: {fileID: 11400000, guid: 65ff9b24e67ec0b4093384523f5ac70b, type: 2}
-  pressSequence: {fileID: 0}
+  isCrossExamination: 1
+  prevLine: {fileID: 11400000, guid: b5f9186b9d8534c4e9f09605bcf02d5a, type: 2}
+  pressSequence: {fileID: 11400000, guid: e58223027467638449770fc4970cd1f7, type: 2}
   wrongPresentSequence: {fileID: 11400000, guid: c6079f3b355f1614292e42029b18e7f8, type: 2}
   presentSequence: {fileID: 0}
   evidence:

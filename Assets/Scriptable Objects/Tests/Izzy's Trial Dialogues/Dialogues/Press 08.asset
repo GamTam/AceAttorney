@@ -10,15 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
-  m_Name: 02 - 01
+  m_Name: Press 08
   m_EditorClassIdentifier: 
   dialogueText:
-  - <name:Clark>You can present evidence to this dialogue!
-  nextLine: {fileID: 0}
+  - <name:Phoenix>Why use a public phone?
+  - '<name:Sahwit>Well, you see, I don''t
+
+    have a cell phone.'
+  - 'And, being in the middle of the
+
+    afternoon, there was no answer
+
+    at
+    the nearby apartments.'
+  - '<name:Phoenix>Ah, right... what time
+
+    did you call again?'
+  nextLine: {fileID: 11400000, guid: 5f582a89f76f663438dc4b3cfe6c9247, type: 2}
   responses: []
-  prevLine: {fileID: 11400000, guid: b5f9186b9d8534c4e9f09605bcf02d5a, type: 2}
+  prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
-  wrongPresentSequence: {fileID: 11400000, guid: 1a4e75435d5f6514385a407cdbfb1680, type: 2}
+  wrongPresentSequence: {fileID: 0}
   presentSequence: {fileID: 0}
-  evidence:
-  - {fileID: 11400000, guid: f7315dc20388a014e826b8bf89349237, type: 2}
+  evidence: []

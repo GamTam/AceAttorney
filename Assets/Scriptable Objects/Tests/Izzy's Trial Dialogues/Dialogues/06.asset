@@ -10,18 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
-  m_Name: 05 - 00
+  m_Name: 06
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<textse:blipmale><name:Sahwit><color=green>I quailed in fright and found
+  - '<textse:blipmale><name:Sahwit><color=green>I thought to call the police
 
-    myself
-    unable to go inside.'
-  nextLine: {fileID: 11400000, guid: 3c59dc8fa3f35e54383284d0c15f9f8e, type: 2}
+    immediately!'
+  nextLine: {fileID: 11400000, guid: 6fef82fec830390408f1bd2ceed18e05, type: 2}
   responses: []
   isCrossExamination: 1
-  prevLine: {fileID: 11400000, guid: c6079f3b355f1614292e42029b18e7f8, type: 2}
-  pressSequence: {fileID: 11400000, guid: 298dc9221bb94b342b434368f34cf9e1, type: 2}
+  prevLine: {fileID: 11400000, guid: 6df1cbb8e4823e6409d11da459e7a480, type: 2}
+  pressSequence: {fileID: 11400000, guid: f106970b5a7e03243b8b673b9494eb47, type: 2}
   wrongPresentSequence: {fileID: 0}
   presentSequence: {fileID: 0}
   evidence: []

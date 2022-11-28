@@ -1182,15 +1182,18 @@ MonoBehaviour:
   _buttons:
   - {fileID: 782405376}
   - {fileID: 406525556}
+  _talkingButtons: []
   _cursor: {fileID: 843017276}
+  _cursorTalking: {fileID: 0}
   _transparent: {fileID: 523226663}
   _corner: {fileID: 0}
   _investigationCursor: {fileID: 787919795915615156, guid: 2dbaf0facc577aa439e8e1320071eaa2, type: 3}
   _examiningColliders:
   - {fileID: 0}
+  _talkingObjects: []
   _fadeIn: {fileID: 523226665}
   _fadeOut: {fileID: 523226664}
-  _song: Suspense
+  _song: CrossEx
   _swap: {fileID: 0}
 --- !u!114 &843017278
 MonoBehaviour:

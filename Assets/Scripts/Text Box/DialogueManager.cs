@@ -11,7 +11,7 @@ public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private GameObject _textBoxPrefab;
     private GameObject _tempBox;
-    private GameObject _advanceButton;
+    private Animator _advanceButton;
     private TMP_Text textBox;
     private TMP_Text _nameBox;
     private Queue<string> lines;
@@ -19,7 +19,7 @@ public class DialogueManager : MonoBehaviour
     private string _prevActionMap;
     private string _typingClip = "blipmale";
 
-    private DialogueVertexAnimator dialogueVertexAnimator;
+    [HideInInspector] public DialogueVertexAnimator dialogueVertexAnimator;
     private bool movingText;
     private InputAction _advanceText;
     private SoundManager _soundManager;
@@ -36,8 +36,9 @@ public class DialogueManager : MonoBehaviour
     private bool _startedText = true;
     private bool _skipFade;
 
+    private bool _crossEx;
+
     // Izzy
-    private DialogueSO currentDialogue;
     private CrossExamination crossExamination;
 
     void Awake() {
@@ -51,6 +52,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartText(DialogueSO linesIn)
     {
+        _crossEx = linesIn.isCrossExamination;
         _shownResponses = false;
 
         if (_tempBox != null)
@@ -70,11 +72,11 @@ public class DialogueManager : MonoBehaviour
         _dialogue = linesIn;
         
         TMP_Text[] texts = _tempBox.GetComponentsInChildren<TMP_Text>();
-        _advanceButton = _tempBox.GetComponentInChildren<Animator>().gameObject;
+        _advanceButton = _tempBox.GetComponentInChildren<Animator>();
 
         textBox = texts[1];
         _nameBox = texts[0];
-        _advanceButton.SetActive(false);
+        _advanceButton.gameObject.SetActive(false);
         dialogueVertexAnimator = new DialogueVertexAnimator(textBox);
 
         _prevActionMap = _playerInput.currentActionMap.name;
@@ -102,23 +104,50 @@ public class DialogueManager : MonoBehaviour
                 NextLine();
             }
             
-            if (!dialogueVertexAnimator.textAnimating)
+            if (!dialogueVertexAnimator.textAnimating && !_advanceButton.gameObject.activeSelf)
             {
                 if (_char != null) _char.Play($"{_currentAnim}_idle");
                 if (lines.Count == 0 && _dialogue.HasResponses) return;
-                _advanceButton.SetActive(true);
+                _advanceButton.gameObject.SetActive(true);
+                if (_crossEx)
+                {
+                    _advanceButton.Play("Idle_Cross");
+                    if (_dialogue.nextLine.name == "Loop")
+                    {
+                        _advanceButton.transform.Find("Forwards").gameObject.GetComponent<Image>().enabled = false;
+                    }
+                    else
+                    {
+                        _advanceButton.transform.Find("Forwards").gameObject.GetComponent<Image>().enabled = true;
+                    }
+
+                    if (_dialogue.prevLine == null)
+                    {
+                        _advanceButton.transform.Find("Backwards").gameObject.GetComponent<Image>().enabled = false;
+                    }
+                    else
+                    {
+                        _advanceButton.transform.Find("Backwards").gameObject.GetComponent<Image>().enabled = true;
+                    }
+                }
+                else
+                {
+                    _advanceButton.transform.Find("Backwards").gameObject.GetComponent<Image>().enabled = false;
+                    _advanceButton.transform.Find("Forwards").gameObject.GetComponent<Image>().enabled = true;
+                    
+                    _advanceButton.Play("Idle");
+                }
             }
         }
     }
 
     public DialogueSO ReturnCurrentDialogue() {
-        return currentDialogue;
+        return _dialogue;
     }
 
     private Coroutine typeRoutine = null;
     public void NextLine(bool firstTime = false)
     {
-        currentDialogue = _dialogue;
         if (_shownResponses) return;
 
         if (dialogueVertexAnimator.textAnimating)
@@ -126,13 +155,21 @@ public class DialogueManager : MonoBehaviour
             dialogueVertexAnimator.QuickEnd();
             return;
         }
-        
-        if (!firstTime) _soundManager.Play("textboxAdvance");
+
+        if (!firstTime)
+        {
+            if (_crossEx)
+            {
+                _soundManager.Play("confirm");   
+            }
+            else
+            {
+                _soundManager.Play("textboxAdvance");
+            }
+        }
         
         if (lines.Count == 0)
         {
-            if (_dialogue.HasPresentSequence || _dialogue.HasWrongPresentSequence) return;
-            
             if (_dialogue.HasNextLine) {
                 StartText(_dialogue.nextLine);
             }
@@ -227,7 +264,7 @@ public class DialogueManager : MonoBehaviour
             }
         }
         
-        _advanceButton.SetActive(false);
+        _advanceButton.gameObject.SetActive(false);
         if (_char != null) _char.Play($"{_currentAnim}_talk");
         typeRoutine = StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, _typingClip, null));
         _startedText = true;

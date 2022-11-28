@@ -10,20 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
-  m_Name: 01 (Start)
+  m_Name: Loop
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<textse:blipmale><name:Sahwit><color=green>I was going door-to-door,
+  - <textse:blipfemale><name:Mia>That's all of it.
+  - 'There must be a contradiction
 
-    selling
-    subscriptions when I saw
+    in there somewhere.'
+  - 'Examine the Court Recort with
 
-    a man fleeing an apartment.'
-  nextLine: {fileID: 11400000, guid: b5f9186b9d8534c4e9f09605bcf02d5a, type: 2}
+    <color=red>Tab</color> if something strikes
+
+    you
+    as being suspicious.'
+  - 'Then,<p:short> find the evicence that
+
+    contradicts his testimony,<p:short>
+
+    and
+    <color=red>present</color> it to the court!'
+  nextLine: {fileID: 11400000, guid: 0d89e76e589538f4396f5d4a5a7e20bf, type: 2}
   responses: []
-  isCrossExamination: 1
   prevLine: {fileID: 0}
-  pressSequence: {fileID: 11400000, guid: 8441233167efdef408d5cd598c8d3792, type: 2}
+  pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}
   presentSequence: {fileID: 0}
   evidence: []

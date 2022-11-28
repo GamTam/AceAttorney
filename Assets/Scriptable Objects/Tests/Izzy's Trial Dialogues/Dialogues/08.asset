@@ -10,14 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
-  m_Name: 06 (End)
+  m_Name: 08
   m_EditorClassIdentifier: 
   dialogueText:
-  - <name:Izzy>This is it for now! Hope it was bug-free!
-  nextLine: {fileID: 0}
+  - '<textse:blipmale><name:Sahwit><color=green>I went to a nearby park and
+
+    found
+    a public phone.'
+  nextLine: {fileID: 11400000, guid: 5f582a89f76f663438dc4b3cfe6c9247, type: 2}
   responses: []
+  isCrossExamination: 1
   prevLine: {fileID: 11400000, guid: 6fef82fec830390408f1bd2ceed18e05, type: 2}
-  pressSequence: {fileID: 0}
+  pressSequence: {fileID: 11400000, guid: 83125b0059ba3064192f0a19b345138a, type: 2}
   wrongPresentSequence: {fileID: 0}
   presentSequence: {fileID: 0}
   evidence: []

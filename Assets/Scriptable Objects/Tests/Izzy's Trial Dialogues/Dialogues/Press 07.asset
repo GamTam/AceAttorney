@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
+  m_Name: Press 07
+  m_EditorClassIdentifier: 
+  dialogueText:
+  - '<name:Phoenix>The phone in her apartment
+
+    wasn''t working?'
+  - '<name:Sahwit>Yes. I mean, no.
+
+    No, it wasn''t. Right.'
+  - '<name:Phoenix>But you said you didn''t
+
+    go into the apartment...
+
+    or
+    did you?'
+  - '<name:Sahwit>Oh, oh, that? I can explain
+
+    that!'
+  - 'There was a cordless phone
+
+    on a shelf in the entranceway.'
+  - 'I reached inside and tried
+
+    using that to call...'
+  - '<name:Payne>And that phone wasn''t
+
+    working, correct?'
+  - What happened next?
+  nextLine: {fileID: 11400000, guid: 6b68c86dd4491de46ac0023a233064ee, type: 2}
+  responses: []
+  prevLine: {fileID: 0}
+  pressSequence: {fileID: 0}
+  wrongPresentSequence: {fileID: 0}
+  presentSequence: {fileID: 0}
+  evidence: []
