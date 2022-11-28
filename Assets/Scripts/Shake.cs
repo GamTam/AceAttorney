@@ -16,7 +16,7 @@ public class Shake : MonoBehaviour
     private float shakeAmount = 0.25f;
     private float decreaseFactor = 1.0f;
 
-    private float _interval = 1 / 60f;
+    [SerializeField] private float _interval = 2 / 60f;
     private float _intervalTimer;
 	
     Vector3 originalPos;

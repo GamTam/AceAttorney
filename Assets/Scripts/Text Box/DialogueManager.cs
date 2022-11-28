@@ -38,6 +38,9 @@ public class DialogueManager : MonoBehaviour
 
     private bool _crossEx;
 
+    [SerializeField] private Texture[] _interjections;
+    [SerializeField] private GameObject _interjectionObj;
+
     // Izzy
     private CrossExamination crossExamination;
 
@@ -203,6 +206,7 @@ public class DialogueManager : MonoBehaviour
         String soundInfo = line.BlipSound;
         String faceInfo = SeparateOutFaceInfo(commands);
         String emotionInfo = SeparateOutEmotionInfo(commands);
+        Interjection interjection = line.Interjection;
         _skipFade = line.SkipFade;
 
         for (int i = 0; i < textAlignInfo.Length; i++)
@@ -243,12 +247,55 @@ public class DialogueManager : MonoBehaviour
         
         if (emotionInfo != null) _currentAnim = emotionInfo;
         
-        StartCoroutine(StartText(commands, totalTextMessage, faceInfo));
+        StartCoroutine(StartText(commands, totalTextMessage, faceInfo, interjection));
     }
 
-    private IEnumerator StartText(List<DialogueCommand> commands, string totalTextMessage, string faceInfo)
+    private IEnumerator StartText(List<DialogueCommand> commands, string totalTextMessage, string faceInfo, Interjection interjection)
     {
         _startedText = false;
+        GameObject obj = null;
+        RawImage img;
+
+        bool skip = false;
+        switch (interjection)
+        {
+            case Interjection.Objection:
+                obj = Instantiate(_interjectionObj);
+                obj.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
+                img = obj.GetComponent<RawImage>();
+                img.texture = _interjections[0];
+                img.SetNativeSize();
+                _soundManager.Play($"objection{_nameBox.text}");
+                break;
+            case Interjection.HoldIt:
+                obj = Instantiate(_interjectionObj);
+                obj.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
+                img = obj.GetComponent<RawImage>();
+                img.texture = _interjections[1];
+                img.SetNativeSize();
+                _soundManager.Play($"holdIt{_nameBox.text}");
+                break;
+            case Interjection.TakeThat:
+                obj = Instantiate(_interjectionObj);
+                obj.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
+                img = obj.GetComponent<RawImage>();
+                img.texture = _interjections[2];
+                img.SetNativeSize();
+                _soundManager.Play($"takeThat{_nameBox.text}");
+                break;
+            case Interjection.NA:
+                skip = true;
+                break;
+        }
+
+        if (!skip)
+        {
+            _tempBox.SetActive(false);
+            yield return new WaitForSeconds(1);
+            _tempBox.SetActive(true);
+            Destroy(obj);
+        }
+        
         if (_prevChar != _char && (_char != null || faceInfo == "NaN"))
         {
             _prevChar = _char;
@@ -284,26 +331,6 @@ public class DialogueManager : MonoBehaviour
         return tempResult.ToArray();
     }
     
-    private String SeparateOutNameInfo(List<DialogueCommand> commands) {
-        for (int i = 0; i < commands.Count; i++) {
-            DialogueCommand command = commands[i];
-            if (command.type == DialogueCommandType.Name) {
-                return command.stringValue;
-            }
-        }
-        return null;
-    }
-    
-    private String SeparateOutTextBlipInfo(List<DialogueCommand> commands) {
-        for (int i = 0; i < commands.Count; i++) {
-            DialogueCommand command = commands[i];
-            if (command.type == DialogueCommandType.TextBlip) {
-                return command.stringValue;
-            }
-        }
-        return null;
-    }
-    
     private String SeparateOutFaceInfo(List<DialogueCommand> commands) {
         for (int i = 0; i < commands.Count; i++) {
             DialogueCommand command = commands[i];
@@ -322,16 +349,6 @@ public class DialogueManager : MonoBehaviour
             }
         }
         return null;
-    }
-    
-    private bool CheckSkipFade(List<DialogueCommand> commands) {
-        for (int i = 0; i < commands.Count; i++) {
-            DialogueCommand command = commands[i];
-            if (command.type == DialogueCommandType.SkipFade) {
-                return true;
-            }
-        }
-        return false;
     }
     
 
