@@ -13,6 +13,8 @@ public class DialogueVertexAnimator {
     
     private SoundManager _soundManager;
     private MusicManager _musicManager;
+
+    public DialogueManager _parent;
     
     float secondsPerCharacter = 2f / 60f;
     public DialogueVertexAnimator(TMP_Text _textBox) {
@@ -159,6 +161,9 @@ public class DialogueVertexAnimator {
                             obj.maxShakeDuration = command.floatValue;
                             obj.enabled = true;
                         }
+                        break;
+                    case DialogueCommandType.Flash:
+                        _parent._tempBox.GetComponent<Animator>().Play("Flash");
                         break;
                 }
                 commands.RemoveAt(i);

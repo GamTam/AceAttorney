@@ -987,6 +987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _textBoxPrefab: {fileID: 3409057346996304509, guid: 4e89df09d9b03544bb8ec808070b80e5, type: 3}
+  _tempBox: {fileID: 0}
   _responseHandler: {fileID: 0}
   _swap: {fileID: 0}
 --- !u!1 &1592886616

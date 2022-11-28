@@ -18,6 +18,12 @@ MonoBehaviour:
     _blipSound: blipmale
     _skipFade: 0
     _interjection: 2
+    _dialogue: <flash>Hold it!
+  - _name: Phoenix
+    _knownName: 1
+    _blipSound: blipmale
+    _skipFade: 0
+    _interjection: 2
     _dialogue: 'Isn''t a man leaving an
 
       appartment a common sight?'

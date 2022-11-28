@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private GameObject _textBoxPrefab;
-    private GameObject _tempBox;
+    [HideInInspector] public GameObject _tempBox;
     private Animator _advanceButton;
     private TMP_Text textBox;
     private TMP_Text _nameBox;
@@ -72,12 +72,14 @@ public class DialogueManager : MonoBehaviour
         _dialogue = linesIn;
         
         TMP_Text[] texts = _tempBox.GetComponentsInChildren<TMP_Text>();
-        _advanceButton = _tempBox.GetComponentInChildren<Animator>();
+        _advanceButton = _tempBox.GetComponentsInChildren<Animator>()[1];
 
         textBox = texts[1];
         _nameBox = texts[0];
         _advanceButton.gameObject.SetActive(false);
+        Debug.Log(_advanceButton.name);
         dialogueVertexAnimator = new DialogueVertexAnimator(textBox);
+        dialogueVertexAnimator._parent = this;
 
         _prevActionMap = _playerInput.currentActionMap.name;
         _playerInput.SwitchCurrentActionMap("TextBox");
