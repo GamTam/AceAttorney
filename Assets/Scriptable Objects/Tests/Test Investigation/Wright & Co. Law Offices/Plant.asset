@@ -16,7 +16,7 @@ MonoBehaviour:
   - _name: Phoenix
     _knownName: 1
     _char: NaN
-    _anim:
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
@@ -25,7 +25,7 @@ MonoBehaviour:
   - _name: Phoenix
     _knownName: 1
     _char: NaN
-    _anim:
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
@@ -48,21 +48,20 @@ MonoBehaviour:
     _skipFade: 0
     _stopMusic: 0
     _interjection: 0
-    _dialogue: "No.<p:normal> Why would I
-    take care of \nsome crusty old plant?"
+    _dialogue: "No.<p:normal> Why would I take care of \nsome crusty old plant?"
   - _name: Phoenix
     _knownName: 1
-    _char:
-    _anim:
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
     _interjection: 0
-    _dialogue: <name:Phoenix><face:Phoenix><textse:blipmale>How has this plant stayed alive?
+    _dialogue: How has this plant stayed alive?
   - _name: Phoenix
     _knownName: 1
-    _char:
-    _anim:
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
@@ -71,18 +70,18 @@ MonoBehaviour:
   - _name: Bondledorf
     _knownName: 0
     _char: Maya
-    _anim:
+    _anim: 
     _blipSound: NaN
     _skipFade: 0
     _stopMusic: 1
     _interjection: 0
-    _dialogue: "<color=green>Nyeh heh heh!<p:normal> Those
-    simpletons will \nnever find out that it is I,<p:short><color=red> <se:reveal>Grenadine\nBondledorf<color=green><p:short>
-    who waters the plant!"
+    _dialogue: "<color=green>Nyeh heh heh!<p:normal> Those simpletons will \nnever
+      find out that it is I,<p:short><color=red> <se:reveal>Grenadine\nBondledorf<color=green><p:short>
+      who waters the plant!"
   - _name: Phoenix
     _knownName: 1
     _char: Maya
-    _anim:
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
@@ -91,7 +90,7 @@ MonoBehaviour:
   - _name: Phoenix
     _knownName: 1
     _char: Maya
-    _anim:
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
@@ -99,8 +98,8 @@ MonoBehaviour:
     _dialogue: <music:Suspense>Maya...
   - _name: Phoenix
     _knownName: 1
-    _char: NaN
-    _anim:
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
@@ -136,7 +135,7 @@ MonoBehaviour:
   - _name: Phoenix
     _knownName: 1
     _char: Maya
-    _anim:
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
@@ -145,7 +144,7 @@ MonoBehaviour:
   - _name: Phoenix
     _knownName: 1
     _char: Maya
-    _anim:
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
@@ -153,6 +152,7 @@ MonoBehaviour:
     _dialogue: <music:Maya>Alright...
   nextLine: {fileID: 0}
   responses: []
+  isCrossExamination: 0
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}
