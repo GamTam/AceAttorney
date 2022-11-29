@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class CursorMovement : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class CursorMovement : MonoBehaviour
     bool _present;
     bool _talking;
 
-    //private DialogueTrigger _inspected;
+    private DialogueTrigger _inspected;
     private DialogueManager _doneTalking;
     
     private PlayerInput _playerInput;
@@ -48,6 +49,8 @@ public class CursorMovement : MonoBehaviour
     private MusicManager _musicManager;
     private SoundManager _soundManager;
 
+    public Sprite _completedTalkingImage;
+
     void Start()
     {
         _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
@@ -58,7 +61,7 @@ public class CursorMovement : MonoBehaviour
         _select = _playerInput.actions["Select"];
         _back = _playerInput.actions["Back"];
         
-        //_inspected = _talkingButtons[0].GetComponent<DialogueTrigger>();
+        _inspected = _neverGoesAway.GetComponent<DialogueTrigger>();
         _doneTalking = _neverGoesAway.GetComponent<DialogueManager>();
 
         _musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();
@@ -259,9 +262,9 @@ public class CursorMovement : MonoBehaviour
 
     public void TalkReturn()
     {
-        _selection = 0;
-        _cursorTalking.transform.position = _talkingButtons[0].transform.position;
         _cursorTalking.SetActive(true);
+        _cursorTalking.transform.position = _talkingButtons[_selection].transform.position;
+        _talkingButtons[_selection].GetComponent<Image>().sprite = _completedTalkingImage;
         AppearArrays(_talkingButtons);
         AppearArrays(_talkingObjects);
     }
