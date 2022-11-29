@@ -16,7 +16,8 @@ public class CursorMovement : MonoBehaviour
     [Header("Explore Elements")] 
     [SerializeField] private GameObject _investigationCursor;
     [SerializeField] private GameObject[] _examiningColliders;
-    [SerializeField] private GameObject[] _talkingObjects;
+    [SerializeField] private GameObject[] _darkenBackground;
+    [SerializeField] private GameObject[] _presentObjects;
     
     [Header("Transition")]
     [SerializeField] private FadingIn _fadeIn;
@@ -29,7 +30,6 @@ public class CursorMovement : MonoBehaviour
     int _selection = 0;
 
     bool _turnedOff;
-    bool _talkingPhase;
     bool _examine;
     bool _move;
     bool _talk;
@@ -145,20 +145,62 @@ public class CursorMovement : MonoBehaviour
                     _cursor.transform.position = _buttons[_selection].transform.position;
                     _cursorTalking.SetActive(false);
                     DissappearArrays(_talkingButtons);
-                    DissappearArrays(_talkingObjects);
+                    DissappearArrays(_darkenBackground);
                     _talk = false;
-                    _talkingPhase = false;
+                }
+                else if(_present)
+                {
+                    _selection = 3;
+                    _cursor.transform.position = _buttons[_selection].transform.position;
+                    DissappearArrays(_presentObjects);
+                    DissappearArrays(_darkenBackground);
+                    _present = false;
                 }
             }
 
-            if(_doneTalking._doneTalking)
+            if(_doneTalking._doneTalking && !_examine)
             {
                 TalkReturn();
                 _doneTalking._doneTalking = false;
             }
         }
 
-        if(_talkingPhase)
+        if(_talk)
+        {
+            if(_left.triggered)
+            {
+                if(_selection == 0)
+                {
+                
+                }
+                else
+                {
+                    _soundManager.Play("select");
+                    _selection--;
+                    _cursorTalking.transform.position = _talkingButtons[_selection].transform.position;
+                }
+            }
+            //Right or D
+            else if(_right.triggered)
+            {
+                if(_selection == 2)
+                {
+                
+                }
+                else
+                {
+                    _soundManager.Play("select");
+                    _selection++;
+                    _cursorTalking.transform.position = _talkingButtons[_selection].transform.position;
+                }
+            }
+
+            if(_select.triggered)
+            {
+                Talk(_selection);
+            }
+        }
+        else if(_present)
         {
             if(_left.triggered)
             {
@@ -232,15 +274,15 @@ public class CursorMovement : MonoBehaviour
         _fadeOut.startFading();
         _turnedOff = true;
         DissappearArrays(_buttons);
-        AppearArrays(_talkingObjects);
+        AppearArrays(_darkenBackground);
         AppearArrays(_talkingButtons);
         _cursorTalking.SetActive(true);
-        _talkingPhase = true;
         _cursorTalking.transform.position = _talkingButtons[0].transform.position;
     }
 
     public void PresBtn()
     {
+        _present = true;
         _selection = 3;
         _cursor.transform.position = _buttons[3].transform.position;
         _soundManager.Play("confirm");
@@ -248,6 +290,8 @@ public class CursorMovement : MonoBehaviour
         _fadeOut.startFading();
         _turnedOff = true;
         DissappearArrays(_buttons);
+        AppearArrays(_darkenBackground);
+        AppearArrays(_presentObjects);
     }
 
     public void Talk(int button)
@@ -257,7 +301,7 @@ public class CursorMovement : MonoBehaviour
         _soundManager.Play("confirm");
         _cursorTalking.SetActive(false);
         DissappearArrays(_talkingButtons);
-        DissappearArrays(_talkingObjects);
+        DissappearArrays(_darkenBackground);
         _talking = true;
     }
 
@@ -267,7 +311,7 @@ public class CursorMovement : MonoBehaviour
         _cursorTalking.transform.position = _talkingButtons[_selection].transform.position;
         _talkingButtons[_selection].GetComponent<Image>().sprite = _completedTalkingImage;
         AppearArrays(_talkingButtons);
-        AppearArrays(_talkingObjects);
+        AppearArrays(_darkenBackground);
     }
 
     IEnumerator TurnOff(GameObject _item)
