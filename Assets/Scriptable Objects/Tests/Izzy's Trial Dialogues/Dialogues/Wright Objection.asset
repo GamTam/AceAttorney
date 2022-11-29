@@ -10,12 +10,34 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
-  m_Name: 07 (End)
+  m_Name: Wright Objection
   m_EditorClassIdentifier: 
   dialogueText:
-  - <name:Izzy>This is it for now! Hope it was bug-free!
+  - _name: Phoenix
+    _knownName: 1
+    _char: NaN
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 1
+    _interjection: 1
+    _dialogue: 'You found the body at 1:00 PM.<p:normal>
+
+      You''re sure?'
+  - _name: Sahwit
+    _knownName: 1
+    _char: 
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: 'Yes.<p:short>
+
+      It was 1:00 PM, for certain.'
   nextLine: {fileID: 0}
   responses: []
+  isCrossExamination: 0
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}

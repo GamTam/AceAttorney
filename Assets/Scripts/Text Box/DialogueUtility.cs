@@ -50,6 +50,9 @@ public class DialogueUtility : MonoBehaviour
     
     private const string SKIPFADE_DIR_REGEX_STRING = "<skipfade>";
     private static readonly Regex skipFadeRegex = new Regex(SKIPFADE_DIR_REGEX_STRING);
+    
+    private const string FLASH_REGEX_STRING = "<flash>";
+    private static readonly Regex flashRegex = new Regex(FLASH_REGEX_STRING);
 
     private static readonly Dictionary<string, float> pauseDictionary = new Dictionary<string, float>{
         { "tiny", .1f },
@@ -83,6 +86,7 @@ public class DialogueUtility : MonoBehaviour
         processedMessage = HandleAlignTags(processedMessage, result);
         
         processedMessage = HandleSkipFadeTags(processedMessage, result);
+        processedMessage = HandleFlashTags(processedMessage, result);
 
         return result;
     }
@@ -258,6 +262,21 @@ public class DialogueUtility : MonoBehaviour
         processedMessage = Regex.Replace(processedMessage, ANIM_END_REGEX_STRING, "");
         return processedMessage;
     }
+    
+    private static string HandleFlashTags(string processedMessage, List<DialogueCommand> result)
+    {
+        MatchCollection animEndMatches = flashRegex.Matches(processedMessage);
+        foreach (Match match in animEndMatches)
+        {
+            result.Add(new DialogueCommand
+            {
+                position = VisibleCharactersUpToIndex(processedMessage, match.Index),
+                type = DialogueCommandType.Flash,
+            });
+        }
+        processedMessage = Regex.Replace(processedMessage, FLASH_REGEX_STRING, "");
+        return processedMessage;
+    }
 
     private static string HandleAnimStartTags(string processedMessage, List<DialogueCommand> result)
     {
@@ -414,7 +433,8 @@ public enum DialogueCommandType
     TextBlip,
     Shake,
     Emotion,
-    SkipFade
+    SkipFade,
+    Flash
 }
 
 public enum TextAlignOptions

@@ -13,14 +13,23 @@ MonoBehaviour:
   m_Name: 05 - 00
   m_EditorClassIdentifier: 
   dialogueText:
-  - <name:Bobert>Congrats!
-  - '<name:Bobert>Now, let us try pressing! '
-  - <name:Bobert>If you press, X, it should take you down the pressing path. If you
-    left click, it should take you down the normal path!
-  nextLine: {fileID: 11400000, guid: 6fef82fec830390408f1bd2ceed18e05, type: 2}
+  - _name: Sahwit
+    _knownName: 1
+    _char: Sahwit
+    _anim: normal
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: '<color=green>I quailed in fright and found
+
+      myself unable to
+      go inside.'
+  nextLine: {fileID: 11400000, guid: 3c59dc8fa3f35e54383284d0c15f9f8e, type: 2}
   responses: []
-  prevLine: {fileID: 0}
-  pressSequence: {fileID: 11400000, guid: 490163662b2527d44bfe9c3722b96840, type: 2}
-  wrongPresentSequence: {fileID: 0}
+  isCrossExamination: 1
+  prevLine: {fileID: 11400000, guid: c6079f3b355f1614292e42029b18e7f8, type: 2}
+  pressSequence: {fileID: 11400000, guid: 298dc9221bb94b342b434368f34cf9e1, type: 2}
+  wrongPresentSequence: {fileID: 11400000, guid: 852dc18a4257aeb49b5c9874e8780077, type: 2}
   presentSequence: {fileID: 0}
   evidence: []

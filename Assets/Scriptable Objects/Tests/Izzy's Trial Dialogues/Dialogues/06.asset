@@ -13,11 +13,22 @@ MonoBehaviour:
   m_Name: 06
   m_EditorClassIdentifier: 
   dialogueText:
-  - <name:Cathy>This is normal sequence!
-  nextLine: {fileID: 11400000, guid: 3c59dc8fa3f35e54383284d0c15f9f8e, type: 2}
+  - _name: Sahwit
+    _knownName: 1
+    _char: Sahwit
+    _anim: normal
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: '<color=green>I thought to call the police
+
+      immediately!'
+  nextLine: {fileID: 11400000, guid: 6fef82fec830390408f1bd2ceed18e05, type: 2}
   responses: []
-  prevLine: {fileID: 0}
-  pressSequence: {fileID: 0}
-  wrongPresentSequence: {fileID: 0}
+  isCrossExamination: 1
+  prevLine: {fileID: 11400000, guid: 6df1cbb8e4823e6409d11da459e7a480, type: 2}
+  pressSequence: {fileID: 11400000, guid: f106970b5a7e03243b8b673b9494eb47, type: 2}
+  wrongPresentSequence: {fileID: 11400000, guid: 852dc18a4257aeb49b5c9874e8780077, type: 2}
   presentSequence: {fileID: 0}
   evidence: []

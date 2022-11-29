@@ -13,14 +13,25 @@ MonoBehaviour:
   m_Name: 02 - 00
   m_EditorClassIdentifier: 
   dialogueText:
-  - <name:Cake>And now this...
-  - <name:Cake>This has options!
-  nextLine: {fileID: 0}
-  responses:
-  - _responseText: Only 1 though
-    _dialogue: {fileID: 11400000, guid: 65ff9b24e67ec0b4093384523f5ac70b, type: 2}
-  prevLine: {fileID: 0}
-  pressSequence: {fileID: 0}
-  wrongPresentSequence: {fileID: 0}
+  - _name: Sahwit
+    _knownName: 1
+    _char: Sahwit
+    _anim: normal
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: '<color=green>I thought he must be in a
+
+      hurry because he left
+      the
+
+      door half-open behind him.'
+  nextLine: {fileID: 11400000, guid: 1a4e75435d5f6514385a407cdbfb1680, type: 2}
+  responses: []
+  isCrossExamination: 1
+  prevLine: {fileID: 11400000, guid: 0d89e76e589538f4396f5d4a5a7e20bf, type: 2}
+  pressSequence: {fileID: 11400000, guid: a1c04a3273032364fa6ef0441a9b95a8, type: 2}
+  wrongPresentSequence: {fileID: 11400000, guid: 852dc18a4257aeb49b5c9874e8780077, type: 2}
   presentSequence: {fileID: 0}
   evidence: []

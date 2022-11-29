@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:0f9a833277e41a2c2cb09169092cfe93:a1072cf942f6761028f248fe6d2d5d81:bc1d758636a7cc1240c7052f7dda4be7$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="sahwit_normal.png" width="900" height="1914">
+    <sprite n="body_1.png" x="0" y="0" w="634" h="594"/>
+    <sprite n="body_2.png" x="0" y="594" w="634" h="540"/>
+    <sprite n="body_3.png" x="0" y="1134" w="617" h="540"/>
+    <sprite n="head.png" x="617" y="1134" w="283" h="324"/>
+    <sprite n="head_top.png" x="0" y="1674" w="283" h="240"/>
+    <sprite n="talk_1.png" x="283" y="1674" w="162" h="108"/>
+    <sprite n="talk_2.png" x="445" y="1674" w="216" h="162"/>
+    <sprite n="talk_3.png" x="661" y="1674" w="216" h="162"/>
+</TextureAtlas>

@@ -5,12 +5,11 @@ using TMPro;
 public class TrialController : MonoBehaviour
 {
     [SerializeField] private DialogueSO currentTrial;
-    [SerializeField] private int maxIncorrects = 5;
+    [SerializeField] private int maxPenalties = 5;
 
-    [SerializeField] private TextMeshProUGUI currentIncorrectsText;
-    [SerializeField] private TextMeshProUGUI maxIncorrectsText;
+    [SerializeField] private TextMeshProUGUI penaltiesText;
 
-    private int currentIncorrects = 0;
+    private int currentPenalties = 0;
     private DialogueManager dialogueManager;
     private CrossExamination crossExamination;
 
@@ -21,36 +20,24 @@ public class TrialController : MonoBehaviour
         dialogueManager = FindObjectOfType<DialogueManager>();
         crossExamination = FindObjectOfType<CrossExamination>();
 
-        currentIncorrectsText.text = currentIncorrects.ToString();
-        maxIncorrectsText.text = maxIncorrects.ToString();
+        penaltiesText.text = $"{currentPenalties}/{maxPenalties}";
 
         playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         playerInput.SwitchCurrentActionMap("Textbox");
-        presentingEvidence = playerInput.actions["Textbox/PresentEvidence"];
-    }
-
-    private void Update() {
-        if (presentingEvidence.triggered) {
-            PresentEvidence();
-        }
     }
 
     public void StartTrial() {
-        currentIncorrects = 0;
-        currentIncorrectsText.text = currentIncorrects.ToString();
+        currentPenalties = 0;
+        penaltiesText.text = $"{currentPenalties}/{maxPenalties}";
         
         dialogueManager.StartText(currentTrial);
     }
 
-    public void PresentEvidence() {
-        crossExamination.StartCrossExamination();
-    }
-
     public void IncreaseIncorrects() {
-        currentIncorrects++;
-        currentIncorrectsText.text = currentIncorrects.ToString();
+        currentPenalties++;
+        penaltiesText.text = $"{currentPenalties}/{maxPenalties}";
 
-        if (currentIncorrects >= maxIncorrects) {
+        if (currentPenalties >= maxPenalties) {
             print("AGHHHHH!!!!");
         }
     }

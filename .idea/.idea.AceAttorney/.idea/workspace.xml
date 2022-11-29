@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="This is a Prefabricated Object">
-      <change afterPath="$PROJECT_DIR$/Assets/Anim/Blink.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anim/Blink.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Blink.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Blink.cs.meta" afterDir="false" />
+    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="Something changed. I think.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Gumshoe/Gumshoe.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Gumshoe/Gumshoe.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Gumshoe/happy_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Gumshoe/happy_idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Gumshoe/happy_talk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Gumshoe/happy_talk.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Maya/Maya.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Maya/Maya.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Maya/smug_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Maya/smug_idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Maya/smug_talk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Maya/smug_talk.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Maya/think_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Maya/think_idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Maya/think_talk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Maya/think_talk.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Gumshoe/Gumshoe.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Gumshoe/Gumshoe.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Maya/Maya.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Maya/Maya.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Updated Trial (Izzy).unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Updated Trial (Izzy).unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/01 (Start).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/01 (Start).asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/02 - 00.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/02 - 00.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/03.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/03.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/04.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/04.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/05 - 00.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/05 - 00.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/06.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/06.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/07.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/07.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/08.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/08.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/09.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/09.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/10.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/10.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,18 +39,15 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad0a7939819048a0a161f66558c9886726800/61/6cede232/Animator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Demo Scene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/09.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scripts/Text Box/Dialogue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7e35836373b74b12bde8ba7fa4d53641167088/64/694d14e8/Match.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Test Scene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Demo Scene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Test Scene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Demo Scene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scripts/SwapCharacters.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Blink.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Test Scene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Test Scene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Demo Scene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Test Scene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scenes/Test Scene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/InputManagerStateMonitors.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_CoroutineTween.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scripts/Text Box/DialogueManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2HbggE0WWlPeR0AECSQgnpl4Gxg" />
   <component name="ProjectLevelVcsManager">
@@ -112,6 +105,8 @@
       <workItem from="1668726244591" duration="602000" />
       <workItem from="1669161121666" duration="2271000" />
       <workItem from="1669317206211" duration="6822000" />
+      <workItem from="1669361971993" duration="9000" />
+      <workItem from="1669673630158" duration="3583000" />
     </task>
     <task id="LOCAL-00001" summary="Audio Prefab">
       <created>1668559907702</created>
@@ -148,7 +143,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669341428644</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Removed Debug.Logs">
+      <created>1669349419772</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669349419772</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Updated Autopsy Report">
+      <created>1669675373401</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669675373401</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Something changed. I think.">
+      <created>1669676773874</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669676773874</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +193,9 @@
     <MESSAGE value="Textbox advance button now doesn't show up when a character appears!" />
     <MESSAGE value="Minor Optimisations" />
     <MESSAGE value="This is a Prefabricated Object" />
-    <option name="LAST_COMMIT_MESSAGE" value="This is a Prefabricated Object" />
+    <MESSAGE value="Removed Debug.Logs" />
+    <MESSAGE value="Updated Autopsy Report" />
+    <MESSAGE value="Something changed. I think." />
+    <option name="LAST_COMMIT_MESSAGE" value="Something changed. I think." />
   </component>
 </project>

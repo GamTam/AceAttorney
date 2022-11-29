@@ -4,7 +4,7 @@ using UnityEngine;
 public class DialogueSO : ScriptableObject 
 {
     [Header("Mandatory")]
-    [TextArea(10, 5)] public string[] dialogueText;
+    public TBLine[] dialogueText;
     public DialogueSO nextLine;
     
     [Header("Optional")]
@@ -12,8 +12,9 @@ public class DialogueSO : ScriptableObject
 
     public bool HasResponses => responses != null && responses.Length > 0;
     public bool HasNextLine => nextLine != null;
-    
+
     [Header("Cross Examination")] 
+    public bool isCrossExamination;
     public DialogueSO prevLine;
     public DialogueSO pressSequence;
     public DialogueSO wrongPresentSequence;
