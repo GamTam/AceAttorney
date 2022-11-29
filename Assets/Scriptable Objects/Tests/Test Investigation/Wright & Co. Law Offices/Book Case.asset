@@ -13,34 +13,130 @@ MonoBehaviour:
   m_Name: Book Case
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<name:Phoenix><textse:blipmale>I should probably read
+  - _name: Phoenix
+    _knownName: 1
+    _char: NaN
+    _anim: normal
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: 'I should probably read
 
     these books at some
     point.'
-  - 'They''re just sitting here gathering dust
+  - _name: Phoenix
+    _knownName: 1
+    _char: NaN
+    _anim: happy
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: 'They''re just sitting here gathering dust
 
     at the moment.'
-  - <name:Gumshoe><face:Gumshoe><em:happy>Hey there,<p:tiny> pal!
-  - '<name:Maya><face:Maya><em:think><textse:blipfemale>Gumshoe?<p:normal>
+  - _name: Gumshoe
+    _knownName: 1
+    _char: Gumshoe
+    _anim: happy
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: Hey there,<p:tiny> pal!
+  - _name: Maya
+    _knownName: 1
+    _char: Maya
+    _anim: think
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: 'Gumshoe?<p:normal>
 
     What
     are you doing here?'
-  - '<name:Gumshoe><face:Gumshoe><textse:blipmale><em:happy>Heard you were talking
+  - _name: Gumshoe
+    _knownName: 1
+    _char: Gumshoe
+    _anim: happy
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: 'Heard you were talking
     about
 
     reading...'
-  - 'Y''know,<p:short> I used to be a bit of a reader
+  - _name: Gumshoe
+    _knownName: 1
+    _char: Gumshoe
+    _anim: happy
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: 'Y''know,<p:short> I used to be a bit of a reader
 
     myself.'
-  - Read all kinds of books...
-  - '<name:Maya><face:Maya><em:smug><textse:blipfemale>Have you tried reading one
+  - _name: Gumshoe
+    _knownName: 1
+    _char: Gumshoe
+    _anim: happy
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: Read all kinds of books...
+  - _name: Maya
+    _knownName: 1
+    _char: Maya
+    _anim: smug
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: 'Have you tried reading one
     of
 
     Nick''s legal documents?'
-  - <name:Gumshoe><face:Gumshoe><textse:blipmale><em:happy>...
-  - Well, I gotta be going.
-  - See ya,<p:tiny> pal!
-  - <name:Phoenix><face:NaN><color=#6ebdf0>(He ran out of the building...)
+  - _name: Gumshoe
+    _knownName: 1
+    _char: Gumshoe
+    _anim: happy
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: ...
+  - _name: Gumshoe
+    _knownName: 1
+    _char: Gumshoe
+    _anim: happy
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: Well, I gotta be going.
+  - _name: Gumshoe
+    _knownName: 1
+    _char: Gumshoe
+    _anim: happy
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: See ya,<p:tiny> pal!
+  - _name: Phoenix
+    _knownName: 1
+    _char: NaN
+    _anim: happy
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: <color=#6ebdf0>(He ran out of the building...)
   nextLine: {fileID: 0}
   responses: []
   prevLine: {fileID: 0}
