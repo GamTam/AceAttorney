@@ -15,30 +15,42 @@ MonoBehaviour:
   dialogueText:
   - _name: Phoenix
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 2
     _dialogue: 'Isn''t a man leaving an
 
       appartment a common sight?'
   - _name: Phoenix
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: 'I find it odd you would
 
       take notice of him...'
   - _name: Sahwit
     _knownName: 1
+    _char: Sahwit
+    _anim: normal
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: Er...<p:short> heh.
   - _name: Sahwit
     _knownName: 1
+    _char: Sahwit
+    _anim: normal
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: 'I don''t know.<p:short> He just seemed
 
@@ -46,16 +58,22 @@ MonoBehaviour:
       that''s all.'
   - _name: Sahwit
     _knownName: 1
+    _char: Sahwit
+    _anim: normal 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: 'Like he was mad,<p:short> and yet
 
       frightened at the same time.'
   - _name: Sahwit
     _knownName: 1
+    _char: Sahwit
+    _anim: normal
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: 'Just like...<p:short> a<se:reveal> criminal fleeing
 
@@ -63,8 +81,11 @@ MonoBehaviour:
       of a crime!'
   - _name: Phoenix
     _knownName: 1
+    _char: 
+    _anim: NaN
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: '<sp:1><shake:0.1>The defence requests that
 
@@ -74,8 +95,11 @@ MonoBehaviour:
       conjecture!'
   - _name: Payne
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: '<sp:2>Of course.<p:short> What the witness
 
@@ -85,8 +109,11 @@ MonoBehaviour:
       looked suspicious.'
   - _name: Payne
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: So,<p:tiny> what happened next?
   nextLine: {fileID: 11400000, guid: b5f9186b9d8534c4e9f09605bcf02d5a, type: 2}
