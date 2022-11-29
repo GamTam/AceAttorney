@@ -254,11 +254,12 @@ public class DialogueManager : MonoBehaviour
         }
         
         if (emotionInfo != null) _currentAnim = emotionInfo;
+        if (_char != null) _char.Play($"{_currentAnim}_idle");
         
-        StartCoroutine(StartText(commands, totalTextMessage, faceInfo, interjection));
+        StartCoroutine(StartText(commands, totalTextMessage, line.Name, faceInfo, interjection));
     }
 
-    private IEnumerator StartText(List<DialogueCommand> commands, string totalTextMessage, string faceInfo, Interjection interjection)
+    private IEnumerator StartText(List<DialogueCommand> commands, string totalTextMessage, string name, string faceInfo, Interjection interjection)
     {
         _startedText = false;
         GameObject obj = null;
@@ -323,7 +324,7 @@ public class DialogueManager : MonoBehaviour
         _tempBox.SetActive(true);
         
         _advanceButton.gameObject.SetActive(false);
-        if (_char != null) _char.Play($"{_currentAnim}_talk");
+        if (_char != null && name == faceInfo) _char.Play($"{_currentAnim}_talk");
         typeRoutine = StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, _typingClip, null));
         _startedText = true;
     }

@@ -13,9 +13,33 @@ MonoBehaviour:
   m_Name: Painting Trash
   m_EditorClassIdentifier: 
   dialogueText:
-  - <name:Phoenix><textse:blipmale><sp:2>Sorry, Maya...
-  - But this is my office now.
-  - <name:Maya><face:Maya><em:think><textse:blipfemale>Nick...
+  - _name: Phoenix
+    _knownName: 1
+    _char: Maya
+    _anim:
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: <sp:2>Sorry, Maya...
+  - _name: Phoenix
+    _knownName: 1
+    _char: Maya
+    _anim:
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: But this is my office now.
+  - _name: Maya
+    _knownName: 1
+    _char: Maya
+    _anim: think
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: Nick...
   nextLine: {fileID: 0}
   responses: []
   prevLine: {fileID: 0}

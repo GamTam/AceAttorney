@@ -13,14 +13,54 @@ MonoBehaviour:
   m_Name: Painting
   m_EditorClassIdentifier: 
   dialogueText:
-  - <name:Phoenix><textse:blipmale>Y'know,<p:tiny> looking at that painting...
-  - I'm not really a big fan.
-  - I should probably get rid of it soon...
-  - '<name:Maya><face:Maya><em:think><textse:blipfemale><se:hit><shake:><sp:1>Nick!<p:normal>
+  - _name: Phoenix
+    _knownName: 1
+    _char: NaN
+    _anim:
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: Y'know,<p:tiny> looking at that painting...
+  - _name: Phoenix
+    _knownName: 1
+    _char: NaN
+    _anim:
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: I'm not really a big fan.
+  - _name: Phoenix
+    _knownName: 1
+    _char: NaN
+    _anim:
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: I should probably get rid of it soon...
+  - _name: Maya
+    _knownName: 1
+    _char: Maya
+    _anim: think
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: '<se:hit><shake:><sp:1>Nick!<p:normal>
     <shake:>
 
     What the heck!?'
-  - <shake:>That was Mia's favourite painting!
+  - _name: Maya
+    _knownName: 1
+    _char: Maya
+    _anim: think
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: <shake:>That was Mia's favourite painting!
   nextLine: {fileID: 0}
   responses:
   - _responseText: Okay, I'll leave it up!

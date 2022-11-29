@@ -13,11 +13,27 @@ MonoBehaviour:
   m_Name: Window
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<name:Phoenix><textse:blipmale>Looking out this window, you can
+  - _name: Phoenix
+    _knownName: 1
+    _char: NaN
+    _anim:
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: 'Looking out this window, you can
 
     really
     see the whole city.'
-  - 'If by "Whole City,"<p:short> you mean
+  - _name: Phoenix
+    _knownName: 1
+    _char: NaN
+    _anim:
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: 'If by "Whole City,"<p:short> you mean
 
     <anim:wave>"Gatewater Hotel."</anim>'
   nextLine: {fileID: 0}

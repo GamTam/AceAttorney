@@ -13,24 +13,80 @@ MonoBehaviour:
   m_Name: Chair
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<name:Phoenix><textse:blipmale>This chair is the heart and soul of
+  - _name: Phoenix
+    _knownName: 1
+    _char: NaN
+    _anim:
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: '<name:Phoenix><textse:blipmale>This chair is the heart and soul of
 
     Wright
     & Co. Law Offices.'
-  - 'Every client we''ve ever had has seen
+  - _name: Phoenix
+    _knownName: 1
+    _char: NaN
+    _anim:
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: 'Every client we''ve ever had has seen
 
     that chair.'
-  - '<name:Maya><textse:blipfemale>Except for Larry,<p:short> Will Powers,<p:short>
+  - _name: Maya
+    _knownName: 1
+    _char: Maya
+    _anim: think
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: '<name:Maya><textse:blipfemale>Except for Larry,<p:short> Will Powers,<p:short>
 
     Edgeworth,<p:short>
     Lana Skye,<p:short> Maggy...'
-  - <name:Phoenix><textse:blipmale>Okay, some haven't...
-  - '<name:Maya><textse:blipfemale>Max Galactica,<p:short> Matt Engarde,<p:short>
+  - _name: Phoenix
+    _knownName: 1
+    _char: Maya
+    _anim:
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: Okay, some haven't...
+  - _name: Maya
+    _knownName: 1
+    _char: Maya
+    _anim: think
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: 'Max Galactica,<p:short> Matt Engarde,<p:short>
 
     Ron
     DeLite,<p:short> Terry Fawles,<p:short> Iris...'
-  - <name:Phoenix><textse:blipmale><sp:1>I GET IT!
-  - '<name:Maya><textse:blipfemale><sp:2>Wocky Kitaki,<p:short> Machi Tobaye,<p:short>
+  - _name: Phoenix
+    _knownName: 1
+    _char: Maya
+    _anim:
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: <name:Phoenix><textse:blipmale><sp:1>I GET IT!
+  - _name: Maya
+    _knownName: 1
+    _char: Maya
+    _anim: think
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: '<sp:2>Wocky Kitaki,<p:short> Machi Tobaye,<p:short>
 
     Vera
     Misham...'
