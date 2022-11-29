@@ -15,8 +15,8 @@ MonoBehaviour:
   dialogueText:
   - _name: Phoenix
     _knownName: 1
-    _char: 
-    _anim: 
+    _char: Maya
+    _anim: think
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
@@ -59,7 +59,7 @@ MonoBehaviour:
   - _name: Sahwit
     _knownName: 1
     _char: Sahwit
-    _anim: normal 
+    _anim: normal
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
