@@ -130,12 +130,12 @@ public class CursorMovement : MonoBehaviour
 
             if(_back.triggered)
             {
-                _selection = 0;
-                _cursor.transform.position = _buttons[_selection].transform.position;
                 _turnedOff = false;
                 _soundManager.Play("back");
                 StartCoroutine(TurnOn(_transparent));
                 AppearArrays(_buttons);
+                _selection = 0;
+                _cursor.transform.position = _buttons[_selection].transform.position;
                 _fadeIn.startFading();
                 if(_examine)
                 {
@@ -143,10 +143,13 @@ public class CursorMovement : MonoBehaviour
                 }
                 else if(_talk)
                 {
+                    _selection = 2;
+                    _cursor.transform.position = _buttons[_selection].transform.position;
                     _cursorTalking.SetActive(false);
                     DissappearArrays(_talkingButtons);
                     DissappearArrays(_talkingObjects);
                     _talk = false;
+                    _talkingPhase = false;
                 }
             }
 
@@ -224,7 +227,7 @@ public class CursorMovement : MonoBehaviour
     public void TalkBtn()
     {
         _talk = true;
-        _selection = 2;
+        _selection = 0;
         _cursor.transform.position = _buttons[2].transform.position;
         _soundManager.Play("confirm");
         StartCoroutine(TurnOff(_transparent));
@@ -235,7 +238,7 @@ public class CursorMovement : MonoBehaviour
         AppearArrays(_talkingButtons);
         _cursorTalking.SetActive(true);
         _talkingPhase = true;
-        _selection = 0;
+        _cursorTalking.transform.position = _talkingButtons[0].transform.position;
     }
 
     public void PresBtn()
