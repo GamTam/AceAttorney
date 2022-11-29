@@ -15,8 +15,8 @@ MonoBehaviour:
   dialogueText:
   - _name: Sahwit
     _knownName: 1
-    _char: NaN
-    _anim: default
+    _char: Sahwit
+    _anim: normal
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
