@@ -13,31 +13,45 @@ MonoBehaviour:
   m_Name: Gumshoe
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<name:Phoenix><textse:blipmale>Hey Maya,<p:normal>
-
-    have you seen Gumshoe
-    around?'
-  - '<name:Maya><face:Maya><em:think><textse:blipfemale>Gumshoe?<p:normal>
-
-    Nope!<p:normal>
-    Why would he be here Nick?'
-  - <name:Gumshoe><face:NaN><textse:blipmale>AAAAAAAAAAHHHHHHHHHHHHH!
-  - <name:Gumshoe><skipfade><face:Gumshoe><textse:blipmale><em:happy><se:hit><shake:><sp:1>Hey
-    pal!<p:normal> I heard I was needed so im here!
-  - <name:Maya><face:Maya><em:think><sp:2><textse:blipfemale>Gumshoe?
-  - <name:Maya><face:Maya><em:smug><se:hit><shake:><sp:1>What the heck are you doing
-    here!?
-  - <name:Phoenix><textse:blipmale><face:NaN><color=#6ebdf0><sp:2>(He just said why
-    he's here Maya...)
-  - <name:Phoenix>Anyways,<p:normal> I wanted to ask you something Detective Gumshoe.
-  - <name:Gumshoe><face:Gumshoe><textse:blipmale><em:happy>Okay,<p:short> ask away.
-  - <name:Maya><face:Maya><em:smug><textse:blipfemale><se:hit><shake:><sp:1>Are you
-    a himbo?
-  - <name:Gumshoe><face:Gumshoe><textse:blipmale><sp:2><em:happy>...
-  - <name:Phoenix><face:NaN><color=#6ebdf0>(He ran out of the building...)
-  - <name:Maya><face:Maya><em:smug><textse:blipfemale><sp:1> Oh okay bye!
+  - _name: Phoenix
+    _knownName: 0
+    _char: 
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: Dialogue Dialogue Dialogue Dialogue Dialogue Dialogue
+  - _name: Maya
+    _knownName: 1
+    _char: Maya
+    _anim: think
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: 'Dialogue Dialogue Dialogue Dialogue Dialogue Dialogue '
+  - _name: Gumshoe
+    _knownName: 1
+    _char: Gumshoe
+    _anim: happy
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: 'Dialogue Dialogue Dialogue Dialogue Dialogue Dialogue '
+  - _name: Maya
+    _knownName: 1
+    _char: Maya
+    _anim: smug
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: 'Dialogue Dialogue Dialogue Dialogue Dialogue Dialogue '
   nextLine: {fileID: 0}
   responses: []
+  isCrossExamination: 0
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}

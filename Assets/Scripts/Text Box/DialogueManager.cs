@@ -45,6 +45,9 @@ public class DialogueManager : MonoBehaviour
     // Izzy
     private CrossExamination crossExamination;
 
+    // David
+    public bool _doneTalking;
+
     void Awake() {
         lines = new Queue<TBLine>();
         _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
@@ -188,6 +191,7 @@ public class DialogueManager : MonoBehaviour
             else
             {
                 EndDialogue();
+                _doneTalking = true;
             }
             return;
         }

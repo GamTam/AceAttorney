@@ -11,6 +11,7 @@ public class CursorMovement : MonoBehaviour
     [SerializeField] private GameObject _cursorTalking;
     [SerializeField] private GameObject _transparent;
     [SerializeField] private GameObject _corner;
+    [SerializeField] private GameObject _neverGoesAway;
 
     [Header("Explore Elements")] 
     [SerializeField] private GameObject _investigationCursor;
@@ -34,6 +35,9 @@ public class CursorMovement : MonoBehaviour
     bool _talk;
     bool _present;
     bool _talking;
+
+    //private DialogueTrigger _inspected;
+    private DialogueManager _doneTalking;
     
     private PlayerInput _playerInput;
     private InputAction _left;
@@ -54,6 +58,9 @@ public class CursorMovement : MonoBehaviour
         _select = _playerInput.actions["Select"];
         _back = _playerInput.actions["Back"];
         
+        //_inspected = _talkingButtons[0].GetComponent<DialogueTrigger>();
+        _doneTalking = _neverGoesAway.GetComponent<DialogueManager>();
+
         _musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();
         _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
         _musicManager.Play(_song);
@@ -120,6 +127,8 @@ public class CursorMovement : MonoBehaviour
 
             if(_back.triggered)
             {
+                _selection = 0;
+                _cursor.transform.position = _buttons[_selection].transform.position;
                 _turnedOff = false;
                 _soundManager.Play("back");
                 StartCoroutine(TurnOn(_transparent));
@@ -138,10 +147,10 @@ public class CursorMovement : MonoBehaviour
                 }
             }
 
-            if(_talking)
+            if(_doneTalking._doneTalking)
             {
-                //TalkReturn();
-                _talking = false;
+                TalkReturn();
+                _doneTalking._doneTalking = false;
             }
         }
 

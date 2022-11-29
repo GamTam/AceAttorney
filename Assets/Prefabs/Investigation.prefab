@@ -83,7 +83,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8587768794798717468
 RectTransform:
   m_ObjectHideFlags: 0
@@ -188,12 +188,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5678902791841992666}
         m_TargetAssemblyTypeName: CursorMovement, Assembly-CSharp
-        m_MethodName: Talk3
-        m_Mode: 1
+        m_MethodName: Talk
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -484,7 +484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6257928884283330540
 RectTransform:
   m_ObjectHideFlags: 0
@@ -589,12 +589,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5678902791841992666}
         m_TargetAssemblyTypeName: CursorMovement, Assembly-CSharp
-        m_MethodName: Talk2
-        m_Mode: 1
+        m_MethodName: Talk
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -616,7 +616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4667397009189062915
 RectTransform:
   m_ObjectHideFlags: 0
@@ -824,7 +824,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5608659486044619323
 RectTransform:
   m_ObjectHideFlags: 0
@@ -929,8 +929,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5678902791841992666}
         m_TargetAssemblyTypeName: CursorMovement, Assembly-CSharp
-        m_MethodName: Talk1
-        m_Mode: 1
+        m_MethodName: Talk
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1979,15 +1979,15 @@ MonoBehaviour:
   _cursorTalking: {fileID: 8043270233148044040}
   _transparent: {fileID: 5678902790800400924}
   _corner: {fileID: 0}
+  _neverGoesAway: {fileID: 0}
   _investigationCursor: {fileID: 787919795915615156, guid: 2dbaf0facc577aa439e8e1320071eaa2, type: 3}
   _examiningColliders:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
   _talkingObjects:
-  - {fileID: 0}
+  - {fileID: 2420905345964389173}
   _fadeIn: {fileID: 5678902790800400923}
   _fadeOut: {fileID: 5678902790800400920}
   _song: Maya
@@ -2381,7 +2381,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8643648303482820282
 RectTransform:
   m_ObjectHideFlags: 0
