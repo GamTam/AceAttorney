@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
-  m_Name: Gumshoe
+  m_Name: TEXT3
   m_EditorClassIdentifier: 
   dialogueText:
   - _name: Phoenix
@@ -21,7 +21,7 @@ MonoBehaviour:
     _skipFade: 0
     _stopMusic: 0
     _interjection: 0
-    _dialogue: Dialogue Dialogue Dialogue Dialogue Dialogue Dialogue
+    _dialogue: This is the text 3 dialogue...
   - _name: Maya
     _knownName: 1
     _char: Maya
@@ -30,25 +30,7 @@ MonoBehaviour:
     _skipFade: 0
     _stopMusic: 0
     _interjection: 0
-    _dialogue: 'Dialogue Dialogue Dialogue Dialogue Dialogue Dialogue '
-  - _name: Gumshoe
-    _knownName: 1
-    _char: Gumshoe
-    _anim: happy
-    _blipSound: blipmale
-    _skipFade: 0
-    _stopMusic: 0
-    _interjection: 0
-    _dialogue: 'Dialogue Dialogue Dialogue Dialogue Dialogue Dialogue '
-  - _name: Maya
-    _knownName: 1
-    _char: Maya
-    _anim: smug
-    _blipSound: blipfemale
-    _skipFade: 0
-    _stopMusic: 0
-    _interjection: 0
-    _dialogue: 'Dialogue Dialogue Dialogue Dialogue Dialogue Dialogue '
+    _dialogue: You're so right again Nick!
   nextLine: {fileID: 0}
   responses: []
   isCrossExamination: 0
