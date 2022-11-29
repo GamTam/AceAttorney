@@ -5,6 +5,7 @@ using TMPro;
 public class TrialController : MonoBehaviour
 {
     [SerializeField] private DialogueSO currentTrial;
+    [SerializeField] private DialogueSO[] allDialogues;
     [SerializeField] private int maxPenalties = 5;
 
     [SerializeField] private TextMeshProUGUI penaltiesText;
@@ -14,7 +15,6 @@ public class TrialController : MonoBehaviour
     private CrossExamination crossExamination;
 
     private PlayerInput playerInput;
-    private InputAction presentingEvidence;
 
     private void Start() {
         dialogueManager = FindObjectOfType<DialogueManager>();
@@ -40,5 +40,9 @@ public class TrialController : MonoBehaviour
         if (currentPenalties >= maxPenalties) {
             print("AGHHHHH!!!!");
         }
+    }
+
+    public DialogueSO[] ReturnAllDialogues() {
+        return allDialogues;
     }
 }
