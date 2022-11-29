@@ -12,7 +12,6 @@ public class CursorMovement : MonoBehaviour
     [SerializeField] private GameObject _cursorTalking;
     [SerializeField] private GameObject _transparent;
     [SerializeField] private GameObject _corner;
-    [SerializeField] private GameObject _neverGoesAway;
 
     [Header("Explore Elements")] 
     [SerializeField] private GameObject _investigationCursor;
@@ -36,8 +35,7 @@ public class CursorMovement : MonoBehaviour
     bool _talk;
     bool _present;
     bool _talking;
-
-    private DialogueTrigger _inspected;
+    
     private DialogueManager _doneTalking;
     
     private PlayerInput _playerInput;
@@ -61,8 +59,8 @@ public class CursorMovement : MonoBehaviour
         _select = _playerInput.actions["Select"];
         _back = _playerInput.actions["Back"];
         
-        _inspected = _neverGoesAway.GetComponent<DialogueTrigger>();
-        _doneTalking = _neverGoesAway.GetComponent<DialogueManager>();
+        GameObject obj = GameObject.FindGameObjectWithTag("Dialogue Manager");
+        _doneTalking = obj.GetComponent<DialogueManager>();
 
         _musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();
         _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
