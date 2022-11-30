@@ -21,16 +21,15 @@ public class CursorMovement : MonoBehaviour
     [SerializeField] private GameObject[] _moveObjects;
     [SerializeField] private GameObject _cursorMove;
     [SerializeField] private GameObject[] _moveButtons;
-    [SerializeField] private TextMeshProUGUI _1stAreaText;
-    [SerializeField] private TextMeshProUGUI _2ndAreaText;
-    [SerializeField] private string _1stArea;
-    [SerializeField] private string _2ndArea;
-    [SerializeField] private Texture _1stAreaTexture;
-    [SerializeField] private Texture _2ndAreaTexture;
+    [SerializeField] private TextMeshProUGUI[] _AreaText;
+    [SerializeField] private string[] _AreaNames;
+    [SerializeField] private Texture[] _AreaTextures;
 
     [Header("Talking Elements")]
     [SerializeField] private GameObject _cursorTalking;
     [SerializeField] private GameObject[] _talkingButtons;
+    [SerializeField] private TextMeshProUGUI[] _talkText;
+    [SerializeField] private string[] _talkNames;
 
     [Header("Present Elements")]
     [SerializeField] private GameObject[] _presentObjects;
@@ -68,8 +67,8 @@ public class CursorMovement : MonoBehaviour
     private InputAction _select;
     private InputAction _back;
 
-    private RawImage _1stAreaRawImage;
-    private RawImage _2ndAreaRawImage;
+    //Move
+    private RawImage[] _rawImages;
     
     private MusicManager _musicManager;
     private SoundManager _soundManager;
@@ -91,12 +90,8 @@ public class CursorMovement : MonoBehaviour
         _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
         _musicManager.Play(_song);
 
-        _1stAreaRawImage = (RawImage)_moveObjects[0].GetComponent<RawImage>(); 
-        _1stAreaRawImage.texture = (Texture)_1stAreaTexture;
-        _2ndAreaRawImage = (RawImage)_moveObjects[1].GetComponent<RawImage>(); 
-        _2ndAreaRawImage.texture = (Texture)_2ndAreaTexture;
-        _1stAreaText.text = _1stArea;
-        _2ndAreaText.text = _2ndArea;
+        _rawImages = new RawImage[_AreaTextures.Length];
+        Setup();
 
         StartCoroutine(WaitThenFade());
     }
@@ -408,14 +403,7 @@ public class CursorMovement : MonoBehaviour
         DissappearArrays(_darkenBackground);
         _cursorMove.SetActive(false);
         _musicManager.Stop();
-        if(_selection == 0)
-        {
-            SceneManager.LoadScene(sceneName:_1stArea);
-        }
-        else
-        {
-            SceneManager.LoadScene(sceneName:_2ndArea);
-        }
+        SceneManager.LoadScene(sceneName:_AreaNames[_selection]);
     }
 
     IEnumerator TurnOff(GameObject _item)
@@ -531,6 +519,23 @@ public class CursorMovement : MonoBehaviour
                 //This is just a temporary solution
                 _attorneyBadgeTrigger.TriggerDialogue();
             }
+        }
+    }
+
+    public void Setup()
+    {
+        for(int a = 0; a < _AreaTextures.Length; a++)
+        {
+            _rawImages[a] = (RawImage)_moveObjects[a].GetComponent<RawImage>(); 
+            _rawImages[a].texture = (Texture)_AreaTextures[a];
+        }
+        for(int b = 0; b < _AreaText.Length; b++)
+        {
+            _AreaText[b].text = _AreaNames[b];
+        }
+        for(int c = 0; c < _talkText.Length; c++)
+        {
+            _talkText[c].text = _talkNames[c];
         }
     }
 }

@@ -1416,7 +1416,7 @@ GameObject:
   - component: {fileID: 4182571953509992026}
   - component: {fileID: 1090890758551498411}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TalkText1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1550,7 +1550,7 @@ GameObject:
   - component: {fileID: 8312839775764330741}
   - component: {fileID: 2464281795392014015}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TalkText2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2276,7 +2276,7 @@ GameObject:
   - component: {fileID: 1635746720892606439}
   - component: {fileID: 7160252350818470136}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TalkText3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3974,17 +3974,28 @@ MonoBehaviour:
   _moveButtons:
   - {fileID: 1372377911}
   - {fileID: 1868206055}
-  _1stAreaText: {fileID: 423355988}
-  _2ndAreaText: {fileID: 1929027091}
-  _1stArea: Coffee Shop
-  _2ndArea: Street View
-  _1stAreaTexture: {fileID: 2800000, guid: f8e2eb52104c30d44be23a680d5e4811, type: 3}
-  _2ndAreaTexture: {fileID: 2800000, guid: e4c984346daa04145b5f85358144b956, type: 3}
+  _AreaText:
+  - {fileID: 423355988}
+  - {fileID: 1929027091}
+  _AreaNames:
+  - Move Area 1
+  - Move Area 2
+  _AreaTextures:
+  - {fileID: 2800000, guid: 610dd44f447fa5841b55a1e535a13bfe, type: 3}
+  - {fileID: 2800000, guid: 610dd44f447fa5841b55a1e535a13bfe, type: 3}
   _cursorTalking: {fileID: 8043270233148044040}
   _talkingButtons:
   - {fileID: 3304983924951186699}
   - {fileID: 1838886600366495650}
   - {fileID: 727102532990784065}
+  _talkText:
+  - {fileID: 1090890758551498411}
+  - {fileID: 2464281795392014015}
+  - {fileID: 7160252350818470136}
+  _talkNames:
+  - Text 1
+  - Text 2
+  - Text 3
   _presentObjects:
   - {fileID: 641778034}
   - {fileID: 251136713}
