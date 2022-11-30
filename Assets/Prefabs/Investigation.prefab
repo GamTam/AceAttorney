@@ -702,7 +702,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Text 2
+  m_text: Maya
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d1b133161d25fcb46800817c78e4396c, type: 2}
   m_sharedMaterial: {fileID: -5152673426670811670, guid: d1b133161d25fcb46800817c78e4396c, type: 2}
@@ -1428,7 +1428,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Text 3
+  m_text: What Happened?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d1b133161d25fcb46800817c78e4396c, type: 2}
   m_sharedMaterial: {fileID: -5152673426670811670, guid: d1b133161d25fcb46800817c78e4396c, type: 2}
