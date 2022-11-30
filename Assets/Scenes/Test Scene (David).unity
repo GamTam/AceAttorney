@@ -1635,8 +1635,11 @@ MonoBehaviour:
   _tempBox: {fileID: 0}
   _responseHandler: {fileID: 0}
   _swap: {fileID: 1991476421}
-  _interjections: []
-  _interjectionObj: {fileID: 0}
+  _interjections:
+  - {fileID: 2800000, guid: 8741141392185a04ca8cce88e40042a4, type: 3}
+  - {fileID: 2800000, guid: 1a373c37b064fa34492608a91996aabd, type: 3}
+  - {fileID: 2800000, guid: 6f8bef19c84b6784785c16b14f60a2c0, type: 3}
+  _interjectionObj: {fileID: 3255038459366842304, guid: 506530a5bd7489f4c830768b5f8d10ac, type: 3}
   _doneTalking: 0
 --- !u!1 &1343139307
 GameObject:

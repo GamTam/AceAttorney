@@ -13,10 +13,15 @@ MonoBehaviour:
   m_Name: No Clues Here
   m_EditorClassIdentifier: 
   dialogueText:
-    _name: Phoenix
+  - _name: Phoenix
+    _knownName: 1
+    _char: NaaN
+    _anim: 
     _blipSound: blipmale
-    _dialogue:
-    - No clues here.
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 3
+    _dialogue: No clues here.
   nextLine: {fileID: 0}
   responses: []
   isCrossExamination: 0
