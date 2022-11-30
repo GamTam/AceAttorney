@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
@@ -10,9 +11,11 @@ public class CursorMovement : MonoBehaviour
     [SerializeField] private GameObject[] _buttons;
     [SerializeField] private GameObject[] _talkingButtons;
     [SerializeField] private GameObject[] _presentButtons;
+    [SerializeField] private GameObject[] _moveButtons;
     [SerializeField] private GameObject _cursor;
     [SerializeField] private GameObject _cursorTalking;
     [SerializeField] private GameObject _cursorPresent;
+    [SerializeField] private GameObject _cursorMove;
     [SerializeField] private GameObject _transparent;
     [SerializeField] private GameObject _corner;
     [SerializeField] private TextMeshProUGUI _titleEvidence;
@@ -23,10 +26,12 @@ public class CursorMovement : MonoBehaviour
     [SerializeField] private GameObject[] _examiningColliders;
     [SerializeField] private GameObject[] _darkenBackground;
     [SerializeField] private GameObject[] _presentObjects;
+    [SerializeField] private GameObject[] _moveObjects;
     
     [Header("Transition")]
     [SerializeField] private FadingIn _fadeIn;
     [SerializeField] private FadingOut _fadeOut;
+    [SerializeField] private GameObject _offScreen;
     
     [Header("Misc.")]
     [SerializeField] string _song = "SteelSamurai";
@@ -41,7 +46,6 @@ public class CursorMovement : MonoBehaviour
     bool _move;
     bool _talk;
     bool _present;
-    bool _talking;
     
     private DialogueManager _doneTalking;
     
@@ -144,9 +148,19 @@ public class CursorMovement : MonoBehaviour
                 _fadeIn.startFading();
                 _cursorTalking.SetActive(false);
                 _cursorPresent.SetActive(false);
+                _cursorMove.SetActive(false);
                 if(_examine)
                 {
                     _examine = false;
+                }
+                else if(_move)
+                {
+                    _selection = 1;
+                    _cursor.transform.position = _buttons[_selection].transform.position;
+                    DissappearArrays(_moveButtons);
+                    DissappearArrays(_moveObjects);
+                    DissappearArrays(_darkenBackground);
+                    _move = false;
                 }
                 else if(_talk)
                 {
@@ -182,91 +196,24 @@ public class CursorMovement : MonoBehaviour
 
         if(_talk)
         {
-            if(_left.triggered)
-            {
-                if(_selection == 0)
-                {
-                
-                }
-                else
-                {
-                    _soundManager.Play("select");
-                    _selection--;
-                    _cursorTalking.transform.position = _talkingButtons[_selection].transform.position;
-                }
-            }
-            //Right or D
-            else if(_right.triggered)
-            {
-                if(_selection == 2)
-                {
-                
-                }
-                else
-                {
-                    _soundManager.Play("select");
-                    _selection++;
-                    _cursorTalking.transform.position = _talkingButtons[_selection].transform.position;
-                }
-            }
-
-            if(_select.triggered)
-            {
-                Talk(_selection);
-            }
+            Selection(_cursorTalking, _talkingButtons, 2);
         }
         else if(_present)
         {
-            if(_left.triggered)
-            {
-                if(_selection == 0)
-                {
-                
-                }
-                else
-                {
-                    _soundManager.Play("select");
-                    _selection--;
-                    _cursorPresent.transform.position = _presentButtons[_selection].transform.position;
-                    _presentButtons[_selection].SetActive(false);
-                    _presentButtons[_selection + 1].SetActive(true);
-                    PresentingSelection();
-                }
-            }
-            //Right or D
-            else if(_right.triggered)
-            {
-                if(_selection == 9)
-                {
-                
-                }
-                if(_selection + 1 == _maxEvidence)
-                {
-
-                }
-                else
-                {
-                    _soundManager.Play("select");
-                    _selection++;
-                    _cursorPresent.transform.position = _presentButtons[_selection].transform.position;
-                    _presentButtons[_selection].SetActive(false);
-                    _presentButtons[_selection - 1].SetActive(true);
-                    PresentingSelection();
-                }
-            }
-
-            if(_select.triggered)
-            {
-                Present(_selection);
-                //This is just a temporary solution
-                _attorneyBadgeTrigger.TriggerDialogue();
-            }
+            Selection(_cursorPresent, _presentButtons, 9);
+        }
+        else if(_move)
+        {
+            Selection(_cursorMove, _moveButtons, 1);
         }
     }
 
     public void ExBtn()
     {
+        _move = false;
+        _talk = false;
         _examine = true;
+        _present = false;
         _selection = 0;
         _cursor.transform.position = _buttons[0].transform.position;
         _soundManager.Play("confirm");
@@ -283,12 +230,23 @@ public class CursorMovement : MonoBehaviour
 
     public void MovBtn()
     {
-        _selection = 1;
-        _cursor.transform.position = _buttons[1].transform.position;
+        _move = true;
+        _talk = false;
+        _examine = false;
+        _present = false;
+        _selection = 0;
+        _cursor.transform.position = _offScreen.transform.position;
         _soundManager.Play("confirm");
-        StartCoroutine(TurnOn(_transparent));
-        //StartCoroutine(TurnOn(_corner));
-        _fadeIn.startFading();
+        StartCoroutine(TurnOff(_transparent));
+        //_fadeOut.startFading();
+        _turnedOff = true;
+        DissappearArrays(_buttons);
+        AppearArrays(_darkenBackground);
+        AppearArrays(_moveButtons);
+        AppearArrays(_moveObjects);
+        _moveObjects[1].SetActive(false);
+        _cursorMove.SetActive(true);
+        _cursorMove.transform.position = _moveButtons[0].transform.position;
     }
 
     public void TalkBtn()
@@ -296,6 +254,7 @@ public class CursorMovement : MonoBehaviour
         _talk = true;
         _examine = false;
         _present = false;
+        _move = false;
         _selection = 0;
         _cursor.transform.position = _buttons[2].transform.position;
         _soundManager.Play("confirm");
@@ -314,6 +273,7 @@ public class CursorMovement : MonoBehaviour
         _present = true;
         _examine = false;
         _talk = false;
+        _move = false;
         _selection = 0;
         _cursor.transform.position = _buttons[3].transform.position;
         _soundManager.Play("confirm");
@@ -338,7 +298,6 @@ public class CursorMovement : MonoBehaviour
         _cursorTalking.SetActive(false);
         DissappearArrays(_talkingButtons);
         DissappearArrays(_darkenBackground);
-        _talking = true;
     }
 
     public void TalkReturn()
@@ -359,7 +318,6 @@ public class CursorMovement : MonoBehaviour
         DissappearArrays(_presentButtons);
         DissappearArrays(_darkenBackground);
         _cursorPresent.SetActive(false);
-        _present = true;
     }
 
     public void PresentReturn()
@@ -419,6 +377,18 @@ public class CursorMovement : MonoBehaviour
         }
     }
 
+    public void Move(int button)
+    {
+        _selection = button;
+        _cursorMove.transform.position = _moveButtons[button].transform.position;
+        _soundManager.Play("confirm");
+        DissappearArrays(_moveObjects);
+        DissappearArrays(_moveButtons);
+        DissappearArrays(_darkenBackground);
+        _cursorMove.SetActive(false);
+        SceneManager.LoadScene(sceneName:"Updated Trial (Izzy)");
+    }
+
     IEnumerator TurnOff(GameObject _item)
     {
         for(float i = 1f; i >= -0.05f; i -= 0.05f)
@@ -458,6 +428,80 @@ public class CursorMovement : MonoBehaviour
         for(int i = 0; i < array.Length; i++)
         {
             array[i].SetActive(true);
+        }
+    }
+
+    public void Selection(GameObject cursor, GameObject[] Buttons, int counter)
+    {
+        if(_left.triggered)
+        {
+            if(_selection == 0)
+            {
+            
+            }
+            else
+            {
+                _soundManager.Play("select");
+                _selection--;
+                cursor.transform.position = Buttons[_selection].transform.position;
+                if(_present)
+                {
+                    _presentButtons[_selection].SetActive(false);
+                    _presentButtons[_selection + 1].SetActive(true);
+                    PresentingSelection();
+                }
+                else if(_move)
+                {
+                    _moveObjects[1].SetActive(false);
+                    _moveObjects[0].SetActive(true);
+                }
+            }
+        }
+        //Right or D
+        else if(_right.triggered)
+        {
+            if(_selection == counter)
+            {
+            
+            }
+            else if(_selection + 1 == _maxEvidence && _present)
+            {
+                    
+            }
+            else
+            {
+                _soundManager.Play("select");
+                _selection++;
+                cursor.transform.position = Buttons[_selection].transform.position;
+                if(_present)
+                {
+                    _presentButtons[_selection].SetActive(false);
+                    _presentButtons[_selection - 1].SetActive(true);
+                    PresentingSelection();
+                }
+                else if(_move)
+                {
+                    _moveObjects[1].SetActive(true);
+                    _moveObjects[0].SetActive(false);
+                }
+            }
+        }
+        if(_select.triggered)
+        {
+            if(_move)
+            {
+
+            }
+            if(_talk)
+            {
+                Talk(_selection);
+            }
+            if(_present)
+            {
+                Present(_selection);
+                //This is just a temporary solution
+                _attorneyBadgeTrigger.TriggerDialogue();
+            }
         }
     }
 }
