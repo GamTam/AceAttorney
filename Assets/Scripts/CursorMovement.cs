@@ -9,34 +9,47 @@ public class CursorMovement : MonoBehaviour
 {
     [Header("UI Elements")]
     [SerializeField] private GameObject[] _buttons;
-    [SerializeField] private GameObject[] _talkingButtons;
-    [SerializeField] private GameObject[] _presentButtons;
-    [SerializeField] private GameObject[] _moveButtons;
     [SerializeField] private GameObject _cursor;
-    [SerializeField] private GameObject _cursorTalking;
-    [SerializeField] private GameObject _cursorPresent;
-    [SerializeField] private GameObject _cursorMove;
     [SerializeField] private GameObject _transparent;
     [SerializeField] private GameObject _corner;
-    [SerializeField] private TextMeshProUGUI _titleEvidence;
-    [SerializeField] private TextMeshProUGUI _descriptionEvidence;
 
     [Header("Explore Elements")] 
     [SerializeField] private GameObject _investigationCursor;
     [SerializeField] private GameObject[] _examiningColliders;
-    [SerializeField] private GameObject[] _darkenBackground;
-    [SerializeField] private GameObject[] _presentObjects;
+
+    [Header("Move Elements")]
     [SerializeField] private GameObject[] _moveObjects;
+    [SerializeField] private GameObject _cursorMove;
+    [SerializeField] private GameObject[] _moveButtons;
+    [SerializeField] private TextMeshProUGUI _1stAreaText;
+    [SerializeField] private TextMeshProUGUI _2ndAreaText;
+    [SerializeField] private string _1stArea;
+    [SerializeField] private string _2ndArea;
+    [SerializeField] private Texture _1stAreaTexture;
+    [SerializeField] private Texture _2ndAreaTexture;
+
+    [Header("Talking Elements")]
+    [SerializeField] private GameObject _cursorTalking;
+    [SerializeField] private GameObject[] _talkingButtons;
+
+    [Header("Present Elements")]
+    [SerializeField] private GameObject[] _presentObjects;
+    [SerializeField] private GameObject _cursorPresent;
+    [SerializeField] private GameObject[] _presentButtons;
+    [SerializeField] private TextMeshProUGUI _titleEvidence;
+    [SerializeField] private TextMeshProUGUI _descriptionEvidence;
     
     [Header("Transition")]
     [SerializeField] private FadingIn _fadeIn;
     [SerializeField] private FadingOut _fadeOut;
     [SerializeField] private GameObject _offScreen;
+    [SerializeField] private GameObject[] _darkenBackground;
     
     [Header("Misc.")]
     [SerializeField] string _song = "SteelSamurai";
     [SerializeField] SwapCharacters _swap;
     [SerializeField] DialogueTrigger _attorneyBadgeTrigger;
+    [SerializeField] public Sprite _completedTalkingImage;
 
     int _selection = 0;
     int _maxEvidence = 1;
@@ -54,11 +67,12 @@ public class CursorMovement : MonoBehaviour
     private InputAction _right;
     private InputAction _select;
     private InputAction _back;
+
+    private RawImage _1stAreaRawImage;
+    private RawImage _2ndAreaRawImage;
     
     private MusicManager _musicManager;
     private SoundManager _soundManager;
-
-    public Sprite _completedTalkingImage;
 
     void Start()
     {
@@ -76,6 +90,13 @@ public class CursorMovement : MonoBehaviour
         _musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();
         _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
         _musicManager.Play(_song);
+
+        _1stAreaRawImage = (RawImage)_moveObjects[0].GetComponent<RawImage>(); 
+        _1stAreaRawImage.texture = (Texture)_1stAreaTexture;
+        _2ndAreaRawImage = (RawImage)_moveObjects[1].GetComponent<RawImage>(); 
+        _2ndAreaRawImage.texture = (Texture)_2ndAreaTexture;
+        _1stAreaText.text = _1stArea;
+        _2ndAreaText.text = _2ndArea;
 
         StartCoroutine(WaitThenFade());
     }
@@ -386,7 +407,15 @@ public class CursorMovement : MonoBehaviour
         DissappearArrays(_moveButtons);
         DissappearArrays(_darkenBackground);
         _cursorMove.SetActive(false);
-        SceneManager.LoadScene(sceneName:"Updated Trial (Izzy)");
+        _musicManager.Stop();
+        if(_selection == 0)
+        {
+            SceneManager.LoadScene(sceneName:_1stArea);
+        }
+        else
+        {
+            SceneManager.LoadScene(sceneName:_2ndArea);
+        }
     }
 
     IEnumerator TurnOff(GameObject _item)

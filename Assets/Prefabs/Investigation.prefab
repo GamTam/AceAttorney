@@ -284,7 +284,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Detention Center
+  m_text: Coffee Shop
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d1b133161d25fcb46800817c78e4396c, type: 2}
   m_sharedMaterial: {fileID: -5152673426670811670, guid: d1b133161d25fcb46800817c78e4396c, type: 2}
@@ -490,7 +490,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 610dd44f447fa5841b55a1e535a13bfe, type: 3}
+  m_Texture: {fileID: 2800000, guid: f8e2eb52104c30d44be23a680d5e4811, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3958,10 +3958,41 @@ MonoBehaviour:
   - {fileID: 5678902791862978426}
   - {fileID: 5678902791641060101}
   - {fileID: 5678902792391076977}
+  _cursor: {fileID: 5678902791841992670}
+  _transparent: {fileID: 5678902790800400924}
+  _corner: {fileID: 0}
+  _investigationCursor: {fileID: 787919795915615156, guid: 2dbaf0facc577aa439e8e1320071eaa2, type: 3}
+  _examiningColliders:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _moveObjects:
+  - {fileID: 1137944639}
+  - {fileID: 1695197977}
+  _cursorMove: {fileID: 1481651618}
+  _moveButtons:
+  - {fileID: 1372377911}
+  - {fileID: 1868206055}
+  _1stAreaText: {fileID: 423355988}
+  _2ndAreaText: {fileID: 1929027091}
+  _1stArea: Coffee Shop
+  _2ndArea: Street View
+  _1stAreaTexture: {fileID: 2800000, guid: f8e2eb52104c30d44be23a680d5e4811, type: 3}
+  _2ndAreaTexture: {fileID: 2800000, guid: e4c984346daa04145b5f85358144b956, type: 3}
+  _cursorTalking: {fileID: 8043270233148044040}
   _talkingButtons:
   - {fileID: 3304983924951186699}
   - {fileID: 1838886600366495650}
   - {fileID: 727102532990784065}
+  _presentObjects:
+  - {fileID: 641778034}
+  - {fileID: 251136713}
+  - {fileID: 5871953533572958623}
+  - {fileID: 720124238096395437}
+  - {fileID: 8988311408293006361}
+  - {fileID: 4296071903184433762}
+  _cursorPresent: {fileID: 3079227033882520845}
   _presentButtons:
   - {fileID: 3420877868536185940}
   - {fileID: 2203107230992889406}
@@ -3973,38 +4004,13 @@ MonoBehaviour:
   - {fileID: 3685734508766717438}
   - {fileID: 4792964556854749470}
   - {fileID: 8745059358204917003}
-  _moveButtons:
-  - {fileID: 1372377911}
-  - {fileID: 1868206055}
-  _cursor: {fileID: 5678902791841992670}
-  _cursorTalking: {fileID: 8043270233148044040}
-  _cursorPresent: {fileID: 3079227033882520845}
-  _cursorMove: {fileID: 1481651618}
-  _transparent: {fileID: 5678902790800400924}
-  _corner: {fileID: 0}
   _titleEvidence: {fileID: 3191246742062085562}
   _descriptionEvidence: {fileID: 3624596389295923589}
-  _investigationCursor: {fileID: 787919795915615156, guid: 2dbaf0facc577aa439e8e1320071eaa2, type: 3}
-  _examiningColliders:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _darkenBackground:
-  - {fileID: 2420905345964389173}
-  _presentObjects:
-  - {fileID: 641778034}
-  - {fileID: 251136713}
-  - {fileID: 5871953533572958623}
-  - {fileID: 720124238096395437}
-  - {fileID: 8988311408293006361}
-  - {fileID: 4296071903184433762}
-  _moveObjects:
-  - {fileID: 1137944639}
-  - {fileID: 1695197977}
   _fadeIn: {fileID: 5678902790800400923}
   _fadeOut: {fileID: 5678902790800400920}
   _offScreen: {fileID: 218270045}
+  _darkenBackground:
+  - {fileID: 2420905345964389173}
   _song: Maya
   _swap: {fileID: 0}
   _attorneyBadgeTrigger: {fileID: 0}
