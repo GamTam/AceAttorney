@@ -166,20 +166,18 @@ public class CursorMovement : MonoBehaviour
         }
         else
         {
-            //Attempted input code, but I dont think I can do it this way.
-
             if(_back.triggered)
             {
                 Back();
             }
 
-            if(_doneTalking._doneTalking && !_examine && !_present)
+            if(_doneTalking._doneTalking && !_examine && !_present && !_move && _talk)
             {
                 TalkReturn();
                 _doneTalking._doneTalking = false;
             }
 
-            if(_doneTalking._doneTalking && !_examine && !_talk)
+            if(_doneTalking._doneTalking && !_examine && !_talk && !_move && _present)
             {
                 PresentReturn();
                 _doneTalking._doneTalking = false;
@@ -202,6 +200,7 @@ public class CursorMovement : MonoBehaviour
 
     public void Back()
     {
+        _doneTalking._doneTalking = false;
         _turnedOff = false;
         _soundManager.Play("back");
         StartCoroutine(TurnOn(_transparent));
