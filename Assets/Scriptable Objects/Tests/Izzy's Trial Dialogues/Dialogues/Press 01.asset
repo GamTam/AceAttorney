@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
   m_Name: Press 01
   m_EditorClassIdentifier: 
+  dialogueIndex: 12
   dialogueText:
   - _name: Phoenix
     _knownName: 1

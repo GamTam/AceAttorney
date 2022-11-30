@@ -1493,6 +1493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1270434692}
   - component: {fileID: 1270434693}
+  - component: {fileID: 1270434694}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Dialogue Manager
@@ -1536,6 +1537,18 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 6f8bef19c84b6784785c16b14f60a2c0, type: 3}
   _interjectionObj: {fileID: 3255038459366842304, guid: 506530a5bd7489f4c830768b5f8d10ac, type: 3}
   _doneTalking: 0
+--- !u!114 &1270434694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270434691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa225b7da29e68940bdfde3fd2ac04af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1592886616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1653,6 +1666,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTrial: {fileID: 11400000, guid: 0d89e76e589538f4396f5d4a5a7e20bf, type: 2}
+  allDialogues:
+  - {fileID: 11400000, guid: 0d89e76e589538f4396f5d4a5a7e20bf, type: 2}
+  - {fileID: 11400000, guid: b5f9186b9d8534c4e9f09605bcf02d5a, type: 2}
+  - {fileID: 11400000, guid: 1a4e75435d5f6514385a407cdbfb1680, type: 2}
+  - {fileID: 11400000, guid: c6079f3b355f1614292e42029b18e7f8, type: 2}
+  - {fileID: 11400000, guid: 6df1cbb8e4823e6409d11da459e7a480, type: 2}
+  - {fileID: 11400000, guid: 3c59dc8fa3f35e54383284d0c15f9f8e, type: 2}
+  - {fileID: 11400000, guid: 6fef82fec830390408f1bd2ceed18e05, type: 2}
+  - {fileID: 11400000, guid: 6b68c86dd4491de46ac0023a233064ee, type: 2}
+  - {fileID: 11400000, guid: 5f582a89f76f663438dc4b3cfe6c9247, type: 2}
+  - {fileID: 11400000, guid: 16740be752e338448bdac7c37246d551, type: 2}
+  - {fileID: 11400000, guid: 33f67d8d5b4cf554fb003272a3c6b67e, type: 2}
+  - {fileID: 11400000, guid: 8441233167efdef408d5cd598c8d3792, type: 2}
+  - {fileID: 11400000, guid: a1c04a3273032364fa6ef0441a9b95a8, type: 2}
+  - {fileID: 11400000, guid: e58223027467638449770fc4970cd1f7, type: 2}
+  - {fileID: 11400000, guid: da7899d280464a346a7f158cc819984d, type: 2}
+  - {fileID: 11400000, guid: 298dc9221bb94b342b434368f34cf9e1, type: 2}
+  - {fileID: 11400000, guid: f106970b5a7e03243b8b673b9494eb47, type: 2}
+  - {fileID: 11400000, guid: e4ebe914e05d5484899dc678c947f88f, type: 2}
+  - {fileID: 11400000, guid: 83125b0059ba3064192f0a19b345138a, type: 2}
+  - {fileID: 11400000, guid: 3bd5e559d9b89d6488e7fbca9be743de, type: 2}
+  - {fileID: 11400000, guid: ea01acbddc8c4fa4687014efb6774849, type: 2}
+  - {fileID: 11400000, guid: 8f3454753c9042e4998714da27a46cc7, type: 2}
+  - {fileID: 11400000, guid: 852dc18a4257aeb49b5c9874e8780077, type: 2}
   maxPenalties: 5
   penaltiesText: {fileID: 175503011}
 --- !u!114 &1592886622

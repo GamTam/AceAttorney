@@ -12,27 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
   m_Name: Press 10
   m_EditorClassIdentifier: 
+  dialogueIndex: 21
   dialogueText:
   - _name: Phoenix
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 2
     _dialogue: 'Are you absolutely,
 
       100% positive?'
   - _name: Sahwit
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: 'Yes, it was him.
 
       No mistake about it.'
   - _name: Payne
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: The witness says he's certain!
   nextLine: {fileID: 11400000, guid: 33f67d8d5b4cf554fb003272a3c6b67e, type: 2}

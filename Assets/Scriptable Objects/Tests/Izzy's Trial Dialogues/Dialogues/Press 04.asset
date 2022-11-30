@@ -12,23 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
   m_Name: Press 04
   m_EditorClassIdentifier: 
+  dialogueIndex: 15
   dialogueText:
   - _name: Phoenix
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 2
     _dialogue: Are you sure she was dead?
   - _name: Sahwit
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: W-Well, no, I guess I wasn't.
   - _name: Sahwit
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: 'But, she wasn''t moving at
 
@@ -37,16 +47,22 @@ MonoBehaviour:
       everywhere.'
   - _name: Phoenix
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: '<color=#6ebdf0>(I guess that would look
 
       fatal to anyone...)'
   - _name: Phoenix
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: Very well, what happened next?
   nextLine: {fileID: 11400000, guid: 6df1cbb8e4823e6409d11da459e7a480, type: 2}

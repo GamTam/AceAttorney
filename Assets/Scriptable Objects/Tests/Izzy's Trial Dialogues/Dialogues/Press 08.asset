@@ -12,25 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
   m_Name: Press 08
   m_EditorClassIdentifier: 
+  dialogueIndex: 19
   dialogueText:
   - _name: Phoenix
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 2
     _dialogue: Why use a public phone?
   - _name: Sahwit
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: 'Well, you see, I don''t
 
       have a cell phone.'
   - _name: Sahwit
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: 'And, being in the middle of the
 
@@ -40,8 +50,11 @@ MonoBehaviour:
       the nearby apartments.'
   - _name: Phoenix
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: 'Ah, right... what time
 

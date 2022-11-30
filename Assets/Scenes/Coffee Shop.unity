@@ -203,7 +203,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &109777453 stripped
 RectTransform:
@@ -541,7 +541,7 @@ Transform:
   m_LocalScale: {x: 0.9900969, y: 0.99009526, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &296586830
 GameObject:
@@ -729,7 +729,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7591e210ed7a46348af37b3c31be3fcf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8e2eb52104c30d44be23a680d5e4811, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1065,7 +1065,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &585168814
 GameObject:
@@ -1471,11 +1471,8 @@ MonoBehaviour:
   _tempBox: {fileID: 0}
   _responseHandler: {fileID: 0}
   _swap: {fileID: 1991476421}
-  _interjections:
-  - {fileID: 2800000, guid: 8741141392185a04ca8cce88e40042a4, type: 3}
-  - {fileID: 2800000, guid: 1a373c37b064fa34492608a91996aabd, type: 3}
-  - {fileID: 2800000, guid: 6f8bef19c84b6784785c16b14f60a2c0, type: 3}
-  _interjectionObj: {fileID: 3255038459366842304, guid: 506530a5bd7489f4c830768b5f8d10ac, type: 3}
+  _interjections: []
+  _interjectionObj: {fileID: 0}
   _doneTalking: 0
 --- !u!1 &1343139307
 GameObject:
@@ -1770,6 +1767,51 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1873504428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1873504430}
+  - component: {fileID: 1873504429}
+  m_Layer: 0
+  m_Name: ATTORNEYDIALOGUEDONTDELETE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1873504429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873504428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ccdc3b7069cf34a9d1d90235b15cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogue: {fileID: 11400000, guid: 0bad6ea2086a2dc479fecf63a8f651b5, type: 2}
+  _inspected: 0
+--- !u!4 &1873504430
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873504428}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.85069686, y: 0.25366837, z: -43.918938}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1877083528
 GameObject:
   m_ObjectHideFlags: 0
@@ -2255,25 +2297,41 @@ PrefabInstance:
     m_TransformParent: {fileID: 1592886620}
     m_Modifications:
     - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
+      propertyPath: _song
+      value: Explore
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
       propertyPath: _swap
       value: 
       objectReference: {fileID: 1991476421}
     - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
+      propertyPath: _1stArea
+      value: Test Scene (David)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
+      propertyPath: _1stAreaTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 7591e210ed7a46348af37b3c31be3fcf, type: 3}
+    - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
+      propertyPath: _attorneyBadgeTrigger
+      value: 
+      objectReference: {fileID: 1873504429}
+    - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
       propertyPath: _AreaNames.Array.data[0]
-      value: Coffee Shop
+      value: Street View
       objectReference: {fileID: 0}
     - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
       propertyPath: _AreaNames.Array.data[1]
-      value: Street View
+      value: Test Scene (David)
       objectReference: {fileID: 0}
     - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
       propertyPath: _AreaTextures.Array.data[0]
       value: 
-      objectReference: {fileID: 2800000, guid: f8e2eb52104c30d44be23a680d5e4811, type: 3}
+      objectReference: {fileID: 2800000, guid: e4c984346daa04145b5f85358144b956, type: 3}
     - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
       propertyPath: _AreaTextures.Array.data[1]
       value: 
-      objectReference: {fileID: 2800000, guid: e4c984346daa04145b5f85358144b956, type: 3}
+      objectReference: {fileID: 2800000, guid: 7591e210ed7a46348af37b3c31be3fcf, type: 3}
     - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
       propertyPath: _examiningColliders.Array.data[0]
       value: 
