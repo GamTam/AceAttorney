@@ -33,10 +33,14 @@ public class CursorMovement : MonoBehaviour
 
     [Header("Present Elements")]
     [SerializeField] private GameObject[] _presentObjects;
+    [SerializeField] private GameObject _evidenceIcon;
+    [SerializeField] private GameObject _evidenceProfile;
     [SerializeField] private GameObject _cursorPresent;
     [SerializeField] private GameObject[] _presentButtons;
     [SerializeField] private TextMeshProUGUI _titleEvidence;
     [SerializeField] private TextMeshProUGUI _descriptionEvidence;
+    [SerializeField] private DialogueTrigger[] _presentEvidence;
+    [SerializeField] private Texture[] _evidenceTextures;
     
     [Header("Transition")]
     [SerializeField] private FadingIn _fadeIn;
@@ -45,19 +49,19 @@ public class CursorMovement : MonoBehaviour
     [SerializeField] private GameObject[] _darkenBackground;
     
     [Header("Misc.")]
-    [SerializeField] string _song = "SteelSamurai";
+    [SerializeField] string _song;
     [SerializeField] SwapCharacters _swap;
-    [SerializeField] DialogueTrigger _attorneyBadgeTrigger;
     [SerializeField] public Sprite _completedTalkingImage;
 
     int _selection = 0;
-    int _maxEvidence = 1;
+    int _maxEvidence = 0;
 
     bool _turnedOff;
     bool _examine;
     bool _move;
     bool _talk;
     bool _present;
+    bool _pageSwap;
     
     private DialogueManager _doneTalking;
     
@@ -68,7 +72,11 @@ public class CursorMovement : MonoBehaviour
     private InputAction _back;
 
     //Move
-    private RawImage[] _rawImages;
+    private RawImage[] _rawImagesMove;
+
+    //Present
+    private RawImage[] _rawImagesIconPresent;
+    private RawImage[] _rawImagesProfilePresent;
     
     private MusicManager _musicManager;
     private SoundManager _soundManager;
@@ -90,7 +98,14 @@ public class CursorMovement : MonoBehaviour
         _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
         _musicManager.Play(_song);
 
-        _rawImages = new RawImage[_AreaTextures.Length];
+        if(_maxEvidence > 9)
+        {
+            _pageSwap = true;
+        }
+
+        _rawImagesMove = new RawImage[_AreaTextures.Length];
+        _rawImagesIconPresent = new RawImage[_evidenceTextures.Length];
+        _rawImagesProfilePresent = new RawImage[_evidenceTextures.Length];
         Setup();
 
         StartCoroutine(WaitThenFade());
@@ -390,6 +405,22 @@ public class CursorMovement : MonoBehaviour
                 _titleEvidence.text = "Empty Kitchen";
                 _descriptionEvidence.text = "No description at the moment.";
                 break;
+            case 10:
+                _titleEvidence.text = "Gun";
+                _descriptionEvidence.text = "No description at the moment.";
+                break;
+            case 11:
+                _titleEvidence.text = "Phone Line Outage Report";
+                _descriptionEvidence.text = "No description at the moment.";
+                break;
+            case 12:
+                _titleEvidence.text = "Security Camera Photo";
+                _descriptionEvidence.text = "No description at the moment.";
+                break;
+            case 13:
+                _titleEvidence.text = "Singing Barbershop Floor Plan";
+                _descriptionEvidence.text = "No description at the moment.";
+                break;
         }
     }
 
@@ -452,9 +483,36 @@ public class CursorMovement : MonoBehaviour
     {
         if(_left.triggered)
         {
-            if(_selection == 0)
+            if(_selection == 0 || _selection > 9 && _present)
             {
-            
+                if(_selection > 9 && _present)
+                {
+                    _soundManager.Play("select");
+                    if(_selection == 10)
+                    {
+                        cursor.transform.position = Buttons[_selection - 1].transform.position;
+                        _presentButtons[0].SetActive(true);
+                        _presentButtons[9].SetActive(false);
+                        _pageSwap = true;
+                        _selection--;
+                    }
+                    else
+                    {
+                        _selection--;
+                        cursor.transform.position = Buttons[_selection - 10].transform.position;
+                        _presentButtons[_selection - 10].SetActive(false);
+                        _presentButtons[_selection - 9].SetActive(true);
+                    }
+                    _rawImagesIconPresent[_selection] = (RawImage)_evidenceIcon.GetComponent<RawImage>(); 
+                    _rawImagesIconPresent[_selection].texture = (Texture)_evidenceTextures[_selection];
+                    _rawImagesProfilePresent[_selection] = (RawImage)_evidenceProfile.GetComponent<RawImage>(); 
+                    _rawImagesProfilePresent[_selection].texture = (Texture)_evidenceTextures[_selection];
+                    PresentingSelection();
+                }
+                else
+                {
+
+                }
             }
             else
             {
@@ -465,6 +523,13 @@ public class CursorMovement : MonoBehaviour
                 {
                     _presentButtons[_selection].SetActive(false);
                     _presentButtons[_selection + 1].SetActive(true);
+
+                    _rawImagesIconPresent[_selection] = (RawImage)_evidenceIcon.GetComponent<RawImage>(); 
+                    _rawImagesIconPresent[_selection].texture = (Texture)_evidenceTextures[_selection];
+
+                    _rawImagesProfilePresent[_selection] = (RawImage)_evidenceProfile.GetComponent<RawImage>(); 
+                    _rawImagesProfilePresent[_selection].texture = (Texture)_evidenceTextures[_selection];
+
                     PresentingSelection();
                 }
                 else if(_move)
@@ -477,13 +542,38 @@ public class CursorMovement : MonoBehaviour
         //Right or D
         else if(_right.triggered)
         {
-            if(_selection == counter)
+            if(_selection >= counter)
             {
-            
-            }
-            else if(_selection + 1 == _maxEvidence && _present)
-            {
+                if(_selection == _maxEvidence && _present)
+                {
                     
+                }
+                else if(_maxEvidence > 9 && _present)
+                {
+                    _soundManager.Play("select");
+                    _selection++;
+                    cursor.transform.position = Buttons[_selection - 10].transform.position;
+                    if(_pageSwap)
+                    {
+                        _presentButtons[0].SetActive(false);
+                        _presentButtons[9].SetActive(true);
+                        _pageSwap = false;
+                    }
+                    else
+                    {
+                        _presentButtons[_selection - 10].SetActive(false);
+                        _presentButtons[_selection - 11].SetActive(true);
+                    }
+                    _rawImagesIconPresent[_selection] = (RawImage)_evidenceIcon.GetComponent<RawImage>(); 
+                    _rawImagesIconPresent[_selection].texture = (Texture)_evidenceTextures[_selection];
+                    _rawImagesProfilePresent[_selection] = (RawImage)_evidenceProfile.GetComponent<RawImage>(); 
+                    _rawImagesProfilePresent[_selection].texture = (Texture)_evidenceTextures[_selection];
+                    PresentingSelection();
+                }
+            }
+            else if(_selection == _maxEvidence && _present)
+            {
+
             }
             else
             {
@@ -494,6 +584,13 @@ public class CursorMovement : MonoBehaviour
                 {
                     _presentButtons[_selection].SetActive(false);
                     _presentButtons[_selection - 1].SetActive(true);
+
+                    _rawImagesIconPresent[_selection] = (RawImage)_evidenceIcon.GetComponent<RawImage>(); 
+                    _rawImagesIconPresent[_selection].texture = (Texture)_evidenceTextures[_selection];
+                    
+                    _rawImagesProfilePresent[_selection] = (RawImage)_evidenceProfile.GetComponent<RawImage>(); 
+                    _rawImagesProfilePresent[_selection].texture = (Texture)_evidenceTextures[_selection];
+
                     PresentingSelection();
                 }
                 else if(_move)
@@ -516,23 +613,24 @@ public class CursorMovement : MonoBehaviour
             if(_present)
             {
                 Present(_selection);
-                //This is just a temporary solution
-                _attorneyBadgeTrigger.TriggerDialogue();
+                _presentEvidence[_selection].TriggerDialogue();
             }
         }
     }
 
     public void Setup()
     {
+        //Move Setup
         for(int a = 0; a < _AreaTextures.Length; a++)
         {
-            _rawImages[a] = (RawImage)_moveObjects[a].GetComponent<RawImage>(); 
-            _rawImages[a].texture = (Texture)_AreaTextures[a];
+            _rawImagesMove[a] = (RawImage)_moveObjects[a].GetComponent<RawImage>(); 
+            _rawImagesMove[a].texture = (Texture)_AreaTextures[a];
         }
         for(int b = 0; b < _AreaText.Length; b++)
         {
             _AreaText[b].text = _AreaNames[b];
         }
+        //Talking Setup
         for(int c = 0; c < _talkText.Length; c++)
         {
             _talkText[c].text = _talkNames[c];
