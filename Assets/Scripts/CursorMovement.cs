@@ -2,16 +2,21 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using TMPro;
 
 public class CursorMovement : MonoBehaviour
 {
     [Header("UI Elements")]
     [SerializeField] private GameObject[] _buttons;
     [SerializeField] private GameObject[] _talkingButtons;
+    [SerializeField] private GameObject[] _presentButtons;
     [SerializeField] private GameObject _cursor;
     [SerializeField] private GameObject _cursorTalking;
+    [SerializeField] private GameObject _cursorPresent;
     [SerializeField] private GameObject _transparent;
     [SerializeField] private GameObject _corner;
+    [SerializeField] private TextMeshProUGUI _titleEvidence;
+    [SerializeField] private TextMeshProUGUI _descriptionEvidence;
 
     [Header("Explore Elements")] 
     [SerializeField] private GameObject _investigationCursor;
@@ -26,8 +31,10 @@ public class CursorMovement : MonoBehaviour
     [Header("Misc.")]
     [SerializeField] string _song = "SteelSamurai";
     [SerializeField] SwapCharacters _swap;
+    [SerializeField] DialogueTrigger _attorneyBadgeTrigger;
 
     int _selection = 0;
+    int _maxEvidence = 1;
 
     bool _turnedOff;
     bool _examine;
@@ -135,6 +142,8 @@ public class CursorMovement : MonoBehaviour
                 _selection = 0;
                 _cursor.transform.position = _buttons[_selection].transform.position;
                 _fadeIn.startFading();
+                _cursorTalking.SetActive(false);
+                _cursorPresent.SetActive(false);
                 if(_examine)
                 {
                     _examine = false;
@@ -143,7 +152,6 @@ public class CursorMovement : MonoBehaviour
                 {
                     _selection = 2;
                     _cursor.transform.position = _buttons[_selection].transform.position;
-                    _cursorTalking.SetActive(false);
                     DissappearArrays(_talkingButtons);
                     DissappearArrays(_darkenBackground);
                     _talk = false;
@@ -153,14 +161,21 @@ public class CursorMovement : MonoBehaviour
                     _selection = 3;
                     _cursor.transform.position = _buttons[_selection].transform.position;
                     DissappearArrays(_presentObjects);
+                    DissappearArrays(_presentButtons);
                     DissappearArrays(_darkenBackground);
                     _present = false;
                 }
             }
 
-            if(_doneTalking._doneTalking && !_examine)
+            if(_doneTalking._doneTalking && !_examine && !_present)
             {
                 TalkReturn();
+                _doneTalking._doneTalking = false;
+            }
+
+            if(_doneTalking._doneTalking && !_examine && !_talk)
+            {
+                PresentReturn();
                 _doneTalking._doneTalking = false;
             }
         }
@@ -212,27 +227,39 @@ public class CursorMovement : MonoBehaviour
                 {
                     _soundManager.Play("select");
                     _selection--;
-                    _cursorTalking.transform.position = _talkingButtons[_selection].transform.position;
+                    _cursorPresent.transform.position = _presentButtons[_selection].transform.position;
+                    _presentButtons[_selection].SetActive(false);
+                    _presentButtons[_selection + 1].SetActive(true);
+                    PresentingSelection();
                 }
             }
             //Right or D
             else if(_right.triggered)
             {
-                if(_selection == 2)
+                if(_selection == 9)
                 {
                 
+                }
+                if(_selection + 1 == _maxEvidence)
+                {
+
                 }
                 else
                 {
                     _soundManager.Play("select");
                     _selection++;
-                    _cursorTalking.transform.position = _talkingButtons[_selection].transform.position;
+                    _cursorPresent.transform.position = _presentButtons[_selection].transform.position;
+                    _presentButtons[_selection].SetActive(false);
+                    _presentButtons[_selection - 1].SetActive(true);
+                    PresentingSelection();
                 }
             }
 
             if(_select.triggered)
             {
-                Talk(_selection);
+                Present(_selection);
+                //This is just a temporary solution
+                _attorneyBadgeTrigger.TriggerDialogue();
             }
         }
     }
@@ -267,6 +294,8 @@ public class CursorMovement : MonoBehaviour
     public void TalkBtn()
     {
         _talk = true;
+        _examine = false;
+        _present = false;
         _selection = 0;
         _cursor.transform.position = _buttons[2].transform.position;
         _soundManager.Play("confirm");
@@ -283,7 +312,9 @@ public class CursorMovement : MonoBehaviour
     public void PresBtn()
     {
         _present = true;
-        _selection = 3;
+        _examine = false;
+        _talk = false;
+        _selection = 0;
         _cursor.transform.position = _buttons[3].transform.position;
         _soundManager.Play("confirm");
         StartCoroutine(TurnOff(_transparent));
@@ -292,6 +323,11 @@ public class CursorMovement : MonoBehaviour
         DissappearArrays(_buttons);
         AppearArrays(_darkenBackground);
         AppearArrays(_presentObjects);
+        AppearArrays(_presentButtons);
+        _cursorPresent.SetActive(true);
+        _cursorPresent.transform.position = _presentButtons[0].transform.position;
+        _presentButtons[0].SetActive(false);
+        PresentingSelection();
     }
 
     public void Talk(int button)
@@ -312,6 +348,75 @@ public class CursorMovement : MonoBehaviour
         _talkingButtons[_selection].GetComponent<Image>().sprite = _completedTalkingImage;
         AppearArrays(_talkingButtons);
         AppearArrays(_darkenBackground);
+    }
+
+    public void Present(int button)
+    {
+        _selection = button;
+        _cursorPresent.transform.position = _presentButtons[button].transform.position;
+        _soundManager.Play("confirm");
+        DissappearArrays(_presentObjects);
+        DissappearArrays(_presentButtons);
+        DissappearArrays(_darkenBackground);
+        _cursorPresent.SetActive(false);
+        _present = true;
+    }
+
+    public void PresentReturn()
+    {
+        _cursorPresent.SetActive(true);
+        _cursorPresent.transform.position = _presentButtons[_selection].transform.position;
+        AppearArrays(_presentButtons);
+        AppearArrays(_presentObjects);
+        AppearArrays(_darkenBackground);
+        _presentButtons[_selection].SetActive(false);
+    }
+
+    public void PresentingSelection()
+    {
+        switch(_selection)
+        {
+            case 0:
+                _titleEvidence.text = "Attorney's Badge";
+                _descriptionEvidence.text = "No one would believe I was a defence attorney if I didn't carry this.";
+                break;
+            case 1:
+                _titleEvidence.text = "Autopsy Reports";
+                _descriptionEvidence.text = "No description at the moment.";
+                break;
+            case 2:
+                _titleEvidence.text = "Barbershop Financial Records";
+                _descriptionEvidence.text = "No description at the moment.";
+                break;
+            case 3:
+                _titleEvidence.text = "Bloody Gloves";
+                _descriptionEvidence.text = "No description at the moment.";
+                break;
+            case 4:
+                _titleEvidence.text = "Bottle of Pills";
+                _descriptionEvidence.text = "No description at the moment.";
+                break;
+            case 5:
+                _titleEvidence.text = "Cafe Front Sign";
+                _descriptionEvidence.text = "No description at the moment.";
+                break;
+            case 6:
+                _titleEvidence.text = "Cafe Receipt";
+                _descriptionEvidence.text = "No description at the moment.";
+                break;
+            case 7:
+                _titleEvidence.text = "Decisive Evidence";
+                _descriptionEvidence.text = "No description at the moment.";
+                break;
+            case 8:
+                _titleEvidence.text = "Doctor's Report";
+                _descriptionEvidence.text = "No description at the moment.";
+                break;
+            case 9:
+                _titleEvidence.text = "Empty Kitchen";
+                _descriptionEvidence.text = "No description at the moment.";
+                break;
+        }
     }
 
     IEnumerator TurnOff(GameObject _item)
