@@ -2317,6 +2317,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1873504429}
     - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
+      propertyPath: _AreaNames.Array.data[0]
+      value: Street View
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
+      propertyPath: _AreaNames.Array.data[1]
+      value: Test Scene (David)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
+      propertyPath: _AreaTextures.Array.data[0]
+      value: 
+      objectReference: {fileID: 2800000, guid: e4c984346daa04145b5f85358144b956, type: 3}
+    - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
+      propertyPath: _AreaTextures.Array.data[1]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7591e210ed7a46348af37b3c31be3fcf, type: 3}
+    - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
       propertyPath: _examiningColliders.Array.data[0]
       value: 
       objectReference: {fileID: 585168814}
