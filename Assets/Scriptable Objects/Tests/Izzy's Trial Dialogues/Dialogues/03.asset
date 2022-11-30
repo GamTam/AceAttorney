@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
   m_Name: 03
   m_EditorClassIdentifier: 
+  dialogueIndex: 3
   dialogueText:
   - _name: Sahwit
     _knownName: 1

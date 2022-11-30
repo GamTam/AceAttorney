@@ -12,25 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
   m_Name: Loop
   m_EditorClassIdentifier: 
+  dialogueIndex: 11
   dialogueText:
   - _name: Mia
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipfemale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: That's all of it.
   - _name: Mia
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipfemale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: 'There must be a contradiction
 
       in there somewhere.'
   - _name: Mia
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipfemale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: 'Examine the Court Recort with
 
@@ -40,8 +50,11 @@ MonoBehaviour:
       you as being suspicious.'
   - _name: Mia
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipfemale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: 'Then,<p:short> find the evicence that
 

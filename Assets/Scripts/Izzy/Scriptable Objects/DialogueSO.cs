@@ -1,9 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Dialogue", menuName = "AceAttorney GDW/Dialogue")]
 public class DialogueSO : ScriptableObject 
 {
     [Header("Mandatory")]
+    public int dialogueIndex;
     public TBLine[] dialogueText;
     public DialogueSO nextLine;
     
@@ -21,11 +23,22 @@ public class DialogueSO : ScriptableObject
     public DialogueSO presentSequence;
     public EvidenceSO[] evidence;
 
+    private List<int> secondaryDialogueIndexes = new List<int>();
+
     public bool HasPresentSequence => presentSequence != null;
     public bool HasWrongPresentSequence => wrongPresentSequence != null;
     public bool HasPressingSequence => pressSequence != null;
+    public bool HasSecondaryDialogues => secondaryDialogueIndexes.Count > 0;
 
     public EvidenceSO[] ReturnListOfEvidence() {
         return evidence;
+    }
+
+    private List<int> ReturnSecondaryDialogueIndex() {
+        foreach (TBLine line in dialogueText) {
+            secondaryDialogueIndexes.Add(line.ReturnSecondaryDialogueIndex());
+        }
+
+        return secondaryDialogueIndexes;
     }
 }

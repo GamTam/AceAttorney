@@ -12,41 +12,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
   m_Name: Press 02
   m_EditorClassIdentifier: 
+  dialogueIndex: 13
   dialogueText:
   - _name: Phoenix
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 2
     _dialogue: Half-open... you say?
   - _name: Sahwit
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: 'Yes, yes, the door was
 
       open halfway. Yes.'
   - _name: Sahwit
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: 'I watched for a moment, but
 
       no one came close to the door.'
   - _name: Sahwit
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: '"That''s odd, in a big city
 
       like this," I thought...'
   - _name: Payne
     _knownName: 1
+    _char: 
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
+    _stopMusic: 0
     _interjection: 0
     _dialogue: 'I see.<p:tiny>
 
