@@ -12,15 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
   m_Name: No Clues Here
   m_EditorClassIdentifier: 
+  dialogueIndex: 0
   dialogueText:
-  - _name: Phoenix
+  - secondaryDialogueIndex: 0
+    _name: Phoenix
     _knownName: 1
     _char: NaaN
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
-    _interjection: 3
+    _interjection: 1
     _dialogue: No clues here.
   nextLine: {fileID: 0}
   responses: []

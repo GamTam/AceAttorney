@@ -12,6 +12,7 @@ TagManager:
   - Dialogue Manager
   - BackgroundCam
   - CharacterPlane
+  - Select
   layers:
   - Default
   - TransparentFX
