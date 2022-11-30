@@ -2113,7 +2113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
       propertyPath: _AreaNames.Array.data[1]
-      value: Test Scene (David)
+      value: Wright & Co. Law Offices
       objectReference: {fileID: 0}
     - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
       propertyPath: _AreaTextures.Array.data[0]

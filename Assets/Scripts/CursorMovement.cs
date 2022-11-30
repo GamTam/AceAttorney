@@ -28,6 +28,7 @@ public class CursorMovement : MonoBehaviour
     [Header("Talking Elements")]
     [SerializeField] private GameObject _cursorTalking;
     [SerializeField] private GameObject[] _talkingButtons;
+    [SerializeField] private DialogueTrigger[] _startTalking;
     [SerializeField] private TextMeshProUGUI[] _talkText;
     [SerializeField] private string[] _talkNames;
 
@@ -62,6 +63,7 @@ public class CursorMovement : MonoBehaviour
     bool _talk;
     bool _present;
     bool _pageSwap;
+    bool _delayDone;
     
     private DialogueManager _doneTalking;
     
@@ -200,6 +202,7 @@ public class CursorMovement : MonoBehaviour
 
     public void Back()
     {
+        _delayDone = false;
         _doneTalking._doneTalking = false;
         _turnedOff = false;
         _soundManager.Play("back");
@@ -213,6 +216,9 @@ public class CursorMovement : MonoBehaviour
         _cursorMove.SetActive(false);
         if(_examine)
         {
+            _selection = 0;
+            _cursor.transform.position = _buttons[_selection].transform.position;
+            DissappearArrays(_examiningColliders);
             _examine = false;
         }
         else if(_move)
@@ -333,6 +339,7 @@ public class CursorMovement : MonoBehaviour
         _cursorTalking.SetActive(false);
         DissappearArrays(_talkingButtons);
         DissappearArrays(_darkenBackground);
+        _startTalking[_selection].TriggerDialogue();
     }
 
     public void TalkReturn()
@@ -448,6 +455,7 @@ public class CursorMovement : MonoBehaviour
             _item.transform.localScale = new Vector2(1, i);
             yield return null;
         }
+        _delayDone = true;
         yield return new WaitForSeconds(0.15f);
     }
 
@@ -604,11 +612,11 @@ public class CursorMovement : MonoBehaviour
                 }
             }
         }
-        if(_select.triggered)
+        if(_select.triggered && _delayDone)
         {
             if(_move)
             {
-
+                Debug.Log("MOVE");
             }
             if(_talk)
             {
