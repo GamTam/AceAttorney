@@ -170,46 +170,7 @@ public class CursorMovement : MonoBehaviour
 
             if(_back.triggered)
             {
-                _turnedOff = false;
-                _soundManager.Play("back");
-                StartCoroutine(TurnOn(_transparent));
-                AppearArrays(_buttons);
-                _selection = 0;
-                _cursor.transform.position = _buttons[_selection].transform.position;
-                _fadeIn.startFading();
-                _cursorTalking.SetActive(false);
-                _cursorPresent.SetActive(false);
-                _cursorMove.SetActive(false);
-                if(_examine)
-                {
-                    _examine = false;
-                }
-                else if(_move)
-                {
-                    _selection = 1;
-                    _cursor.transform.position = _buttons[_selection].transform.position;
-                    DissappearArrays(_moveButtons);
-                    DissappearArrays(_moveObjects);
-                    DissappearArrays(_darkenBackground);
-                    _move = false;
-                }
-                else if(_talk)
-                {
-                    _selection = 2;
-                    _cursor.transform.position = _buttons[_selection].transform.position;
-                    DissappearArrays(_talkingButtons);
-                    DissappearArrays(_darkenBackground);
-                    _talk = false;
-                }
-                else if(_present)
-                {
-                    _selection = 3;
-                    _cursor.transform.position = _buttons[_selection].transform.position;
-                    DissappearArrays(_presentObjects);
-                    DissappearArrays(_presentButtons);
-                    DissappearArrays(_darkenBackground);
-                    _present = false;
-                }
+                Back();
             }
 
             if(_doneTalking._doneTalking && !_examine && !_present)
@@ -236,6 +197,50 @@ public class CursorMovement : MonoBehaviour
         else if(_move)
         {
             Selection(_cursorMove, _moveButtons, 1);
+        }
+    }
+
+    public void Back()
+    {
+        _turnedOff = false;
+        _soundManager.Play("back");
+        StartCoroutine(TurnOn(_transparent));
+        AppearArrays(_buttons);
+        _selection = 0;
+        _cursor.transform.position = _buttons[_selection].transform.position;
+        _fadeIn.startFading();
+        _cursorTalking.SetActive(false);
+        _cursorPresent.SetActive(false);
+        _cursorMove.SetActive(false);
+        if(_examine)
+        {
+            _examine = false;
+        }
+        else if(_move)
+        {
+            _selection = 1;
+            _cursor.transform.position = _buttons[_selection].transform.position;
+            DissappearArrays(_moveButtons);
+            DissappearArrays(_moveObjects);
+            DissappearArrays(_darkenBackground);
+            _move = false;
+        }
+        else if(_talk)
+        {
+            _selection = 2;
+            _cursor.transform.position = _buttons[_selection].transform.position;
+            DissappearArrays(_talkingButtons);
+            DissappearArrays(_darkenBackground);
+            _talk = false;
+        }
+        else if(_present)
+        {
+            _selection = 3;
+            _cursor.transform.position = _buttons[_selection].transform.position;
+            DissappearArrays(_presentObjects);
+            DissappearArrays(_presentButtons);
+            DissappearArrays(_darkenBackground);
+            _present = false;
         }
     }
 
