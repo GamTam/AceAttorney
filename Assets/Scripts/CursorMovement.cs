@@ -64,6 +64,7 @@ public class CursorMovement : MonoBehaviour
     bool _present;
     bool _pageSwap;
     bool _delayDone;
+    public bool _trial;
     
     private DialogueManager _doneTalking;
     
@@ -316,10 +317,13 @@ public class CursorMovement : MonoBehaviour
         _talk = false;
         _move = false;
         _selection = 0;
-        _cursor.transform.position = _buttons[3].transform.position;
         _soundManager.Play("confirm");
-        StartCoroutine(TurnOff(_transparent));
-        _fadeOut.startFading();
+        if(!_trial)
+        {
+            _cursor.transform.position = _buttons[3].transform.position;
+            StartCoroutine(TurnOff(_transparent));
+            _fadeOut.startFading();
+        }
         _turnedOff = true;
         DissappearArrays(_buttons);
         AppearArrays(_darkenBackground);

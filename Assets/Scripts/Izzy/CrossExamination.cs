@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 public class CrossExamination : MonoBehaviour 
 {
     [SerializeField] EvidenceSO presentedEvidence; // This will change when we have actual evidence presentation
+
+    [SerializeField] CursorMovement _spagettiCode; // David - Temporary
     
     private SoundManager _soundManager;
     
@@ -41,7 +43,10 @@ public class CrossExamination : MonoBehaviour
 
         if (present.triggered)
         {
-            Present();
+            _spagettiCode._trial = true;
+            _spagettiCode.PresBtn();
+            _spagettiCode.PresentingSelection();
+            //Present();
         }
 
         if (currentDialogue.HasPressingSequence)
@@ -63,6 +68,7 @@ public class CrossExamination : MonoBehaviour
     }
 
     public void Present() {
+        
         var correctEvidenceName = currentDialogue.ReturnListOfEvidence();
 
         foreach (EvidenceSO evidence in correctEvidenceName) {
