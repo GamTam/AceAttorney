@@ -1711,6 +1711,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 852dc18a4257aeb49b5c9874e8780077, type: 2}
   maxPenalties: 5
   penaltiesText: {fileID: 175503011}
+  currentPenalties: 5
 --- !u!114 &1592886622
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -30,7 +30,7 @@ MonoBehaviour:
     _knownName: 1
     _char: Maya
     _anim: think
-    _blipSound: blipmale
+    _blipSound: blipfemale
     _skipFade: 0
     _stopMusic: 0
     _interjection: 0

@@ -10,7 +10,7 @@ public class TrialController : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI penaltiesText;
 
-    private int currentPenalties = 0;
+    public int currentPenalties = 5;
     private DialogueManager dialogueManager;
     private CrossExamination crossExamination;
 
@@ -20,24 +20,29 @@ public class TrialController : MonoBehaviour
         dialogueManager = FindObjectOfType<DialogueManager>();
         crossExamination = FindObjectOfType<CrossExamination>();
 
-        penaltiesText.text = $"{currentPenalties}/{maxPenalties}";
+        UpdateText();
 
         playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         playerInput.SwitchCurrentActionMap("Textbox");
     }
 
     public void StartTrial() {
-        currentPenalties = 0;
-        penaltiesText.text = $"{currentPenalties}/{maxPenalties}";
+        currentPenalties = maxPenalties;
+        UpdateText();
         
         dialogueManager.StartText(currentTrial);
     }
 
-    public void IncreaseIncorrects() {
-        currentPenalties++;
+    public void UpdateText()
+    {
         penaltiesText.text = $"{currentPenalties}/{maxPenalties}";
+    }
 
-        if (currentPenalties >= maxPenalties) {
+    public void IncreaseIncorrects() {
+        currentPenalties--;
+        UpdateText();
+
+        if (currentPenalties <= 0) {
             print("AGHHHHH!!!!");
         }
     }

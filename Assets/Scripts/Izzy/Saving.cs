@@ -37,11 +37,14 @@ public class Saving : MonoBehaviour
         PlayerPrefs.SetInt("currentDialogueIndex", currentDialogue.dialogueIndex);
         PlayerPrefs.SetInt("currentLine", dialogueManager._currentLine);
         PlayerPrefs.SetString("musicPlaying", _musicManager.musicPlaying.name);
+        PlayerPrefs.SetInt("penalties", trialController.currentPenalties);
     }
 
     public void LoadGame() {
         var savedDialogueIndex = PlayerPrefs.GetInt("currentDialogueIndex");
         string s = PlayerPrefs.GetString("musicPlaying");
+        trialController.currentPenalties = PlayerPrefs.GetInt("penalties");
+        trialController.UpdateText();
         if (_musicManager.GetMusicPlaying().name != s)
         {
             _musicManager.fadeOut();
@@ -50,7 +53,7 @@ public class Saving : MonoBehaviour
 
         foreach (DialogueSO dialogue in allDialogues) {
             if (dialogue.dialogueIndex == savedDialogueIndex) {
-                dialogueManager.StartText(dialogue, true, PlayerPrefs.GetInt("currentLine"));
+                dialogueManager.StartText(dialogue, true, PlayerPrefs.GetInt("currentLine") - 1);
             }
         }
     }
