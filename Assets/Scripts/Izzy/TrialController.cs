@@ -13,6 +13,7 @@ public class TrialController : MonoBehaviour
     public int currentPenalties = 5;
     private DialogueManager dialogueManager;
     private CrossExamination crossExamination;
+    private MusicManager _musicManager;
 
     private PlayerInput playerInput;
 
@@ -24,6 +25,9 @@ public class TrialController : MonoBehaviour
 
         playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         playerInput.SwitchCurrentActionMap("Textbox");
+        _musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();
+        _musicManager.Play("CrossEx");
+        StartTrial();
     }
 
     public void StartTrial() {
