@@ -16,7 +16,7 @@ MonoBehaviour:
   dialogueText:
   - _name: Phoenix
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
@@ -25,7 +25,7 @@ MonoBehaviour:
     _dialogue: Are you sure she was dead?
   - _name: Sahwit
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
@@ -34,7 +34,7 @@ MonoBehaviour:
     _dialogue: W-Well, no, I guess I wasn't.
   - _name: Sahwit
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
       everywhere.'
   - _name: Phoenix
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
       fatal to anyone...)'
   - _name: Phoenix
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0

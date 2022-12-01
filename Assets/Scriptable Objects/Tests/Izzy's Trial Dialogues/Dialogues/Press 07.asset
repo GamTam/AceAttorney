@@ -16,7 +16,7 @@ MonoBehaviour:
   dialogueText:
   - _name: Phoenix
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
@@ -27,7 +27,7 @@ MonoBehaviour:
       wasn''t working?'
   - _name: Sahwit
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
@@ -38,7 +38,7 @@ MonoBehaviour:
       No, it wasn''t. Right.'
   - _name: Phoenix
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
       did you?'
   - _name: Sahwit
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
@@ -63,7 +63,7 @@ MonoBehaviour:
       that!'
   - _name: Sahwit
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
@@ -74,7 +74,7 @@ MonoBehaviour:
       on a shelf in the entranceway.'
   - _name: Sahwit
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
@@ -85,7 +85,7 @@ MonoBehaviour:
       using that to call...'
   - _name: Payne
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
       working, correct?'
   - _name: Payne
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0

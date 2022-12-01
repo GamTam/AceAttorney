@@ -16,7 +16,7 @@ MonoBehaviour:
   dialogueText:
   - _name: Phoenix
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
@@ -27,7 +27,7 @@ MonoBehaviour:
       100% positive?'
   - _name: Sahwit
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
@@ -38,7 +38,7 @@ MonoBehaviour:
       No mistake about it.'
   - _name: Payne
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0

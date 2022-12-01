@@ -4,7 +4,6 @@ using UnityEngine;
 [System.Serializable]
 public class TBLine
 {
-    [SerializeField] private int secondaryDialogueIndex;
     [SerializeField] private string _name;
     [SerializeField] private bool _knownName = true;
     [SerializeField] private string _char;
@@ -24,10 +23,6 @@ public class TBLine
     public bool SkipFade => _skipFade;
     public bool StopMusic => _stopMusic;
     public string Dialogue => _dialogue;
-
-    public int ReturnSecondaryDialogueIndex() {
-        return secondaryDialogueIndex;
-    }
 }
 
 public enum Interjection

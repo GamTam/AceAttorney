@@ -14,21 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueIndex: 12
   dialogueText:
-  - _name: Phoenix
+  - _name: Maya
     _knownName: 1
     _char: Maya
     _anim: think
-    _blipSound: blipmale
+    _blipSound: blipfemale
     _skipFade: 0
     _stopMusic: 0
     _interjection: 2
     _dialogue: 'Isn''t a man leaving an
 
-      appartment a common sight?'
-  - _name: Phoenix
+      appartment a<music:Suspense> common
+      sight?'
+  - _name: Maya
     _knownName: 1
-    _char: 
-    _anim: 
+    _char: Maya
+    _anim: think
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
@@ -82,8 +83,8 @@ MonoBehaviour:
       of a crime!'
   - _name: Phoenix
     _knownName: 1
-    _char: 
-    _anim: NaN
+    _char: Sahwit
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
@@ -96,7 +97,7 @@ MonoBehaviour:
       conjecture!'
   - _name: Payne
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
@@ -110,7 +111,7 @@ MonoBehaviour:
       looked suspicious.'
   - _name: Payne
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0

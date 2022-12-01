@@ -1026,17 +1026,35 @@ MonoBehaviour:
   _buttons:
   - {fileID: 782405376}
   - {fileID: 0}
-  _talkingButtons: []
   _cursor: {fileID: 843017276}
-  _cursorTalking: {fileID: 0}
   _transparent: {fileID: 523226663}
   _corner: {fileID: 0}
   _investigationCursor: {fileID: 787919795915615156, guid: 2dbaf0facc577aa439e8e1320071eaa2, type: 3}
   _examiningColliders:
   - {fileID: 0}
-  _talkingObjects: []
+  _moveObjects: []
+  _cursorMove: {fileID: 0}
+  _moveButtons: []
+  _AreaText: []
+  _AreaNames: []
+  _AreaTextures: []
+  _cursorTalking: {fileID: 0}
+  _talkingButtons: []
+  _talkText: []
+  _talkNames: []
+  _presentObjects: []
+  _evidenceIcon: {fileID: 0}
+  _evidenceProfile: {fileID: 0}
+  _cursorPresent: {fileID: 0}
+  _presentButtons: []
+  _titleEvidence: {fileID: 0}
+  _descriptionEvidence: {fileID: 0}
+  _presentEvidence: []
+  _evidenceTextures: []
   _fadeIn: {fileID: 523226665}
   _fadeOut: {fileID: 523226664}
+  _offScreen: {fileID: 0}
+  _darkenBackground: []
   _song: CrossEx
   _swap: {fileID: 0}
   _completedTalkingImage: {fileID: 0}
@@ -1529,6 +1547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textBoxPrefab: {fileID: 3409057346996304509, guid: 4e89df09d9b03544bb8ec808070b80e5, type: 3}
   _tempBox: {fileID: 0}
+  _currentLine: 0
   _responseHandler: {fileID: 0}
   _swap: {fileID: 948322832}
   _interjections:

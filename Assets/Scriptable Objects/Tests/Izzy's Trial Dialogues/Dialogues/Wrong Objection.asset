@@ -16,7 +16,7 @@ MonoBehaviour:
   dialogueText:
   - _name: Phoenix
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
@@ -27,23 +27,36 @@ MonoBehaviour:
       <sp:1><shake:>Contradicts the evidence!'
   - _name: Judge
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
     _interjection: 0
-    _dialogue: <sp:2>No.
+    _dialogue: '<sp:2>And how exactly does it,<p:short>
+
+      Mr. Wright?'
   - _name: Phoenix
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
     _interjection: 0
-    _dialogue: Fuck.
-  nextLine: {fileID: 11400000, guid: 0d89e76e589538f4396f5d4a5a7e20bf, type: 2}
+    _dialogue: It doesn't,<p:short> does it?
+  - _name: Judge
+    _knownName: 1
+    _char: Sahwit
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: 'I''m afraid I''m going to have to
+
+      penalize you for this.'
+  nextLine: {fileID: 11400000, guid: 6df1cbb8e4823e6409d11da459e7a480, type: 2}
   responses: []
   isCrossExamination: 0
   prevLine: {fileID: 0}

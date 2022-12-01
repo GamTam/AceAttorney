@@ -5,6 +5,7 @@ public class Saving : MonoBehaviour
 {
     private DialogueManager dialogueManager;
     private TrialController trialController;
+    private MusicManager _musicManager;
 
     private DialogueSO currentDialogue;
     private DialogueSO[] allDialogues;
@@ -16,6 +17,7 @@ public class Saving : MonoBehaviour
     private void Start() {
         dialogueManager = FindObjectOfType<DialogueManager>();
         trialController = FindObjectOfType<TrialController>();
+        _musicManager = FindObjectOfType<MusicManager>();
         
         allDialogues = trialController.ReturnAllDialogues();
 
@@ -33,18 +35,22 @@ public class Saving : MonoBehaviour
     public void SaveGame() {
         currentDialogue = dialogueManager.ReturnCurrentDialogue();
         PlayerPrefs.SetInt("currentDialogueIndex", currentDialogue.dialogueIndex);
-
-        if (currentDialogue.HasSecondaryDialogues) {
-            
-        }
+        PlayerPrefs.SetInt("currentLine", dialogueManager._currentLine);
+        PlayerPrefs.SetString("musicPlaying", _musicManager.musicPlaying.name);
     }
 
     public void LoadGame() {
         var savedDialogueIndex = PlayerPrefs.GetInt("currentDialogueIndex");
+        string s = PlayerPrefs.GetString("musicPlaying");
+        if (_musicManager.GetMusicPlaying().name != s)
+        {
+            _musicManager.fadeOut();
+            _musicManager.Play(s);
+        }
 
         foreach (DialogueSO dialogue in allDialogues) {
             if (dialogue.dialogueIndex == savedDialogueIndex) {
-                //dialogueManager.StartText(dialogue);
+                dialogueManager.StartText(dialogue, true, PlayerPrefs.GetInt("currentLine"));
             }
         }
     }

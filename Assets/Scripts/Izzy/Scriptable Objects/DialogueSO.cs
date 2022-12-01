@@ -33,12 +33,4 @@ public class DialogueSO : ScriptableObject
     public EvidenceSO[] ReturnListOfEvidence() {
         return evidence;
     }
-
-    private List<int> ReturnSecondaryDialogueIndex() {
-        foreach (TBLine line in dialogueText) {
-            secondaryDialogueIndexes.Add(line.ReturnSecondaryDialogueIndex());
-        }
-
-        return secondaryDialogueIndexes;
-    }
 }

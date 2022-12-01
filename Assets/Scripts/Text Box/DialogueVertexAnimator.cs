@@ -17,6 +17,7 @@ public class DialogueVertexAnimator {
     public DialogueManager _parent;
     
     float secondsPerCharacter = 2f / 60f;
+    private List<DialogueCommand> _commands;
     public DialogueVertexAnimator(TMP_Text _textBox) {
         textBox = _textBox;
         textAnimationScale = textBox.fontSize;
@@ -30,6 +31,7 @@ public class DialogueVertexAnimator {
     private static readonly Vector3 vecZero = Vector3.zero;
     public IEnumerator AnimateTextIn(List<DialogueCommand> commands, string processedMessage, string voice_sound, Action onFinish) {
         textAnimating = true;
+        _commands = commands;
         float timeOfLastCharacter = 0;
 
         TextAnimInfo[] textAnimInfo = SeparateOutTextAnimInfo(commands);
@@ -71,6 +73,7 @@ public class DialogueVertexAnimator {
             if (ShouldShowNextCharacter(secondsPerCharacter, timeOfLastCharacter)) {
                 if (visableCharacterIndex <= charCount) {
                     ExecuteCommandsForCurrentIndex(commands, visableCharacterIndex, ref secondsPerCharacter, ref timeOfLastCharacter);
+                    _commands = commands;
                     if (visableCharacterIndex < charCount && ShouldShowNextCharacter(secondsPerCharacter, timeOfLastCharacter)) {
                         charAnimStartTimes[visableCharacterIndex] = Time.unscaledTime;
                         PlayDialogueSound(voice_sound);
@@ -207,6 +210,14 @@ public class DialogueVertexAnimator {
     public void QuickEnd() {
         if (textAnimating) {
             stopAnimating = true;
+            float f = 1000f;
+            foreach (DialogueCommand command in _commands)
+            {
+                if (command.type != DialogueCommandType.Pause)
+                {
+                    ExecuteCommandsForCurrentIndex(new List<DialogueCommand>() {command}, command.position, ref secondsPerCharacter, ref f);
+                }
+            }
         }
     }
 

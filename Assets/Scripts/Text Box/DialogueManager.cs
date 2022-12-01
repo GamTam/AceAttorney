@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -14,7 +15,8 @@ public class DialogueManager : MonoBehaviour
     private Animator _advanceButton;
     private TMP_Text textBox;
     private TMP_Text _nameBox;
-    private Queue<TBLine> lines;
+    private List<TBLine> lines;
+    [HideInInspector] public int _currentLine;
     private PlayerInput _playerInput;
     private string _prevActionMap;
     private string _typingClip = "blipmale";
@@ -49,7 +51,7 @@ public class DialogueManager : MonoBehaviour
     public bool _doneTalking;
 
     void Awake() {
-        lines = new Queue<TBLine>();
+        lines = new List<TBLine>();
         _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         _advanceText = _playerInput.actions["Advance"];
         _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
@@ -58,10 +60,11 @@ public class DialogueManager : MonoBehaviour
         crossExamination = FindObjectOfType<CrossExamination>();
     }
 
-    public void StartText(DialogueSO linesIn)
+    public void StartText(DialogueSO linesIn, bool quickEnd = false, int startingLine = 0)
     {
         _crossEx = linesIn.isCrossExamination;
         _shownResponses = false;
+        _currentLine = startingLine;
 
         if (_tempBox != null)
         {
@@ -92,13 +95,10 @@ public class DialogueManager : MonoBehaviour
         _prevActionMap = _playerInput.currentActionMap.name;
         _playerInput.SwitchCurrentActionMap("TextBox");
         lines.Clear();
+
+        lines = linesIn.dialogueText.ToList();
         
-        foreach (TBLine line in linesIn.dialogueText)
-        {
-            lines.Enqueue(line);
-        }
-        
-        NextLine(true);
+        NextLine(true, quickEnd);
     }
 
     private void Update()
@@ -109,7 +109,7 @@ public class DialogueManager : MonoBehaviour
             {
                 NextLine();
             }
-            else if (!dialogueVertexAnimator.textAnimating && lines.Count == 0 && _dialogue.HasResponses && !_shownResponses)
+            else if (!dialogueVertexAnimator.textAnimating && _currentLine == lines.Count && _dialogue.HasResponses && !_shownResponses)
             {
                 NextLine();
             }
@@ -117,7 +117,7 @@ public class DialogueManager : MonoBehaviour
             if (!dialogueVertexAnimator.textAnimating && !_advanceButton.gameObject.activeSelf)
             {
                 if (_char != null) _char.Play($"{_currentAnim}_idle");
-                if (lines.Count == 0 && _dialogue.HasResponses) return;
+                if (_currentLine == lines.Count && _dialogue.HasResponses) return;
                 _advanceButton.gameObject.SetActive(true);
                 if (_crossEx)
                 {
@@ -156,7 +156,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     private Coroutine typeRoutine = null;
-    public void NextLine(bool firstTime = false)
+    public void NextLine(bool firstTime = false, bool quickEnd = false)
     {
         if (_shownResponses) return;
 
@@ -178,7 +178,7 @@ public class DialogueManager : MonoBehaviour
             }
         }
         
-        if (lines.Count == 0)
+        if (_currentLine == lines.Count)
         {
             if (_dialogue.HasNextLine) {
                 StartText(_dialogue.nextLine);
@@ -202,7 +202,8 @@ public class DialogueManager : MonoBehaviour
         }
 
         _skipFade = false;
-        TBLine line = lines.Dequeue();
+        TBLine line = lines[_currentLine];
+        _currentLine += 1;
         this.EnsureCoroutineStopped(ref typeRoutine);
         dialogueVertexAnimator.textAnimating = false;
         List<DialogueCommand> commands =
@@ -255,7 +256,14 @@ public class DialogueManager : MonoBehaviour
         
         if (emotionInfo != null) _currentAnim = emotionInfo;
         if (_char != null) _char.Play($"{_currentAnim}_idle");
-        
+
+        if (quickEnd)
+        {
+            typeRoutine = StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, null, null));
+            _swap.StartSwap(faceInfo, skipFade:true);
+            dialogueVertexAnimator.QuickEnd();
+            return;
+        }
         StartCoroutine(StartText(commands, totalTextMessage, line.Name, faceInfo, interjection));
     }
 

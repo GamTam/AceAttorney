@@ -16,7 +16,7 @@ MonoBehaviour:
   dialogueText:
   - _name: Phoenix
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
@@ -27,7 +27,7 @@ MonoBehaviour:
       ANYTHING in the apartment?'
   - _name: Sahwit
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
@@ -36,7 +36,7 @@ MonoBehaviour:
     _dialogue: Um, yes. I mean no! Nothing.
   - _name: Phoenix
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0

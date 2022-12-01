@@ -9,7 +9,7 @@ public class MusicManager : MonoBehaviour
     
     public static MusicManager instance;
 
-    [SerializeField] private Music musicPlaying;
+    [HideInInspector] public Music musicPlaying = null;
 
     public static float currentPoint = 0;
 

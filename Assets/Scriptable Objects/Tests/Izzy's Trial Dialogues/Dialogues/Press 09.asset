@@ -16,7 +16,7 @@ MonoBehaviour:
   dialogueText:
   - _name: Phoenix
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
@@ -27,7 +27,7 @@ MonoBehaviour:
       Are you certain?'
   - _name: Sahwit
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
@@ -38,7 +38,7 @@ MonoBehaviour:
       Absolutely.'
   - _name: Phoenix
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
@@ -49,7 +49,7 @@ MonoBehaviour:
       confident.)'
   - _name: Mia
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipfemale
     _skipFade: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
     _dialogue: <color=red><se:reveal>1:00 PM</color>?
   - _name: Mia
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipfemale
     _skipFade: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
       seem strange to you?'
   - _name: Mia
     _knownName: 1
-    _char: 
+    _char: Sahwit
     _anim: 
     _blipSound: blipfemale
     _skipFade: 0
