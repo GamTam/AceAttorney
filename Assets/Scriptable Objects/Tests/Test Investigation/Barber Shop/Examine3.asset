@@ -10,19 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
-  m_Name: Gumshoe
+  m_Name: Examine3
   m_EditorClassIdentifier: 
+  dialogueIndex: 0
   dialogueText:
-  - _name: Phoenix
-    _knownName: 0
-    _char: 
+  - secondaryDialogueIndex: 0
+    _name: Phoenix
+    _knownName: 1
+    _char: NaN
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
     _interjection: 0
-    _dialogue: Dialogue Dialogue Dialogue Dialogue Dialogue Dialogue
-  - _name: Maya
+    _dialogue: The<p:normal> <se:hit><shake:>CHAIR!!
+  - secondaryDialogueIndex: 0
+    _name: Maya
     _knownName: 1
     _char: Maya
     _anim: think
@@ -30,25 +33,32 @@ MonoBehaviour:
     _skipFade: 0
     _stopMusic: 0
     _interjection: 0
-    _dialogue: 'Dialogue Dialogue Dialogue Dialogue Dialogue Dialogue '
-  - _name: Gumshoe
+    _dialogue: Nick, <p:short>are you okay?
+  - secondaryDialogueIndex: 0
+    _name: Phoenix
     _knownName: 1
-    _char: Gumshoe
-    _anim: happy
+    _char: Maya
+    _anim: think
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
     _interjection: 0
-    _dialogue: 'Dialogue Dialogue Dialogue Dialogue Dialogue Dialogue '
-  - _name: Maya
+    _dialogue: '<sp:1>The<p:normal> <se:hit><shake:>CHAIR!! <p:normal>
+
+      <sp:0.75>The<p:short>
+      <se:hit><shake:>CHAIR!! <p:short>
+
+      <sp:0.50>The<p:short> <se:hit><shake:>CHAIR!!'
+  - secondaryDialogueIndex: 0
+    _name: Maya
     _knownName: 1
     _char: Maya
-    _anim: smug
+    _anim: think
     _blipSound: blipfemale
     _skipFade: 0
     _stopMusic: 0
     _interjection: 0
-    _dialogue: 'Dialogue Dialogue Dialogue Dialogue Dialogue Dialogue '
+    _dialogue: <sp:2>Nick STOP! You're scaring me.
   nextLine: {fileID: 0}
   responses: []
   isCrossExamination: 0

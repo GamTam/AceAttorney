@@ -333,6 +333,7 @@ public class CursorMovement : MonoBehaviour
 
     public void Talk(int button)
     {
+        Debug.Log(_selection);
         _selection = button;
         _cursorTalking.transform.position = _talkingButtons[button].transform.position;
         _soundManager.Play("confirm");
@@ -616,7 +617,7 @@ public class CursorMovement : MonoBehaviour
         {
             if(_move)
             {
-                Debug.Log("MOVE");
+                Move(_selection);
             }
             if(_talk)
             {

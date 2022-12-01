@@ -1039,7 +1039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ccdc3b7069cf34a9d1d90235b15cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogue: {fileID: 11400000, guid: dbf261ed3dce69246a40f717c2471546, type: 2}
+  _dialogue: {fileID: 11400000, guid: 64f0ec1f75b89c741b521d1fb2d1b329, type: 2}
   _inspected: 0
 --- !u!1 &712753126
 GameObject:
@@ -2123,6 +2123,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1592886620}
     m_Modifications:
+    - target: {fileID: 1137944641, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695197979, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1489727769938810459, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2169,7 +2177,7 @@ PrefabInstance:
       objectReference: {fileID: 1991476421}
     - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
       propertyPath: _AreaNames.Array.data[0]
-      value: Coffee Shop
+      value: Detention Center [NOT FUNTIONAL]
       objectReference: {fileID: 0}
     - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
       propertyPath: _AreaNames.Array.data[1]
@@ -2180,9 +2188,21 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
+      propertyPath: _talkNames.Array.data[0]
+      value: About The Murder
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
+      propertyPath: _talkNames.Array.data[1]
+      value: Maya
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
+      propertyPath: _talkNames.Array.data[2]
+      value: Time Of Murder
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
       propertyPath: _AreaTextures.Array.data[0]
       value: 
-      objectReference: {fileID: 2800000, guid: f8e2eb52104c30d44be23a680d5e4811, type: 3}
+      objectReference: {fileID: 2800000, guid: bc9e0355c53c7194ba53ab3fe23ccacf, type: 3}
     - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
       propertyPath: _AreaTextures.Array.data[1]
       value: 

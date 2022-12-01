@@ -10,20 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
-  m_Name: No Clues Here
+  m_Name: Examine4
   m_EditorClassIdentifier: 
   dialogueIndex: 0
   dialogueText:
   - secondaryDialogueIndex: 0
     _name: Phoenix
     _knownName: 1
-    _char: NaaN
+    _char: NaN
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
     _interjection: 0
-    _dialogue: No clues here.
+    _dialogue: What a odd clock... <p:normal>Did it happen to stop working after
+      the crime?
+  - secondaryDialogueIndex: 0
+    _name: Phoenix
+    _knownName: 1
+    _char: 
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: Hmm.<p:tiny>.<p:tiny>.<p:normal> <color=#ff0000><se:reveal>2:38PM...
+      <color=#ffffff>
   nextLine: {fileID: 0}
   responses: []
   isCrossExamination: 0

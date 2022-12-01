@@ -10,19 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
-  m_Name: TEXT3
+  m_Name: Examine1
   m_EditorClassIdentifier: 
+  dialogueIndex: 0
   dialogueText:
-  - _name: Phoenix
-    _knownName: 0
-    _char: 
+  - secondaryDialogueIndex: 0
+    _name: Phoenix
+    _knownName: 1
+    _char: NaN
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
     _interjection: 0
-    _dialogue: This is the text 3 dialogue...
-  - _name: Maya
+    _dialogue: Is that<p:short>.<p:short>.<p:short>.<p:normal> <sp:1>Blood?
+  - secondaryDialogueIndex: 0
+    _name: Maya
     _knownName: 1
     _char: Maya
     _anim: think
@@ -30,7 +33,30 @@ MonoBehaviour:
     _skipFade: 0
     _stopMusic: 0
     _interjection: 0
-    _dialogue: You're so right again Nick!
+    _dialogue: <sp:2>Looks like dried up blood, <p:short>let me see...
+  - secondaryDialogueIndex: 0
+    _name: Gumshoe
+    _knownName: 1
+    _char: Maya
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: '<se:hit><shake:><sp:1>HEY YOU! <p:normal>
+
+      <se:hit><shake:>STEP
+      AWAY FROM THE CRIME SCENE!'
+  - secondaryDialogueIndex: 0
+    _name: Maya
+    _knownName: 1
+    _char: Maya
+    _anim: smug
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: EEEEEEEK!
   nextLine: {fileID: 0}
   responses: []
   isCrossExamination: 0

@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
+  m_Name: Examine2
+  m_EditorClassIdentifier: 
+  dialogueIndex: 0
+  dialogueText:
+  - secondaryDialogueIndex: 0
+    _name: Phoenix
+    _knownName: 1
+    _char: NaN
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: Those mirrors look like they're in really good shape.
+  - secondaryDialogueIndex: 0
+    _name: Maya
+    _knownName: 1
+    _char: Maya
+    _anim: think
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: Hey, <p:short>those mirrors look like the exact one I have in my room!
+  - secondaryDialogueIndex: 0
+    _name: Phoenix
+    _knownName: 1
+    _char: Maya
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: Wait Maya...
+  - secondaryDialogueIndex: 0
+    _name: Phoenix
+    _knownName: 1
+    _char: Maya
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: What did you say?
+  - secondaryDialogueIndex: 0
+    _name: Maya
+    _knownName: 1
+    _char: Maya
+    _anim: think
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: Those mirrors look like the exact one I have in my room?
+  - secondaryDialogueIndex: 0
+    _name: Phoenix
+    _knownName: 1
+    _char: Maya
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: No, <p:short>the way you said mirror, <p:short>you said it wrong.
+  - secondaryDialogueIndex: 0
+    _name: Maya
+    _knownName: 1
+    _char: Maya
+    _anim: think
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: Mirror? <p:normal>What's wrong with the way I say Mirror?
+  - secondaryDialogueIndex: 0
+    _name: Phoenix
+    _knownName: 1
+    _char: Maya
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: You're not pronouncing it with the second<p:tiny> "ror", <p:short>it's
+      like you're saying mere, <p:short>or mirr.
+  - secondaryDialogueIndex: 0
+    _name: Maya
+    _knownName: 1
+    _char: Maya
+    _anim: think
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: .<p:short>.<p:short>.<p:normal> Mirror!
+  - secondaryDialogueIndex: 0
+    _name: Phoenix
+    _knownName: 1
+    _char: Maya
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: <se:hit><shake:><sp:1>Mirror!
+  - secondaryDialogueIndex: 0
+    _name: Maya
+    _knownName: 1
+    _char: Maya
+    _anim: smug
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: <se:hit><shake:><sp:1>Mirror!
+  - secondaryDialogueIndex: 0
+    _name: Phoenix
+    _knownName: 1
+    _char: Maya
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: <se:hit><shake:><sp:1>MIRROR!
+  nextLine: {fileID: 0}
+  responses: []
+  isCrossExamination: 0
+  prevLine: {fileID: 0}
+  pressSequence: {fileID: 0}
+  wrongPresentSequence: {fileID: 0}
+  presentSequence: {fileID: 0}
+  evidence: []

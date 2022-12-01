@@ -10,20 +10,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
-  m_Name: No Clues Here
+  m_Name: AttorneyBadgeGumshoe
   m_EditorClassIdentifier: 
   dialogueIndex: 0
   dialogueText:
   - secondaryDialogueIndex: 0
     _name: Phoenix
     _knownName: 1
-    _char: NaaN
+    _char: 
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
     _interjection: 0
-    _dialogue: No clues here.
+    _dialogue: This <p:tiny>CLEARLY<p:tiny> shows im capable of being a lawyer!
+  - secondaryDialogueIndex: 0
+    _name: Maya
+    _knownName: 1
+    _char: Maya
+    _anim: think
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: Nick... <p:normal>Are you okay?
+  - secondaryDialogueIndex: 0
+    _name: Gumshoe
+    _knownName: 1
+    _char: Gumshoe
+    _anim: happy
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: .<p:short>.<p:short>.<p:normal> Hey, <p:short>pal. <p:normal>Why are
+      you showing me this?
   nextLine: {fileID: 0}
   responses: []
   isCrossExamination: 0

@@ -10,20 +10,40 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
-  m_Name: No Clues Here
+  m_Name: Text2
   m_EditorClassIdentifier: 
   dialogueIndex: 0
   dialogueText:
   - secondaryDialogueIndex: 0
     _name: Phoenix
     _knownName: 1
-    _char: NaaN
+    _char: 
     _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
     _interjection: 0
-    _dialogue: No clues here.
+    _dialogue: Hey Maya, <p:short>are you sure you took us to the right place?
+  - secondaryDialogueIndex: 0
+    _name: Maya
+    _knownName: 1
+    _char: Maya
+    _anim: think
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: Uhhh, <p:short>I'm pretty sure!
+  - secondaryDialogueIndex: 0
+    _name: Phoenix
+    _knownName: 1
+    _char: Maya
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: Oh no...<p:normal> Are we lost?
   nextLine: {fileID: 0}
   responses: []
   isCrossExamination: 0

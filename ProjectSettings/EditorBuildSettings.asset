@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Wright & Co. Law Offices.unity
     guid: 82045f58f6b82c3478299cb9c6214a13
+  - enabled: 1
+    path: Assets/Scenes/Barber Shop.unity
+    guid: bea535d3cdef3e24d9fc6ed40c45d054
   m_configObjects: {}
