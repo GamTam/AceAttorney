@@ -28,6 +28,7 @@ public class CursorMovement : MonoBehaviour
     [Header("Talking Elements")]
     [SerializeField] private GameObject _cursorTalking;
     [SerializeField] private GameObject[] _talkingButtons;
+    [SerializeField] private DialogueTrigger[] _startTalking;
     [SerializeField] private TextMeshProUGUI[] _talkText;
     [SerializeField] private string[] _talkNames;
 
@@ -62,6 +63,8 @@ public class CursorMovement : MonoBehaviour
     bool _talk;
     bool _present;
     bool _pageSwap;
+    bool _delayDone;
+    public bool _trial;
     
     private DialogueManager _doneTalking;
     
@@ -166,20 +169,18 @@ public class CursorMovement : MonoBehaviour
         }
         else
         {
-            //Attempted input code, but I dont think I can do it this way.
-
             if(_back.triggered)
             {
                 Back();
             }
 
-            if(_doneTalking._doneTalking && !_examine && !_present)
+            if(_doneTalking._doneTalking && !_examine && !_present && !_move && _talk)
             {
                 TalkReturn();
                 _doneTalking._doneTalking = false;
             }
 
-            if(_doneTalking._doneTalking && !_examine && !_talk)
+            if(_doneTalking._doneTalking && !_examine && !_talk && !_move && _present)
             {
                 PresentReturn();
                 _doneTalking._doneTalking = false;
@@ -202,6 +203,8 @@ public class CursorMovement : MonoBehaviour
 
     public void Back()
     {
+        _delayDone = false;
+        _doneTalking._doneTalking = false;
         _turnedOff = false;
         _soundManager.Play("back");
         StartCoroutine(TurnOn(_transparent));
@@ -214,6 +217,9 @@ public class CursorMovement : MonoBehaviour
         _cursorMove.SetActive(false);
         if(_examine)
         {
+            _selection = 0;
+            _cursor.transform.position = _buttons[_selection].transform.position;
+            DissappearArrays(_examiningColliders);
             _examine = false;
         }
         else if(_move)
@@ -311,10 +317,13 @@ public class CursorMovement : MonoBehaviour
         _talk = false;
         _move = false;
         _selection = 0;
-        _cursor.transform.position = _buttons[3].transform.position;
         _soundManager.Play("confirm");
-        StartCoroutine(TurnOff(_transparent));
-        _fadeOut.startFading();
+        if(!_trial)
+        {
+            _cursor.transform.position = _buttons[3].transform.position;
+            StartCoroutine(TurnOff(_transparent));
+            _fadeOut.startFading();
+        }
         _turnedOff = true;
         DissappearArrays(_buttons);
         AppearArrays(_darkenBackground);
@@ -328,12 +337,14 @@ public class CursorMovement : MonoBehaviour
 
     public void Talk(int button)
     {
+        Debug.Log(_selection);
         _selection = button;
         _cursorTalking.transform.position = _talkingButtons[button].transform.position;
         _soundManager.Play("confirm");
         _cursorTalking.SetActive(false);
         DissappearArrays(_talkingButtons);
         DissappearArrays(_darkenBackground);
+        _startTalking[_selection].TriggerDialogue();
     }
 
     public void TalkReturn()
@@ -449,6 +460,7 @@ public class CursorMovement : MonoBehaviour
             _item.transform.localScale = new Vector2(1, i);
             yield return null;
         }
+        _delayDone = true;
         yield return new WaitForSeconds(0.15f);
     }
 
@@ -605,11 +617,11 @@ public class CursorMovement : MonoBehaviour
                 }
             }
         }
-        if(_select.triggered)
+        if(_select.triggered && _delayDone)
         {
             if(_move)
             {
-
+                Move(_selection);
             }
             if(_talk)
             {

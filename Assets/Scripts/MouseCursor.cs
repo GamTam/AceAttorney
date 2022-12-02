@@ -75,6 +75,7 @@ public class MouseCursor : MonoBehaviour
             _swap.StartSwap(_char);
             _playerInput.SwitchCurrentActionMap("Menu");
             Destroy(gameObject);
+            Cursor.visible = true;
             _cursorMovement.Back();
         }
 

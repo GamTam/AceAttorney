@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
+  m_Name: Text3
+  m_EditorClassIdentifier: 
+  dialogueIndex: 0
+  dialogueText:
+  - secondaryDialogueIndex: 0
+    _name: Phoenix
+    _knownName: 1
+    _char: 
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: Hey Gumshoe, <p:short>can you tell me about the witness?<p:normal>
+      I heard on TV that there was a witness to the murder.
+  - secondaryDialogueIndex: 0
+    _name: Gumshoe
+    _knownName: 1
+    _char: Gumshoe
+    _anim: happy
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: Ha, <p:short>nice try pal, <p:short>but your not gonna pull a fast
+      one on me. <p:normal>I'm not telling you anything.
+  - secondaryDialogueIndex: 0
+    _name: Phoenix
+    _knownName: 1
+    _char: Gumshoe
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: <color=#6ebdf0> (Arghgh, <p:short>it would've been really helpful
+      to get some info from Gumshoe...)
+  nextLine: {fileID: 0}
+  responses: []
+  isCrossExamination: 0
+  prevLine: {fileID: 0}
+  pressSequence: {fileID: 0}
+  wrongPresentSequence: {fileID: 0}
+  presentSequence: {fileID: 0}
+  evidence: []
