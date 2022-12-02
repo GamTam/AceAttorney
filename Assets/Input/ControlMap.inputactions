@@ -180,6 +180,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Court Record",
+                    "type": "Button",
+                    "id": "a34c7842-6998-493d-b184-5b41ac79fe74",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Present",
                     "type": "Button",
                     "id": "f2c0029e-60ec-4653-b592-685afae5e3c7",
@@ -282,7 +291,7 @@
                 {
                     "name": "",
                     "id": "77c50885-5385-4196-9429-7147b879bc23",
-                    "path": "<Keyboard>/tab",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -419,6 +428,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "Saving",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "50737be7-db65-48c7-87f8-7eefa522e516",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Court Record",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9e745eea-a967-4c02-b34d-a37c7a81f3b8",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Court Record",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0814b5cc-67de-4d6a-a9b9-77b749e1fa67",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Court Record",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

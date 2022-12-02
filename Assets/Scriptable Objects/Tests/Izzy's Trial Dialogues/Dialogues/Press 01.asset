@@ -117,7 +117,7 @@ MonoBehaviour:
     _skipFade: 0
     _stopMusic: 0
     _interjection: 0
-    _dialogue: So,<p:tiny> what happened next?
+    _dialogue: So,<p:tiny> <music:CrossEx>what happened next?
   nextLine: {fileID: 11400000, guid: b5f9186b9d8534c4e9f09605bcf02d5a, type: 2}
   responses: []
   isCrossExamination: 0
