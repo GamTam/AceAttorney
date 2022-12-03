@@ -22,26 +22,40 @@ public class InvestigationMenu : MonoBehaviour
     private MusicManager _musicManager;
     private SoundManager _soundManager;
     private GameObject _selectedButton;
+    private Animator _anim;
 
     void Awake()
     {
         _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
+        _anim = GetComponent<Animator>();
 
         GameObject obj = GameObject.FindGameObjectWithTag("Dialogue Manager");
         _dialogueManager = obj.GetComponent<DialogueManager>();
 
         _musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();
         _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
+    }
 
+    private void Start()
+    {
         _musicManager.Play(_song);
     }
 
     private void OnEnable()
     {
         _playerInput.SwitchCurrentActionMap("Menu");
-        Debug.Log(_dialogueManager);
         _background.transform.localScale = new Vector3(1, 0, 1);
         StartCoroutine(BackgroundAnimIn());
+
+        if (_selectedButton == null)
+        {
+            Button[] buttons = GameObject.FindWithTag("Investigation").transform.Find("Buttons").GetComponentsInChildren<Button>();
+            
+            _selectedButton = buttons[0].gameObject;
+        }
+        
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(_selectedButton);
     }
 
     private IEnumerator BackgroundAnimIn()
@@ -68,7 +82,7 @@ public class InvestigationMenu : MonoBehaviour
     
     private void Update()
     {
-        if (EventSystem.current.currentSelectedGameObject == null) return;
+        if (EventSystem.current.currentSelectedGameObject == null) EventSystem.current.SetSelectedGameObject(_selectedButton);
         transform.position = EventSystem.current.currentSelectedGameObject.transform.position;
 
         if (_selectedButton != EventSystem.current.currentSelectedGameObject)
@@ -85,11 +99,12 @@ public class InvestigationMenu : MonoBehaviour
         
         foreach (Button but in GameObject.FindWithTag("UI").GetComponentsInChildren<Button>())
         {
-            if (but != obj) but.GetComponent<Animator>().Play("Fade Out");
+            if (but != obj) but.GetComponent<Animator>().Play("Fade Out", 1);
         }
         
         _soundManager.Play("confirm");
         _swap.StartSwap(fadeIn:false);
+        _anim.Play("Select Fade Out");
 
         switch (obj.name)
         {
@@ -101,9 +116,9 @@ public class InvestigationMenu : MonoBehaviour
 
     private IEnumerator Examine()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
         _playerInput.SwitchCurrentActionMap("Investigation");
         Instantiate(_investigateCursor, (Vector2) Camera.main.transform.position, Quaternion.identity);
-        GameObject.FindWithTag("UI").transform.Find("Investigation").gameObject.SetActive(false);
+        GameObject.FindWithTag("Investigation").SetActive(false);
     }
 }

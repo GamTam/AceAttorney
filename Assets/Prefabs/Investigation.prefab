@@ -486,6 +486,7 @@ GameObject:
   - component: {fileID: 5678902791841992667}
   - component: {fileID: 5678902791841992664}
   - component: {fileID: 5678902791841992666}
+  - component: {fileID: 5903604243029775626}
   m_Layer: 5
   m_Name: Select
   m_TagString: Select
@@ -566,6 +567,25 @@ MonoBehaviour:
   _song: Maya
   _swap: {fileID: 0}
   _background: {fileID: 5678902790800400924}
+--- !u!95 &5903604243029775626
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5678902791841992670}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cefbead9ad0ad5046bcbe3ddc4ee20a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5678902791985950609
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,7 +597,7 @@ GameObject:
   - component: {fileID: 5678902791985950608}
   m_Layer: 5
   m_Name: Investigation
-  m_TagString: Untagged
+  m_TagString: Investigation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -13,6 +13,7 @@ TagManager:
   - BackgroundCam
   - CharacterPlane
   - Select
+  - Investigation
   layers:
   - Default
   - TransparentFX
