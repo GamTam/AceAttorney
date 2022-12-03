@@ -9,7 +9,8 @@ using UnityEngine.EventSystems;
 
 public class InvestigationMenu : MonoBehaviour
 {
-    [SerializeField] private EventSystem _eventSystem;
+    [SerializeField] private GameObject _investigateCursor;
+    
     [Header("Misc.")] [SerializeField] string _song;
     [SerializeField] SwapCharacters _swap;
     [SerializeField] private GameObject _background;
@@ -22,20 +23,25 @@ public class InvestigationMenu : MonoBehaviour
     private SoundManager _soundManager;
     private GameObject _selectedButton;
 
-    void Start()
+    void Awake()
     {
         _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
-        _playerInput.SwitchCurrentActionMap("Menu");
 
         GameObject obj = GameObject.FindGameObjectWithTag("Dialogue Manager");
         _dialogueManager = obj.GetComponent<DialogueManager>();
 
         _musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();
         _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
+
+        _musicManager.Play(_song);
+    }
+
+    private void OnEnable()
+    {
+        _playerInput.SwitchCurrentActionMap("Menu");
+        Debug.Log(_dialogueManager);
         _background.transform.localScale = new Vector3(1, 0, 1);
         StartCoroutine(BackgroundAnimIn());
-        
-        _musicManager.Play(_song);
     }
 
     private IEnumerator BackgroundAnimIn()
@@ -62,18 +68,42 @@ public class InvestigationMenu : MonoBehaviour
     
     private void Update()
     {
-        if (_eventSystem.currentSelectedGameObject == null) return;
-        transform.position = _eventSystem.currentSelectedGameObject.transform.position;
+        if (EventSystem.current.currentSelectedGameObject == null) return;
+        transform.position = EventSystem.current.currentSelectedGameObject.transform.position;
 
-        if (_selectedButton != _eventSystem.currentSelectedGameObject)
+        if (_selectedButton != EventSystem.current.currentSelectedGameObject)
         {
             if (_selectedButton != null) _soundManager.Play("select");
-            _selectedButton = _eventSystem.currentSelectedGameObject;
+            _selectedButton = EventSystem.current.currentSelectedGameObject;
         }
     }
 
-    public void Examine(GameObject obj)
+    public void Click(Button obj)
     {
+        _playerInput.SwitchCurrentActionMap("Null");
+        StartCoroutine(BackgroundAnimOut());
         
+        foreach (Button but in GameObject.FindWithTag("UI").GetComponentsInChildren<Button>())
+        {
+            if (but != obj) but.GetComponent<Animator>().Play("Fade Out");
+        }
+        
+        _soundManager.Play("confirm");
+        _swap.StartSwap(fadeIn:false);
+
+        switch (obj.name)
+        {
+            case "Examine":
+                StartCoroutine(Examine());
+                break;
+        }
+    }
+
+    private IEnumerator Examine()
+    {
+        yield return new WaitForSeconds(0.5f);
+        _playerInput.SwitchCurrentActionMap("Investigation");
+        Instantiate(_investigateCursor, (Vector2) Camera.main.transform.position, Quaternion.identity);
+        GameObject.FindWithTag("UI").transform.Find("Investigation").gameObject.SetActive(false);
     }
 }

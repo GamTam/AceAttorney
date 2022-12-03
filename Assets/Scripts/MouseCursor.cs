@@ -13,6 +13,7 @@ public class MouseCursor : MonoBehaviour
 
     private Camera _cam;
     private DialogueTrigger _selectedObj;
+    private SoundManager _soundManager;
 
     private SwapCharacters _swap;
 
@@ -29,6 +30,7 @@ public class MouseCursor : MonoBehaviour
         _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         _cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         _swap = GameObject.FindWithTag("CharacterPlane").GetComponent<SwapCharacters>();
+        _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
         _char = _swap._charName;
         
         transform.position = new Vector3(_cam.transform.position.x, _cam.transform.position.y, transform.position.z);
@@ -73,7 +75,9 @@ public class MouseCursor : MonoBehaviour
             _swap.StartSwap(_char);
             _playerInput.SwitchCurrentActionMap("Menu");
             Destroy(gameObject);
+            _soundManager.Play("back");
             Cursor.visible = true;
+            GameObject.FindWithTag("UI").transform.Find("Investigation").gameObject.SetActive(true);
         }
 
         if (_playerInput.currentActionMap.name == "Investigation" && !_spriteRenderer.enabled)

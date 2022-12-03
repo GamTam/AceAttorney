@@ -562,7 +562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81e58c433f3394d4a9d60818c12e5768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _eventSystem: {fileID: 0}
+  _investigateCursor: {fileID: 787919795915615156, guid: 2dbaf0facc577aa439e8e1320071eaa2, type: 3}
   _song: Maya
   _swap: {fileID: 0}
   _background: {fileID: 5678902790800400924}
