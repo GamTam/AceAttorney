@@ -41,7 +41,6 @@ public class DialogueManager : MonoBehaviour
 
     private bool _crossEx;
 
-    [SerializeField] private Texture[] _interjections;
     [SerializeField] private GameObject _interjectionObj;
 
     // Izzy
@@ -280,7 +279,7 @@ public class DialogueManager : MonoBehaviour
                 obj = Instantiate(_interjectionObj);
                 obj.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
                 img = obj.GetComponent<RawImage>();
-                img.texture = _interjections[0];
+                img.texture = Resources.Load<Texture>("Sprites/Interjections/Objection");
                 img.SetNativeSize();
                 _soundManager.Play($"objection{_nameBox.text}");
                 break;
@@ -288,7 +287,7 @@ public class DialogueManager : MonoBehaviour
                 obj = Instantiate(_interjectionObj);
                 obj.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
                 img = obj.GetComponent<RawImage>();
-                img.texture = _interjections[1];
+                img.texture = Resources.Load<Texture>("Sprites/Interjections/Hold It");
                 img.SetNativeSize();
                 _soundManager.Play($"holdIt{_nameBox.text}");
                 break;
@@ -296,7 +295,7 @@ public class DialogueManager : MonoBehaviour
                 obj = Instantiate(_interjectionObj);
                 obj.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
                 img = obj.GetComponent<RawImage>();
-                img.texture = _interjections[2];
+                img.texture = Resources.Load<Texture>("Sprites/Interjections/Take That");
                 img.SetNativeSize();
                 _soundManager.Play($"takeThat{_nameBox.text}");
                 break;

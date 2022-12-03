@@ -1,19 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="Something changed. I think.">
+    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Anim/UI.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Anim/UI/Button.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Anim/UI/Button.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Anim/UI/Opening.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Anim/UI/Opening.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Interjections.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Interjections/Hold It.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Interjections/Hold It.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Interjections/Objection.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Interjections/Objection.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Interjections/Take That.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Interjections/Take That.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InvestigationMenu.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/TextBox/select_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/TextBox/select_button.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input/ControlMap.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/ControlMap.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Investigation.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Investigation.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Updated Trial (Izzy).unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Updated Trial (Izzy).unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/01 (Start).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/01 (Start).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/02 - 00.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/02 - 00.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/03.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/03.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/04.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/04.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/05 - 00.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/05 - 00.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/06.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/06.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/07.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/07.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/08.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/08.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/09.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/09.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/10.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/10.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Wright &amp; Co. Law Offices.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Wright &amp; Co. Law Offices.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CursorMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CursorMovement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InvestigationMenu.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy/CrossExamination.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Izzy/CrossExamination.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MouseCursor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MouseCursor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Interjections.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Interjections/Hold It.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Interjections/Hold It.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Interjections/Objection.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Interjections/Objection.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Interjections/Take That.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Interjections/Take That.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Investigation/Present/selectWithArrow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Investigation/Present/selectWithArrow.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy (Steam 2019) - Episode 4_ Turnabout Goodbyes 2-14-11 screenshot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy (Steam 2019) - Episode 4_ Turnabout Goodbyes 2-14-11 screenshot.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy Walkthrough Gameplay Part 1 - No Commentary (PC Remastered) 4-14 screenshot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy Walkthrough Gameplay Part 1 - No Commentary (PC Remastered) 4-14 screenshot.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy Walkthrough Gameplay Part 1 - No Commentary (PC Remastered) 5-38 screenshot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy Walkthrough Gameplay Part 1 - No Commentary (PC Remastered) 5-38 screenshot.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy Walkthrough Gameplay Part 1 - No Commentary (PC Remastered) 9-24 screenshot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy Walkthrough Gameplay Part 1 - No Commentary (PC Remastered) 9-24 screenshot.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy Walkthrough Gameplay Part 2 - Case 2 (PC Remastered) 27-57 screenshot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy Walkthrough Gameplay Part 2 - Case 2 (PC Remastered) 27-57 screenshot.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy Walkthrough Gameplay Part 2 - Case 2 (PC Remastered) 4-45 screenshot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy Walkthrough Gameplay Part 2 - Case 2 (PC Remastered) 4-45 screenshot.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Screenshot (10).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Screenshot (10).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Screenshot (24).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Screenshot (24).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Screenshot (25).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Screenshot (25).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/SelectionBox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/SelectionBox.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextBox/Investigation Button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextBox/Investigation Button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextBox/Investigation Select.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextBox/Investigation Select.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/detective_img01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/detective_img01.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/images.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/images.jpg.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,16 +88,14 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad0a7939819048a0a161f66558c9886726800/61/6cede232/Animator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/09.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scripts/Text Box/Dialogue.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7e35836373b74b12bde8ba7fa4d53641167088/64/694d14e8/Match.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scripts/SwapCharacters.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad0a7939819048a0a161f66558c9886726800/61/6cede232/Animator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scripts/Izzy/CrossExamination.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Blink.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/InputManagerStateMonitors.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_CoroutineTween.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scripts/Text Box/DialogueManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7e35836373b74b12bde8ba7fa4d53641167088/64/694d14e8/Match.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scripts/CursorMovement.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2HbggE0WWlPeR0AECSQgnpl4Gxg" />
   <component name="ProjectLevelVcsManager">
@@ -106,7 +154,8 @@
       <workItem from="1669161121666" duration="2271000" />
       <workItem from="1669317206211" duration="6822000" />
       <workItem from="1669361971993" duration="9000" />
-      <workItem from="1669673630158" duration="3583000" />
+      <workItem from="1669673630158" duration="3641000" />
+      <workItem from="1670018859512" duration="11075000" />
     </task>
     <task id="LOCAL-00001" summary="Audio Prefab">
       <created>1668559907702</created>
@@ -164,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669676773874</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Sahwit - Part 1">
+      <created>1669680026912</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669680026912</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +252,7 @@
     <MESSAGE value="Removed Debug.Logs" />
     <MESSAGE value="Updated Autopsy Report" />
     <MESSAGE value="Something changed. I think." />
-    <option name="LAST_COMMIT_MESSAGE" value="Something changed. I think." />
+    <MESSAGE value="Sahwit - Part 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sahwit - Part 1" />
   </component>
 </project>
