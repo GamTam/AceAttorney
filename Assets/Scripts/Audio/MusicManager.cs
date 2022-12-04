@@ -17,6 +17,12 @@ public class MusicManager : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        if (instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
 
         Dictionary<string, ArrayList> musicDict = new Dictionary<string, ArrayList>();
         musicDict = Globals.LoadTSV("Music Data");
@@ -54,10 +60,9 @@ public class MusicManager : MonoBehaviour
         musicPlaying.source.time = currentPoint;
     }
     
-    public void Stop() {
-        if (musicPlaying != null) {
-            musicPlaying.source.Stop();
-        }
+    public void Stop()
+    {
+        musicPlaying?.source.Stop();
     }
 
     public Music Play (string name)
@@ -65,6 +70,11 @@ public class MusicManager : MonoBehaviour
         Music s = allMusic.Find(x => x.name == name);
         if (s == null)
             return null;
+
+        if (musicPlaying == s && musicPlaying.source.isPlaying)
+        {
+            return musicPlaying;
+        }
 
         musicPlaying = s;
 
@@ -100,7 +110,15 @@ public class MusicManager : MonoBehaviour
 
     public void fadeOut(float length=0.1f)
     {
-        setPoint();
+        try
+        {
+            setPoint();
+        }
+        catch
+        {
+            return;
+        }
+
         StartCoroutine(fadeTo(length, 0, musicPlaying));
     }
     

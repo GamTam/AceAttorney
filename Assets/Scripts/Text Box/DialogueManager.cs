@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     private List<TBLine> lines;
     [HideInInspector] public int _currentLine;
     private PlayerInput _playerInput;
-    private string _prevActionMap;
+    [HideInInspector] public string _prevActionMap;
     private string _typingClip = "blipmale";
 
     [HideInInspector] public DialogueVertexAnimator dialogueVertexAnimator;
@@ -59,8 +59,9 @@ public class DialogueManager : MonoBehaviour
         crossExamination = FindObjectOfType<CrossExamination>();
     }
 
-    public void StartText(DialogueSO linesIn, bool quickEnd = false, int startingLine = 0)
+    public void StartText(DialogueSO linesIn, bool quickEnd = false, int startingLine = 0, string prevActionMap = null)
     {
+        _doneTalking = false;
         _crossEx = linesIn.isCrossExamination;
         _shownResponses = false;
         _currentLine = startingLine;
@@ -91,7 +92,15 @@ public class DialogueManager : MonoBehaviour
         dialogueVertexAnimator = new DialogueVertexAnimator(textBox);
         dialogueVertexAnimator._parent = this;
 
-        _prevActionMap = _playerInput.currentActionMap.name;
+        if (prevActionMap == null)
+        {
+            _prevActionMap = _playerInput.currentActionMap.name;
+        }
+        else
+        {
+            _prevActionMap = prevActionMap;
+        }
+        
         _playerInput.SwitchCurrentActionMap("TextBox");
         lines.Clear();
 

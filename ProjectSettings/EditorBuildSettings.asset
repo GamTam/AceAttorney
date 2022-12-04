@@ -6,27 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Updated Trial (Izzy).unity
-    guid: 21cbfc7b41a24ac4cb55120d294c00f1
-  - enabled: 1
-    path: Assets/Scenes/Demo Scene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Test Scene (David).unity
-    guid: 0dd717afd3657e34b81c2b254f388301
-  - enabled: 1
-    path: Assets/Scenes/Test Scene.unity
-    guid: 531b21ced09ab744da8c904567a1320d
-  - enabled: 1
-    path: Assets/Scenes/Street View.unity
-    guid: faf07354f61a8d944a244d674020b38b
-  - enabled: 1
-    path: Assets/Scenes/Coffee Shop.unity
-    guid: d466b093619cbb945883f39a8d7a8934
-  - enabled: 1
     path: Assets/Scenes/Wright & Co. Law Offices.unity
     guid: 82045f58f6b82c3478299cb9c6214a13
   - enabled: 1
-    path: Assets/Scenes/Barber Shop.unity
-    guid: bea535d3cdef3e24d9fc6ed40c45d054
+    path: Assets/Scenes/Updated Trial (Izzy).unity
+    guid: 21cbfc7b41a24ac4cb55120d294c00f1
+  - enabled: 1
+    path: Assets/Scenes/Studio 2.unity
+    guid: 82354e853065edf4fb0ce6e816fa2730
   m_configObjects: {}

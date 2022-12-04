@@ -67,7 +67,7 @@ public class CrossExamination : MonoBehaviour
         var correctEvidenceName = currentDialogue.ReturnListOfEvidence();
 
         foreach (EvidenceSO evidence in correctEvidenceName) {
-            if (presentedEvidence.evidenceName == evidence.evidenceName) {
+            if (presentedEvidence.Name == evidence.Name) {
                 CorrectEvidenceShown();
                 return;
             }
