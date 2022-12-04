@@ -85,18 +85,6 @@ public class MusicManager : MonoBehaviour
         return s;
     }
 
-    public void Continue (string name)
-    {
-        Music s = allMusic.Find(x => x.name == name);
-        if (s == null)
-            return;
-
-        musicPlaying = s;
-        
-        s.source.time = currentPoint;
-        s.source.Play();
-    }
-
     private void Update()
     {
         if (musicPlaying != null)

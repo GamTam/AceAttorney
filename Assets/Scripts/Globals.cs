@@ -7,7 +7,8 @@ using UnityEngine;
 
 public static class Globals
 {
-    public static bool microgameActive = false;
+    public static List<EvidenceSO> _evidence;
+    public static List<EvidenceSO> _profiles;
     
     public static Dictionary<string, ArrayList> LoadTSV(string file) {
         

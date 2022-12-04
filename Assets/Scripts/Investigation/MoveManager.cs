@@ -58,7 +58,7 @@ public class MoveManager : MonoBehaviour
     {
         _windowOpen = false;
 
-        for (float i = 90; i > 0; i -= 4.5f)
+        for (float i = 90; i > 0; i -= 6f)
         {
             _window.transform.rotation = Quaternion.Euler(new Vector3(i, 0, 0));
             yield return new WaitForSeconds(1 / 60f);
@@ -71,7 +71,7 @@ public class MoveManager : MonoBehaviour
     {
         _windowOpen = true;
 
-        for (float i = 0; i < 90; i += 4.5f)
+        for (float i = 0; i < 90; i += 6)
         {
             _window.transform.rotation = Quaternion.Euler(new Vector3(i, 0, 0));
             yield return new WaitForSeconds(1 / 60f);

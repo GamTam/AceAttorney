@@ -1,69 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Anim/UI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anim/UI/Button.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anim/UI/Button.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anim/UI/Opening.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Anim/UI/Opening.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Interjections.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Interjections/Hold It.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Interjections/Hold It.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Interjections/Objection.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Interjections/Objection.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Interjections/Take That.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Interjections/Take That.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/InvestigationMenu.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/TextBox/select_button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/TextBox/select_button.png.meta" afterDir="false" />
+    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="Something changed. I think.">
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Manfred von Karma.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Manfred von Karma.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/it02c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/it02c.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/itc03b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/itc03b.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/ControlMap.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/ControlMap.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Investigation.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Investigation.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Updated Trial (Izzy).unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Updated Trial (Izzy).unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Wright &amp; Co. Law Offices.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Wright &amp; Co. Law Offices.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CursorMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CursorMovement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InvestigationMenu.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy/CrossExamination.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Izzy/CrossExamination.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MouseCursor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MouseCursor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Interjections.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Interjections/Hold It.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Interjections/Hold It.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Interjections/Objection.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Interjections/Objection.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Interjections/Take That.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Interjections/Take That.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Investigation/Present/selectWithArrow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Investigation/Present/selectWithArrow.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy (Steam 2019) - Episode 4_ Turnabout Goodbyes 2-14-11 screenshot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy (Steam 2019) - Episode 4_ Turnabout Goodbyes 2-14-11 screenshot.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy Walkthrough Gameplay Part 1 - No Commentary (PC Remastered) 4-14 screenshot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy Walkthrough Gameplay Part 1 - No Commentary (PC Remastered) 4-14 screenshot.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy Walkthrough Gameplay Part 1 - No Commentary (PC Remastered) 5-38 screenshot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy Walkthrough Gameplay Part 1 - No Commentary (PC Remastered) 5-38 screenshot.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy Walkthrough Gameplay Part 1 - No Commentary (PC Remastered) 9-24 screenshot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy Walkthrough Gameplay Part 1 - No Commentary (PC Remastered) 9-24 screenshot.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy Walkthrough Gameplay Part 2 - Case 2 (PC Remastered) 27-57 screenshot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy Walkthrough Gameplay Part 2 - Case 2 (PC Remastered) 27-57 screenshot.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy Walkthrough Gameplay Part 2 - Case 2 (PC Remastered) 4-45 screenshot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Phoenix Wright_ Ace Attorney Trilogy Walkthrough Gameplay Part 2 - Case 2 (PC Remastered) 4-45 screenshot.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Screenshot (10).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Screenshot (10).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Screenshot (24).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Screenshot (24).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Screenshot (25).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Screenshot (25).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/SelectionBox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/SelectionBox.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextBox/Investigation Button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextBox/Investigation Button.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextBox/Investigation Select.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextBox/Investigation Select.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/detective_img01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/detective_img01.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/images.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/images.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Test Investigation/Barber Shop.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Test Investigation/Barber Shop.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Test Investigation/Street View.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Test Investigation/Street View.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/MusicManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/MusicManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Globals.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Globals.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Investigation/MoveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Investigation/MoveManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy/Scriptable Objects/EvidenceSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Izzy/Scriptable Objects/EvidenceSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Court Record/record_icon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Court Record/record_icon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Court Record/recordu.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Court Record/recordu.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="david-dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -91,9 +45,11 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad0a7939819048a0a161f66558c9886726800/61/6cede232/Animator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scripts/Izzy/CrossExamination.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Blink.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scriptable Objects/Tests/Test Investigation/Barber Shop.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/InputManagerStateMonitors.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_CoroutineTween.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Editor/TimelineSelection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scriptable Objects/Tests/Test Investigation/Barber Shop.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7e35836373b74b12bde8ba7fa4d53641167088/64/694d14e8/Match.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scripts/CursorMovement.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -234,7 +190,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="david-dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
