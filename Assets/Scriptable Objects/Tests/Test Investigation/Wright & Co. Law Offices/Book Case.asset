@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
   m_Name: Book Case
   m_EditorClassIdentifier: 
+  dialogueIndex: 0
   dialogueText:
   - _name: Phoenix
     _knownName: 1
     _char: NaN
     _anim: normal
     _blipSound: blipmale
-    _skipFade: 0
+    _skipFade: 1
     _stopMusic: 0
     _interjection: 0
     _dialogue: 'I should probably read
 
-    these books at some
-    point.'
+      these books at some point.'
   - _name: Phoenix
     _knownName: 1
     _char: NaN
@@ -35,7 +35,7 @@ MonoBehaviour:
     _interjection: 0
     _dialogue: 'They''re just sitting here gathering dust
 
-    at the moment.'
+      at the moment.'
   - _name: Gumshoe
     _knownName: 1
     _char: Gumshoe
@@ -55,8 +55,7 @@ MonoBehaviour:
     _interjection: 0
     _dialogue: 'Gumshoe?<p:normal>
 
-    What
-    are you doing here?'
+      What are you doing here?'
   - _name: Gumshoe
     _knownName: 1
     _char: Gumshoe
@@ -65,10 +64,9 @@ MonoBehaviour:
     _skipFade: 0
     _stopMusic: 0
     _interjection: 0
-    _dialogue: 'Heard you were talking
-    about
+    _dialogue: 'Heard you were talking about
 
-    reading...'
+      reading...'
   - _name: Gumshoe
     _knownName: 1
     _char: Gumshoe
@@ -79,7 +77,7 @@ MonoBehaviour:
     _interjection: 0
     _dialogue: 'Y''know,<p:short> I used to be a bit of a reader
 
-    myself.'
+      myself.'
   - _name: Gumshoe
     _knownName: 1
     _char: Gumshoe
@@ -97,10 +95,9 @@ MonoBehaviour:
     _skipFade: 0
     _stopMusic: 0
     _interjection: 0
-    _dialogue: 'Have you tried reading one
-    of
+    _dialogue: 'Have you tried reading one of
 
-    Nick''s legal documents?'
+      Nick''s legal documents?'
   - _name: Gumshoe
     _knownName: 1
     _char: Gumshoe
@@ -139,6 +136,7 @@ MonoBehaviour:
     _dialogue: <color=#6ebdf0>(He ran out of the building...)
   nextLine: {fileID: 0}
   responses: []
+  isCrossExamination: 0
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}

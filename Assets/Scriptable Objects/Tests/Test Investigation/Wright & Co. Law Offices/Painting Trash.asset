@@ -12,20 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
   m_Name: Painting Trash
   m_EditorClassIdentifier: 
+  dialogueIndex: 0
   dialogueText:
   - _name: Phoenix
     _knownName: 1
     _char: Maya
-    _anim:
+    _anim: 
     _blipSound: blipmale
-    _skipFade: 0
+    _skipFade: 1
     _stopMusic: 0
     _interjection: 0
     _dialogue: <sp:2>Sorry, Maya...
   - _name: Phoenix
     _knownName: 1
     _char: Maya
-    _anim:
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
@@ -42,6 +43,7 @@ MonoBehaviour:
     _dialogue: Nick...
   nextLine: {fileID: 0}
   responses: []
+  isCrossExamination: 0
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}

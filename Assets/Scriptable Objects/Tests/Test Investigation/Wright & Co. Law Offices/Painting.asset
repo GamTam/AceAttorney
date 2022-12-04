@@ -12,20 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
   m_Name: Painting
   m_EditorClassIdentifier: 
+  dialogueIndex: 0
   dialogueText:
   - _name: Phoenix
     _knownName: 1
     _char: NaN
-    _anim:
+    _anim: 
     _blipSound: blipmale
-    _skipFade: 0
+    _skipFade: 1
     _stopMusic: 0
     _interjection: 0
     _dialogue: Y'know,<p:tiny> looking at that painting...
   - _name: Phoenix
     _knownName: 1
     _char: NaN
-    _anim:
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
@@ -34,7 +35,7 @@ MonoBehaviour:
   - _name: Phoenix
     _knownName: 1
     _char: NaN
-    _anim:
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
@@ -48,10 +49,9 @@ MonoBehaviour:
     _skipFade: 0
     _stopMusic: 0
     _interjection: 0
-    _dialogue: '<se:hit><shake:><sp:1>Nick!<p:normal>
-    <shake:>
+    _dialogue: '<se:hit><shake:><sp:1>Nick!<p:normal> <shake:>
 
-    What the heck!?'
+      What the heck!?'
   - _name: Maya
     _knownName: 1
     _char: Maya
@@ -67,6 +67,7 @@ MonoBehaviour:
     _dialogue: {fileID: 11400000, guid: 969de70e910bcdb48aa66d4bb1e47ca9, type: 2}
   - _responseText: It's going in the trash!
     _dialogue: {fileID: 11400000, guid: d465ab8c491fce542a02068a7c62d92f, type: 2}
+  isCrossExamination: 0
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}

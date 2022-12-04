@@ -12,32 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
   m_Name: Window
   m_EditorClassIdentifier: 
+  dialogueIndex: 0
   dialogueText:
   - _name: Phoenix
     _knownName: 1
     _char: NaN
-    _anim:
+    _anim: 
     _blipSound: blipmale
-    _skipFade: 0
+    _skipFade: 1
     _stopMusic: 0
     _interjection: 0
     _dialogue: 'Looking out this window, you can
 
-    really
-    see the whole city.'
+      really see the whole city.'
   - _name: Phoenix
     _knownName: 1
     _char: NaN
-    _anim:
+    _anim: 
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
     _interjection: 0
     _dialogue: 'If by "Whole City,"<p:short> you mean
 
-    <anim:wave>"Gatewater Hotel."</anim>'
+      <anim:wave>"Gatewater
+      Hotel."</anim>'
   nextLine: {fileID: 0}
   responses: []
+  isCrossExamination: 0
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}

@@ -14,13 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueIndex: 0
   dialogueText:
-  - secondaryDialogueIndex: 0
-    _name: Phoenix
+  - _name: Phoenix
     _knownName: 1
-    _char: NaaN
+    _char: NaN
     _anim: 
     _blipSound: blipmale
-    _skipFade: 0
+    _skipFade: 1
     _stopMusic: 0
     _interjection: 0
     _dialogue: No clues here.

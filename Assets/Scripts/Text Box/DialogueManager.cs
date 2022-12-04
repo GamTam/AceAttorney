@@ -88,7 +88,6 @@ public class DialogueManager : MonoBehaviour
         textBox = texts[1];
         _nameBox = texts[0];
         _advanceButton.gameObject.SetActive(false);
-        Debug.Log(_advanceButton.name);
         dialogueVertexAnimator = new DialogueVertexAnimator(textBox);
         dialogueVertexAnimator._parent = this;
 
