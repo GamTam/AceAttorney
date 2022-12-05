@@ -11,6 +11,8 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private GameObject _textBoxPrefab;
+    [SerializeField] private GameObject _courtRecordPrefab;
+    private GameObject _tempCourtRecord;
     [HideInInspector] public GameObject _tempBox;
     private Animator _advanceButton;
     private TMP_Text textBox;
@@ -197,7 +199,7 @@ public class DialogueManager : MonoBehaviour
             }
             else
             {
-                EndDialogue();
+                StartCoroutine(EndDialogue());
                 _doneTalking = true;
             }
             return;
@@ -223,6 +225,14 @@ public class DialogueManager : MonoBehaviour
         Interjection interjection = line.Interjection;
         _skipFade = line.SkipFade;
 
+        StateChange state = line.StateChange;
+        if (state.StoryFlag != null) Globals.StoryFlags.Add(state.StoryFlag);
+        if (state.EvidenceToAdd != null) Globals.Evidence.Add(state.EvidenceToAdd);
+        if (state.EvidenceToRemove != null) Globals.Evidence.Remove(state.EvidenceToRemove);
+        if (state.PersonToAdd != null) Globals.Profiles.Add(state.PersonToAdd);
+
+        bool addToCourtRecord = line.AddToCourtRecord;
+
         for (int i = 0; i < textAlignInfo.Length; i++)
         {
             TextAlignOptions info = textAlignInfo[i];
@@ -246,7 +256,18 @@ public class DialogueManager : MonoBehaviour
 
         if (line.StopMusic) _musicManager.Stop();
         
-        if (nameInfo != null) _nameBox.text = nameInfo;
+        if (nameInfo != null)
+        {
+            if (nameInfo == "")
+            {
+                _nameBox.transform.parent.gameObject.SetActive(false);
+            }
+            else
+            {
+                _nameBox.transform.parent.gameObject.SetActive(true);
+            }
+            _nameBox.text = nameInfo;
+        }
         if (soundInfo != null) _typingClip = soundInfo;
         
         if (faceInfo != null)
@@ -271,11 +292,17 @@ public class DialogueManager : MonoBehaviour
             dialogueVertexAnimator.QuickEnd();
             return;
         }
-        StartCoroutine(StartText(commands, totalTextMessage, line.Name, faceInfo, interjection));
+        StartCoroutine(StartText(commands, totalTextMessage, line.Name, faceInfo, interjection, addToCourtRecord));
     }
 
-    private IEnumerator StartText(List<DialogueCommand> commands, string totalTextMessage, string name, string faceInfo, Interjection interjection)
+    private IEnumerator StartText(List<DialogueCommand> commands, string totalTextMessage, string name, string faceInfo, Interjection interjection, bool addToCourtRecord)
     {
+        if (_tempCourtRecord != null) _tempCourtRecord.GetComponent<Animator>().Play("Fade Out");
+        while (_tempCourtRecord != null)
+        {
+            yield return null;
+        }
+        
         _startedText = false;
         GameObject obj = null;
         RawImage img;
@@ -349,9 +376,25 @@ public class DialogueManager : MonoBehaviour
         }
         
         _tempBox.SetActive(true);
-        
+
         _advanceButton.gameObject.SetActive(false);
         if (_char != null && name == faceInfo) _char.Play($"{_currentAnim}_talk");
+        
+        if (addToCourtRecord)
+        {
+            _tempCourtRecord = Instantiate(_courtRecordPrefab, GameObject.FindWithTag("UI").transform, false);
+
+            _tempCourtRecord.GetComponentsInChildren<Image>()[3].sprite = Globals.Evidence[Globals.Evidence.Count - 1].Icon;
+            _tempCourtRecord.GetComponentsInChildren<Image>()[3].SetNativeSize();
+            
+            _tempCourtRecord.gameObject.GetComponentsInChildren<TMP_Text>()[0].SetText(Globals.Evidence[Globals.Evidence.Count - 1].Name);
+            _tempCourtRecord.gameObject.GetComponentsInChildren<TMP_Text>()[1].SetText(Globals.Evidence[Globals.Evidence.Count - 1].Description);
+            
+            _tempBox.transform.SetParent(_tempCourtRecord.transform, true);
+            yield return null;
+            _tempBox.transform.SetParent( GameObject.FindWithTag("UI").transform, true); 
+        }
+        
         typeRoutine = StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, _typingClip, null));
         _startedText = true;
     }
@@ -368,8 +411,13 @@ public class DialogueManager : MonoBehaviour
     }
     
 
-    void EndDialogue()
+    IEnumerator EndDialogue()
     {
+        if (_tempCourtRecord != null) _tempCourtRecord.GetComponent<Animator>().Play("Fade Out");
+        while (_tempCourtRecord != null)
+        {
+            yield return null;
+        }
         StartCoroutine(dialogueVertexAnimator.AnimateTextIn(new List<DialogueCommand>(), "", _typingClip, null));
         Destroy(_tempBox);
         _playerInput.SwitchCurrentActionMap(_prevActionMap);

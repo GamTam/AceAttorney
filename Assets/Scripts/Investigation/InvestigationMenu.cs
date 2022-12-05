@@ -18,7 +18,6 @@ public class InvestigationMenu : MenuCursor
     [SerializeField] private MoveSO[] _moveablePlaces;
     [SerializeField] public EvidenceTalkPair[] _evidenceDialogue;
     [SerializeField] public DialogueSO _wrongEvidence;
-    [SerializeField] private List<EvidenceSO> _evidence;
     
     [Header("Misc.")] [SerializeField] string _song;
     [SerializeField] SwapCharacters _swap;
@@ -38,7 +37,6 @@ public class InvestigationMenu : MenuCursor
 
     void Awake()
     {
-        Globals.Evidence = _evidence;
         base.Start();
         _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
 

@@ -21,8 +21,34 @@ MonoBehaviour:
     _blipSound: blipmale
     _skipFade: 1
     _stopMusic: 0
+    _addToCourtRecord: 0
     _interjection: 0
+    _align: 0
     _dialogue: No clues here.
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: 
+    _knownName: 1
+    _char: NaN
+    _anim: 
+    _blipSound: 
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 1
+    _interjection: 0
+    _align: 0
+    _dialogue: '<color=#6ebdf0><se:court record>Nothing was added to
+
+      the Court
+      Record.'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 11400000, guid: ae8fe674f9f3a484a8a51e11a1a1c1ef, type: 2}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
   nextLine: {fileID: 0}
   responses: []
   isCrossExamination: 0

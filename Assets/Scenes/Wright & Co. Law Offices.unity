@@ -1534,6 +1534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _textBoxPrefab: {fileID: 3409057346996304509, guid: 4e89df09d9b03544bb8ec808070b80e5, type: 3}
+  _courtRecordPrefab: {fileID: 4007864071899059607, guid: b92b62b510101f0438c3ee608b87439f, type: 3}
   _tempBox: {fileID: 0}
   _currentLine: 0
   _prevActionMap: 

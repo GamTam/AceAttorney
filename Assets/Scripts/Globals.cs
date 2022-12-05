@@ -11,7 +11,8 @@ public static class Globals
     public static List<EvidenceSO> Profiles = new List<EvidenceSO>();
     public static List<DialogueSO> UsedDialogue = new List<DialogueSO>();
     public static List<TalkSO> UsedTalks = new List<TalkSO>();
-    
+    public static List<String> StoryFlags = new List<string>();
+
     public static Dictionary<string, ArrayList> LoadTSV(string file) {
         
         Dictionary<string, ArrayList> dictionary = new Dictionary<string, ArrayList>();
