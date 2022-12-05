@@ -4,22 +4,22 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -8507171329564533381
-    second: EVIDENCE_BANGBANG_0
+    second: Doctor's Report
   - first:
       213: -2404483471432083324
-    second: EVIDENCE_BANGBANG_1
+    second: Bloody Gloves
   - first:
       213: -9214433469507024599
-    second: EVIDENCE_BANGBANG_2
+    second: Gun
   - first:
       213: -8287962109157593508
-    second: EVIDENCE_BANGBANG_3
+    second: Financial Records
   - first:
       213: -7316230742564081040
-    second: EVIDENCE_BANGBANG_4
+    second: Power Outage Report
   - first:
       213: 3092458498671181094
-    second: EVIDENCE_BANGBANG_5
+    second: Autopsy Reports
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EVIDENCE_BANGBANG_0
+      name: Doctor's Report
       rect:
         serializedVersion: 2
         x: 140
@@ -131,7 +131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EVIDENCE_BANGBANG_1
+      name: Bloody Gloves
       rect:
         serializedVersion: 2
         x: 631
@@ -152,7 +152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EVIDENCE_BANGBANG_2
+      name: Gun
       rect:
         serializedVersion: 2
         x: 1086
@@ -173,7 +173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EVIDENCE_BANGBANG_3
+      name: Financial Records
       rect:
         serializedVersion: 2
         x: 136
@@ -194,7 +194,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EVIDENCE_BANGBANG_4
+      name: Power Outage Report
       rect:
         serializedVersion: 2
         x: 629
@@ -215,7 +215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EVIDENCE_BANGBANG_5
+      name: Autopsy Reports
       rect:
         serializedVersion: 2
         x: 1096

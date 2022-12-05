@@ -94,6 +94,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Profile",
+                    "type": "Button",
+                    "id": "6931612a-4961-44e5-ab4b-18c0bacf9b69",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Present",
+                    "type": "Button",
+                    "id": "01e16b79-6d5c-44b3-b419-c304a62f3e3b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -547,6 +565,50 @@
                     "action": "TrackedDeviceOrientation",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2441af65-865a-48a8-ac36-93501f15721a",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Profile",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "613215d5-0c4a-4561-8853-b0d73db614ec",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Profile",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8d53d93f-afe7-4cc8-aed8-010f3fdc33df",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Present",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8a56d172-fe3d-46aa-b563-0a120613dddc",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Present",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -762,6 +824,17 @@
                 },
                 {
                     "name": "",
+                    "id": "9651ce24-1b51-4cfa-8099-41c8fc677e31",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "PreviousLine",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "9493316e-ff14-4b7a-973f-b5c062944c70",
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
@@ -789,6 +862,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller",
+                    "action": "NextLine",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c56b679c-71fc-40da-b9c7-2db967d3d7bc",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
                     "action": "NextLine",
                     "isComposite": false,
                     "isPartOfComposite": false

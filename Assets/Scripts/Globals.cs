@@ -7,8 +7,10 @@ using UnityEngine;
 
 public static class Globals
 {
-    public static List<EvidenceSO> _evidence;
-    public static List<EvidenceSO> _profiles;
+    public static List<EvidenceSO> Evidence = new List<EvidenceSO>();
+    public static List<EvidenceSO> Profiles = new List<EvidenceSO>();
+    public static List<DialogueSO> UsedDialogue = new List<DialogueSO>();
+    public static List<TalkSO> UsedTalks = new List<TalkSO>();
     
     public static Dictionary<string, ArrayList> LoadTSV(string file) {
         

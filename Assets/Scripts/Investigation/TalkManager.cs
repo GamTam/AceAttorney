@@ -97,7 +97,7 @@ public class TalkManager : MonoBehaviour
 
             _responseButtons.Add(responseButton);
             
-            if (response.talked)
+            if (Globals.UsedTalks.Contains(response))
             {
                 responseButton.gameObject.GetComponent<Image>().sprite = _selectedSprites[0];
                 responseButton.gameObject.GetComponentsInChildren<Image>()[1].sprite = _selectedSprites[1];
@@ -124,7 +124,7 @@ public class TalkManager : MonoBehaviour
         _sprite.color = new Color(0f, 0f, 0f, 0f);
         
         yield return new WaitForSeconds(0.5f);
-        response.talked = true;
+        Globals.UsedTalks.Add(response);
         _playerInput.SwitchCurrentActionMap("Menu");
         _dialogueManager.StartText(response.DialogueSO);
         

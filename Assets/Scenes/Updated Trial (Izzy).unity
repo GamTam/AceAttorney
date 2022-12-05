@@ -1297,10 +1297,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sahwit
       objectReference: {fileID: 0}
-    - target: {fileID: 4365636216073985715, guid: d4283b11664fc1b46a150a56adcb7642, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 4ad44c79edd1acd4fadc5f83698b872b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4283b11664fc1b46a150a56adcb7642, type: 3}
 --- !u!4 &1820951575 stripped

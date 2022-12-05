@@ -18,5 +18,6 @@ faceReveal	false
 hit	false
 objectionPhoenix	false
 holdItPhoenix	false
-holdItMaya	false
 takeThatPhoenix	false
+interjection	false
+record flip	false

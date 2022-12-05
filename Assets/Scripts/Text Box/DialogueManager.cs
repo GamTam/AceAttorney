@@ -289,7 +289,11 @@ public class DialogueManager : MonoBehaviour
                 img = obj.GetComponent<RawImage>();
                 img.texture = Resources.Load<Texture>("Sprites/Interjections/Objection");
                 img.SetNativeSize();
-                _soundManager.Play($"objection{_nameBox.text}");
+                if (_soundManager.Play($"objection{_nameBox.text}") == null)
+                {
+                    _soundManager.Play("interjection");
+                }
+
                 break;
             case Interjection.HoldIt:
                 obj = Instantiate(_interjectionObj);
@@ -297,7 +301,11 @@ public class DialogueManager : MonoBehaviour
                 img = obj.GetComponent<RawImage>();
                 img.texture = Resources.Load<Texture>("Sprites/Interjections/Hold It");
                 img.SetNativeSize();
-                _soundManager.Play($"holdIt{_nameBox.text}");
+                if (_soundManager.Play($"holdIt{_nameBox.text}") == null)
+                {
+                    _soundManager.Play("interjection");
+                }
+                
                 break;
             case Interjection.TakeThat:
                 obj = Instantiate(_interjectionObj);
@@ -305,7 +313,11 @@ public class DialogueManager : MonoBehaviour
                 img = obj.GetComponent<RawImage>();
                 img.texture = Resources.Load<Texture>("Sprites/Interjections/Take That");
                 img.SetNativeSize();
-                _soundManager.Play($"takeThat{_nameBox.text}");
+                if (_soundManager.Play($"takeThat{_nameBox.text}") == null)
+                {
+                    _soundManager.Play("interjection");
+                }
+                
                 break;
             case Interjection.NA:
                 skip = true;

@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -12,8 +13,12 @@ public class InvestigationMenu : MenuCursor
     [SerializeField] private GameObject _investigateCursor;
     [SerializeField] private GameObject _talkPrefab;
     [SerializeField] private GameObject _movePrefab;
+    [SerializeField] private GameObject _presentPrefab;
     [SerializeField] private TalkSO[] _talkText;
     [SerializeField] private MoveSO[] _moveablePlaces;
+    [SerializeField] public EvidenceTalkPair[] _evidenceDialogue;
+    [SerializeField] public DialogueSO _wrongEvidence;
+    [SerializeField] private List<EvidenceSO> _evidence;
     
     [Header("Misc.")] [SerializeField] string _song;
     [SerializeField] SwapCharacters _swap;
@@ -24,9 +29,16 @@ public class InvestigationMenu : MenuCursor
     private PlayerInput _playerInput;
 
     private MusicManager _musicManager;
+    
+    [Serializable]
+    public struct EvidenceTalkPair {
+        public EvidenceSO Evidence;
+        public DialogueSO Dialogue;
+    }
 
     void Awake()
     {
+        Globals.Evidence = _evidence;
         base.Start();
         _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
 
@@ -102,6 +114,9 @@ public class InvestigationMenu : MenuCursor
             case "Talk":
                 StartCoroutine(Talk());
                 break;
+            case "Present":
+                StartCoroutine(Present());
+                break;
         }
     }
 
@@ -135,6 +150,19 @@ public class InvestigationMenu : MenuCursor
         obj.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
         MoveManager move = obj.GetComponent<MoveManager>();
         move.ShowOptions(_moveablePlaces);
+        
+        GameObject.FindWithTag("Investigation").SetActive(false);
+        _playerInput.SwitchCurrentActionMap("Menu");
+    }
+    
+    private IEnumerator Present()
+    {
+        yield return new WaitForSeconds(0.25f);
+        
+        GameObject obj = Instantiate(_presentPrefab);
+        obj.transform.SetParent(GameObject.FindGameObjectsWithTag("UI")[1].transform, false);
+        CRPresent pres = obj.GetComponent<CRPresent>();
+        pres.enabled = true;
         
         GameObject.FindWithTag("Investigation").SetActive(false);
         _playerInput.SwitchCurrentActionMap("Menu");

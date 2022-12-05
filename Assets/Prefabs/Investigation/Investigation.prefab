@@ -167,6 +167,7 @@ MonoBehaviour:
   _investigateCursor: {fileID: 787919795915615156, guid: 2dbaf0facc577aa439e8e1320071eaa2, type: 3}
   _talkPrefab: {fileID: 466788259218403568, guid: ec534e6c461cfc2478765a4a57f294d8, type: 3}
   _movePrefab: {fileID: 6233346118203205664, guid: d82f8467768083244b7c8dad51a66a00, type: 3}
+  _presentPrefab: {fileID: 7298867464423827332, guid: 1e8a966404fbe024797533a0fcc1c0bd, type: 3}
   _talkText: []
   _moveablePlaces: []
   _song: Maya

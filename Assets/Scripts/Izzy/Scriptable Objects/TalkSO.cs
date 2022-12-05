@@ -5,5 +5,4 @@ public class TalkSO : ScriptableObject
 {
     public string Name;
     public DialogueSO DialogueSO;
-    public bool talked;
 }

@@ -12,7 +12,7 @@ public class TBLine
     [SerializeField] private bool _skipFade;
     [SerializeField] private bool _stopMusic;
     [SerializeField] private Interjection _interjection;
-    [Header("")][SerializeField][TextArea(10, 5)] private string _dialogue;
+    [Header("")][SerializeField][TextArea(3, 4)] private string _dialogue;
 
     public string Name => _name;
     public string Char => _char;
