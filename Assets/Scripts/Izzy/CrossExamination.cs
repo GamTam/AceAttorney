@@ -1,10 +1,17 @@
+using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.PlayerLoop;
 
 public class CrossExamination : MonoBehaviour 
 {
-    [SerializeField] EvidenceSO presentedEvidence; // This will change when we have actual evidence presentation
+    [SerializeField] GameObject _courtRecord;
+    [SerializeField] private EvidenceSO[] _evidenceList;
     
+    private EvidenceSO _selectedEvidence;
+    private bool _presenting;
+
     private SoundManager _soundManager;
     
     private TrialController trialController;
@@ -21,10 +28,15 @@ public class CrossExamination : MonoBehaviour
         dialogueManager = FindObjectOfType<DialogueManager>();
         trialController = FindObjectOfType<TrialController>();
 
+        foreach (var evidence in _evidenceList)
+        {
+            Globals.Evidence.Add(evidence);
+        }
+
         playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         playerInput.SwitchCurrentActionMap("Textbox");
         pressing = playerInput.actions["Textbox/Press"];
-        present = playerInput.actions["Textbox/Present"];
+        present = playerInput.actions["Textbox/Court Record"];
         previousLine = playerInput.actions["Textbox/PreviousLine"];
         nextLine = playerInput.actions["Textbox/NextLine"];
         
@@ -33,7 +45,7 @@ public class CrossExamination : MonoBehaviour
 
     private void Update() {
         currentDialogue = dialogueManager.ReturnCurrentDialogue();
-        if (currentDialogue == null) return;
+        if (currentDialogue == null || _presenting) return;
 
         if (pressing.triggered) {
             Press();
@@ -41,7 +53,7 @@ public class CrossExamination : MonoBehaviour
 
         if (present.triggered)
         {
-            Present();
+            StartCoroutine(Present());
         }
 
         if (currentDialogue.HasPressingSequence)
@@ -62,25 +74,50 @@ public class CrossExamination : MonoBehaviour
         }
     }
 
-    public void Present() {
-        
+    public IEnumerator Present()
+    {
+        _selectedEvidence = null;
+        _presenting = true;
         var correctEvidenceName = currentDialogue.ReturnListOfEvidence();
+        GameObject obj = Instantiate(_courtRecord, GameObject.FindWithTag("UI").transform, false);
+        CourtRecordController cr = obj.GetComponent<CourtRecordController>();
+        obj.GetComponent<CRCrossEx>().enabled = true;
+        
+        playerInput.SwitchCurrentActionMap("Menu");
+        cr.HasPresented += UpdateEvidence;
 
-        foreach (EvidenceSO evidence in correctEvidenceName) {
-            if (presentedEvidence.Name == evidence.Name) {
-                CorrectEvidenceShown();
-                return;
+        while (_selectedEvidence == null)
+        {
+            if (obj == null)
+            {
+                _presenting = false;
+                yield break;
             }
+
+            yield return null;
+        }
+
+        if (correctEvidenceName.Contains(_selectedEvidence))
+        {
+            CorrectEvidenceShown();
+        }
+        else
+        {
+            IncorrectEvidenceShown();
         }
         
-        IncorrectEvidenceShown();
+        _presenting = false;
+    }
+
+    void UpdateEvidence(EvidenceSO evidence)
+    {
+        _selectedEvidence = evidence;
     }
 
     private void CorrectEvidenceShown() {
         if (currentDialogue.HasPresentSequence) {
             dialogueManager.StartText(currentDialogue.presentSequence);
         }
-        else return;
     }
 
     private void IncorrectEvidenceShown() {
@@ -90,16 +127,11 @@ public class CrossExamination : MonoBehaviour
             dialogueManager.StartText(currentDialogue.wrongPresentSequence);
             trialController.IncreaseIncorrects();
         }
-        else return;
     }
 
     private void Press() {
         if (currentDialogue.HasPressingSequence) {
             dialogueManager.StartText(currentDialogue.pressSequence);
         }
-        else return;
-
-        //dialogueManager.StartText(currentDialogue.pressSequence);
-        //print(currentDialogue.dialogueText[0]);
     }
 }

@@ -1038,6 +1038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _textBoxPrefab: {fileID: 3409057346996304509, guid: 4e89df09d9b03544bb8ec808070b80e5, type: 3}
+  _courtRecordPrefab: {fileID: 0}
   _tempBox: {fileID: 0}
   _currentLine: 0
   _prevActionMap: 
@@ -1213,7 +1214,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fc1dde4de86245429bf0808617c9e2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presentedEvidence: {fileID: 11400000, guid: 416f81d697033a64eb9078ab422f547c, type: 2}
+  _courtRecord: {fileID: 7298867464423827332, guid: 1e8a966404fbe024797533a0fcc1c0bd, type: 3}
+  _evidenceList:
+  - {fileID: 11400000, guid: ae8fe674f9f3a484a8a51e11a1a1c1ef, type: 2}
+  - {fileID: 11400000, guid: 5810e0a35a2ecd640b0ca6bfcc5b721a, type: 2}
+  - {fileID: 11400000, guid: 368a6de20af80e84793969a5f58e2667, type: 2}
+  - {fileID: 11400000, guid: 447e2ffcbed60ea4cbf05305bd00d952, type: 2}
+  - {fileID: 11400000, guid: 84f5589fb428e5f4daf4eb4d6548354f, type: 2}
+  - {fileID: 11400000, guid: 1a853311dfd6397448122d4d60b4aa8a, type: 2}
+  - {fileID: 11400000, guid: 581ac14913f2ecb4986773aa479e1184, type: 2}
 --- !u!1001 &1820951574
 PrefabInstance:
   m_ObjectHideFlags: 0

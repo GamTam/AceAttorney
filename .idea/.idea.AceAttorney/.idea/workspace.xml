@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="Something changed. I think.">
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Manfred von Karma.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Manfred von Karma.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/it02c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/it02c.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/itc03b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sprites/itc03b.png.meta" afterDir="false" />
+    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/CRCrossEx.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CRCrossEx.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Wright &amp; Co. Law Offices.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Wright &amp; Co. Law Offices.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Test Investigation/Barber Shop.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Test Investigation/Barber Shop.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Test Investigation/Street View.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Test Investigation/Street View.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/MusicManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/MusicManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Globals.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Globals.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Investigation/MoveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Investigation/MoveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy/Scriptable Objects/EvidenceSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Izzy/Scriptable Objects/EvidenceSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Court Record/record_icon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Court Record/record_icon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Court Record/recordu.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Court Record/recordu.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Court Record.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Court Record.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Updated Trial (Izzy).unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Updated Trial (Izzy).unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Investigation/CourtRecordController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Investigation/CourtRecordController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy/CrossExamination.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Izzy/CrossExamination.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,16 +33,19 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad0a7939819048a0a161f66558c9886726800/61/6cede232/Animator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scripts/Izzy/CrossExamination.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scriptable Objects/Tests/Test Investigation/Barber Shop.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Editor/AssetEditor/InputActionAssetManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Editor/TimelineSelection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@10.10.1/Editor/Drawing/Blackboard/SGBlackboardSection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Editor/TimelineHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Editor/Utilities/MarkerModifier.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@10.10.1/Editor/Data/Graphs/MaterialSlot.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7e35836373b74b12bde8ba7fa4d53641167088/64/694d14e8/Match.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/InputManagerStateMonitors.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_CoroutineTween.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Editor/TimelineSelection.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scriptable Objects/Tests/Test Investigation/Barber Shop.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7e35836373b74b12bde8ba7fa4d53641167088/64/694d14e8/Match.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scripts/CursorMovement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.core@1.0.1/Editor/Core/EditorGameService/EditorGameServiceSettingsProvider.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2HbggE0WWlPeR0AECSQgnpl4Gxg" />
   <component name="ProjectLevelVcsManager">
@@ -112,6 +106,7 @@
       <workItem from="1669361971993" duration="9000" />
       <workItem from="1669673630158" duration="3641000" />
       <workItem from="1670018859512" duration="11075000" />
+      <workItem from="1670280308414" duration="2777000" />
     </task>
     <task id="LOCAL-00001" summary="Audio Prefab">
       <created>1668559907702</created>
@@ -176,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669680026912</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="I have no idea what I'm doing">
+      <created>1670146517069</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670146517069</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +223,7 @@
     <MESSAGE value="Updated Autopsy Report" />
     <MESSAGE value="Something changed. I think." />
     <MESSAGE value="Sahwit - Part 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sahwit - Part 1" />
+    <MESSAGE value="I have no idea what I'm doing" />
+    <option name="LAST_COMMIT_MESSAGE" value="I have no idea what I'm doing" />
   </component>
 </project>

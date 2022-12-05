@@ -48,6 +48,7 @@ public class CourtRecordController : MonoBehaviour
         _base.transform.localScale = new Vector3(0, 0, 0);
         
         _playerInput.SwitchCurrentActionMap("Null");
+        _soundManager.Play("record flip");
 
         for (int i = 0; i < 10; i++)
         {
@@ -253,7 +254,10 @@ public class CourtRecordController : MonoBehaviour
 
         GetComponent<Image>().enabled = false;
         yield return new WaitForSeconds(0.1f);
-        GameObject.FindWithTag("UI").transform.Find("Investigation").gameObject.SetActive(true);
+        try
+        {
+            GameObject.FindWithTag("UI").transform.Find("Investigation").gameObject.SetActive(true);
+        } catch {}
         Destroy(gameObject);
     }
 
