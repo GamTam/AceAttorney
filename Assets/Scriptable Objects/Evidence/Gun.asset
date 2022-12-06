@@ -15,9 +15,9 @@ MonoBehaviour:
   Name: Gun
   Icon: {fileID: 21300000, guid: 29c5a337b722c3e4591ea40ac1ae5a58, type: 3}
   CheckImage: {fileID: 0}
-  Description: 'The murder weapon.
+  Description: 'The murder weapon. Fired four times.
 
-    Bears Lyla''s prints on all
+    Bears Lyla''s prints on
+    all
 
-    areas except
-    the trigger.'
+    areas except the trigger.'

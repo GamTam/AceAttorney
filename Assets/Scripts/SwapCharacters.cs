@@ -10,6 +10,11 @@ public class SwapCharacters : MonoBehaviour
     public bool _done;
     public string _charName;
 
+    private void Awake()
+    {
+        _mesh.material.color = Color.white;
+    }
+
     public void StartSwap(string newChar="NaN", float speed=-3, bool fadeIn=true, bool skipFade=false)
     {
         if (speed < 0)
@@ -23,14 +28,17 @@ public class SwapCharacters : MonoBehaviour
     {
         _done = false;
         
-        if (_mesh.material.color.a != 0 && !skipFade)
+        if (_mesh.material.color.a != 0)
         {
-            while (_mesh.material.color.a >= 0)
+            if (!skipFade)
             {
-                float a = _mesh.material.color.a;
-                _mesh.material.color = new Color(1f, 1f, 1f, a - (speed * Time.deltaTime));
-                
-                yield return null;
+                while (_mesh.material.color.a >= 0)
+                {
+                    float a = _mesh.material.color.a;
+                    _mesh.material.color = new Color(1f, 1f, 1f, a - (speed * Time.deltaTime));
+
+                    yield return null;
+                }
             }
 
             _mesh.material.color = new Color(1f, 1f, 1f, 0f);

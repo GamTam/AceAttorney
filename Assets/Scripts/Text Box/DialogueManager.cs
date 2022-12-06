@@ -226,10 +226,10 @@ public class DialogueManager : MonoBehaviour
         _skipFade = line.SkipFade;
 
         StateChange state = line.StateChange;
-        if (state.StoryFlag != null) Globals.StoryFlags.Add(state.StoryFlag);
-        if (state.EvidenceToAdd != null) Globals.Evidence.Add(state.EvidenceToAdd);
-        if (state.EvidenceToRemove != null) Globals.Evidence.Remove(state.EvidenceToRemove);
-        if (state.PersonToAdd != null) Globals.Profiles.Add(state.PersonToAdd);
+        if (state.StoryFlag != null) if (!Globals.StoryFlags.Contains(state.StoryFlag)) Globals.StoryFlags.Add(state.StoryFlag);
+        if (state.EvidenceToAdd != null) if (!Globals.Evidence.Contains(state.EvidenceToAdd)) Globals.Evidence.Add(state.EvidenceToAdd);
+        if (state.EvidenceToRemove != null) if (Globals.Evidence.Contains(state.EvidenceToRemove)) Globals.Evidence.Remove(state.EvidenceToRemove);
+        if (state.PersonToAdd != null) if (!Globals.Profiles.Contains(state.PersonToAdd)) Globals.Profiles.Add(state.PersonToAdd);
 
         bool addToCourtRecord = line.AddToCourtRecord;
 
@@ -252,7 +252,7 @@ public class DialogueManager : MonoBehaviour
             textBox.alignment = TextAlignmentOptions.TopRight;
         }
 
-        if (line.StopMusic) _musicManager.Stop();
+        if (line.StopMusic) _musicManager.fadeOut();
         
         if (soundInfo != null) _typingClip = soundInfo;
         

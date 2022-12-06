@@ -43,7 +43,6 @@ public class CRPresent : MonoBehaviour
 
     void Present(EvidenceSO evidence)
     {
-        int i = 0;
         IEnumerator coroutine = _cr.WaitThenLoop(evidence, _menu._evidenceDialogue, _menu._wrongEvidence);
         StartCoroutine(coroutine);
     }

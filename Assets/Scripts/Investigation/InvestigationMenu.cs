@@ -14,12 +14,12 @@ public class InvestigationMenu : MenuCursor
     [SerializeField] private GameObject _talkPrefab;
     [SerializeField] private GameObject _movePrefab;
     [SerializeField] private GameObject _presentPrefab;
-    [SerializeField] public TalkSO[] _talkText;
-    [SerializeField] public MoveSO[] _moveablePlaces;
+    [SerializeField] public List<TalkSO> _talkText = new List<TalkSO>();
+    [SerializeField] public List<MoveSO> _moveablePlaces = new List<MoveSO>();
     [SerializeField] public EvidenceTalkPair[] _evidenceDialogue;
     [SerializeField] public DialogueSO _wrongEvidence;
     
-    [Header("Misc.")] [SerializeField] string _song;
+    [Header("Misc.")] [SerializeField] public string _song;
     [SerializeField] SwapCharacters _swap;
     [SerializeField] private GameObject _background;
 
@@ -134,6 +134,7 @@ public class InvestigationMenu : MenuCursor
         GameObject obj = Instantiate(_talkPrefab);
         obj.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
         TalkManager talk = obj.GetComponent<TalkManager>();
+        talk._investigation = this;
         talk.ShowOptions(_talkText);
         
         GameObject.FindWithTag("Investigation").SetActive(false);

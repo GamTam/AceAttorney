@@ -24,12 +24,13 @@ MonoBehaviour:
     _addToCourtRecord: 0
     _interjection: 0
     _align: 2
-    _dialogue: '<color=green><sp:10>September 20th
+    _dialogue: '<color=green><sp:10><p:long>September 20, 10:00 AM
 
-      Wright & Co. Law Offices'
+      Wright
+      & Co. Law Offices'
     _stateChange:
       StoryFlag: 
-      EvidenceToAdd: {fileID: 0}
+      EvidenceToAdd: {fileID: 11400000, guid: ae8fe674f9f3a484a8a51e11a1a1c1ef, type: 2}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
   - _name: TV
@@ -276,7 +277,7 @@ MonoBehaviour:
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Phone
+  - _name: Cellphone
     _knownName: 1
     _char: Maya
     _anim: smug
@@ -335,7 +336,7 @@ MonoBehaviour:
     _addToCourtRecord: 0
     _interjection: 0
     _align: 0
-    _dialogue: I-<p:short> no. No I'm not.
+    _dialogue: I-<p:short> No. No I'm not.
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -450,6 +451,7 @@ MonoBehaviour:
       PersonToAdd: {fileID: 0}
   nextLine: {fileID: 0}
   responses: []
+  IsCrossExanimation: 0
   isCrossExamination: 0
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}

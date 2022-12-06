@@ -103,7 +103,7 @@ public class MoveManager : MonoBehaviour
         }
     }
 
-    public void ShowOptions(MoveSO[] responses)
+    public void ShowOptions(List<MoveSO> responses)
     {
         _selectionHead.SetActive(true);
         int i = 0;

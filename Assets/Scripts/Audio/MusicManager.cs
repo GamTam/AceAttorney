@@ -76,6 +76,14 @@ public class MusicManager : MonoBehaviour
             return musicPlaying;
         }
 
+        try
+        {
+            if (musicPlaying.source.isPlaying)
+            {
+                fadeOut();
+            }
+        } catch {}
+
         musicPlaying = s;
 
         s.source.volume = 1;

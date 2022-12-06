@@ -11,9 +11,8 @@ public class DialogueSO : ScriptableObject
     
     [Header("Optional")]
     public Response[] responses;
-
-    public bool HasResponses => responses != null && responses.Length > 0;
-    public bool HasNextLine => nextLine != null;
+    
+    public bool IsCrossExanimation;
 
     [Header("Cross Examination")] 
     public bool isCrossExamination;
@@ -25,6 +24,8 @@ public class DialogueSO : ScriptableObject
 
     private List<int> secondaryDialogueIndexes = new List<int>();
 
+    public bool HasResponses => responses != null && responses.Length > 0;
+    public bool HasNextLine => nextLine != null;
     public bool HasPresentSequence => presentSequence != null;
     public bool HasWrongPresentSequence => wrongPresentSequence != null;
     public bool HasPressingSequence => pressSequence != null;

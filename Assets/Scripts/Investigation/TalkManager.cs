@@ -17,6 +17,7 @@ public class TalkManager : MonoBehaviour
 
     private List<RectTransform> _responseButtons = new List<RectTransform>();
     private List<TalkSO> _dialogue = new List<TalkSO>();
+    public InvestigationMenu _investigation;
 
     private PlayerInput _playerInput;
     private InputAction _back;
@@ -33,6 +34,7 @@ public class TalkManager : MonoBehaviour
         _dialogueManager = GameObject.FindWithTag("Dialogue Manager").GetComponent<DialogueManager>();
         _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
+        _investigation = GameObject.FindWithTag("UI").GetComponent<InvestigationMenu>();
         
         _back = _playerInput.actions["Menu/Cancel"];
     }
@@ -75,10 +77,11 @@ public class TalkManager : MonoBehaviour
         
         StartCoroutine(Start());
         _playerInput.SwitchCurrentActionMap("Menu");
-        ShowOptions(_dialogue.ToArray());
+        _dialogue = _investigation._talkText.ToList();
+        ShowOptions(_dialogue);
     }
 
-    public void ShowOptions(TalkSO[] responses)
+    public void ShowOptions(List<TalkSO> responses)
     {
         if (_dialogue.Count == 0)
         {

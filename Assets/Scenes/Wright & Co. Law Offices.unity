@@ -1625,8 +1625,13 @@ MonoBehaviour:
   _talkText:
   - {fileID: 11400000, guid: 9827f2c35b1cb64469b4a714f19725a4, type: 2}
   - {fileID: 11400000, guid: d69cc8ffb13971147861ff568a3de341, type: 2}
+  _talkTextAfterDC:
+  - {fileID: 11400000, guid: b64e007d0c160044b8d983096060044d, type: 2}
   _moveablePlaces:
   - {fileID: 11400000, guid: f83d11de3c4e0a84ead7b96ade7af915, type: 2}
+  _moveablePlacesAfterDC:
+  - {fileID: 11400000, guid: f83d11de3c4e0a84ead7b96ade7af915, type: 2}
+  - {fileID: 11400000, guid: f7ab55ca530dcfd4398ede433b08d09b, type: 2}
 --- !u!224 &1469925740 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5678902792772350652, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
@@ -2910,7 +2915,7 @@ PrefabInstance:
     - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
       propertyPath: _wrongEvidence
       value: 
-      objectReference: {fileID: 11400000, guid: f5fbb9e87ebe49b4ba4d7557e9dbc340, type: 2}
+      objectReference: {fileID: 11400000, guid: 99b45a25c2b38484ea24963d5376e32d, type: 2}
     - target: {fileID: 5678902791841992666, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}
       propertyPath: _evidence.Array.size
       value: 7

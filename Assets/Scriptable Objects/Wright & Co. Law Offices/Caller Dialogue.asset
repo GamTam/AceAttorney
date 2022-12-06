@@ -80,10 +80,8 @@ MonoBehaviour:
     _addToCourtRecord: 0
     _interjection: 0
     _align: 0
-    _dialogue: 'I''m just saying, that TV lawyer doesn''t seem
-
-      like a lawyer
-      for honest people.'
+    _dialogue: "I'm just saying,<p:short> that TV lawyer doesn't \nseem like a lawyer
+      for honest people."
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
