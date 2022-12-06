@@ -7,7 +7,6 @@ using UnityEngine.PlayerLoop;
 public class CrossExamination : MonoBehaviour 
 {
     [SerializeField] GameObject _courtRecord;
-    [SerializeField] private EvidenceSO[] _evidenceList;
     
     private EvidenceSO _selectedEvidence;
     private bool _presenting;
@@ -27,11 +26,6 @@ public class CrossExamination : MonoBehaviour
     private void Start() {
         dialogueManager = FindObjectOfType<DialogueManager>();
         trialController = FindObjectOfType<TrialController>();
-
-        foreach (var evidence in _evidenceList)
-        {
-            Globals.Evidence.Add(evidence);
-        }
 
         playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         playerInput.SwitchCurrentActionMap("Textbox");
@@ -56,7 +50,7 @@ public class CrossExamination : MonoBehaviour
             StartCoroutine(Present());
         }
 
-        if (currentDialogue.HasPressingSequence)
+        if (currentDialogue.isCrossExamination)
         {
             if (nextLine.triggered && currentDialogue.nextLine != null &&
                 !dialogueManager.dialogueVertexAnimator.textAnimating)
@@ -130,6 +124,7 @@ public class CrossExamination : MonoBehaviour
     }
 
     private void Press() {
+        Debug.Log("a");
         if (currentDialogue.HasPressingSequence) {
             dialogueManager.StartText(currentDialogue.pressSequence);
         }

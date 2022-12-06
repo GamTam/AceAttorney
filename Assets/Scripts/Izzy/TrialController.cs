@@ -4,7 +4,6 @@ using TMPro;
 
 public class TrialController : MonoBehaviour
 {
-    [SerializeField] private DialogueSO currentTrial;
     [SerializeField] private DialogueSO[] allDialogues;
     [SerializeField] private int maxPenalties = 5;
 
@@ -26,16 +25,8 @@ public class TrialController : MonoBehaviour
         playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         playerInput.SwitchCurrentActionMap("Textbox");
         _musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();
-        _musicManager.fadeOut();
         _musicManager.Play("CrossEx");
-        StartTrial();
-    }
-
-    public void StartTrial() {
         currentPenalties = maxPenalties;
-        UpdateText();
-        
-        dialogueManager.StartText(currentTrial);
     }
 
     public void UpdateText()

@@ -42,13 +42,10 @@ public class DialogueManager : MonoBehaviour
     private bool _skipFade;
 
     private bool _crossEx;
-
+    private bool _autoEnd;
+    
     [SerializeField] private GameObject _interjectionObj;
 
-    // Izzy
-    private CrossExamination crossExamination;
-
-    // David
     public bool _doneTalking;
 
     void Awake() {
@@ -57,8 +54,6 @@ public class DialogueManager : MonoBehaviour
         _advanceText = _playerInput.actions["Advance"];
         _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
         _musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();
-
-        crossExamination = FindObjectOfType<CrossExamination>();
     }
 
     public void StartText(DialogueSO linesIn, bool quickEnd = false, int startingLine = 0, string prevActionMap = null)
@@ -95,7 +90,14 @@ public class DialogueManager : MonoBehaviour
 
         if (prevActionMap == null)
         {
-            _prevActionMap = _playerInput.currentActionMap.name;
+            try
+            {
+                _prevActionMap = _playerInput.currentActionMap.name;
+            }
+            catch
+            {
+                _prevActionMap = "Menu";
+            }
         }
         else
         {
@@ -118,9 +120,13 @@ public class DialogueManager : MonoBehaviour
             {
                 NextLine();
             }
-            else if (!dialogueVertexAnimator.textAnimating && _currentLine == lines.Count && _dialogue.HasResponses && !_shownResponses)
+            else if (!dialogueVertexAnimator.textAnimating &&
+                     (_currentLine == lines.Count && _dialogue.HasResponses && !_shownResponses) || _autoEnd)
             {
-                NextLine();
+                if (!dialogueVertexAnimator.textAnimating)
+                {
+                    NextLine();   
+                }
             }
             
             if (!dialogueVertexAnimator.textAnimating && !_advanceButton.gameObject.activeSelf)
@@ -225,6 +231,8 @@ public class DialogueManager : MonoBehaviour
         Interjection interjection = line.Interjection;
         _skipFade = line.SkipFade;
 
+        _autoEnd = line.AutoEnd;
+
         StateChange state = line.StateChange;
         if (state.StoryFlag != null) if (!Globals.StoryFlags.Contains(state.StoryFlag)) Globals.StoryFlags.Add(state.StoryFlag);
         if (state.EvidenceToAdd != null) if (!Globals.Evidence.Contains(state.EvidenceToAdd)) Globals.Evidence.Add(state.EvidenceToAdd);
@@ -280,10 +288,10 @@ public class DialogueManager : MonoBehaviour
             dialogueVertexAnimator.QuickEnd();
             return;
         }
-        StartCoroutine(StartText(commands, totalTextMessage, line.Name, faceInfo, interjection, addToCourtRecord));
+        StartCoroutine(StartText(commands, totalTextMessage, line.Name, faceInfo, interjection, addToCourtRecord, line.Thinking, line.ForceFade));
     }
 
-    private IEnumerator StartText(List<DialogueCommand> commands, string totalTextMessage, string name, string faceInfo, Interjection interjection, bool addToCourtRecord)
+    private IEnumerator StartText(List<DialogueCommand> commands, string totalTextMessage, string name, string faceInfo, Interjection interjection, bool addToCourtRecord, bool Thinking, bool forceFade)
     {
         if (_tempCourtRecord != null) _tempCourtRecord.GetComponent<Animator>().Play("Fade Out");
         while (_tempCourtRecord != null)
@@ -347,7 +355,7 @@ public class DialogueManager : MonoBehaviour
             Destroy(obj);
         }
         
-        if (_prevChar != _char && (_char != null || faceInfo == "NaN"))
+        if (_prevChar != _char && (_char != null || faceInfo == "NaN") || forceFade)
         {
             _prevChar = _char;
             _swap.StartSwap(faceInfo, fadeIn:faceInfo != "NaN", skipFade:_skipFade);
@@ -367,7 +375,7 @@ public class DialogueManager : MonoBehaviour
         _tempBox.SetActive(true);
 
         _advanceButton.gameObject.SetActive(false);
-        if (_char != null && name == faceInfo) _char.Play($"{_currentAnim}_talk");
+        if (_char != null && name == faceInfo && !Thinking) _char.Play($"{_currentAnim}_talk");
         
         if (addToCourtRecord)
         {

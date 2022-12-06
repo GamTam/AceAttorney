@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:81b8aae1634ce9a1059fc669eb46ad14:ac565781785f25dc6975b45862298241:bccb039c55c035e1360fc2b060afd057$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="edgeworth_idle.png" width="701" height="1832">
+    <sprite n="blink_1.png" x="0" y="0" w="187" h="108"/>
+    <sprite n="blink_2.png" x="187" y="0" w="187" h="108"/>
+    <sprite n="hold_paper.png" x="192" y="162" w="418" h="707"/>
+    <sprite n="stand.png" x="0" y="869" w="701" h="963"/>
+    <sprite n="talk_1.png" x="374" y="0" w="192" h="162"/>
+    <sprite n="talk_2.png" x="0" y="162" w="192" h="162"/>
+</TextureAtlas>

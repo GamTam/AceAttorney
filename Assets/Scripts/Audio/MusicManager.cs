@@ -67,11 +67,12 @@ public class MusicManager : MonoBehaviour
 
     public Music Play (string name)
     {
+        Debug.Log(name);
         Music s = allMusic.Find(x => x.name == name);
         if (s == null)
             return null;
 
-        if (musicPlaying == s && musicPlaying.source.isPlaying)
+        if (musicPlaying == s && Math.Abs(musicPlaying.source.volume - 1) < 0.1 && musicPlaying.source.isPlaying)
         {
             return musicPlaying;
         }
@@ -89,6 +90,7 @@ public class MusicManager : MonoBehaviour
         s.source.volume = 1;
         s.source.time = 0;
         s.source.Play();
+        Debug.Log(s.source.isPlaying);
 
         return s;
     }
@@ -141,11 +143,12 @@ public class MusicManager : MonoBehaviour
             yield return null;
         }
 
-        if (audioSource.volume == 0)
+        audioSource.source.volume = targetVolume;
+
+        if (audioSource.source.volume <= 0.1)
         {
             audioSource.source.Stop();
         }
-        yield break;
     }
 
     public Music GetMusicPlaying() {

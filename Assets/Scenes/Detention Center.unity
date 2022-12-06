@@ -1370,7 +1370,7 @@ MonoBehaviour:
   _talkText: {fileID: 11400000, guid: be8fba483619c9f4195f77342e35dbea, type: 2}
   _street: {fileID: 11400000, guid: f7ab55ca530dcfd4398ede433b08d09b, type: 2}
   _fadeOut: {fileID: 5333907003242033190, guid: 4556e2556985ee04c9c31f6599526555, type: 3}
-  _evidence: {fileID: 11400000, guid: 447e2ffcbed60ea4cbf05305bd00d952, type: 2}
+  _evidence: {fileID: 0}
 --- !u!224 &1469925740 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5678902792772350652, guid: 0828b7a32118ce84fafc6a8e9f72f65e, type: 3}

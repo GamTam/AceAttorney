@@ -70,7 +70,7 @@ public class FlagsDetentionCenter : MonoBehaviour
             SceneTransition trans = obj.GetComponent<SceneTransition>();
             trans._speed = 0.5f;
             trans.TBC = true;
-            trans._destination = "Courtroom";
+            trans._destination = "Lobby";
             _begunEnd = true;
         }
     }

@@ -11,8 +11,6 @@ public class DialogueSO : ScriptableObject
     
     [Header("Optional")]
     public Response[] responses;
-    
-    public bool IsCrossExanimation;
 
     [Header("Cross Examination")] 
     public bool isCrossExamination;

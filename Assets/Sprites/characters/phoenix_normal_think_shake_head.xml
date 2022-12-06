@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:57f2fa0739479ea8c1369daaa2d47b2f:7b7ff98b3f4d7534b435b2579db9add1:7b54ad5c11a6324f2667314a34a00bdc$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="phoenix_normal_think_shake_head.png" width="1891" height="1481">
+    <sprite n="blink_1.png" x="0" y="0" w="54" h="54"/>
+    <sprite n="blink_2.png" x="54" y="0" w="54" h="54"/>
+    <sprite n="body_normal.png" x="882" y="852" w="875" h="629"/>
+    <sprite n="body_think.png" x="1494" y="162" w="397" h="594"/>
+    <sprite n="head_think.png" x="1110" y="162" w="384" h="359"/>
+    <sprite n="Layer 1.png" x="365" y="162" w="367" h="335"/>
+    <sprite n="mouth_normal_1.png" x="1186" y="0" w="202" h="162"/>
+    <sprite n="mouth_normal_2.png" x="1388" y="0" w="202" h="162"/>
+    <sprite n="shake_head_1.png" x="732" y="162" w="378" h="690"/>
+    <sprite n="shake_head_2.png" x="432" y="852" w="450" h="468"/>
+    <sprite n="shake_head_3.png" x="0" y="852" w="432" h="450"/>
+    <sprite n="shake_head_4.png" x="0" y="162" w="365" h="474"/>
+    <sprite n="think_blink_1.png" x="324" y="0" w="123" h="73"/>
+    <sprite n="think_blink_2.png" x="447" y="0" w="123" h="73"/>
+    <sprite n="think_blink_3.png" x="570" y="0" w="123" h="73"/>
+    <sprite n="think_blink_4.png" x="693" y="0" w="123" h="73"/>
+    <sprite n="think_idle_1.png" x="816" y="0" w="185" h="108"/>
+    <sprite n="think_idle_2.png" x="1001" y="0" w="185" h="162"/>
+    <sprite n="think_talk_1.png" x="108" y="0" w="108" h="108"/>
+    <sprite n="think_talk_2.png" x="216" y="0" w="108" h="108"/>
+</TextureAtlas>
