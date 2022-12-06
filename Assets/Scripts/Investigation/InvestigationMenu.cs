@@ -14,8 +14,8 @@ public class InvestigationMenu : MenuCursor
     [SerializeField] private GameObject _talkPrefab;
     [SerializeField] private GameObject _movePrefab;
     [SerializeField] private GameObject _presentPrefab;
-    [SerializeField] private TalkSO[] _talkText;
-    [SerializeField] private MoveSO[] _moveablePlaces;
+    [SerializeField] public TalkSO[] _talkText;
+    [SerializeField] public MoveSO[] _moveablePlaces;
     [SerializeField] public EvidenceTalkPair[] _evidenceDialogue;
     [SerializeField] public DialogueSO _wrongEvidence;
     

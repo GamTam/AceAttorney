@@ -87,7 +87,7 @@ public class MusicManager : MonoBehaviour
 
     private void Update()
     {
-        if (musicPlaying != null)
+        if (musicPlaying.name != "")
         {
             if (musicPlaying.source.time > musicPlaying.loopEnd && musicPlaying.loopEnd != -1)
             {

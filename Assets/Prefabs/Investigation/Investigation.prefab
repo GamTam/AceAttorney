@@ -170,7 +170,9 @@ MonoBehaviour:
   _presentPrefab: {fileID: 7298867464423827332, guid: 1e8a966404fbe024797533a0fcc1c0bd, type: 3}
   _talkText: []
   _moveablePlaces: []
-  _song: Maya
+  _evidenceDialogue: []
+  _wrongEvidence: {fileID: 0}
+  _song: 
   _swap: {fileID: 0}
   _background: {fileID: 5678902790800400924}
 --- !u!95 &5903604243029775626

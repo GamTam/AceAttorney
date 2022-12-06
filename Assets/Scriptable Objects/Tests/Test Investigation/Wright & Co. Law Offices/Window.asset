@@ -18,13 +18,39 @@ MonoBehaviour:
     _knownName: 1
     _char: NaN
     _anim: 
+    _blipSound: typewriter
+    _skipFade: 1
+    _stopMusic: 1
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 2
+    _dialogue: '<color=green><sp:10>September 17th<p:normal>
+
+      Wright & Co.
+      Law Offices'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Phoenix
+    _knownName: 1
+    _char: NaN
+    _anim: 
     _blipSound: blipmale
     _skipFade: 1
     _stopMusic: 0
+    _addToCourtRecord: 0
     _interjection: 0
+    _align: 0
     _dialogue: 'Looking out this window, you can
 
       really see the whole city.'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
   - _name: Phoenix
     _knownName: 1
     _char: NaN
@@ -32,11 +58,18 @@ MonoBehaviour:
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
+    _addToCourtRecord: 0
     _interjection: 0
+    _align: 0
     _dialogue: 'If by "Whole City,"<p:short> you mean
 
       <anim:wave>"Gatewater
       Hotel."</anim>'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
   nextLine: {fileID: 0}
   responses: []
   isCrossExamination: 0

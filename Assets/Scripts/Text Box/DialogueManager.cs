@@ -233,41 +233,27 @@ public class DialogueManager : MonoBehaviour
 
         bool addToCourtRecord = line.AddToCourtRecord;
 
-        for (int i = 0; i < textAlignInfo.Length; i++)
+        TextAlignOptions options = line.Align;
+        
+        if (options == TextAlignOptions.topCenter)
         {
-            TextAlignOptions info = textAlignInfo[i];
-            if (info == TextAlignOptions.topCenter)
-            {
-                textBox.alignment = TextAlignmentOptions.Top;
-            }
-            else if (info == TextAlignOptions.midCenter)
-            {
-                textBox.alignment = TextAlignmentOptions.Center;
-            }
-            else if (info == TextAlignOptions.left)
-            {
-                textBox.alignment = TextAlignmentOptions.TopLeft;
-            }
-            else if (info == TextAlignOptions.right)
-            {
-                textBox.alignment = TextAlignmentOptions.TopRight;
-            }
+            textBox.alignment = TextAlignmentOptions.Top;
+        }
+        else if (options == TextAlignOptions.midCenter)
+        {
+            textBox.alignment = TextAlignmentOptions.Center;
+        }
+        else if (options == TextAlignOptions.left)
+        {
+            textBox.alignment = TextAlignmentOptions.TopLeft;
+        }
+        else if (options == TextAlignOptions.right)
+        {
+            textBox.alignment = TextAlignmentOptions.TopRight;
         }
 
         if (line.StopMusic) _musicManager.Stop();
         
-        if (nameInfo != null)
-        {
-            if (nameInfo == "")
-            {
-                _nameBox.transform.parent.gameObject.SetActive(false);
-            }
-            else
-            {
-                _nameBox.transform.parent.gameObject.SetActive(true);
-            }
-            _nameBox.text = nameInfo;
-        }
         if (soundInfo != null) _typingClip = soundInfo;
         
         if (faceInfo != null)
@@ -284,6 +270,8 @@ public class DialogueManager : MonoBehaviour
         
         if (emotionInfo != null) _currentAnim = emotionInfo;
         if (_char != null) _char.Play($"{_currentAnim}_idle");
+        
+        _nameBox.text = nameInfo;
 
         if (quickEnd)
         {
@@ -306,13 +294,14 @@ public class DialogueManager : MonoBehaviour
         _startedText = false;
         GameObject obj = null;
         RawImage img;
+        int c = GameObject.FindGameObjectsWithTag("UI").Length;
 
         bool skip = false;
         switch (interjection)
         {
             case Interjection.Objection:
                 obj = Instantiate(_interjectionObj);
-                obj.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
+                obj.transform.SetParent(GameObject.FindGameObjectsWithTag("UI")[c - 1].transform, false);
                 img = obj.GetComponent<RawImage>();
                 img.texture = Resources.Load<Texture>("Sprites/Interjections/Objection");
                 img.SetNativeSize();
@@ -324,7 +313,7 @@ public class DialogueManager : MonoBehaviour
                 break;
             case Interjection.HoldIt:
                 obj = Instantiate(_interjectionObj);
-                obj.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
+                obj.transform.SetParent(GameObject.FindGameObjectsWithTag("UI")[c - 1].transform, false);
                 img = obj.GetComponent<RawImage>();
                 img.texture = Resources.Load<Texture>("Sprites/Interjections/Hold It");
                 img.SetNativeSize();
@@ -336,7 +325,7 @@ public class DialogueManager : MonoBehaviour
                 break;
             case Interjection.TakeThat:
                 obj = Instantiate(_interjectionObj);
-                obj.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
+                obj.transform.SetParent(GameObject.FindGameObjectsWithTag("UI")[c - 1].transform, false);
                 img = obj.GetComponent<RawImage>();
                 img.texture = Resources.Load<Texture>("Sprites/Interjections/Take That");
                 img.SetNativeSize();
@@ -382,6 +371,7 @@ public class DialogueManager : MonoBehaviour
         
         if (addToCourtRecord)
         {
+            _soundManager.Play("court record");
             _tempCourtRecord = Instantiate(_courtRecordPrefab, GameObject.FindWithTag("UI").transform, false);
 
             _tempCourtRecord.GetComponentsInChildren<Image>()[3].sprite = Globals.Evidence[Globals.Evidence.Count - 1].Icon;
@@ -392,7 +382,19 @@ public class DialogueManager : MonoBehaviour
             
             _tempBox.transform.SetParent(_tempCourtRecord.transform, true);
             yield return null;
-            _tempBox.transform.SetParent( GameObject.FindWithTag("UI").transform, true); 
+            _tempBox.transform.SetParent(GameObject.FindWithTag("UI").transform, true); 
+        }
+        
+        if (name != null)
+        {
+            if (name == "")
+            {
+                _nameBox.transform.parent.gameObject.SetActive(false);
+            }
+            else
+            {
+                _nameBox.transform.parent.gameObject.SetActive(true);
+            }
         }
         
         typeRoutine = StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, _typingClip, null));

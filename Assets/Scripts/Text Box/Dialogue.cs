@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -15,7 +16,7 @@ public class TBLine
     [SerializeField] private bool _stopMusic;
     [SerializeField] private bool _addToCourtRecord;
     [SerializeField] private Interjection _interjection;
-    [SerializeField] private Align _align;
+    [SerializeField] private TextAlignOptions _align;
     [Header("")][SerializeField][TextArea(3, 4)] private string _dialogue;
     [SerializeField] private StateChange _stateChange;
 
@@ -26,7 +27,7 @@ public class TBLine
     public bool AddToCourtRecord => _addToCourtRecord;
     public string BlipSound => _blipSound;
     public Interjection Interjection => _interjection;
-    public Align Align => _align;
+    public TextAlignOptions Align => _align;
     public StateChange StateChange => _stateChange;
     public bool SkipFade => _skipFade;
     public bool StopMusic => _stopMusic;

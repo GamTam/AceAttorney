@@ -79,7 +79,7 @@ public class CrossExamination : MonoBehaviour
         _selectedEvidence = null;
         _presenting = true;
         var correctEvidenceName = currentDialogue.ReturnListOfEvidence();
-        GameObject obj = Instantiate(_courtRecord, GameObject.FindWithTag("UI").transform, false);
+        GameObject obj = Instantiate(_courtRecord, GameObject.FindGameObjectsWithTag("UI")[1].transform, false);
         CourtRecordController cr = obj.GetComponent<CourtRecordController>();
         obj.GetComponent<CRCrossEx>().enabled = true;
         

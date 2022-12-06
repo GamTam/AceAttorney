@@ -70,7 +70,7 @@ MonoBehaviour:
     _knownName: 1
     _char: Maya
     _anim: think
-    _blipSound: blipmale
+    _blipSound: blipfemale
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
     _knownName: 1
     _char: Maya
     _anim: smug
-    _blipSound: blipmale
+    _blipSound: blipfemale
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -183,7 +183,7 @@ MonoBehaviour:
     _dialogue: Well, I gotta be going.
     _stateChange:
       StoryFlag: 
-      EvidenceToAdd: {fileID: 11400000, guid: ae8fe674f9f3a484a8a51e11a1a1c1ef, type: 2}
+      EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
   - _name: Gumshoe

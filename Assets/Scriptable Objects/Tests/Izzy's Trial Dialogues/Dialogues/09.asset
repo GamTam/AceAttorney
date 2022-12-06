@@ -21,10 +21,17 @@ MonoBehaviour:
     _blipSound: blipmale
     _skipFade: 0
     _stopMusic: 0
+    _addToCourtRecord: 0
     _interjection: 0
+    _align: 0
     _dialogue: '<color=green>I remember the time exactly:
 
       It was 1:00 PM.'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
   nextLine: {fileID: 11400000, guid: 16740be752e338448bdac7c37246d551, type: 2}
   responses: []
   isCrossExamination: 1
@@ -33,4 +40,4 @@ MonoBehaviour:
   wrongPresentSequence: {fileID: 11400000, guid: 852dc18a4257aeb49b5c9874e8780077, type: 2}
   presentSequence: {fileID: 11400000, guid: 8f3454753c9042e4998714da27a46cc7, type: 2}
   evidence:
-  - {fileID: 11400000, guid: 416f81d697033a64eb9078ab422f547c, type: 2}
+  - {fileID: 11400000, guid: 5810e0a35a2ecd640b0ca6bfcc5b721a, type: 2}
