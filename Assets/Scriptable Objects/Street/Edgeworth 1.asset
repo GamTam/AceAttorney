@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
+  m_Name: Edgeworth 1
+  m_EditorClassIdentifier: 
+  dialogueIndex: 0
+  dialogueText:
+  - _name: Phoenix
+    _knownName: 1
+    _char: Gumshoe
+    _anim: happy
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'So, is Edgeworth gonna
+
+      be prosecuting again?'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Gumshoe
+    _knownName: 1
+    _char: Gumshoe
+    _anim: happy
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: You betcha, pal!
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Gumshoe
+    _knownName: 1
+    _char: Gumshoe
+    _anim: happy
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'He had a feeling that
+
+      you''d end up on defense,
+
+      so
+      he took the case personally.'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Phoenix
+    _knownName: 1
+    _char: Gumshoe
+    _anim: happy
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'Oh, how...<p:short>
+
+      Gestureful...'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  nextLine: {fileID: 0}
+  responses: []
+  IsCrossExanimation: 0
+  isCrossExamination: 0
+  prevLine: {fileID: 0}
+  pressSequence: {fileID: 0}
+  wrongPresentSequence: {fileID: 0}
+  presentSequence: {fileID: 0}
+  evidence: []

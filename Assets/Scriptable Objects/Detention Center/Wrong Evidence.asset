@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
+  m_Name: Wrong Evidence
+  m_EditorClassIdentifier: 
+  dialogueIndex: 0
+  dialogueText:
+  - _name: Lyla
+    _knownName: 1
+    _char: Lyla
+    _anim: 
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'Is that going to help
+
+      get me out of here?'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Phoenix
+    _knownName: 1
+    _char: Lyla
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: I'm not quite sure yet.
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Lyla
+    _knownName: 1
+    _char: Lyla
+    _anim: 
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: Oh, I see...
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  nextLine: {fileID: 0}
+  responses: []
+  isCrossExamination: 0
+  prevLine: {fileID: 0}
+  pressSequence: {fileID: 0}
+  wrongPresentSequence: {fileID: 0}
+  presentSequence: {fileID: 0}
+  evidence: []

@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Object 1
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<sound:blipmale><name:Phoenix>Hmm...<p:normal>
+  - '<textse:blipmale><name:Phoenix>Hmm...<p:normal>
 
     Object 1...'
-  - '<name:Maya><sound:blipfemale>Did you know that this was
+  - '<name:Maya><textse:blipfemale>Did you know that this was
 
     the <color=red>first
     object</color> that the devs
 
     made for this demo?'
-  - '<sound:blipmale><name:Phoenix>Thanks, Maya...<p:normal><color=#6ebdf0>
+  - '<textse:blipmale><name:Phoenix>Thanks, Maya...<p:normal><color=#6ebdf0>
 
     (VERY
     insightful...)'

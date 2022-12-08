@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
+  m_Name: 03
+  m_EditorClassIdentifier: 
+  dialogueIndex: 3
+  dialogueText:
+  - _name: Sahwit
+    _knownName: 1
+    _char: Sahwit
+    _anim: normal
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: '<color=green>Thinking it strange, I looked
+
+      inside the apartment.'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  nextLine: {fileID: 11400000, guid: c6079f3b355f1614292e42029b18e7f8, type: 2}
+  responses: []
+  isCrossExamination: 1
+  prevLine: {fileID: 11400000, guid: b5f9186b9d8534c4e9f09605bcf02d5a, type: 2}
+  pressSequence: {fileID: 11400000, guid: e58223027467638449770fc4970cd1f7, type: 2}
+  wrongPresentSequence: {fileID: 11400000, guid: 852dc18a4257aeb49b5c9874e8780077, type: 2}
+  presentSequence: {fileID: 0}
+  evidence:
+  - {fileID: 11400000, guid: 5a958d73438d99a46ba69f1e5c940d88, type: 2}

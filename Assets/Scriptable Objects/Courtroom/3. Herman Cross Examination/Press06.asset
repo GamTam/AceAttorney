@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
+  m_Name: Press06
+  m_EditorClassIdentifier: 
+  dialogueIndex: 0
+  dialogueText:
+  - _name: Phoenix
+    _knownName: 1
+    _char: Phoenix
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 2
+    _align: 0
+    _dialogue: If I'm being honest,<p:short> no.
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Phoenix
+    _knownName: 1
+    _char: Phoenix
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: "Your version of events leaves\nno explanation for the third \nbloodstain
+      left at the Barbershop."
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Phoenix
+    _knownName: 1
+    _char: Phoenix
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: How do you explain that one?
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Herman
+    _knownName: 1
+    _char: Herman
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'Ryan was always a bit
+
+      of a clutz.'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Herman
+    _knownName: 1
+    _char: Herman
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'I wouldn''t be too surprised
+
+      if he cut himself open while
+
+      trying
+      to fix the plumbing.'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Phoenix
+    _knownName: 1
+    _char: Phoenix
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: Okay...
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  nextLine: {fileID: 11400000, guid: f31ec9d7506db5d41a2783dc3581a9e8, type: 2}
+  responses: []
+  isCrossExamination: 0
+  prevLine: {fileID: 0}
+  pressSequence: {fileID: 0}
+  wrongPresentSequence: {fileID: 0}
+  presentSequence: {fileID: 0}
+  evidence: []

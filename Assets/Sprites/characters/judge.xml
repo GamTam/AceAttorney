@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:bed996c1eebdba0c20d160515ef47a97:4e354a53bf2f98819c608e664923d92c:8fd9a8165e946b56e82af5e2cfbebf4e$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="judge.png" width="991" height="844">
+    <sprite n="blink_1.png" x="0" y="0" w="206" h="54"/>
+    <sprite n="blink_2.png" x="206" y="0" w="206" h="54"/>
+    <sprite n="body.png" x="216" y="162" w="775" h="682"/>
+    <sprite n="talk_1.png" x="412" y="0" w="216" h="162"/>
+    <sprite n="talk_2.png" x="628" y="0" w="216" h="162"/>
+    <sprite n="talk_3.png" x="0" y="162" w="216" h="162"/>
+</TextureAtlas>

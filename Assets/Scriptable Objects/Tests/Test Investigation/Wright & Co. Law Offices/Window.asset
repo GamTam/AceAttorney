@@ -12,15 +12,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
   m_Name: Window
   m_EditorClassIdentifier: 
+  dialogueIndex: 0
   dialogueText:
-  - '<name:Phoenix><sound:blipmale>Looking out this window, you can
+  - _name: Phoenix
+    _knownName: 1
+    _char: NaN
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'Looking out this window, you can
 
-    really see
-    the whole city.'
-  - 'If by "Whole City,"<p:short> you mean
+      really see the whole city.'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Phoenix
+    _knownName: 1
+    _char: NaN
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'If by "Whole City,"<p:short> you mean
 
-    "Gatewater Hotel."'
+      "Gatewater Hotel."'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
   nextLine: {fileID: 0}
+  responses: []
+  isCrossExamination: 0
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}

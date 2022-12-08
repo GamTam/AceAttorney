@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
+  m_Name: Press 04
+  m_EditorClassIdentifier: 
+  dialogueIndex: 0
+  dialogueText:
+  - _name: Phoenix
+    _knownName: 1
+    _char: Phoenix
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 2
+    _align: 0
+    _dialogue: 'You know what helps me
+
+      with forgetting my wallet?'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Phoenix
+    _knownName: 1
+    _char: Phoenix
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'Glueing it to the inside
+
+      of my pants.'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Phoenix
+    _knownName: 1
+    _char: Phoenix
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'That way, my valuables
+
+      are stuck with me whether
+
+      they
+      want to or not.'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Phoenix
+    _knownName: 1
+    _char: Phoenix
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'And then for digital security,<p:short>
+
+      I always use the same
+      long,<p:short>
+
+      complex password.'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Phoenix
+    _knownName: 1
+    _char: Phoenix
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 1
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'What was it?<p:short>
+
+      Something along the lines of<p:short>
+
+      <color=green>Edgewo-'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Edgeworth
+    _knownName: 1
+    _char: Edgeworth
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 1
+    _align: 0
+    _dialogue: Wright.
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Edgeworth
+    _knownName: 1
+    _char: Edgeworth
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'If you know what''s good
+
+      for you,<p:short> <se:reveal><flash>you
+      won''t continue
+
+      that sentence any further.'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  nextLine: {fileID: 11400000, guid: 211f4658ed8dcaf4d924145239c89fc5, type: 2}
+  responses: []
+  isCrossExamination: 0
+  prevLine: {fileID: 0}
+  pressSequence: {fileID: 0}
+  wrongPresentSequence: {fileID: 0}
+  presentSequence: {fileID: 0}
+  evidence: []

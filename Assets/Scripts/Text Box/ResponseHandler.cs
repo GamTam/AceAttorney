@@ -1,21 +1,32 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class ResponseHandler : MonoBehaviour
 {
     [SerializeField] private RectTransform responseButton;
+    [SerializeField] private GameObject _selectionHead;
+
+    private PlayerInput _playerInput;
     private DialogueManager _dialogueManager;
+    private bool _shownResponses;
     
     private void Start()
     {
         _dialogueManager = GameObject.FindWithTag("Dialogue Manager").GetComponent<DialogueManager>();
+        _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         _dialogueManager._responseHandler = this;
     }
 
     public void ShowResponses(Response[] responses)
     {
+        
+        _selectionHead.SetActive(true);
+        int i = 0;
         foreach (Response response in responses)
         {
             RectTransform responseButton = Instantiate(this.responseButton);
@@ -23,14 +34,25 @@ public class ResponseHandler : MonoBehaviour
             responseButton.parent = gameObject.GetComponent<RectTransform>();
             responseButton.localScale = new Vector3(1, 1, 1);
             responseButton.gameObject.GetComponentInChildren<TMP_Text>().text = response.ResponseText;
-            responseButton.gameObject.GetComponent<Button>().onClick.AddListener(() => OnPickedResponse(response));
+            responseButton.gameObject.GetComponent<Button>().onClick.AddListener(() => StartCoroutine(OnPickedResponse(response)));
+            
+            if (i==0) EventSystem.current.SetSelectedGameObject(responseButton.gameObject);
+            i++;
         }
-
+        
         gameObject.GetComponentInParent<Image>().enabled = true;
+        _playerInput.SwitchCurrentActionMap("Menu");
     }
 
-    private void OnPickedResponse(Response response)
+    private IEnumerator OnPickedResponse(Response response)
     {
-        _dialogueManager.StartText(response.DialogueObject);
+        foreach (GameObject but in GameObject.FindGameObjectsWithTag("Button"))
+        {
+             if (but != EventSystem.current.currentSelectedGameObject) but.GetComponent<Animator>().Play("Fade Out");
+        }
+        yield return new WaitForSeconds(0.5f);
+        _playerInput.SwitchCurrentActionMap("TextBox");
+        _dialogueManager.StartText(response.DialogueObject, prevActionMap:_dialogueManager._prevActionMap);
+        _selectionHead.SetActive(false);
     }
 }

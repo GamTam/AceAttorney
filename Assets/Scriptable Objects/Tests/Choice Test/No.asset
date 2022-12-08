@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText:
   - <name:Phoenix>No I have not, Your Honor.
-  - <name:Maya><sound:blipfemale>Nick,<p:normal> be honest with the Judge.
+  - <name:Maya><textse:blipfemale>Nick,<p:normal> be honest with the Judge.
   - I've seen you look at Edgeworth.
-  - <name:Phoenix><sound:blipmale>(This is NOT the time Maya.)
-  - <name:Edgeworth><sound:blipmale>?
+  - <name:Phoenix><textse:blipmale>(This is NOT the time Maya.)
+  - <name:Edgeworth><textse:blipmale>?
   nextLine: {fileID: 0}
   responses: []
   prevLine: {fileID: 0}

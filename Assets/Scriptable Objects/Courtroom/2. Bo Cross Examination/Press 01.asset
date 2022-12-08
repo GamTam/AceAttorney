@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
+  m_Name: Press 01
+  m_EditorClassIdentifier: 
+  dialogueIndex: 0
+  dialogueText:
+  - _name: Phoenix
+    _knownName: 1
+    _char: Phoenix
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 2
+    _align: 0
+    _dialogue: 'Do you normally go to the
+
+      Singing Barbershop?'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Bo
+    _knownName: 1
+    _char: Bo
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: Not really.
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Bo
+    _knownName: 1
+    _char: Bo
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'I usually go to the one
+
+      near my house.'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Phoenix
+    _knownName: 1
+    _char: Phoenix
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'Then,<p:short> why did you go
+
+      that day?'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Edgeworth
+    _knownName: 1
+    _char: Edgeworth
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 1
+    _align: 0
+    _dialogue: 'Your Honor, Mr. Wright is
+
+      going off topic with his line
+
+      of
+      questioning.'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Judge
+    _knownName: 1
+    _char: Judge
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: Objection sustained.
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Judge
+    _knownName: 1
+    _char: Judge
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'Mr. Wright, you will refrain from
+
+      frivilous questioning.'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Edgeworth
+    _knownName: 1
+    _char: Edgeworth
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'So, you walked in to
+
+      the Singing Barbershop?'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  nextLine: {fileID: 11400000, guid: 986db4e839cf63f42a0f2eaf37bfc7e6, type: 2}
+  responses: []
+  isCrossExamination: 0
+  prevLine: {fileID: 0}
+  pressSequence: {fileID: 0}
+  wrongPresentSequence: {fileID: 0}
+  presentSequence: {fileID: 0}
+  evidence: []

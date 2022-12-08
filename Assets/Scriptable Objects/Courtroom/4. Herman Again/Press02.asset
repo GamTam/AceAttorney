@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
+  m_Name: Press02
+  m_EditorClassIdentifier: 
+  dialogueIndex: 0
+  dialogueText:
+  - _name: Phoenix
+    _knownName: 1
+    _char: Phoenix
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 2
+    _align: 0
+    _dialogue: 'Have you ever gotten
+
+      a haircut from them?'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Herman
+    _knownName: 1
+    _char: Herman
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: Not personally,<p:short> no.
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Herman
+    _knownName: 1
+    _char: Herman
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'But I have heard really
+
+      good things about them.'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Phoenix
+    _knownName: 1
+    _char: Phoenix
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'Interesting.<p:short> I may have to
+
+      go there at some point.'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Edgeworth
+    _knownName: 1
+    _char: Edgeworth
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'The two main barbers there
+
+      are dead,<p:tiny> Wright.'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Phoenix
+    _knownName: 1
+    _char: Phoenix
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: Oh yeah...
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  nextLine: {fileID: 11400000, guid: 74877ace640f8e744b7329638b0c31be, type: 2}
+  responses: []
+  isCrossExamination: 0
+  prevLine: {fileID: 0}
+  pressSequence: {fileID: 0}
+  wrongPresentSequence: {fileID: 0}
+  presentSequence: {fileID: 0}
+  evidence: []

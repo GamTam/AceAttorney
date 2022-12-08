@@ -12,13 +12,18 @@ public class DialogueVertexAnimator {
     private readonly float textAnimationScale;
     
     private SoundManager _soundManager;
+    private MusicManager _musicManager;
+
+    public DialogueManager _parent;
     
     float secondsPerCharacter = 2f / 60f;
+    private List<DialogueCommand> _commands;
     public DialogueVertexAnimator(TMP_Text _textBox) {
         textBox = _textBox;
         textAnimationScale = textBox.fontSize;
         
         _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
+        _musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();
     }
 
     private static readonly Color32 clear = new Color32(0, 0, 0, 0);
@@ -26,6 +31,7 @@ public class DialogueVertexAnimator {
     private static readonly Vector3 vecZero = Vector3.zero;
     public IEnumerator AnimateTextIn(List<DialogueCommand> commands, string processedMessage, string voice_sound, Action onFinish) {
         textAnimating = true;
+        _commands = commands;
         float timeOfLastCharacter = 0;
 
         TextAnimInfo[] textAnimInfo = SeparateOutTextAnimInfo(commands);
@@ -67,6 +73,7 @@ public class DialogueVertexAnimator {
             if (ShouldShowNextCharacter(secondsPerCharacter, timeOfLastCharacter)) {
                 if (visableCharacterIndex <= charCount) {
                     ExecuteCommandsForCurrentIndex(commands, visableCharacterIndex, ref secondsPerCharacter, ref timeOfLastCharacter);
+                    _commands = commands;
                     if (visableCharacterIndex < charCount && ShouldShowNextCharacter(secondsPerCharacter, timeOfLastCharacter)) {
                         charAnimStartTimes[visableCharacterIndex] = Time.unscaledTime;
                         PlayDialogueSound(voice_sound);
@@ -129,6 +136,38 @@ public class DialogueVertexAnimator {
                     case DialogueCommandType.TextSpeedChange:
                         secondsPerCharacter = command.floatValue / 60f;
                         break;
+                    case DialogueCommandType.Sound:
+                        _soundManager.Play(command.stringValue);
+                        break;
+                    case DialogueCommandType.Music:
+                        switch (command.stringValue)
+                        {
+                            case "fadeout":
+                                _musicManager.fadeOut(1.5f);
+                                break;
+                            case "stop":
+                                _musicManager.fadeOut();
+                                break;
+                            case "continue":
+                                _musicManager.fadeIn();
+                                break;
+                            default:
+                                _musicManager.fadeOut();
+                                _musicManager.Play(command.stringValue);
+                                break;
+                        }
+                        break;
+                    case DialogueCommandType.Shake:
+                        Shake[] objects = (Shake[]) GameObject.FindObjectsOfType(typeof(Shake));
+                        foreach (Shake obj in objects)
+                        {
+                            obj.maxShakeDuration = command.floatValue;
+                            obj.enabled = true;
+                        }
+                        break;
+                    case DialogueCommandType.Flash:
+                        _parent._tempBox.GetComponent<Animator>().Play("Flash");
+                        break;
                 }
                 commands.RemoveAt(i);
                 i--;
@@ -171,6 +210,14 @@ public class DialogueVertexAnimator {
     public void QuickEnd() {
         if (textAnimating) {
             stopAnimating = true;
+            float f = 1000f;
+            foreach (DialogueCommand command in _commands)
+            {
+                if (command.type != DialogueCommandType.Pause)
+                {
+                    ExecuteCommandsForCurrentIndex(new List<DialogueCommand>() {command}, command.position, ref secondsPerCharacter, ref f);
+                }
+            }
         }
     }
 
@@ -180,7 +227,7 @@ public class DialogueVertexAnimator {
         if (Time.unscaledTime - lastDialogueSound > timeUntilNextDialogueSound) {
             timeUntilNextDialogueSound = 4/60f;
             lastDialogueSound = Time.unscaledTime;
-            _soundManager.Play(voice_sound); //Use Multiple Audio Sources to allow playing multiple sounds at once
+            _soundManager.Play(voice_sound);
         }
     }
 

@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
+  m_Name: Right Objection
+  m_EditorClassIdentifier: 
+  dialogueIndex: 0
+  dialogueText:
+  - _name: Phoenix
+    _knownName: 1
+    _char: Phoenix
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 1
+    _addToCourtRecord: 0
+    _interjection: 1
+    _align: 0
+    _dialogue: 'You claim that Ryan got
+
+      injured when he was trying
+
+      to
+      fix the plumbing...'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Phoenix
+    _knownName: 1
+    _char: Phoenix
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 1
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'Frankly, I don''t believe
+
+      that he even did
+
+      any plumbing.'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Herman
+    _knownName: 1
+    _char: Herman
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 1
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: What do you mean?
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Phoenix
+    _knownName: 1
+    _char: Phoenix
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 1
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'What I mean is that
+
+      every single thing
+
+      you said on
+      that stand...'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  nextLine: {fileID: 11400000, guid: d7ee0de6dc6f7ee489ee4f971eecd7f2, type: 2}
+  responses: []
+  isCrossExamination: 0
+  prevLine: {fileID: 0}
+  pressSequence: {fileID: 0}
+  wrongPresentSequence: {fileID: 0}
+  presentSequence: {fileID: 0}
+  evidence: []

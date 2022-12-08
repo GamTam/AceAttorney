@@ -12,29 +12,87 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
   m_Name: Chair
   m_EditorClassIdentifier: 
+  dialogueIndex: 0
   dialogueText:
-  - '<name:Phoenix><sound:blipmale>This chair is the heart and soul of
+  - _name: Phoenix
+    _knownName: 1
+    _char: NaN
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 1
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: '<name:Phoenix><textse:blipmale>This chair is the heart and soul of
 
-    Wright
-    & Co. Law Offices.'
-  - 'Every client we''ve ever had has seen
+      Wright
+      & Co. Law Offices.'
+  - _name: Phoenix
+    _knownName: 1
+    _char: NaN
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: 'Every client we''ve ever had has seen
 
-    that chair.'
-  - '<name:Maya><sound:blipfemale>Except for Larry,<p:short> Will Powers,<p:short>
+      that chair.'
+  - _name: Maya
+    _knownName: 1
+    _char: Maya
+    _anim: think
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: '<name:Maya><textse:blipfemale>Except for Larry,<p:short> Will Powers,<p:short>
 
-    Edgeworth,<p:short>
-    Lana Skye,<p:short> Maggy...'
-  - <name:Phoenix><sound:blipmale>Okay, some haven't...
-  - '<name:Maya><sound:blipfemale>Max Galactica,<p:short> Matt Engarde,<p:short>
+      Edgeworth,<p:short>
+      Lana Skye,<p:short> Maggy...'
+  - _name: Phoenix
+    _knownName: 1
+    _char: Maya
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: Okay, some haven't...
+  - _name: Maya
+    _knownName: 1
+    _char: Maya
+    _anim: think
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: 'Max Galactica,<p:short> Matt Engarde,<p:short>
 
-    Ron
-    DeLite,<p:short> Terry Fawles,<p:short> Iris...'
-  - <name:Phoenix><sound:blipmale><sp:1>I GET IT!
-  - '<name:Maya><sound:blipfemale><sp:2>Wocky Kitaki,<p:short> Machi Tobaye,<p:short>
+      Ron DeLite,<p:short>
+      Terry Fawles,<p:short> Iris...'
+  - _name: Phoenix
+    _knownName: 1
+    _char: Maya
+    _anim: 
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: <name:Phoenix><textse:blipmale><sp:1>I GET IT!
+  - _name: Maya
+    _knownName: 1
+    _char: Maya
+    _anim: think
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: '<sp:2>Wocky Kitaki,<p:short> Machi Tobaye,<p:short>
 
-    Vera
-    Misham...'
+      Vera Misham...'
   nextLine: {fileID: 0}
+  responses: []
+  isCrossExamination: 0
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}
   wrongPresentSequence: {fileID: 0}

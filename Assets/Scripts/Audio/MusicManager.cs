@@ -9,7 +9,7 @@ public class MusicManager : MonoBehaviour
     
     public static MusicManager instance;
 
-    [SerializeField] private Music musicPlaying;
+    [HideInInspector] public Music musicPlaying = null;
 
     public static float currentPoint = 0;
 
@@ -17,6 +17,12 @@ public class MusicManager : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        if (instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
 
         Dictionary<string, ArrayList> musicDict = new Dictionary<string, ArrayList>();
         musicDict = Globals.LoadTSV("Music Data");
@@ -54,42 +60,44 @@ public class MusicManager : MonoBehaviour
         musicPlaying.source.time = currentPoint;
     }
     
-    public void Stop() {
-        if (musicPlaying != null) {
-            musicPlaying.source.Stop();
-        }
+    public void Stop()
+    {
+        musicPlaying?.source.Stop();
     }
 
     public Music Play (string name)
     {
+        Debug.Log(name);
         Music s = allMusic.Find(x => x.name == name);
-        Debug.Log(s.name);
         if (s == null)
             return null;
+
+        if (musicPlaying == s && Math.Abs(musicPlaying.source.volume - 1) < 0.1 && musicPlaying.source.isPlaying)
+        {
+            return musicPlaying;
+        }
+
+        try
+        {
+            if (musicPlaying.source.isPlaying)
+            {
+                fadeOut();
+            }
+        } catch {}
 
         musicPlaying = s;
 
         s.source.volume = 1;
+        s.source.time = 0;
         s.source.Play();
+        Debug.Log(s.source.isPlaying);
 
         return s;
     }
 
-    public void Continue (string name)
-    {
-        Music s = allMusic.Find(x => x.name == name);
-        if (s == null)
-            return;
-
-        musicPlaying = s;
-        
-        s.source.time = currentPoint;
-        s.source.Play();
-    }
-
     private void Update()
     {
-        if (musicPlaying != null)
+        if (musicPlaying.name != "")
         {
             if (musicPlaying.source.time > musicPlaying.loopEnd && musicPlaying.loopEnd != -1)
             {
@@ -98,10 +106,18 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    public void fadeOut()
+    public void fadeOut(float length=0.1f)
     {
-        setPoint();
-        StartCoroutine(fadeTo(0.1f, 0, musicPlaying));
+        try
+        {
+            setPoint();
+        }
+        catch
+        {
+            return;
+        }
+
+        StartCoroutine(fadeTo(length, 0, musicPlaying));
     }
     
     public void fadeIn()
@@ -117,8 +133,6 @@ public class MusicManager : MonoBehaviour
             audioSource = musicPlaying;
         }
         
-        Debug.Log(audioSource.name);
-        
         float currentTime = 0;
         float start = audioSource.source.volume;
 
@@ -129,11 +143,12 @@ public class MusicManager : MonoBehaviour
             yield return null;
         }
 
-        if (audioSource.volume == 0)
+        audioSource.source.volume = targetVolume;
+
+        if (audioSource.source.volume <= 0.1)
         {
             audioSource.source.Stop();
         }
-        yield break;
     }
 
     public Music GetMusicPlaying() {

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
+  m_Name: 02 - 00
+  m_EditorClassIdentifier: 
+  dialogueIndex: 2
+  dialogueText:
+  - _name: Sahwit
+    _knownName: 1
+    _char: Sahwit
+    _anim: normal
+    _blipSound: blipmale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: '<color=green>I thought he must be in a
+
+      hurry because he left
+      the
+
+      door half-open behind him.'
+  nextLine: {fileID: 11400000, guid: 1a4e75435d5f6514385a407cdbfb1680, type: 2}
+  responses: []
+  isCrossExamination: 1
+  prevLine: {fileID: 11400000, guid: 0d89e76e589538f4396f5d4a5a7e20bf, type: 2}
+  pressSequence: {fileID: 11400000, guid: a1c04a3273032364fa6ef0441a9b95a8, type: 2}
+  wrongPresentSequence: {fileID: 11400000, guid: 852dc18a4257aeb49b5c9874e8780077, type: 2}
+  presentSequence: {fileID: 0}
+  evidence: []

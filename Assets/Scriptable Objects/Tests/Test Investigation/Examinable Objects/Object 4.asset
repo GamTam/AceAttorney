@@ -13,30 +13,30 @@ MonoBehaviour:
   m_Name: Object 4
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<sound:blipfemale><name:Maya>Hmm...<p:normal>
+  - '<textse:blipfemale><name:Maya>Hmm...<p:normal>
 
     Object 4...'
-  - '<sound:blipmale><name:Phoenix>Hey!<p:normal>
+  - '<textse:blipmale><name:Phoenix>Hey!<p:normal>
 
     That''s what I was going to
     say!'
-  - '<sound:blipfemale><name:Maya>Sorry Nick,<p:tiny> but I guess you''re
+  - '<textse:blipfemale><name:Maya>Sorry Nick,<p:tiny> but I guess you''re
 
     gonna
     be out of business soon...'
   - "Because I'M the new Nick\r\n\rfrom now on!"
-  - <sound:blipmale><name:Phoenix>I-<p:short> I-<p:short> I-<p:normal> What?
-  - <sound:blipfemale><name:Maya>...
-  - <sound:blipmale><name:Phoenix>...
-  - '<sound:blipfemale><name:Maya><anim:shake>N-<p:short> N-<p:short> Nick!<p:normal>
+  - <textse:blipmale><name:Phoenix>I-<p:short> I-<p:short> I-<p:normal> What?
+  - <textse:blipfemale><name:Maya>...
+  - <textse:blipmale><name:Phoenix>...
+  - '<textse:blipfemale><name:Maya><anim:shake>N-<p:short> N-<p:short> Nick!<p:normal>
 
     Earthquake!</anim>'
   - <anim:shake>We need to take cover!</anim>
-  - '<sound:blipmale><name:Phoenix>No, Maya.<p:normal>
+  - '<textse:blipmale><name:Phoenix>No, Maya.<p:normal>
 
     There''s no earthquake.'
   - You're on a vibration plate.
-  - '<sound:blipfemale><name:Maya><anim:shake>Oh.<p:normal>
+  - '<textse:blipfemale><name:Maya><anim:shake>Oh.<p:normal>
 
     Guess I should step
     off then.</anim>'

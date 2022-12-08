@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
+  m_Name: 02
+  m_EditorClassIdentifier: 
+  dialogueIndex: 0
+  dialogueText:
+  - _name: Gumshoe
+    _knownName: 1
+    _char: Gumshoe
+    _anim: happy
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 0
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: '<color=green>From there, we rushed over to the
+
+      Barbershop
+      as fast as we could.'
+    _stateChange:
+      StoryFlag: Gumshoe CrossEx Start
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  nextLine: {fileID: 11400000, guid: 69be8d48248c6094f9989c9b2e06faee, type: 2}
+  responses: []
+  isCrossExamination: 1
+  prevLine: {fileID: 11400000, guid: a61a50ff3b7ec814f863818ba01f01ee, type: 2}
+  pressSequence: {fileID: 11400000, guid: 1901886586afb454a8f0a9ea3bf457c8, type: 2}
+  wrongPresentSequence: {fileID: 11400000, guid: 852dc18a4257aeb49b5c9874e8780077, type: 2}
+  presentSequence: {fileID: 0}
+  evidence: []

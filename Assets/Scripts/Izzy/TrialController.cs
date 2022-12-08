@@ -1,51 +1,48 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class TrialController : MonoBehaviour
 {
-    [SerializeField] private DialogueSO currentTrial;
-    [SerializeField] private GameObject scuffedEvidenceUI;
-    [SerializeField] private GameObject scuffedWrongEvidenceUI;
+    [SerializeField] private DialogueSO[] allDialogues;
+    [SerializeField] private int maxPenalties = 5;
+
+    [SerializeField] private TextMeshProUGUI penaltiesText;
+
+    public int currentPenalties = 5;
+    public string song = "CrossEx";
     private DialogueManager dialogueManager;
+    private CrossExamination crossExamination;
+    private MusicManager _musicManager;
 
     private PlayerInput playerInput;
-    private InputAction presentingEvidence;
-    private InputAction wrongEvidence;
 
     private void Start() {
         dialogueManager = FindObjectOfType<DialogueManager>();
-        scuffedEvidenceUI.SetActive(false);
-        scuffedWrongEvidenceUI.SetActive(false);
+        crossExamination = FindObjectOfType<CrossExamination>();
+
+        UpdateText();
 
         playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         playerInput.SwitchCurrentActionMap("Textbox");
-        presentingEvidence = playerInput.actions["Textbox/PresentEvidence"];
-        wrongEvidence = playerInput.actions["Textbox/WrongEvidence"];
+        currentPenalties = maxPenalties;
     }
 
-    private void Update() {
-        if (presentingEvidence.triggered) {
-            StartCoroutine(PresentEvidence());
+    public void UpdateText()
+    {
+        penaltiesText.text = $"{currentPenalties}/{maxPenalties}";
+    }
+
+    public void IncreaseIncorrects() {
+        currentPenalties--;
+        UpdateText();
+
+        if (currentPenalties <= 0) {
+            print("AGHHHHH!!!!");
         }
-        if (wrongEvidence.triggered) {
-            StartCoroutine(WrongEvidenceShown());
-        }
     }
 
-    public void StartTrial() {
-        dialogueManager.StartText(currentTrial);
-    }
-
-    public IEnumerator PresentEvidence() {
-        scuffedEvidenceUI.SetActive(true);
-        yield return new WaitForSeconds(2f);
-        scuffedEvidenceUI.SetActive(false);
-    }
-
-    public IEnumerator WrongEvidenceShown() {
-        scuffedWrongEvidenceUI.SetActive(true);
-        yield return new WaitForSeconds(2f);
-        scuffedWrongEvidenceUI.SetActive(false);
+    public DialogueSO[] ReturnAllDialogues() {
+        return allDialogues;
     }
 }

@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
+  m_Name: Loop
+  m_EditorClassIdentifier: 
+  dialogueIndex: 11
+  dialogueText:
+  - _name: Mia
+    _knownName: 1
+    _char: Sahwit
+    _anim: 
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: That's all of it.
+  - _name: Mia
+    _knownName: 1
+    _char: Sahwit
+    _anim: 
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: 'There must be a contradiction
+
+      in there somewhere.'
+  - _name: Mia
+    _knownName: 1
+    _char: Sahwit
+    _anim: 
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: 'Examine the Court Recort with
+
+      <color=red>Tab</color> if something
+      strikes
+
+      you as being suspicious.'
+  - _name: Mia
+    _knownName: 1
+    _char: Sahwit
+    _anim: 
+    _blipSound: blipfemale
+    _skipFade: 0
+    _stopMusic: 0
+    _interjection: 0
+    _dialogue: 'Then,<p:short> find the evicence that
+
+      contradicts his testimony,<p:short>
+
+      and
+      <color=red>present</color> it to the court!'
+  nextLine: {fileID: 11400000, guid: 0d89e76e589538f4396f5d4a5a7e20bf, type: 2}
+  responses: []
+  isCrossExamination: 0
+  prevLine: {fileID: 0}
+  pressSequence: {fileID: 0}
+  wrongPresentSequence: {fileID: 0}
+  presentSequence: {fileID: 0}
+  evidence: []

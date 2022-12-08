@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:d1096560e4dc6d0747ddb5abf5bbbd6b:e7de757c34d992fbc4edfc917e1af263:1b4d4a840d67836f13c6f5cf5a9100a1$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="gumshoe_normal.png" width="1509" height="2201">
+    <sprite n="blink_1.png" x="0" y="0" w="175" h="54"/>
+    <sprite n="blink_2.png" x="175" y="0" w="175" h="54"/>
+    <sprite n="face.png" x="350" y="0" w="216" h="324"/>
+    <sprite n="head_base.png" x="566" y="0" w="603" h="473"/>
+    <sprite n="normal_base_1.png" x="0" y="473" w="1067" h="756"/>
+    <sprite n="normal_base_2.png" x="0" y="1229" w="1077" h="972"/>
+    <sprite n="talk_1.png" x="1077" y="1229" w="216" h="162"/>
+    <sprite n="talk_2.png" x="1293" y="1229" w="216" h="162"/>
+</TextureAtlas>

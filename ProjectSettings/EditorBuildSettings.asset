@@ -6,6 +6,39 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Demo Scene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Title Screen.unity
+    guid: e841370feba2ff14b80a207fc9021462
+  - enabled: 1
+    path: Assets/Scenes/Wright & Co. Law Offices.unity
+    guid: 9db1701b5123d434badbc6b4a10fd93a
+  - enabled: 1
+    path: Assets/Scenes/Test/Wright & Co. Law Offices.unity
+    guid: 82045f58f6b82c3478299cb9c6214a13
+  - enabled: 1
+    path: Assets/Scenes/Test/Updated Trial (Izzy).unity
+    guid: 21cbfc7b41a24ac4cb55120d294c00f1
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 601836426e5ce7647984f6cbe93b8d18
+  - enabled: 1
+    path: Assets/Scenes/Test/Studio 2.unity
+    guid: 82354e853065edf4fb0ce6e816fa2730
+  - enabled: 1
+    path: Assets/Scenes/Detention Center.unity
+    guid: 5866732062aea984a8cabc3f6a2ef477
+  - enabled: 1
+    path: Assets/Scenes/Street.unity
+    guid: b9c50d6eea1aabb42b790dc9b137edf9
+  - enabled: 1
+    path: Assets/Scenes/Abandoned Building.unity
+    guid: f49c19e9fa1356845a5098e0cdb6a908
+  - enabled: 1
+    path: Assets/Scenes/Courtroom.unity
+    guid: bb20c99f7e520dc46aff87dad8bca6b4
+  - enabled: 1
+    path: Assets/Scenes/Lobby.unity
+    guid: b30bf81164bc3884fa2579a2ee8a5564
+  - enabled: 1
+    path: Assets/Scenes/Barber Shop.unity
+    guid: a1d75defb90eec747bc7961ccb2cb180
   m_configObjects: {}

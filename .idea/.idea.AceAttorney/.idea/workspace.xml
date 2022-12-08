@@ -1,24 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="Audio Prefab">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sound/blipfemale.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sound/blipfemale.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sound/blipmale.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sound/blipmale.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="Court record works in cross examination!">
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Music/Saul.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Music/Saul.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Test.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Test/Studio 2.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Test/Studio 2.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Test/Updated Trial (Izzy).unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Test/Updated Trial (Izzy).unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Test/Wright &amp; Co. Law Offices.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Test/Wright &amp; Co. Law Offices.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/Any Ideas Dialogue.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/Any Ideas Dialogue.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/Any Ideas.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/Any Ideas.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/Caller Dialogue.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/Caller Dialogue.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/Caller.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/Caller.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/Detention Center.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/Detention Center.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/Opening.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/Opening.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/WrongEvidence.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/WrongEvidence.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Story Flags.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsOpening.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsOpening.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Investigation/Areas/Previews/Detention Center.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Investigation/Areas/Previews/Detention Center.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Investigation/Areas/Previews/Office.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Investigation/Areas/Previews/Office.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Lyla.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Text Box.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Text Box.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Investigation/Investigation.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Investigation/Investigation.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/MayaMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Material/MayaMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Studio 2.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Studio 2.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Updated Trial (Izzy).unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Updated Trial (Izzy).unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Wright &amp; Co. Law Offices.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Wright &amp; Co. Law Offices.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Wright &amp; Co. Law Offices.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Wright &amp; Co. Law Offices.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/No Clues Here.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/No Clues Here.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/03.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/03.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/09.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Izzy's Trial Dialogues/Dialogues/09.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Test Investigation/Wright &amp; Co. Law Offices/Book Case.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Test Investigation/Wright &amp; Co. Law Offices/Book Case.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Test Investigation/Wright &amp; Co. Law Offices/Window.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Test Investigation/Wright &amp; Co. Law Offices/Window.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/MusicManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/MusicManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Investigation/InvestigationMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Investigation/InvestigationMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy/CrossExamination.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Izzy/CrossExamination.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Text Box/Dialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Text Box/Dialogue.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueUtility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueVertexAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueVertexAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/Dialogue Font SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/Dialogue Font SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/files/Sound Data.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/files/Sound Data.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Court Record/Evidence/EVIDENCE_BANGBANG.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Court Record/Evidence/EVIDENCE_BANGBANG.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Investigation/Areas/Previews/thumb01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Investigation/Areas/Previews/thumb01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/files/Music Data.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/files/Music Data.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +67,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="david-dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,7 +82,21 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsOpening.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad0a7939819048a0a161f66558c9886726800/61/6cede232/Animator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Editor/AssetEditor/InputActionAssetManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Editor/TimelineSelection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@10.10.1/Editor/Drawing/Blackboard/SGBlackboardSection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Prefabs/Court Record.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Editor/TimelineHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Editor/Utilities/MarkerModifier.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@10.10.1/Editor/Data/Graphs/MaterialSlot.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7e35836373b74b12bde8ba7fa4d53641167088/64/694d14e8/Match.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/InputManagerStateMonitors.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_CoroutineTween.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.core@1.0.1/Editor/Core/EditorGameService/EditorGameServiceSettingsProvider.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2HbggE0WWlPeR0AECSQgnpl4Gxg" />
   <component name="ProjectLevelVcsManager">
@@ -97,7 +150,14 @@
       <updated>1668559306175</updated>
       <workItem from="1668559308926" duration="194000" />
       <workItem from="1668559548280" duration="1109000" />
-      <workItem from="1668667673624" duration="1766000" />
+      <workItem from="1668667673624" duration="1795000" />
+      <workItem from="1668726244591" duration="602000" />
+      <workItem from="1669161121666" duration="2271000" />
+      <workItem from="1669317206211" duration="6822000" />
+      <workItem from="1669361971993" duration="9000" />
+      <workItem from="1669673630158" duration="3641000" />
+      <workItem from="1670018859512" duration="11075000" />
+      <workItem from="1670280308414" duration="9874000" />
     </task>
     <task id="LOCAL-00001" summary="Audio Prefab">
       <created>1668559907702</created>
@@ -106,7 +166,77 @@
       <option name="project" value="LOCAL" />
       <updated>1668559907702</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Dialogue Sounds!">
+      <created>1668670548135</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668670548135</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Textbox advance button now doesn't show up when a character appears!">
+      <created>1669322226178</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669322226178</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Minor Optimisations">
+      <created>1669329432158</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669329432158</updated>
+    </task>
+    <task id="LOCAL-00005" summary="This is a Prefabricated Object">
+      <created>1669341428644</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669341428644</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Removed Debug.Logs">
+      <created>1669349419772</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669349419772</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Updated Autopsy Report">
+      <created>1669675373401</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669675373401</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Something changed. I think.">
+      <created>1669676773874</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669676773874</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Sahwit - Part 1">
+      <created>1669680026912</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669680026912</updated>
+    </task>
+    <task id="LOCAL-00010" summary="I have no idea what I'm doing">
+      <created>1670146517069</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670146517069</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Court record works in cross examination!">
+      <created>1670283405859</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670283405859</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,7 +250,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="david-dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -131,6 +273,16 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Audio Prefab" />
-    <option name="LAST_COMMIT_MESSAGE" value="Audio Prefab" />
+    <MESSAGE value="Dialogue Sounds!" />
+    <MESSAGE value="Textbox advance button now doesn't show up when a character appears!" />
+    <MESSAGE value="Minor Optimisations" />
+    <MESSAGE value="This is a Prefabricated Object" />
+    <MESSAGE value="Removed Debug.Logs" />
+    <MESSAGE value="Updated Autopsy Report" />
+    <MESSAGE value="Something changed. I think." />
+    <MESSAGE value="Sahwit - Part 1" />
+    <MESSAGE value="I have no idea what I'm doing" />
+    <MESSAGE value="Court record works in cross examination!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Court record works in cross examination!" />
   </component>
 </project>

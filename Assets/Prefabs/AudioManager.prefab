@@ -47,8 +47,8 @@ MonoBehaviour:
   allMusic: []
   musicPlaying:
     name: 
-    volume: 1
-    pitch: 1
+    volume: 0
+    pitch: 0
     source: {fileID: 0}
     loopStart: 0
     loopEnd: 0

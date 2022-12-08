@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: Object 2
   m_EditorClassIdentifier: 
   dialogueText:
-  - '<sound:blipmale><name:Phoenix>Hmm...<p:normal>
+  - '<textse:blipmale><name:Phoenix>Hmm...<p:normal>
 
     Object 2...'
-  - '<name:Maya><sound:blipfemale>Y''know,<p:tiny> this one reminds me
+  - '<name:Maya><textse:blipfemale>Y''know,<p:tiny> this one reminds me
 
     a lot
     of the first one...'
-  - '<name:Phoenix><sound:blipmale>Maya.<p:normal>
+  - '<name:Phoenix><textse:blipmale>Maya.<p:normal>
 
     This is the same sprite.'
-  - <name:Maya><sound:blipfemale>Well that would explain it!
-  - <sound:blipmale><name:Phoenix><color=#6ebdf0>(Sometimes I worry about this girl.)
+  - <name:Maya><textse:blipfemale>Well that would explain it!
+  - <textse:blipmale><name:Phoenix><color=#6ebdf0>(Sometimes I worry about this girl.)
   prevLine: {fileID: 0}
   nextLine: {fileID: 0}
   pressSequence: {fileID: 0}
