@@ -16,6 +16,7 @@ public class FlagsCourt : MonoBehaviour
     private MusicManager _musicManager;
     
     private bool _openedMenu;
+    private bool _end;
 
     private void Start()
     {
@@ -26,8 +27,9 @@ public class FlagsCourt : MonoBehaviour
         _playerInput.SwitchCurrentActionMap("Menu");
 
         
-        if (Globals.StoryFlags.Contains("Won Case"))
+        if (Globals.StoryFlags.Contains("We did it, Reddit"))
         {
+            _musicManager.Play("Win");
             _dialogueManager.StartText(_newDialogue);
         }
         else
@@ -43,7 +45,18 @@ public class FlagsCourt : MonoBehaviour
             _openedMenu = true;
             GameObject obj = Instantiate(_fadeOut);
             SceneTransition trans = obj.GetComponent<SceneTransition>();
+            trans._speed = 1;
             trans._destination = "Courtroom";
+        }
+        
+        if (Globals.StoryFlags.Contains("End") && _dialogueManager._doneTalking && !_end)
+        {
+            GameObject obj = Instantiate(_fadeOut);
+            SceneTransition trans = obj.GetComponent<SceneTransition>();
+            trans._speed = 0.5f;
+            trans.Ending = true;
+            trans._destination = "Credits";
+            _end = true;
         }
     }
 }

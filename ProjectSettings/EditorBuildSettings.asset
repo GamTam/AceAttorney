@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Title Screen.unity
+    guid: e841370feba2ff14b80a207fc9021462
+  - enabled: 1
     path: Assets/Scenes/Wright & Co. Law Offices.unity
     guid: 9db1701b5123d434badbc6b4a10fd93a
   - enabled: 1
@@ -14,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test/Updated Trial (Izzy).unity
     guid: 21cbfc7b41a24ac4cb55120d294c00f1
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 601836426e5ce7647984f6cbe93b8d18
   - enabled: 1
     path: Assets/Scenes/Test/Studio 2.unity
     guid: 82354e853065edf4fb0ce6e816fa2730

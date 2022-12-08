@@ -19,6 +19,8 @@ MonoBehaviour:
     _char: NaN
     _anim: thinking
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -37,6 +39,8 @@ MonoBehaviour:
     _char: Maya
     _anim: think
     _blipSound: blipfemale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -55,6 +59,8 @@ MonoBehaviour:
     _char: Maya
     _anim: thinking
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -73,6 +79,8 @@ MonoBehaviour:
     _char: NaN
     _anim: 
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -91,6 +99,8 @@ MonoBehaviour:
     _char: NaN
     _anim: 
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -107,6 +117,8 @@ MonoBehaviour:
     _char: 
     _anim: 
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 1
@@ -116,7 +128,7 @@ MonoBehaviour:
 
       the Court Record.'
     _stateChange:
-      StoryFlag: Clock Added
+      StoryFlag: 
       EvidenceToAdd: {fileID: 11400000, guid: 395175753f6541640a182fa6b92de1f5, type: 2}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
@@ -125,6 +137,8 @@ MonoBehaviour:
     _char: 
     _anim: 
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -138,7 +152,6 @@ MonoBehaviour:
       PersonToAdd: {fileID: 0}
   nextLine: {fileID: 0}
   responses: []
-  IsCrossExanimation: 0
   isCrossExamination: 0
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}

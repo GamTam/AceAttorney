@@ -159,7 +159,7 @@ public class InvestigationMenu : MenuCursor
         yield return new WaitForSeconds(0.25f);
         
         GameObject obj = Instantiate(_presentPrefab);
-        obj.transform.SetParent(GameObject.FindGameObjectsWithTag("UI")[1].transform, false);
+        obj.transform.SetParent(GameObject.FindGameObjectWithTag("UI").transform, false);
         CRPresent pres = obj.GetComponent<CRPresent>();
         pres.enabled = true;
         

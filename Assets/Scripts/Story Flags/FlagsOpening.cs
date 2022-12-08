@@ -37,6 +37,8 @@ public class FlagsOpening : MonoBehaviour
         _dialogueManager = GameObject.FindGameObjectWithTag("Dialogue Manager").GetComponent<DialogueManager>();
         Globals.Evidence.Add(_badge);
         _playerInput.SwitchCurrentActionMap("Menu");
+
+        if (Globals.StoryFlags.Contains("Met Lyla")) return;
         _dialogueManager.StartText(_dialogue);
     }
 

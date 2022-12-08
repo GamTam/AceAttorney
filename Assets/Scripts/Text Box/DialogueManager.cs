@@ -76,6 +76,7 @@ public class DialogueManager : MonoBehaviour
 
         _tempBox = Instantiate(_textBoxPrefab);
         _tempBox.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
+        _tempBox.transform.SetSiblingIndex(_tempBox.transform.parent.childCount - 2);
 
         _dialogue = linesIn;
         
@@ -280,6 +281,8 @@ public class DialogueManager : MonoBehaviour
         if (_char != null) _char.Play($"{_currentAnim}_idle");
         
         _nameBox.text = nameInfo;
+        
+        _tempBox.transform.SetSiblingIndex(_tempBox.transform.parent.transform.Find("Controls").GetSiblingIndex() - 1);
 
         if (quickEnd)
         {
@@ -302,14 +305,13 @@ public class DialogueManager : MonoBehaviour
         _startedText = false;
         GameObject obj = null;
         RawImage img;
-        int c = GameObject.FindGameObjectsWithTag("UI").Length;
 
         bool skip = false;
         switch (interjection)
         {
             case Interjection.Objection:
                 obj = Instantiate(_interjectionObj);
-                obj.transform.SetParent(GameObject.FindGameObjectsWithTag("UI")[c - 1].transform, false);
+                obj.transform.SetParent(GameObject.FindGameObjectWithTag("UI").transform, false);
                 img = obj.GetComponent<RawImage>();
                 img.texture = Resources.Load<Texture>("Sprites/Interjections/Objection");
                 img.SetNativeSize();
@@ -321,7 +323,7 @@ public class DialogueManager : MonoBehaviour
                 break;
             case Interjection.HoldIt:
                 obj = Instantiate(_interjectionObj);
-                obj.transform.SetParent(GameObject.FindGameObjectsWithTag("UI")[c - 1].transform, false);
+                obj.transform.SetParent(GameObject.FindGameObjectWithTag("UI").transform, false);
                 img = obj.GetComponent<RawImage>();
                 img.texture = Resources.Load<Texture>("Sprites/Interjections/Hold It");
                 img.SetNativeSize();
@@ -333,7 +335,7 @@ public class DialogueManager : MonoBehaviour
                 break;
             case Interjection.TakeThat:
                 obj = Instantiate(_interjectionObj);
-                obj.transform.SetParent(GameObject.FindGameObjectsWithTag("UI")[c - 1].transform, false);
+                obj.transform.SetParent(GameObject.FindGameObjectWithTag("UI").transform, false);
                 img = obj.GetComponent<RawImage>();
                 img.texture = Resources.Load<Texture>("Sprites/Interjections/Take That");
                 img.SetNativeSize();

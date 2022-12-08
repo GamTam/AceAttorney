@@ -16,6 +16,7 @@ TagManager:
   - Investigation
   - Button
   - Controls
+  - Transition
   layers:
   - Default
   - TransparentFX

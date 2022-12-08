@@ -15,9 +15,5 @@ MonoBehaviour:
   Name: Doctor's Report
   Icon: {fileID: -8507171329564533381, guid: e96d36ed769ad264695b6d2426ff2afb, type: 3}
   CheckImage: {fileID: 0}
-  Description: 'A report from the hospital that
-
-    Ryan Tetrum went to after
-
-    the
-    crime.'
+  Description: "A report on Ryan Tetrum. He was \nseverely injured, and will have
+    to \nwear a full-body cast for a while."

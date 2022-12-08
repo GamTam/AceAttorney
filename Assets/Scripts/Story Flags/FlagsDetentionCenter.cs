@@ -12,7 +12,6 @@ public class FlagsDetentionCenter : MonoBehaviour
     [SerializeField] private TalkSO _talkText;
     [SerializeField] private MoveSO _street;
     [SerializeField] private GameObject _fadeOut;
-    [SerializeField] private EvidenceSO _evidence;
     
     private PlayerInput _playerInput;
     private DialogueManager _dialogueManager;
@@ -28,7 +27,6 @@ public class FlagsDetentionCenter : MonoBehaviour
         _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         _dialogueManager = GameObject.FindGameObjectWithTag("Dialogue Manager").GetComponent<DialogueManager>();
         _playerInput.SwitchCurrentActionMap("Menu");
-        Globals.Evidence.Add(_evidence);
 
         if (Globals.StoryFlags.Contains("Met Lyla"))
         {
@@ -64,7 +62,7 @@ public class FlagsDetentionCenter : MonoBehaviour
 
         if (Globals.StoryFlags.Contains("Ready For Court") && _dialogueManager._doneTalking && !_begunEnd)
         {
-            Destroy(GameObject.FindGameObjectsWithTag("UI")[1].transform.GetComponentInChildren<CourtRecordController>().gameObject);
+            Destroy(GameObject.FindGameObjectWithTag("UI").transform.GetComponentInChildren<CourtRecordController>().gameObject);
             Debug.Log("baneen");
             GameObject obj = Instantiate(_fadeOut);
             SceneTransition trans = obj.GetComponent<SceneTransition>();

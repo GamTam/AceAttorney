@@ -19,6 +19,8 @@ MonoBehaviour:
     _char: NaN
     _anim: 
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 1
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -37,6 +39,8 @@ MonoBehaviour:
     _char: NaN
     _anim: 
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 1
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -55,6 +59,48 @@ MonoBehaviour:
     _char: NaN
     _anim: 
     _blipSound: 
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 1
+    _stopMusic: 0
+    _addToCourtRecord: 1
+    _interjection: 0
+    _align: 0
+    _dialogue: '<color=#6ebdf0>Doctor''s Report added to
+
+      the Court Record.'
+    _stateChange:
+      StoryFlag: Financial Added
+      EvidenceToAdd: {fileID: 11400000, guid: 84f5589fb428e5f4daf4eb4d6548354f, type: 2}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Phoenix
+    _knownName: 1
+    _char: 
+    _anim: 
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 0
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: 'Oh hey,<p:tiny> there''s something else
+
+      in the drawer!'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: 
+    _knownName: 0
+    _char: NaN
+    _anim: 
+    _blipSound: 
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 1
     _stopMusic: 0
     _addToCourtRecord: 1
@@ -73,6 +119,26 @@ MonoBehaviour:
     _char: 
     _anim: 
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 0
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: That's everything in the drawer.
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _name: Phoenix
+    _knownName: 1
+    _char: 
+    _anim: 
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -80,13 +146,12 @@ MonoBehaviour:
     _align: 0
     _dialogue: I wonder if there's anything else...
     _stateChange:
-      StoryFlag: Clock Added
-      EvidenceToAdd: {fileID: 11400000, guid: 395175753f6541640a182fa6b92de1f5, type: 2}
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
   nextLine: {fileID: 0}
   responses: []
-  IsCrossExanimation: 0
   isCrossExamination: 0
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}

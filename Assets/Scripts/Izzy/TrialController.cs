@@ -10,6 +10,7 @@ public class TrialController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI penaltiesText;
 
     public int currentPenalties = 5;
+    public string song = "CrossEx";
     private DialogueManager dialogueManager;
     private CrossExamination crossExamination;
     private MusicManager _musicManager;
@@ -24,8 +25,6 @@ public class TrialController : MonoBehaviour
 
         playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         playerInput.SwitchCurrentActionMap("Textbox");
-        _musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();
-        _musicManager.Play("CrossEx");
         currentPenalties = maxPenalties;
     }
 

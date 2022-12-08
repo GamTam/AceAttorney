@@ -19,12 +19,14 @@ MonoBehaviour:
     _char: NaN
     _anim: 
     _blipSound: typewriter
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 1
     _stopMusic: 0
     _addToCourtRecord: 0
     _interjection: 0
     _align: 2
-    _dialogue: '<color=green><sp:10><p:long>September 20, 10:00 AM
+    _dialogue: '<color=green><sp:10><p:read>September 20, 10:00 AM
 
       Wright
       & Co. Law Offices'
@@ -38,6 +40,8 @@ MonoBehaviour:
     _char: 
     _anim: 
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -57,6 +61,8 @@ MonoBehaviour:
     _char: 
     _anim: 
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -73,6 +79,8 @@ MonoBehaviour:
     _char: Maya
     _anim: think
     _blipSound: blipfemale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -91,6 +99,8 @@ MonoBehaviour:
     _char: Maya
     _anim: think
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -109,6 +119,8 @@ MonoBehaviour:
     _char: Maya
     _anim: think
     _blipSound: blipfemale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -125,6 +137,8 @@ MonoBehaviour:
     _char: Maya
     _anim: think
     _blipSound: blipfemale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -141,6 +155,8 @@ MonoBehaviour:
     _char: Maya
     _anim: think
     _blipSound: blipfemale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -159,6 +175,8 @@ MonoBehaviour:
     _char: Maya
     _anim: think
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -178,6 +196,8 @@ MonoBehaviour:
     _char: Maya
     _anim: think
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -199,6 +219,8 @@ MonoBehaviour:
     _char: Maya
     _anim: think
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -215,6 +237,8 @@ MonoBehaviour:
     _char: Maya
     _anim: think
     _blipSound: blipfemale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -231,6 +255,8 @@ MonoBehaviour:
     _char: Maya
     _anim: smug
     _blipSound: blipfemale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -247,6 +273,8 @@ MonoBehaviour:
     _char: Maya
     _anim: smug
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -263,6 +291,8 @@ MonoBehaviour:
     _char: Maya
     _anim: smug
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -282,6 +312,8 @@ MonoBehaviour:
     _char: Maya
     _anim: smug
     _blipSound: 
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 0
     _addToCourtRecord: 0
@@ -299,6 +331,8 @@ MonoBehaviour:
     _char: NaN
     _anim: 
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 1
     _addToCourtRecord: 0
@@ -315,6 +349,8 @@ MonoBehaviour:
     _char: NaN
     _anim: 
     _blipSound: blipfemale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 1
     _addToCourtRecord: 0
@@ -331,6 +367,8 @@ MonoBehaviour:
     _char: NaN
     _anim: smug
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 1
     _addToCourtRecord: 0
@@ -347,6 +385,8 @@ MonoBehaviour:
     _char: NaN
     _anim: smug
     _blipSound: blipfemale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 1
     _addToCourtRecord: 0
@@ -363,6 +403,8 @@ MonoBehaviour:
     _char: NaN
     _anim: smug
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 1
     _addToCourtRecord: 0
@@ -382,6 +424,8 @@ MonoBehaviour:
     _char: NaN
     _anim: smug
     _blipSound: blipfemale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 1
     _addToCourtRecord: 0
@@ -398,6 +442,8 @@ MonoBehaviour:
     _char: NaN
     _anim: smug
     _blipSound: blipfemale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 1
     _addToCourtRecord: 0
@@ -419,6 +465,8 @@ MonoBehaviour:
     _char: NaN
     _anim: smug
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 1
     _addToCourtRecord: 0
@@ -435,6 +483,8 @@ MonoBehaviour:
     _char: Maya
     _anim: think
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 0
     _stopMusic: 1
     _addToCourtRecord: 0
@@ -451,7 +501,6 @@ MonoBehaviour:
       PersonToAdd: {fileID: 0}
   nextLine: {fileID: 0}
   responses: []
-  IsCrossExanimation: 0
   isCrossExamination: 0
   prevLine: {fileID: 0}
   pressSequence: {fileID: 0}

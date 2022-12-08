@@ -26,11 +26,19 @@ public class SceneTransition : MonoBehaviour
         Vector3 pos = Camera.main.transform.position;
         gameObject.transform.position = new Vector3(pos.x, pos.y, pos.z + 1);
         _spr = GetComponent<SpriteRenderer>();
-        _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
-        _musicManager = GameObject.FindWithTag("Audio").GetComponent<MusicManager>();
+        try
+        {
+            _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
+            _musicManager = GameObject.FindWithTag("Audio").GetComponent<MusicManager>();
+
+            _playerInput.SwitchCurrentActionMap("Null");
+        }
+        catch
+        {
+            
+        }
+
         _spr.color = new Color(_spr.color.r, _spr.color.g, _spr.color.b, 0);
-        
-        _playerInput.SwitchCurrentActionMap("Null");
         StartCoroutine(FadeIn());
     }
 

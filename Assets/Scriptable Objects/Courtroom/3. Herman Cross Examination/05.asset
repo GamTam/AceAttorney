@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
+  m_Name: 05
+  m_EditorClassIdentifier: 
+  dialogueIndex: 0
+  dialogueText:
+  - _name: Herman
+    _knownName: 1
+    _char: Herman
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 0
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: '<color=green>The doctors said that he''s
+
+      supposed to make
+      a full recovery,
+
+      so I hope that for him.'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  nextLine: {fileID: 11400000, guid: cd2f465285cbcb04aa8982d022f6207b, type: 2}
+  responses: []
+  isCrossExamination: 1
+  prevLine: {fileID: 11400000, guid: bf9abe1d44c230147805008764dc90f6, type: 2}
+  pressSequence: {fileID: 11400000, guid: 5bbf8bfd3f45a7e4d93461f6c8e43c65, type: 2}
+  wrongPresentSequence: {fileID: 11400000, guid: 852dc18a4257aeb49b5c9874e8780077, type: 2}
+  presentSequence: {fileID: 0}
+  evidence: []

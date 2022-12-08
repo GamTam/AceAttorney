@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
+  m_Name: 04
+  m_EditorClassIdentifier: 
+  dialogueIndex: 0
+  dialogueText:
+  - _name: Herman
+    _knownName: 1
+    _char: Herman
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 0
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: '<color=green>He had tried to replace a pipe,
+
+      but threw out
+      his back really bad.
+
+      So bad that he''s in the hospital now.'
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  nextLine: {fileID: 11400000, guid: 19cba3621f02396458ebd4bacc045d38, type: 2}
+  responses: []
+  isCrossExamination: 1
+  prevLine: {fileID: 11400000, guid: a9e762a805a85a14fa43f149f50c1e8a, type: 2}
+  pressSequence: {fileID: 11400000, guid: 4b6f3196e2aaa7c42a9aef36165b01b5, type: 2}
+  wrongPresentSequence: {fileID: 11400000, guid: 852dc18a4257aeb49b5c9874e8780077, type: 2}
+  presentSequence: {fileID: 11400000, guid: aaa742a89ff98a44495fb7147eb65e19, type: 2}
+  evidence:
+  - {fileID: 11400000, guid: 84f5589fb428e5f4daf4eb4d6548354f, type: 2}

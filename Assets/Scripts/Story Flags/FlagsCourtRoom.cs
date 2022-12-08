@@ -12,6 +12,7 @@ public class FlagsCourtRoom : MonoBehaviour
     [SerializeField] private TrialController _trial;
     [SerializeField] private CrossExamination _crossExamination;
     [SerializeField] private GameObject _penaltyUI;
+    [SerializeField] private GameObject _fadeOut;
     
     private PlayerInput _playerInput;
     private DialogueManager _dialogueManager;
@@ -21,6 +22,11 @@ public class FlagsCourtRoom : MonoBehaviour
     private bool _endedCrossEx;
     private bool _boCrossEx;
     private bool _boCrossExEnd;
+    private bool _hermanCrossEx;
+    private bool _hermanCrossExEnd;
+    private bool _hermanCrossEx2;
+    private bool _hermanCrossExEnd2;
+    private bool _openedMenu;
 
     private void Start()
     {
@@ -30,13 +36,59 @@ public class FlagsCourtRoom : MonoBehaviour
         }
         
         _dialogueManager = GameObject.FindGameObjectWithTag("Dialogue Manager").GetComponent<DialogueManager>();
+        _musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();
         _dialogueManager.StartText(_dialogue);
     }
 
     private void Update()
     {
+        if (Globals.StoryFlags.Contains("We did it, Reddit") && _dialogueManager._doneTalking && !_openedMenu)
+        {
+            _musicManager.fadeOut(2);
+            _openedMenu = true;
+            GameObject obj = Instantiate(_fadeOut);
+            SceneTransition trans = obj.GetComponent<SceneTransition>();
+            trans._destination = "Lobby";
+            trans._speed = 1;
+        }
+        
+        if (Globals.StoryFlags.Contains("Herman CrossEx 2 Start") && !_hermanCrossEx2)
+        {
+            _musicManager.Play("CrossExFast");
+            _hermanCrossEx2 = true;
+            _penaltyUI.SetActive(true);
+            _trial.enabled = true;
+            _crossExamination.enabled = true;
+        }
+        
+        if (Globals.StoryFlags.Contains("Herman CrossEx 2 End") && !_hermanCrossExEnd2)
+        {
+            _hermanCrossExEnd2 = true;
+            _penaltyUI.SetActive(false);
+            _trial.enabled = false;
+            _crossExamination.enabled = false;
+                }
+    
+        if (Globals.StoryFlags.Contains("Herman CrossEx Start") && !_hermanCrossEx)
+        {
+            _musicManager.Play("CrossExFast");
+            _hermanCrossEx = true;
+            _penaltyUI.SetActive(true);
+            _trial.enabled = true;
+            _crossExamination.enabled = true;
+        }
+        
+        if (Globals.StoryFlags.Contains("Herman CrossEx End") && !_hermanCrossExEnd)
+        {
+            _hermanCrossExEnd = true;
+            _penaltyUI.SetActive(false);
+            _trial.enabled = false;
+            _crossExamination.enabled = false;
+        }
+        
         if (Globals.StoryFlags.Contains("Bo CrossEx Start") && !_boCrossEx)
         {
+            _musicManager.Play("CrossEx");
             _boCrossEx = true;
             _penaltyUI.SetActive(true);
             _trial.enabled = true;
@@ -53,6 +105,7 @@ public class FlagsCourtRoom : MonoBehaviour
 
         if (Globals.StoryFlags.Contains("Gumshoe CrossEx Start") && !_startedCrossEx)
         {
+            _musicManager.Play("CrossEx");
             _penaltyUI.SetActive(true);
             _startedCrossEx = true;
             _trial.enabled = true;

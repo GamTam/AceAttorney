@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
+  m_Name: 01
+  m_EditorClassIdentifier: 
+  dialogueIndex: 0
+  dialogueText:
+  - _name: Herman
+    _knownName: 1
+    _char: Herman
+    _anim: normal
+    _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
+    _skipFade: 0
+    _stopMusic: 0
+    _addToCourtRecord: 0
+    _interjection: 0
+    _align: 0
+    _dialogue: "<color=green>The Singing Barbershop is a\ngood tenant of mine!<p:short>
+      Why would \nI want to get rid of them?"
+    _stateChange:
+      StoryFlag: Herman CrossEx 2 Start
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  nextLine: {fileID: 11400000, guid: 99258b3e2aaf3c84b93fcb14857fa670, type: 2}
+  responses: []
+  isCrossExamination: 1
+  prevLine: {fileID: 0}
+  pressSequence: {fileID: 11400000, guid: 96fd091a3ee771c41bd786a309aacc2f, type: 2}
+  wrongPresentSequence: {fileID: 11400000, guid: 852dc18a4257aeb49b5c9874e8780077, type: 2}
+  presentSequence: {fileID: 11400000, guid: 23cc380d1eabe3c4d839567b1681ea4c, type: 2}
+  evidence:
+  - {fileID: 11400000, guid: 331101c610134ae49880c4c91cdc35f0, type: 2}
