@@ -1194,7 +1194,8 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5936236329318773401, guid: 7414b34839310a442b2f259db727dd81, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7414b34839310a442b2f259db727dd81, type: 3}
 --- !u!4 &779527155 stripped
 Transform:

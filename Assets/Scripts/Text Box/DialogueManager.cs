@@ -43,6 +43,7 @@ public class DialogueManager : MonoBehaviour
 
     private bool _crossEx;
     private bool _autoEnd;
+    private bool _mute;
     
     [SerializeField] private GameObject _interjectionObj;
 
@@ -182,7 +183,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (!firstTime)
+        if (!firstTime && !_mute)
         {
             if (_crossEx)
             {
@@ -193,6 +194,8 @@ public class DialogueManager : MonoBehaviour
                 _soundManager.Play("textboxAdvance");
             }
         }
+        
+        _mute = false;
         
         if (_currentLine == lines.Count)
         {
@@ -231,8 +234,12 @@ public class DialogueManager : MonoBehaviour
         String emotionInfo = line.Anim;
         Interjection interjection = line.Interjection;
         _skipFade = line.SkipFade;
-
+        
         _autoEnd = line.AutoEnd;
+        if (line.AutoEnd)
+        {
+            _mute = true;
+        }
 
         StateChange state = line.StateChange;
         if (state.StoryFlag != null) if (!Globals.StoryFlags.Contains(state.StoryFlag)) Globals.StoryFlags.Add(state.StoryFlag);
@@ -306,6 +313,7 @@ public class DialogueManager : MonoBehaviour
         GameObject obj = null;
         RawImage img;
 
+        interjection = Interjection.Objection;
         bool skip = false;
         switch (interjection)
         {
@@ -406,7 +414,12 @@ public class DialogueManager : MonoBehaviour
                 _nameBox.transform.parent.gameObject.SetActive(true);
             }
         }
-        
+
+        if (String.Concat(totalTextMessage.Where(c => !Char.IsWhiteSpace(c))) == "")
+        {
+            _tempBox.SetActive(false);
+            _mute = true;
+        }
         typeRoutine = StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, _typingClip, null));
         _startedText = true;
     }

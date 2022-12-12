@@ -254,11 +254,11 @@ MonoBehaviour:
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Herman
+  - _name: 
     _knownName: 0
     _char: Herman
     _anim: normal
-    _blipSound: blipmale
+    _blipSound: 
     _thinking: 0
     _autoEnd: 1
     _skipFade: 0

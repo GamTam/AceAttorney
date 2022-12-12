@@ -293,11 +293,11 @@ MonoBehaviour:
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Gumshoe
+  - _name: 
     _knownName: 1
     _char: Gumshoe
     _anim: happy
-    _blipSound: blipmale
+    _blipSound: 
     _thinking: 1
     _autoEnd: 1
     _skipFade: 0
@@ -305,7 +305,7 @@ MonoBehaviour:
     _addToCourtRecord: 0
     _interjection: 0
     _align: 0
-    _dialogue: '<p:read> '
+    _dialogue: '<p:long> '
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
