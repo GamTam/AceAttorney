@@ -67,10 +67,13 @@ public class MusicManager : MonoBehaviour
 
     public Music Play (string name)
     {
-        Debug.Log(name);
-        Music s = allMusic.Find(x => x.name == name);
+        Debug.Log(name + $"_{Globals.Soundtrack.ToString()}");
+        Music s = allMusic.Find(x => x.name == name + $"_{Globals.Soundtrack.ToString()}");
         if (s == null)
-            return null;
+        {
+            s = allMusic.Find(x => x.name == name);
+            if (s == null) return null;
+        }
 
         if (musicPlaying == s && Math.Abs(musicPlaying.source.volume - 1) < 0.1 && musicPlaying.source.isPlaying)
         {

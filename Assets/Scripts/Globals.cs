@@ -13,6 +13,8 @@ public static class Globals
     public static List<TalkSO> UsedTalks = new List<TalkSO>();
     public static List<String> StoryFlags = new List<string>();
 
+    public static SoundtrackTypes Soundtrack = SoundtrackTypes.PWAA;
+
     public static Dictionary<string, ArrayList> LoadTSV(string file) {
         
         Dictionary<string, ArrayList> dictionary = new Dictionary<string, ArrayList>();
@@ -34,4 +36,15 @@ public static class Globals
 
         return dictionary;
     }
+}
+
+public enum SoundtrackTypes
+{
+    PWAA,
+    JFA,
+    TT,
+    AJAA,
+    DD,
+    SOJ,
+    GAA
 }

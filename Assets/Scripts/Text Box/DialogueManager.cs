@@ -312,8 +312,7 @@ public class DialogueManager : MonoBehaviour
         _startedText = false;
         GameObject obj = null;
         RawImage img;
-
-        interjection = Interjection.Objection;
+        
         bool skip = false;
         switch (interjection)
         {
