@@ -1186,6 +1186,7 @@ MonoBehaviour:
   _tempBox: {fileID: 0}
   _currentLine: 0
   _prevActionMap: 
+  _courtRecord: {fileID: 7298867464423827332, guid: 1e8a966404fbe024797533a0fcc1c0bd, type: 3}
   _responseHandler: {fileID: 0}
   _swap: {fileID: 1991476421}
   _interjectionObj: {fileID: 3255038459366842304, guid: 506530a5bd7489f4c830768b5f8d10ac, type: 3}

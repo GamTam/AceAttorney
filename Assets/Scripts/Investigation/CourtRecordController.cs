@@ -37,7 +37,11 @@ public class CourtRecordController : MonoBehaviour
     private GameObject _selectedButton;
     private DialogueManager _dialogueManager;
 
+    private CRNormal _normal;
+
     private Vector3 _speedVector = new Vector3(0.15f, 0.15f, 1);
+    
+    private Navigation _nav = new Navigation();
 
     // Start is called before the first frame update
     IEnumerator Start()
@@ -50,6 +54,11 @@ public class CourtRecordController : MonoBehaviour
         _playerInput.SwitchCurrentActionMap("Null");
         _soundManager.Play("record flip");
 
+        _normal = GetComponent<CRNormal>();
+        
+        _nav.wrapAround = true;
+        _nav.mode = Navigation.Mode.Horizontal;
+
         for (int i = 0; i < 10; i++)
         {
             GameObject obj = Instantiate(_icon, _evidenceRow.transform, false);
@@ -59,6 +68,7 @@ public class CourtRecordController : MonoBehaviour
             {
                 obj.GetComponentsInChildren<Image>()[1].sprite = Globals.Evidence[i].Icon;
                 obj.GetComponentsInChildren<Image>()[1].SetNativeSize();
+                obj.GetComponent<Button>().navigation = _nav;
                 _oddEvidence.Add(obj.GetComponentsInChildren<Image>()[1]);
             }
             else
@@ -107,7 +117,7 @@ public class CourtRecordController : MonoBehaviour
     {
         if (EventSystem.current.currentSelectedGameObject == null) EventSystem.current.SetSelectedGameObject(_selectedButton);
         
-        if (_selectedButton != EventSystem.current.currentSelectedGameObject)
+        if (_selectedButton != EventSystem.current.currentSelectedGameObject && gameObject.transform.GetSiblingIndex() == 0)
         {
             _soundManager.Play("select");
             _selectedButton = EventSystem.current.currentSelectedGameObject;
@@ -256,7 +266,7 @@ public class CourtRecordController : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         try
         {
-            GameObject.FindWithTag("UI").transform.Find("Investigation").gameObject.SetActive(true);
+            if (!_normal.enabled) GameObject.FindWithTag("UI").transform.Find("Investigation").gameObject.SetActive(true);
         } catch {}
         Destroy(gameObject);
     }
@@ -322,6 +332,7 @@ public class CourtRecordController : MonoBehaviour
                 {
                     _oddEvidence.Add(obj.GetComponentsInChildren<Image>()[1]);
                 }
+                obj.GetComponent<Button>().navigation = _nav;
             }
             else
             {
@@ -425,7 +436,6 @@ public class CourtRecordController : MonoBehaviour
     
     public void KillChildren(Transform transform)
     {
-        Debug.Log(transform.childCount);
         int i = 0;
 
         //Array to hold all child obj
@@ -443,7 +453,5 @@ public class CourtRecordController : MonoBehaviour
         {
             DestroyImmediate(child.gameObject);
         }
-
-        Debug.Log(transform.childCount);
     }
 }

@@ -10,6 +10,7 @@ public class CRPresent : MonoBehaviour
     [SerializeField] private CourtRecordController _cr;
 
     private InvestigationMenu _menu;
+    private DialogueManager _dialogueManager;
     
     private PlayerInput _playerInput;
 
@@ -21,14 +22,16 @@ public class CRPresent : MonoBehaviour
         _text.SetText("<sprite=\"Keyboard\" name=\"backspace\">Back         <sprite=\"Keyboard\" name=\"E\">Present");
         _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         _menu = GameObject.FindWithTag("UI").transform.Find("Investigation/Select").GetComponent<InvestigationMenu>();
-        Debug.Log(_menu);
-        
+        _dialogueManager = GameObject.FindWithTag("Dialogue Manager").GetComponent<DialogueManager>();
+
         _back = _playerInput.actions["Menu/Cancel"];
         _present = _playerInput.actions["Menu/Present"];
     }
     
     void Update()
     {
+        if (!_dialogueManager._doneTalking) return;
+
         if (_back.triggered)
         {
             _cr.Close();

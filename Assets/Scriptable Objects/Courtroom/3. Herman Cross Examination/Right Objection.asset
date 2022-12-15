@@ -33,7 +33,7 @@ MonoBehaviour:
       to
       fix the plumbing...'
     _stateChange:
-      StoryFlag: 
+      StoryFlag: Herman CrossEx End
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}

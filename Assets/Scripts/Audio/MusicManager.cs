@@ -67,7 +67,6 @@ public class MusicManager : MonoBehaviour
 
     public Music Play (string name)
     {
-        Debug.Log(name + $"_{Globals.Soundtrack.ToString()}");
         Music s = allMusic.Find(x => x.name == name + $"_{Globals.Soundtrack.ToString()}");
         if (s == null)
         {
@@ -93,7 +92,6 @@ public class MusicManager : MonoBehaviour
         s.source.volume = 1;
         s.source.time = 0;
         s.source.Play();
-        Debug.Log(s.source.isPlaying);
 
         return s;
     }

@@ -14,12 +14,17 @@ public class ResponseHandler : MonoBehaviour
     private PlayerInput _playerInput;
     private DialogueManager _dialogueManager;
     private bool _shownResponses;
+
+    private Navigation _nav = new Navigation();
     
     private void Start()
     {
         _dialogueManager = GameObject.FindWithTag("Dialogue Manager").GetComponent<DialogueManager>();
         _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         _dialogueManager._responseHandler = this;
+
+        _nav.wrapAround = true;
+        _nav.mode = Navigation.Mode.Vertical;
     }
 
     public void ShowResponses(Response[] responses)
@@ -34,7 +39,9 @@ public class ResponseHandler : MonoBehaviour
             responseButton.parent = gameObject.GetComponent<RectTransform>();
             responseButton.localScale = new Vector3(1, 1, 1);
             responseButton.gameObject.GetComponentInChildren<TMP_Text>().text = response.ResponseText;
-            responseButton.gameObject.GetComponent<Button>().onClick.AddListener(() => StartCoroutine(OnPickedResponse(response)));
+            Button but = responseButton.gameObject.GetComponent<Button>();
+            but.onClick.AddListener(() => StartCoroutine(OnPickedResponse(response)));
+            but.navigation = _nav;
             
             if (i==0) EventSystem.current.SetSelectedGameObject(responseButton.gameObject);
             i++;

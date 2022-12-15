@@ -30,7 +30,7 @@ MonoBehaviour:
 
       I''ve got motive.'
     _stateChange:
-      StoryFlag: 
+      StoryFlag: Herman CrossEx 2 End
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
