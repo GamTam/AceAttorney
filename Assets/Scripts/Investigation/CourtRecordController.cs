@@ -117,7 +117,7 @@ public class CourtRecordController : MonoBehaviour
     {
         if (EventSystem.current.currentSelectedGameObject == null) EventSystem.current.SetSelectedGameObject(_selectedButton);
         
-        if (_selectedButton != EventSystem.current.currentSelectedGameObject && gameObject.transform.GetSiblingIndex() == 0)
+        if (_selectedButton != EventSystem.current.currentSelectedGameObject && gameObject.transform.GetSiblingIndex() == gameObject.transform.parent.childCount - 1)
         {
             _soundManager.Play("select");
             _selectedButton = EventSystem.current.currentSelectedGameObject;

@@ -2,9 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class MusicManager : MonoBehaviour
 {
+    [SerializeField] private AudioMixerGroup group;
     [SerializeField] private List<Music> allMusic;
     
     public static MusicManager instance;
@@ -42,6 +44,7 @@ public class MusicManager : MonoBehaviour
                 music.source.clip = Resources.Load(path) as AudioClip;
                 music.source.pitch = music.pitch;
                 music.source.loop = true;
+                music.source.outputAudioMixerGroup = group;
 
                 allMusic.Add(music);
             }

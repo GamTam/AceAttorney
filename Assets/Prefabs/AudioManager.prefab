@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ee14b96ba9fbf43bc9218e7ced34a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  group: {fileID: -6858190185496689155, guid: dcb05321a2977b540a5c48cfef4a3087, type: 2}
   allMusic: []
   musicPlaying:
     name: 
@@ -64,4 +65,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5033c2c7ab446a9baf151a9a6068ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  group: {fileID: 4972550696825237619, guid: dcb05321a2977b540a5c48cfef4a3087, type: 2}
   sounds: []

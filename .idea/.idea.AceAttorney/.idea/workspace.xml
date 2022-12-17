@@ -1,30 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Music/CrossEx_GAA.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Music/CrossEx_GAA.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Music/Pursuit.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Music/Pursuit.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Music/PursuitVariation.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Music/PursuitVariation.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Music/PursuitVariation_AJAA.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Music/PursuitVariation_AJAA.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Music/PursuitVariation_GAA.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Music/PursuitVariation_GAA.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Music/Pursuit_AJAA.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Music/Pursuit_AJAA.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Music/Pursuit_GAA.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Music/Pursuit_GAA.wav.meta" afterDir="false" />
+    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="Added more music">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/PursuitVariation_PWAA.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/PursuitVariation_PWAA.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Pursuit_PWAA.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Pursuit_PWAA.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/AudioManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/AudioManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Courtroom/3. Herman Cross Examination/01.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Courtroom/3. Herman Cross Examination/01.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Globals.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Globals.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/symbol_pc.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/symbol_pc.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Courtroom/1. Opening.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Courtroom/1. Opening.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/MusicManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/MusicManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Investigation/CourtRecordController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Investigation/CourtRecordController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/files/Music Data.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/files/Music Data.tsv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +36,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsOpening.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad0a7939819048a0a161f66558c9886726800/61/6cede232/Animator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/541b3b83020e495b89ac9b47a9afb663fa00/6a/f3a23166/AudioSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Editor/AssetEditor/InputActionAssetManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.4.8/Editor/TimelineSelection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@10.10.1/Editor/Drawing/Blackboard/SGBlackboardSection.cs" root0="SKIP_HIGHLIGHTING" />
@@ -60,6 +45,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@10.10.1/Editor/Data/Graphs/MaterialSlot.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7e35836373b74b12bde8ba7fa4d53641167088/64/694d14e8/Match.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Scriptable Objects/Courtroom/3. Herman Cross Examination/01.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/InputManagerStateMonitors.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_CoroutineTween.cs" root0="SKIP_HIGHLIGHTING" />
@@ -125,7 +111,7 @@
       <workItem from="1669673630158" duration="3641000" />
       <workItem from="1670018859512" duration="11075000" />
       <workItem from="1670280308414" duration="9874000" />
-      <workItem from="1671081460970" duration="74000" />
+      <workItem from="1671081460970" duration="3426000" />
     </task>
     <task id="LOCAL-00001" summary="Audio Prefab">
       <created>1668559907702</created>
@@ -204,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670283405859</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added more music">
+      <created>1671085878165</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1671085878165</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +217,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="david-dev" />
+                        <option value="mabel-dev" />
                       </list>
                     </value>
                   </entry>
@@ -251,6 +244,7 @@
     <MESSAGE value="Sahwit - Part 1" />
     <MESSAGE value="I have no idea what I'm doing" />
     <MESSAGE value="Court record works in cross examination!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Court record works in cross examination!" />
+    <MESSAGE value="Added more music" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more music" />
   </component>
 </project>
