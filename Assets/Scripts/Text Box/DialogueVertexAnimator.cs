@@ -157,6 +157,9 @@ public class DialogueVertexAnimator {
                                 break;
                         }
                         break;
+                    case DialogueCommandType.Lowpass:
+                        _musicManager.SetLowpass(0.1f, command.floatValue);
+                        break;
                     case DialogueCommandType.Shake:
                         Shake[] objects = (Shake[]) GameObject.FindObjectsOfType(typeof(Shake));
                         foreach (Shake obj in objects)

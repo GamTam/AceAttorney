@@ -155,6 +155,27 @@ public class MusicManager : MonoBehaviour
         }
     }
 
+    public void SetLowpass(float duration, float targetValue)
+    {
+        StartCoroutine(FadeLowpassFilter(duration, targetValue));
+    }
+
+    public IEnumerator FadeLowpassFilter(float duration, float targetValue)
+    {
+        float currentTime = 0;
+        float start;
+        group.audioMixer.GetFloat("Music Lowpass", out start);
+
+        while (currentTime < duration)
+        {
+            currentTime += Time.deltaTime;
+            @group.audioMixer.SetFloat("Music Lowpass", Mathf.Lerp(start, targetValue, currentTime / duration));
+            yield return null;
+        }
+
+        @group.audioMixer.SetFloat("Music Lowpass", targetValue);
+    }
+
     public Music GetMusicPlaying() {
         return musicPlaying;
     }
