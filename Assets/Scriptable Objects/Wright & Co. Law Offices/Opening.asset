@@ -26,7 +26,7 @@ MonoBehaviour:
     _addToCourtRecord: 0
     _interjection: 0
     _align: 2
-    _dialogue: '<color=green><sp:10><p:read>September 20, 10:00 AM
+    _dialogue: '<lp:full><color=green><sp:10><p:read>September 20, 10:00 AM
 
       Wright
       & Co. Law Offices'
@@ -319,7 +319,7 @@ MonoBehaviour:
     _addToCourtRecord: 0
     _interjection: 0
     _align: 0
-    _dialogue: "<music:Ringtone><color=red><sp:1>Brrrrrriiiiing......\n         
+    _dialogue: "<lp:none><music:Ringtone><color=red><sp:1>Brrrrrriiiiing......\n         
       Brrrrrriiiiing......\n                    Brrrrrriiiiing......"
     _stateChange:
       StoryFlag: 
