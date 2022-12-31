@@ -28,5 +28,10 @@ public class CRNormal : MonoBehaviour
         {
             _cr.Close();
         }
+
+        if (_profiles.triggered)
+        {
+            _cr.ProfileEvidenceSwap();
+        }
     }
 }

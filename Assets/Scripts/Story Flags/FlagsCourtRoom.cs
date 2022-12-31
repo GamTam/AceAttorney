@@ -9,6 +9,7 @@ public class FlagsCourtRoom : MonoBehaviour
 {
     [SerializeField] private DialogueSO _dialogue;
     [SerializeField] private List<EvidenceSO> _evidence;
+    [SerializeField] private List<EvidenceSO> _profiles;
     [SerializeField] private TrialController _trial;
     [SerializeField] private CrossExamination _crossExamination;
     [SerializeField] private GameObject _penaltyUI;
@@ -34,6 +35,8 @@ public class FlagsCourtRoom : MonoBehaviour
         {
             Globals.Evidence = _evidence;
         }
+
+        Globals.Profiles = _profiles;
         
         _dialogueManager = GameObject.FindGameObjectWithTag("Dialogue Manager").GetComponent<DialogueManager>();
         _musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();

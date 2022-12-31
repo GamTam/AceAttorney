@@ -3447,7 +3447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67dfdd853c824d6a953f88c22bb4bd0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogue: {fileID: 11400000, guid: ee69f160698339b418fe68257144b2dd, type: 2}
+  _dialogue: {fileID: 11400000, guid: bb69af12376cf9c4d8a7b3edc26eebe9, type: 2}
   _evidence:
   - {fileID: 11400000, guid: ae8fe674f9f3a484a8a51e11a1a1c1ef, type: 2}
   - {fileID: 11400000, guid: 80cb3ac9c93f83c4297941e627008d3f, type: 2}
@@ -3458,6 +3458,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 447e2ffcbed60ea4cbf05305bd00d952, type: 2}
   - {fileID: 11400000, guid: 331101c610134ae49880c4c91cdc35f0, type: 2}
   - {fileID: 11400000, guid: 1a853311dfd6397448122d4d60b4aa8a, type: 2}
+  _profiles:
+  - {fileID: 11400000, guid: 581ac14913f2ecb4986773aa479e1184, type: 2}
+  - {fileID: 11400000, guid: ae8fe674f9f3a484a8a51e11a1a1c1ef, type: 2}
   _trial: {fileID: 2050831290}
   _crossExamination: {fileID: 2050831291}
   _penaltyUI: {fileID: 2104087920}

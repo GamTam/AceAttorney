@@ -24,14 +24,25 @@ public class CourtRecordController : MonoBehaviour
     [SerializeField] private Image _bigEvidenceIcon;
     [SerializeField] private TMP_Text _title;
     [SerializeField] private TMP_Text _description;
-    
+
+    [Header("Top Banner")] 
+    [SerializeField] private Image _banner;
+    [SerializeField] private List<Sprite> _bannerImages;
+
     public event Action<EvidenceSO> HasPresented;
 
-    public List<Image> _oddEvidence = new List<Image>();
-    public List<Image> _evenEvidence = new List<Image>();
+    private List<Image> _oddEvidence = new List<Image>();
+    private List<Image> _evenEvidence = new List<Image>();
     private GameObject _openPage;
+
+    private bool _sound = true;
+    private bool _evidence = true;
     private int _page = 1;
-    
+    private int _evidencePage = 1;
+    private int _evidenceIndex = 0;
+    private int _profilePage = 1;
+    private int _profileIndex = 0;
+
     private SoundManager _soundManager;
     private PlayerInput _playerInput;
     private GameObject _selectedButton;
@@ -42,7 +53,7 @@ public class CourtRecordController : MonoBehaviour
     private Vector3 _speedVector = new Vector3(0.15f, 0.15f, 1);
     
     private Navigation _nav = new Navigation();
-
+    
     // Start is called before the first frame update
     IEnumerator Start()
     {
@@ -119,7 +130,7 @@ public class CourtRecordController : MonoBehaviour
         
         if (_selectedButton != EventSystem.current.currentSelectedGameObject && gameObject.transform.GetSiblingIndex() == gameObject.transform.parent.childCount - 1)
         {
-            _soundManager.Play("select");
+            if (_sound) _soundManager.Play("select");
             _selectedButton = EventSystem.current.currentSelectedGameObject;
 
             if (_selectedButton == _arrows[0])
@@ -135,6 +146,7 @@ public class CourtRecordController : MonoBehaviour
             }
 
             List<Image> images;
+            List<EvidenceSO> masterList;
             
             if (_openPage == _backupRow)
             {
@@ -144,12 +156,14 @@ public class CourtRecordController : MonoBehaviour
             {
                 images = _oddEvidence;
             }
+
+            masterList = _evidence ? Globals.Evidence : Globals.Profiles;
             
             foreach (Image icon in images)
             {
                 if (icon.gameObject.transform.parent.gameObject == EventSystem.current.currentSelectedGameObject)
                 {
-                    foreach (EvidenceSO evidence in Globals.Evidence)
+                    foreach (EvidenceSO evidence in masterList)
                     {
                         if (evidence.Icon == icon.sprite)
                         {
@@ -177,6 +191,12 @@ public class CourtRecordController : MonoBehaviour
     {
         if (sound) _soundManager.Play("back");
         StartCoroutine(CloseRecord());
+    }
+
+    public void ProfileEvidenceSwap()
+    {
+        _soundManager.Play("record flip");
+        StartCoroutine(SwapProfileAndEvidence());
     }
 
     public void Present()
@@ -271,6 +291,100 @@ public class CourtRecordController : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public IEnumerator SwapProfileAndEvidence()
+    {
+        _sound = false;
+        int index = 0;
+
+        if (_openPage == _evidenceRow)
+        {
+            index = _oddEvidence.IndexOf(
+                EventSystem.current.currentSelectedGameObject.GetComponentsInChildren<Image>()[1]);
+            _openPage = _backupRow;
+        }
+        else 
+        { 
+            _openPage = _evidenceRow; 
+            index = _evenEvidence.IndexOf(
+            EventSystem.current.currentSelectedGameObject.GetComponentsInChildren<Image>()[1]);
+        }
+
+        if (_evidence)
+        {
+            _evidencePage = _page;
+            _evidenceIndex = index;
+        }
+        else
+        {
+            _profilePage = _page;
+            _profileIndex = index;
+        }
+        
+        _evidence = !_evidence;
+        _playerInput.SwitchCurrentActionMap("Null");
+        while (_base.transform.localScale.y > 0)
+        {
+            yield return new WaitForSeconds(1 / 60f);
+            _base.transform.localScale -= new Vector3(0, _speedVector.y);
+        }
+
+        _base.transform.localScale = new Vector3(_base.transform.localScale.x, 0, _base.transform.localScale.y);
+        EventSystem.current.SetSelectedGameObject(null);
+        
+        KillChildren(_evidenceRow.transform);
+        KillChildren(_backupRow.transform);
+
+        _arrows[0].SetActive(false);
+        _arrows[1].SetActive(false);
+
+        _banner.sprite = _evidence ? _bannerImages[0] : _bannerImages[1];
+        _page = _evidence ? _evidencePage : _profilePage;
+        index = _evidence ? _evidenceIndex : _profileIndex;
+        
+        _oddEvidence = new List<Image>();
+        _evenEvidence = new List<Image>();
+        
+        AddItemsToRow();
+
+        if (_openPage == _evidenceRow)
+        {
+            EventSystem.current.SetSelectedGameObject(_evenEvidence[index].transform.parent.gameObject);
+            _openPage = _backupRow;
+        }
+        else
+        {
+            EventSystem.current.SetSelectedGameObject(_oddEvidence[index].transform.parent.gameObject);
+            _openPage = _evidenceRow;
+        }
+
+        if (_evidence)
+        {
+            if (Globals.Evidence.Count > 10)
+            {
+                _arrows[0].SetActive(true);
+                _arrows[1].SetActive(true);
+            }
+        }
+        else
+        {
+            if (Globals.Profiles.Count > 10)
+            {
+                _arrows[0].SetActive(true);
+                _arrows[1].SetActive(true);
+            }
+        }
+
+        while (_base.transform.localScale.y < 1)
+        {
+            yield return new WaitForSeconds(1 / 60f);
+            _base.transform.localScale += new Vector3(0, _speedVector.y);
+        }
+
+        _base.transform.localScale = new Vector3(_base.transform.localScale.x, 1, _base.transform.localScale.y);
+        _sound = true;
+        _playerInput.SwitchCurrentActionMap("Menu");
+    }
+
     public IEnumerator PageTurn(bool left)
     {
         RectTransform currentRect;
@@ -304,42 +418,8 @@ public class CourtRecordController : MonoBehaviour
                 _page = 1;
             }
         }
-        
-        
-        
-        for (int i = 0; i < 10; i++)
-        {
-            GameObject obj;
-            if (_openPage == _evidenceRow)
-            {
-                obj = Instantiate(_icon, _backupRow.transform, false);
-            }
-            else
-            {
-                obj = Instantiate(_icon, _evidenceRow.transform, false);
-            } 
-            obj.gameObject.SetActive(true);
-            
-            if (Globals.Evidence.Count > i + (_page - 1) * 10)
-            {
-                obj.GetComponentsInChildren<Image>()[1].sprite = Globals.Evidence[i + (_page - 1) * 10].Icon;
-                obj.GetComponentsInChildren<Image>()[1].SetNativeSize();
-                if (_openPage == _evidenceRow)
-                {
-                    _evenEvidence.Add(obj.GetComponentsInChildren<Image>()[1]);
-                }
-                else
-                {
-                    _oddEvidence.Add(obj.GetComponentsInChildren<Image>()[1]);
-                }
-                obj.GetComponent<Button>().navigation = _nav;
-            }
-            else
-            {
-                obj.GetComponent<Button>().interactable = false;
-                obj.GetComponentsInChildren<Image>()[1].enabled = false;
-            }
-        }
+
+        AddItemsToRow();
         
         _arrows[0].SetActive(false);
         _arrows[1].SetActive(false);
@@ -432,6 +512,54 @@ public class CourtRecordController : MonoBehaviour
         
         _arrows[0].SetActive(true);
         _arrows[1].SetActive(true);
+    }
+
+    private void AddItemsToRow()
+    {
+        List<EvidenceSO> items = new List<EvidenceSO>();
+
+        if (_evidence)
+        {
+            items = Globals.Evidence;
+        }
+        else
+        {
+            items = Globals.Profiles;
+        }
+        
+        for (int i = 0; i < 10; i++)
+        {
+            GameObject obj;
+            if (_openPage == _evidenceRow)
+            {
+                obj = Instantiate(_icon, _backupRow.transform, false);
+            }
+            else
+            {
+                obj = Instantiate(_icon, _evidenceRow.transform, false);
+            } 
+            obj.gameObject.SetActive(true);
+            
+            if (items.Count > i + (_page - 1) * 10)
+            {
+                obj.GetComponentsInChildren<Image>()[1].sprite = items[i + (_page - 1) * 10].Icon;
+                obj.GetComponentsInChildren<Image>()[1].SetNativeSize();
+                if (_openPage == _evidenceRow)
+                {
+                    _evenEvidence.Add(obj.GetComponentsInChildren<Image>()[1]);
+                }
+                else
+                {
+                    _oddEvidence.Add(obj.GetComponentsInChildren<Image>()[1]);
+                }
+                obj.GetComponent<Button>().navigation = _nav;
+            }
+            else
+            {
+                obj.GetComponent<Button>().interactable = false;
+                obj.GetComponentsInChildren<Image>()[1].enabled = false;
+            }
+        }
     }
     
     public void KillChildren(Transform transform)
