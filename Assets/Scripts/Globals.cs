@@ -1,6 +1,5 @@
 using System;
 using System.IO;
-using System.Net.Mime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +11,8 @@ public static class Globals
     public static List<DialogueSO> UsedDialogue = new List<DialogueSO>();
     public static List<TalkSO> UsedTalks = new List<TalkSO>();
     public static List<String> StoryFlags = new List<string>();
+
+    public static SoundtrackTypes Soundtrack = SoundtrackTypes.PWAA;
 
     public static Dictionary<string, ArrayList> LoadTSV(string file) {
         
@@ -34,4 +35,15 @@ public static class Globals
 
         return dictionary;
     }
+}
+
+public enum SoundtrackTypes
+{
+    PWAA,
+    JFA,
+    TT,
+    AJAA,
+    DD,
+    SOJ,
+    GAA
 }

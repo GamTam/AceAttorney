@@ -1194,7 +1194,8 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5936236329318773401, guid: 7414b34839310a442b2f259db727dd81, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7414b34839310a442b2f259db727dd81, type: 3}
 --- !u!4 &779527155 stripped
 Transform:
@@ -1438,6 +1439,7 @@ MonoBehaviour:
   _tempBox: {fileID: 0}
   _currentLine: 0
   _prevActionMap: 
+  _courtRecord: {fileID: 7298867464423827332, guid: 1e8a966404fbe024797533a0fcc1c0bd, type: 3}
   _responseHandler: {fileID: 0}
   _swap: {fileID: 1991476421}
   _interjectionObj: {fileID: 3255038459366842304, guid: 506530a5bd7489f4c830768b5f8d10ac, type: 3}

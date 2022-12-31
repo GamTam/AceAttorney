@@ -1,8 +1,13 @@
 Name	Intro Point	Loop Point 
 SteelSamurai	3.209	56.352
-Court	10.536	58.533	
+Court	10.536	58.533
+Court_AJAA	8.160	63.028572
 CrossEx	0.715	46.427
+CrossEx_AJAA	1.353	35.720
+CrossEx_GAA	4.111	63.028
 CrossExFast	1.341	58.656445
+CrossExFast_AJAA	0.938	46.389
+CrossExFast_GAA	11.635342	82.955029
 DetentionCenter	13.705	61.71
 Explain	2.176	71.994
 Explore	2.397	50.388
@@ -12,11 +17,20 @@ Maya	0.284	74.128
 Objection	24.5	48.505
 Opening	0	-1
 Pursuit	7.799	46.198
+Pursuit_JFA	6.406	38.403
+Pursuit_TT	6.486	60.001
+Pursuit_AJAA	7.917	53.322
+Pursuit_GAA	7.459103	94.977778
 PursuitVariation	2.218	40.618
+PursuitVariation_JFA	6.406	38.403
+PursuitVariation_TT	1.340	54.855
+PursuitVariation_AJAA	3.052	48.463
+PursuitVariation_GAA	8.105	63.483
 Ringtone	0.552	19.411
 Suspense	7.928590	35.357207
 Twist	1.328	34.662
 TwistInvestigation	5.496000	57.495433
 Win	1.537	50.771
-Saul	0	-1 
+Saul	0	-1
+Eminem	0	-1
 Title	0.856	75.652

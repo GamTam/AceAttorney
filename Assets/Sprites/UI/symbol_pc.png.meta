@@ -240,7 +240,7 @@ TextureImporter:
       213: 6632139030402900293
     second: symbol_pc_78
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -261,6 +261,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -269,7 +270,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -299,11 +300,10 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -315,7 +315,31 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -1997,6 +2021,86 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      down: 4532582141210981306
+      3: 7695566600791544787
+      0: 1327233477228216407
+      F1: 2420414408939336237
+      symbol_pc_76: -4106465850807846565
+      F6: -7402433081574201630
+      P: 2176717898294195462
+      Y: -5347705367467159512
+      H: 8676645222690406725
+      6: 4538289708685378189
+      F9: 5087559074468518266
+      L: 2160225913913222387
+      Insert: -6360930532166899206
+      S: -9047692728586428176
+      5: -2133465132779337555
+      RCtrl: -363593157736616248
+      RShift: -6636123923924915453
+      F3: -2840100524733604271
+      pageup: -2860214068521678188
+      symbol_pc_72: -7888062388554091433
+      R: 5641409612088166887
+      LCtrl: -8941138434960150155
+      F11: 1701682472251698749
+      D: -2254956900939210243
+      symbol_pc_75: 2268409939490344823
+      F12: -2168580711090700453
+      F5: -5187792800801012871
+      Z: 707840609942849143
+      Esc: 157076231297099105
+      backspace: -5217687088808000382
+      RAlt: 7082957876749004574
+      K: -6709688824134496928
+      M: -1733542578297282620
+      F: -5750194965732589635
+      F4: -3348596913970060793
+      8: 3367891931995480304
+      W: 3187451297843558932
+      tab: 6763714926689780018
+      del: -1583220988852417813
+      LAlt: 2515820708309220466
+      symbol_pc_70: -6818763796624798325
+      space: -258766319957916752
+      2: -5183863199322781012
+      C: -347562340736242346
+      Q: 5685493435245801644
+      end: -8191309191447948592
+      J: 7458745054188114402
+      9: 8314942470863442579
+      4: 2262537983386805488
+      G: 2716091868065029272
+      E: 3516892547960350136
+      X: 1721965101938955217
+      B: -7433592824436436772
+      F7: 4366002027917221585
+      U: 8915015009199456813
+      I: -7207585871736425292
+      F8: -8594894510399996993
+      home: -1533496146459320646
+      LShift: -6081650092785694693
+      O: 9113760578813697970
+      symbol_pc_71: 8002760183623288887
+      up: -6899373912185615614
+      T: -5880010140718719962
+      symbol_pc_77: -6450274071247121173
+      F2: -3478786427356178468
+      symbol_pc_78: 6632139030402900293
+      F10: 6734031056462649322
+      1: -6497000508356327678
+      7: -4015679004558487631
+      A: 1445507416146764812
+      right: -6919929603759410017
+      V: -1147859152550610377
+      symbol_pc_69: 2173529744625032873
+      symbol_pc_73: -6393986503204068030
+      pagedown: 7192405588791529551
+      symbol_pc_74: -5547304794742236599
+      N: 1695984921477025839
+      enter: 5233574166244034336
+      left: -2476252492821042660
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.Serialization;
 
 public class SoundManager : MonoBehaviour
 {
+    [SerializeField] private AudioMixerGroup group;
     [FormerlySerializedAs("allMusic")] [SerializeField] private List<Sound> sounds;
     
     public static SoundManager instance;
@@ -30,7 +32,8 @@ public class SoundManager : MonoBehaviour
                 sound.source = gameObject.AddComponent<AudioSource>();
                 sound.source.clip = Resources.Load(path) as AudioClip;
                 sound.source.pitch = sound.pitch;
-                sound.source.loop = Convert.ToBoolean(entry.Value[0]);;
+                sound.source.loop = Convert.ToBoolean(entry.Value[0]);
+                sound.source.outputAudioMixerGroup = group;
 
                 sounds.Add(sound);
             }

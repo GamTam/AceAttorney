@@ -2,9 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class MusicManager : MonoBehaviour
 {
+    [SerializeField] private AudioMixerGroup group;
     [SerializeField] private List<Music> allMusic;
     
     public static MusicManager instance;
@@ -42,6 +44,7 @@ public class MusicManager : MonoBehaviour
                 music.source.clip = Resources.Load(path) as AudioClip;
                 music.source.pitch = music.pitch;
                 music.source.loop = true;
+                music.source.outputAudioMixerGroup = group;
 
                 allMusic.Add(music);
             }
@@ -67,10 +70,12 @@ public class MusicManager : MonoBehaviour
 
     public Music Play (string name)
     {
-        Debug.Log(name);
-        Music s = allMusic.Find(x => x.name == name);
+        Music s = allMusic.Find(x => x.name == name + $"_{Globals.Soundtrack.ToString()}");
         if (s == null)
-            return null;
+        {
+            s = allMusic.Find(x => x.name == name);
+            if (s == null) return null;
+        }
 
         if (musicPlaying == s && Math.Abs(musicPlaying.source.volume - 1) < 0.1 && musicPlaying.source.isPlaying)
         {
@@ -90,7 +95,6 @@ public class MusicManager : MonoBehaviour
         s.source.volume = 1;
         s.source.time = 0;
         s.source.Play();
-        Debug.Log(s.source.isPlaying);
 
         return s;
     }
@@ -149,6 +153,27 @@ public class MusicManager : MonoBehaviour
         {
             audioSource.source.Stop();
         }
+    }
+
+    public void SetLowpass(float duration, float targetValue)
+    {
+        StartCoroutine(FadeLowpassFilter(duration, targetValue));
+    }
+
+    public IEnumerator FadeLowpassFilter(float duration, float targetValue)
+    {
+        float currentTime = 0;
+        float start;
+        group.audioMixer.GetFloat("Music Lowpass", out start);
+
+        while (currentTime < duration)
+        {
+            currentTime += Time.deltaTime;
+            @group.audioMixer.SetFloat("Music Lowpass", Mathf.Lerp(start, targetValue, currentTime / duration));
+            yield return null;
+        }
+
+        @group.audioMixer.SetFloat("Music Lowpass", targetValue);
     }
 
     public Music GetMusicPlaying() {

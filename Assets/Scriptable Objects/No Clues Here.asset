@@ -19,6 +19,8 @@ MonoBehaviour:
     _char: NaN
     _anim: 
     _blipSound: blipmale
+    _thinking: 0
+    _autoEnd: 0
     _skipFade: 1
     _stopMusic: 0
     _addToCourtRecord: 0

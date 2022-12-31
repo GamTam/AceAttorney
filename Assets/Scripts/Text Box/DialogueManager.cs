@@ -22,14 +22,17 @@ public class DialogueManager : MonoBehaviour
     private PlayerInput _playerInput;
     [HideInInspector] public string _prevActionMap;
     private string _typingClip = "blipmale";
+    [SerializeField] private GameObject _courtRecord;
+    private bool _presenting;
 
     [HideInInspector] public DialogueVertexAnimator dialogueVertexAnimator;
     private bool movingText;
     private InputAction _advanceText;
+    private InputAction _cr;
     private MusicManager _musicManager;
     private SoundManager _soundManager;
 
-    public ResponseHandler _responseHandler;
+    [HideInInspector] public ResponseHandler _responseHandler;
     private DialogueSO _dialogue;
     private bool _shownResponses;
 
@@ -43,6 +46,7 @@ public class DialogueManager : MonoBehaviour
 
     private bool _crossEx;
     private bool _autoEnd;
+    private bool _mute;
     
     [SerializeField] private GameObject _interjectionObj;
 
@@ -52,6 +56,7 @@ public class DialogueManager : MonoBehaviour
         lines = new List<TBLine>();
         _playerInput = GameObject.FindWithTag("Controller Manager").GetComponent<PlayerInput>();
         _advanceText = _playerInput.actions["Advance"];
+        _cr = _playerInput.actions["Textbox/Court Record"];
         _soundManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>();
         _musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();
     }
@@ -129,6 +134,11 @@ public class DialogueManager : MonoBehaviour
                     NextLine();   
                 }
             }
+
+            if (!dialogueVertexAnimator.textAnimating && _cr.triggered)
+            {
+                StartCoroutine(CourtRecord());
+            }
             
             if (!dialogueVertexAnimator.textAnimating && !_advanceButton.gameObject.activeSelf)
             {
@@ -171,6 +181,26 @@ public class DialogueManager : MonoBehaviour
         return _dialogue;
     }
 
+    private IEnumerator CourtRecord()
+    {
+        if (_presenting || _crossEx) yield break;
+
+        _presenting = true;
+        
+        GameObject obj = Instantiate(_courtRecord, GameObject.FindGameObjectWithTag("UI").transform, false);
+        obj.GetComponent<CRNormal>().enabled = true;
+        
+        _playerInput.SwitchCurrentActionMap("Menu");
+
+        while (obj != null)
+        {
+            yield return null;
+        }
+
+        _playerInput.SwitchCurrentActionMap("TextBox");
+        _presenting = false;
+    }
+    
     private Coroutine typeRoutine = null;
     public void NextLine(bool firstTime = false, bool quickEnd = false)
     {
@@ -182,7 +212,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (!firstTime)
+        if (!firstTime && !_mute)
         {
             if (_crossEx)
             {
@@ -193,6 +223,8 @@ public class DialogueManager : MonoBehaviour
                 _soundManager.Play("textboxAdvance");
             }
         }
+        
+        _mute = false;
         
         if (_currentLine == lines.Count)
         {
@@ -231,8 +263,12 @@ public class DialogueManager : MonoBehaviour
         String emotionInfo = line.Anim;
         Interjection interjection = line.Interjection;
         _skipFade = line.SkipFade;
-
+        
         _autoEnd = line.AutoEnd;
+        if (line.AutoEnd)
+        {
+            _mute = true;
+        }
 
         StateChange state = line.StateChange;
         if (state.StoryFlag != null) if (!Globals.StoryFlags.Contains(state.StoryFlag)) Globals.StoryFlags.Add(state.StoryFlag);
@@ -305,7 +341,7 @@ public class DialogueManager : MonoBehaviour
         _startedText = false;
         GameObject obj = null;
         RawImage img;
-
+        
         bool skip = false;
         switch (interjection)
         {
@@ -406,7 +442,12 @@ public class DialogueManager : MonoBehaviour
                 _nameBox.transform.parent.gameObject.SetActive(true);
             }
         }
-        
+
+        if (String.Concat(totalTextMessage.Where(c => !Char.IsWhiteSpace(c))) == "")
+        {
+            _tempBox.SetActive(false);
+            _mute = true;
+        }
         typeRoutine = StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, _typingClip, null));
         _startedText = true;
     }

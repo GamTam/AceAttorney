@@ -205,7 +205,7 @@ MonoBehaviour:
     _char: Phoenix
     _anim: normal
     _blipSound: blipmale
-    _thinking: 0
+    _thinking: 1
     _autoEnd: 0
     _skipFade: 1
     _stopMusic: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
     _char: Phoenix
     _anim: normal
     _blipSound: blipmale
-    _thinking: 0
+    _thinking: 1
     _autoEnd: 0
     _skipFade: 1
     _stopMusic: 0

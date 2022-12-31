@@ -12,6 +12,9 @@ public class DialogueUtility : MonoBehaviour
     private const string PAUSE_REGEX_STRING = "<p:(?<pause>" + REMAINDER_REGEX + ")>";
     private static readonly Regex pauseRegex = new Regex(PAUSE_REGEX_STRING);
     
+    private const string LOWPASS_REGEX_STRING = "<lp:(?<lowpass>" + REMAINDER_REGEX + ")>";
+    private static readonly Regex lowpassRegex = new Regex(LOWPASS_REGEX_STRING);
+    
     private const string SPEED_REGEX_STRING = "<sp:(?<speed>" + REMAINDER_REGEX + ")>";
     private static readonly Regex speedRegex = new Regex(SPEED_REGEX_STRING);
     
@@ -62,6 +65,13 @@ public class DialogueUtility : MonoBehaviour
         { "read", 2f },
     };
 
+    private static readonly Dictionary<string, float> lowpassDictionary = new Dictionary<string, float>
+    {
+        { "full", 1000f },
+        { "med", 15000f },
+        { "none", 22000f }
+    };
+
     public static List<DialogueCommand> ProcessInputString(string message, out string processedMessage)
     {
         List<DialogueCommand> result = new List<DialogueCommand>();
@@ -82,6 +92,7 @@ public class DialogueUtility : MonoBehaviour
         processedMessage = HandleShakeTags(processedMessage, result);
         processedMessage = HandleSoundTags(processedMessage, result);
         processedMessage = HandleMusicTags(processedMessage, result);
+        processedMessage = HandleLowpassTags(processedMessage, result);
         
         processedMessage = HandleAlignTags(processedMessage, result);
         
@@ -335,6 +346,25 @@ public class DialogueUtility : MonoBehaviour
         return processedMessage;
     }
     
+    private static string HandleLowpassTags(string processedMessage, List<DialogueCommand> result)
+    {
+        MatchCollection pauseMatches = lowpassRegex.Matches(processedMessage);
+        foreach (Match match in pauseMatches)
+        {
+            string val = match.Groups["lowpass"].Value;
+            string lowpassType = val;
+            Debug.Assert(lowpassDictionary.ContainsKey(lowpassType), "no lowpass option registered for '" + lowpassType + "'");
+            result.Add(new DialogueCommand
+            {
+                position = VisibleCharactersUpToIndex(processedMessage, match.Index),
+                type = DialogueCommandType.Lowpass,
+                floatValue = lowpassDictionary[lowpassType]
+            });
+        }
+        processedMessage = Regex.Replace(processedMessage, LOWPASS_REGEX_STRING, "");
+        return processedMessage;
+    }
+
     private static string HandleSkipFadeTags(string processedMessage, List<DialogueCommand> result)
     {
         MatchCollection skipFadeMatches = skipFadeRegex.Matches(processedMessage);
@@ -428,6 +458,7 @@ public enum DialogueCommandType
     Name,
     Sound,
     Music,
+    Lowpass,
     Speaker,
     SpeakerFace,
     TextBlip,

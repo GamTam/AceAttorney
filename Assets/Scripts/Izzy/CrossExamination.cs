@@ -124,7 +124,6 @@ public class CrossExamination : MonoBehaviour
     }
 
     private void Press() {
-        Debug.Log("a");
         if (currentDialogue.HasPressingSequence) {
             dialogueManager.StartText(currentDialogue.pressSequence);
         }

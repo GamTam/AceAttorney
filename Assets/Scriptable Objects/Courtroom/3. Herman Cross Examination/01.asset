@@ -31,7 +31,7 @@ MonoBehaviour:
       a third person there.
       It is the
 
-      Singing Barbershop <color=red>Quartet<color=green> after all.'
+      Singing Barbershop Quartet after all.'
     _stateChange:
       StoryFlag: Herman CrossEx Start
       EvidenceToAdd: {fileID: 0}

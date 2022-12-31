@@ -49,7 +49,6 @@ public class FlagsDetentionCenter : MonoBehaviour
 
         if (Globals.StoryFlags.Contains("Talked To Lyla Once") && !_addedDialogueOne)
         {
-            Debug.Log("A");
             _investigation._talkText.Add(_talkText);
             _addedDialogueOne = true;
         }
@@ -63,7 +62,6 @@ public class FlagsDetentionCenter : MonoBehaviour
         if (Globals.StoryFlags.Contains("Ready For Court") && _dialogueManager._doneTalking && !_begunEnd)
         {
             Destroy(GameObject.FindGameObjectWithTag("UI").transform.GetComponentInChildren<CourtRecordController>().gameObject);
-            Debug.Log("baneen");
             GameObject obj = Instantiate(_fadeOut);
             SceneTransition trans = obj.GetComponent<SceneTransition>();
             trans._speed = 0.5f;

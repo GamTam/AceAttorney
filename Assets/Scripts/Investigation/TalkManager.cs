@@ -56,16 +56,15 @@ public class TalkManager : MonoBehaviour
 
     private void Update()
     {
-        if (_killing) return;
+        if (_killing || !_dialogueManager._doneTalking) return;
         
         if (_back.triggered)
         {
             StartCoroutine(Kill());
         }
 
-        if (_responseButtons.Count == 0 && _dialogueManager._doneTalking && !_revealing)
+        if (_responseButtons.Count == 0 && !_revealing)
         {
-            Debug.Log("a");
             _revealing = true;
             StartCoroutine(RevealOptions());
         }
@@ -160,6 +159,7 @@ public class TalkManager : MonoBehaviour
         Destroy(_selectionHead);
         
         yield return new WaitForSeconds(10/60f);
+        Debug.Log("Weeeeeee");
         GameObject.FindWithTag("UI").transform.Find("Investigation").gameObject.SetActive(true);
         Destroy(gameObject);
     }
