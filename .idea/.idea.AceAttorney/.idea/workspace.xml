@@ -2,97 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/MemorySettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/boot.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney.dir/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio Mixers/Main.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio Mixers/Main.mixer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Saul.wav" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Saul.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Muffled Rap Music.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Muffled Rap Music.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/Opening.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/Opening.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Globals.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Globals.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Court Record/Evidence/Autopsy Report.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Court Record/Evidence/Autopsy Report.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Court Record/Evidence/Clock.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Court Record/Evidence/Clock.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Court Record/Evidence/EVIDENCE_BANGBANG.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Court Record/Evidence/EVIDENCE_BANGBANG.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Court Record/Evidence/Envelope.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Court Record/Evidence/Envelope.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Court Record/Evidence/Gun.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Court Record/Evidence/Gun.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Court Record/Evidence/Other Autopsy Report.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Court Record/Evidence/Other Autopsy Report.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Court Record/Evidence/attorneysBadge.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Court Record/Evidence/attorneysBadge.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Court Record/Record Check.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Court Record/Record Check.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Court Record/evidence_01u.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Court Record/evidence_01u.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Court Record/evidence_base.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Court Record/evidence_base.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Court Record/record_icon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Court Record/record_icon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Court Record/recordu.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Court Record/recordu.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Defense Desk.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Defense Desk.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Defense.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Defense.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Judge.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Judge.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Lobby.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Lobby.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Prosecution Desk.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Prosecution Desk.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Prosecution.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Prosecution.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Sidebar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Sidebar.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Wide Shot.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Wide Shot.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Witness Stand.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Witness Stand.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Witness.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Witness.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Icon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Icon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Investigation/Areas/Abandoned_building.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Investigation/Areas/Abandoned_building.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Investigation/Areas/Barber_shop.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Investigation/Areas/Barber_shop.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Investigation/Areas/Cafe.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Investigation/Areas/Cafe.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Investigation/Areas/Detention Center-Front.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Investigation/Areas/Detention Center-Front.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Investigation/Areas/Detentoin Center.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Investigation/Areas/Detentoin Center.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Investigation/Areas/Street_View.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Investigation/Areas/Street_View.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Investigation/Areas/Wright &amp; Co. Law Offices.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Investigation/Areas/Wright &amp; Co. Law Offices.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Investigation/Move/move_window.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Investigation/Move/move_window.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Investigation/Nothing Selected.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Investigation/Nothing Selected.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Investigation/Selected Again.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Investigation/Selected Again.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Investigation/Selected.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Investigation/Selected.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Investigation/TransparentBox.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Investigation/TransparentBox.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Manfred von Karma.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Manfred von Karma.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Splash.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Splash.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextBox/Talk Choice Completed.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextBox/Talk Choice Completed.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextBox/Talk Choice.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextBox/Talk Choice.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextBox/nameTag.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextBox/nameTag.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextBox/select_arrow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextBox/select_arrow.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextBox/select_button.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextBox/select_button.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextBox/select_window.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextBox/select_window.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextBox/select_window_wide.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextBox/select_window_wide.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextBox/textBox.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextBox/textBox.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Title Screen/Cutting Edge 4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Title Screen/Cutting Edge 4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Title Screen/title_back.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Title Screen/title_back.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/The End.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/The End.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/To Be Continued.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/To Be Continued.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/menu_bg.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/menu_bg.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/symbol_pc.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/symbol_pc.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/blink man.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/blink man.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/confusion man.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/confusion man.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/half  blink man.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/half  blink man.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/half mouth man.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/half mouth man.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/mouth open man.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/mouth open man.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/pose 1 man.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/pose 1 man.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/pose 2 man.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/pose 2 man.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Herman_Idle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Herman_Idle.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Herman_Pose_2_Headless.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Herman_Pose_2_Headless.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Herman_Tears_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Herman_Tears_1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Herman_Tears_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Herman_Tears_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Herman_Tears_3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Herman_Tears_3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Sad_Herman_No_Tears.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Sad_Herman_No_Tears.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Lyla/Spreadsheet sprite .png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Lyla/Spreadsheet sprite .png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Lyla/Spreadsheet sprite 2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Lyla/Spreadsheet sprite 2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Lyla/Spreadsheet sprite 3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Lyla/Spreadsheet sprite 3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/edgeworth_idle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/edgeworth_idle.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/gumshoe_normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/gumshoe_normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/judge.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/judge.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/maya_smug.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/maya_smug.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/maya_think.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/maya_think.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/phoenix_normal_think_shake_head.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/phoenix_normal_think_shake_head.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/sahwit_normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/sahwit_normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineAsset.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineAsset_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineAsset_Renderer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/files/Music Data.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/files/Music Data.tsv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +28,11 @@
     <option name="RESET_MODE" value="HARD" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
   <component name="GithubProjectSettings">
     <option name="branchProtectionPatterns">
       <list>
@@ -116,19 +40,23 @@
       </list>
     </option>
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="f2d830bb-e089-4c8c-a22d-9413f9e0ac80" />
+        <option name="url" value="https://github.com/GamTam/AceAttorney.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsOpening.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad0a7939819048a0a161f66558c9886726800/61/6cede232/Animator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/541b3b83020e495b89ac9b47a9afb663fa00/6a/f3a23166/AudioSource.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Editor/AssetEditor/InputActionAssetManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/InputManagerStateMonitors.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_CoroutineTween.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/Sprites/characters/maya_smug.png.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/eba875eb53a542ed8b3ed97f002cceb213d600/d3/d04fdea3/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/luigi/RiderProjects/AceAttorney/Assets/UniversalRenderPipelineAsset.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7e35836373b74b12bde8ba7fa4d53641167088/64/694d14e8/Match.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="Toolset" />
   </component>
   <component name="ProjectId" id="2HbggE0WWlPeR0AECSQgnpl4Gxg" />
   <component name="ProjectLevelVcsManager">
@@ -138,19 +66,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="Discover.Launch.Via.Unity" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="TODO_SCOPE" value="All Places" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.environmentSetup" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\lucca\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\lucca\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\lucca\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\lucca\RiderProjects\AceAttorney -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\lucca\RiderProjects\AceAttorney" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\lucca\RiderProjects\AceAttorney -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\lucca\RiderProjects\AceAttorney" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -193,6 +140,8 @@
       <workItem from="1671081460970" duration="9908000" />
       <workItem from="1671489646357" duration="740000" />
       <workItem from="1671608697156" duration="1473000" />
+      <workItem from="1671697359113" duration="53000" />
+      <workItem from="1672468511939" duration="1384000" />
     </task>
     <task id="LOCAL-00001" summary="Audio Prefab">
       <created>1668559907702</created>
@@ -323,7 +272,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

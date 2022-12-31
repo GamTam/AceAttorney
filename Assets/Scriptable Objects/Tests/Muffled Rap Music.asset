@@ -49,10 +49,10 @@ MonoBehaviour:
     _addToCourtRecord: 0
     _interjection: 0
     _align: 0
-    _dialogue: '<sp:2><music:SteelSamurai>Court is now in session for
+    _dialogue: '<sp:2><music:Eminem>Court is now in session for
 
-      the
-      trial of Ms. Maya Fey.'
+      the trial
+      of Ms. Maya Fey.'
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
