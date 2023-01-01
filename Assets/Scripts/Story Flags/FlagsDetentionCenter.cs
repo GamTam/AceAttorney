@@ -7,10 +7,7 @@ using UnityEngine.InputSystem;
 
 public class FlagsDetentionCenter : MonoBehaviour
 {
-    [SerializeField] private InvestigationMenu _investigation;
     [SerializeField] private DialogueSO _dialogue;
-    [SerializeField] private TalkSO _talkText;
-    [SerializeField] private MoveSO _street;
     [SerializeField] private GameObject _fadeOut;
     
     private PlayerInput _playerInput;
@@ -45,18 +42,6 @@ public class FlagsDetentionCenter : MonoBehaviour
         {
             _openedMenu = true;
             GameObject.FindWithTag("UI").transform.Find("Investigation").gameObject.SetActive(true);
-        }
-
-        if (Globals.StoryFlags.Contains("Talked To Lyla Once") && !_addedDialogueOne)
-        {
-            _investigation._talkText.Add(_talkText);
-            _addedDialogueOne = true;
-        }
-
-        if (Globals.StoryFlags.Contains("Know Where Barbershop Is") && !_updatedMoveLocations)
-        {
-            _updatedMoveLocations = true;
-            _investigation._moveablePlaces.Add(_street);
         }
 
         if (Globals.StoryFlags.Contains("Ready For Court") && _dialogueManager._doneTalking && !_begunEnd)

@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: What Happened?
   DialogueSO: {fileID: 11400000, guid: d974044e3dbcd044996693c19e939e28, type: 2}
+  ConditionFlags:
+  - Talked To Lyla Once

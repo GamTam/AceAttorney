@@ -69,8 +69,8 @@ public class FlagsCourtRoom : MonoBehaviour
             _hermanCrossExEnd2 = true;
             _penaltyUI.SetActive(false);
             _trial.enabled = false;
-            _crossExamination.enabled = false;
-                }
+            _crossExamination.enabled = false; 
+        }
     
         if (Globals.StoryFlags.Contains("Herman CrossEx Start") && !_hermanCrossEx)
         {

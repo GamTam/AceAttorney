@@ -7,7 +7,6 @@ using UnityEngine.InputSystem;
 
 public class FlagsAbandonedBuilding : MonoBehaviour
 {
-    [SerializeField] private InvestigationMenu _investigation;
     [SerializeField] private DialogueSO _dialogue;
     
     private PlayerInput _playerInput;

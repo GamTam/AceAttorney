@@ -10,7 +10,6 @@ public class FlagsStreetView : MonoBehaviour
     [SerializeField] private InvestigationMenu _investigation;
     [SerializeField] private DialogueSO _dialogue;
     [SerializeField] private DialogueSO _newDialogue;
-    [SerializeField] private MoveSO _abandonedBuilding;
     [SerializeField] private SwapCharacters _swap;
     [SerializeField] private GameObject _talk;
     [SerializeField] private GameObject _present;
@@ -40,7 +39,6 @@ public class FlagsStreetView : MonoBehaviour
             Destroy(_talk);
             Destroy(_present);
             _dialogueManager.StartText(_newDialogue);
-            _investigation._moveablePlaces.Add(_abandonedBuilding);
         } else if (Globals.StoryFlags.Contains("Got Evidence From Gumshoe") &&
                    Globals.StoryFlags.Contains("Got Evidence From Barbershop") &&
                    Globals.StoryFlags.Contains("Can Go To Abandoned Building"))
@@ -51,7 +49,6 @@ public class FlagsStreetView : MonoBehaviour
             Destroy(_talk);
             Destroy(_present);
             _investigation._song = "";
-            _investigation._moveablePlaces.Add(_abandonedBuilding);
         } 
         else if (Globals.StoryFlags.Contains("Met Gumshoe"))
         {

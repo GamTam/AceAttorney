@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: That caller
   DialogueSO: {fileID: 11400000, guid: 641e6456e1d9c2a48984b796b94151c8, type: 2}
+  ConditionFlags:
+  - '!Know Where Barbershop Is'

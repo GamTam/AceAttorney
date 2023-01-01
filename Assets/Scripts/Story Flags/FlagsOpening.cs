@@ -21,14 +21,9 @@ public class FlagsOpening : MonoBehaviour
 
     private void Start()
     {
-        if (Globals.StoryFlags.Contains("Know Where Barbershop Is"))
+        if (Globals.StoryFlags.Contains("Opening Monalogue"))
         {
             GameObject.FindWithTag("UI").transform.Find("Investigation").gameObject.SetActive(true);
-            
-            GameObject.FindWithTag("UI").transform.Find("Investigation").transform.Find("Select")
-                .GetComponent<InvestigationMenu>()._talkText = _talkTextAfterDC.ToList();
-            GameObject.FindWithTag("UI").transform.Find("Investigation").transform.Find("Select")
-                .GetComponent<InvestigationMenu>()._moveablePlaces = _moveablePlacesAfterDC.ToList();
             enabled = false;
             return;
         }
@@ -49,10 +44,6 @@ public class FlagsOpening : MonoBehaviour
             enabled = false;
             _openedMenu = true;
             GameObject.FindWithTag("UI").transform.Find("Investigation").gameObject.SetActive(true);
-            GameObject.FindWithTag("UI").transform.Find("Investigation").transform.Find("Select")
-                .GetComponent<InvestigationMenu>()._talkText = _talkText.ToList();
-            GameObject.FindWithTag("UI").transform.Find("Investigation").transform.Find("Select")
-                .GetComponent<InvestigationMenu>()._moveablePlaces = _moveablePlaces.ToList();
         }
     }
 }

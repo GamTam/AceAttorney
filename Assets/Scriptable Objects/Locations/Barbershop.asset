@@ -15,3 +15,4 @@ MonoBehaviour:
   Name: The Singing Barbershop
   Preview: {fileID: 21300000, guid: e18d63733ec9ccb438728451256dcb7c, type: 3}
   Scene: Barber Shop
+  ConditionFlags: []

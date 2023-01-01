@@ -15,3 +15,5 @@ MonoBehaviour:
   Name: Abandoned Building
   Preview: {fileID: 21300000, guid: 527082f4b5ebabc40a3b5bbd98cec7c7, type: 3}
   Scene: Abandoned Building
+  ConditionFlags:
+  - Can Go To Abandoned Building

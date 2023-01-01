@@ -7,7 +7,6 @@ using UnityEngine.InputSystem;
 
 public class FlagsBarbershop : MonoBehaviour
 {
-    [SerializeField] private InvestigationMenu _investigation;
     [SerializeField] private DialogueSO _dialogue;
     [SerializeField] private DialogueSO _endDialogue;
     

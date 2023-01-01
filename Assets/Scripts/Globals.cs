@@ -12,7 +12,7 @@ public static class Globals
     public static List<TalkSO> UsedTalks = new List<TalkSO>();
     public static List<String> StoryFlags = new List<string>();
 
-    public static SoundtrackTypes Soundtrack = SoundtrackTypes.TT;
+    public static SoundtrackTypes Soundtrack = SoundtrackTypes.PWAA;
 
     public static Dictionary<string, ArrayList> LoadTSV(string file) {
         

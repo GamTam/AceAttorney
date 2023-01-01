@@ -109,6 +109,34 @@ public class MoveManager : MonoBehaviour
         int i = 0;
         foreach (MoveSO response in responses)
         {
+            bool skip = false;
+            for (int j = 0; j < response.ConditionFlags.Length; j++)
+            {
+                string flag = response.ConditionFlags[j];
+                bool not = false;
+                
+                if (flag[0] == '!')
+                {
+                    not = true;
+                    flag = flag.Remove(0, 1);
+                }
+
+                if (not)
+                {
+                    if (Globals.StoryFlags.Contains(flag))
+                    {
+                        skip = true;
+                        break;
+                    }  
+                }
+                else if (!Globals.StoryFlags.Contains(flag))
+                {
+                    skip = true;
+                    break;
+                }
+            }
+            if (skip) continue;
+            
             RectTransform responseButton = Instantiate(this.responseButton, responseButtonLocation, false);
             responseButton.gameObject.SetActive(true);
             responseButton.localScale = new Vector3(1, 1, 1);

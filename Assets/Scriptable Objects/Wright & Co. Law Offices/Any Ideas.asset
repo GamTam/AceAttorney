@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Any Ideas?
   DialogueSO: {fileID: 11400000, guid: 8960cc53ad8252446bf58e385664c4c6, type: 2}
+  ConditionFlags:
+  - '!Know Where Barbershop Is'

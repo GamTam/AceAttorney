@@ -15,3 +15,4 @@ MonoBehaviour:
   Name: Detention Center
   Preview: {fileID: 21300000, guid: 6f2f2787130c09447b16ef82bc6ddf84, type: 3}
   Scene: Detention Center
+  ConditionFlags: []
