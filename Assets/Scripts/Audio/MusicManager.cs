@@ -29,27 +29,23 @@ public class MusicManager : MonoBehaviour
         Dictionary<string, ArrayList> musicDict = new Dictionary<string, ArrayList>();
         musicDict = Globals.LoadTSV("Music Data");
 
-        int i = 0;
         foreach(KeyValuePair<string, ArrayList> entry in musicDict) {
-            if (i != 0) {
-                Music music = new Music();
+            if (entry.Key == "" || entry.Key[0] == '#') continue;
+            Music music = new Music();
                 
-                music.name = entry.Key;
-                music.loopStart = Convert.ToSingle(entry.Value[0]);
-                music.loopEnd = Convert.ToSingle(entry.Value[1]);
+            music.name = entry.Key;
+            music.loopStart = Convert.ToSingle(entry.Value[0]);
+            music.loopEnd = Convert.ToSingle(entry.Value[1]);
 
-                String path = "Music/" + music.name;
+            String path = "Music/" + music.name;
 
-                music.source = gameObject.AddComponent<AudioSource>();
-                music.source.clip = Resources.Load(path) as AudioClip;
-                music.source.pitch = music.pitch;
-                music.source.loop = true;
-                music.source.outputAudioMixerGroup = group;
+            music.source = gameObject.AddComponent<AudioSource>();
+            music.source.clip = Resources.Load(path) as AudioClip;
+            music.source.pitch = music.pitch;
+            music.source.loop = true;
+            music.source.outputAudioMixerGroup = group;
 
-                allMusic.Add(music);
-            }
-
-            i++;
+            allMusic.Add(music);
         }
     }
 

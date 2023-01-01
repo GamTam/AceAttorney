@@ -1,71 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="I haven't committed since last year! (Now's the part where you laugh)">
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Music/Court_JFA.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Music/Court_JFA.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Music/Court_TT.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Music/Court_TT.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/CrossExamination.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/CrossExamination.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/TrialController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/TrialController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptable Objects.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptable Objects/DialogueSO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptable Objects/DialogueSO.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptable Objects/EvidenceSO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptable Objects/EvidenceSO.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptable Objects/MoveSO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptable Objects/MoveSO.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptable Objects/TalkSO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptable Objects/TalkSO.cs.meta" afterDir="false" />
+    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Detention Center.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Detention Center.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Street.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Street.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test/Studio 2.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test/Studio 2.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test/Updated Trial (Izzy).unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test/Updated Trial (Izzy).unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test/Wright &amp; Co. Law Offices.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test/Wright &amp; Co. Law Offices.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Wright &amp; Co. Law Offices.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Wright &amp; Co. Law Offices.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Detention Center/What Happened.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Detention Center/What Happened.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Detention Center/Who Are You.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Detention Center/Who Are You.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Locations/Abandoned Building.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Locations/Abandoned Building.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Locations/Barbershop.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Locations/Barbershop.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Locations/Detention Center.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Locations/Detention Center.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Locations/Office.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Locations/Office.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Locations/Street Outside Barber Shop.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Locations/Street Outside Barber Shop.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/Any Ideas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/Any Ideas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/Caller.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/Caller.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/Street.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Wright &amp; Co. Law Offices/Street.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/MusicManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/MusicManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Globals.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Globals.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Investigation/MoveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Investigation/MoveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Investigation/TalkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Investigation/TalkManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy/CrossExamination.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy/CrossExamination.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy/Saving.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy/Saving.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy/Scriptable Objects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy/Scriptable Objects/DialogueSO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy/Scriptable Objects/DialogueSO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy/Scriptable Objects/EvidenceSO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy/Scriptable Objects/EvidenceSO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy/Scriptable Objects/MoveSO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy/Scriptable Objects/MoveSO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy/Scriptable Objects/TalkSO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy/Scriptable Objects/TalkSO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy/TrialController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Izzy/TrialController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsAbandonedBuilding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsAbandonedBuilding.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsBarbershop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsBarbershop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsCourtRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsCourtRoom.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsDetentionCenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsDetentionCenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsOpening.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsOpening.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsStreetView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsStreetView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/files/Music Data.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/files/Music Data.tsv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,16 +42,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/5f/12757df7/List`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scenes/Courtroom.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scenes/Detention Center.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scriptable Objects/Locations/Barbershop.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scriptable Objects/Locations/Barbershop.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scriptable Objects/Locations/Office.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scriptable Objects/Locations/Street Outside Barber Shop.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scripts/Investigation/CourtRecordController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scripts/Izzy/Scriptable Objects/MoveSO.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scripts/Story Flags/FlagsDetentionCenter.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scripts/Story Flags/FlagsOpening.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsOpening.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Editor/AssetEditor/InputActionAssetManager.cs" root0="SKIP_HIGHLIGHTING" />
@@ -135,21 +64,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\lucca\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\lucca\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\lucca\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\lucca\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\lucca\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\lucca\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Unity.exe" />
@@ -211,7 +141,8 @@
       <workItem from="1671608697156" duration="1473000" />
       <workItem from="1671697359113" duration="53000" />
       <workItem from="1672468511939" duration="1384000" />
-      <workItem from="1672543485490" duration="10649000" />
+      <workItem from="1672543485490" duration="11909000" />
+      <workItem from="1672601505441" duration="1840000" />
     </task>
     <task id="LOCAL-00001" summary="Audio Prefab">
       <created>1668559907702</created>
@@ -325,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672560473237</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Cleaned up story flags a bit and got rid of unusable scriptable objects">
+      <created>1672570037063</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1672570037063</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,6 +314,7 @@
     <MESSAGE value="Something's different, I'm sure" />
     <MESSAGE value="Court Record can show profiles now" />
     <MESSAGE value="I haven't committed since last year! (Now's the part where you laugh)" />
-    <option name="LAST_COMMIT_MESSAGE" value="I haven't committed since last year! (Now's the part where you laugh)" />
+    <MESSAGE value="Cleaned up story flags a bit and got rid of unusable scriptable objects" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up story flags a bit and got rid of unusable scriptable objects" />
   </component>
 </project>
