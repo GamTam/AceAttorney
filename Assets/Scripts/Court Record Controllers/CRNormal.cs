@@ -34,4 +34,15 @@ public class CRNormal : MonoBehaviour
             _cr.ProfileEvidenceSwap();
         }
     }
+
+    public void SetControlLabel(bool evidence)
+    {
+        if (evidence)
+        {
+            _text.SetText("<sprite=\"Keyboard\" name=\"backspace\">Back         <sprite=\"Keyboard\" name=\"R\">Profiles");
+            return;
+        }
+        
+        _text.SetText("<sprite=\"Keyboard\" name=\"backspace\">Back         <sprite=\"Keyboard\" name=\"R\">Evidence");
+    }
 }

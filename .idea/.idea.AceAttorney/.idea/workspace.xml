@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="Court record works in cross examination!">
+    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Court Record.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Court Record.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Evidence/Gun.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Evidence/Gun.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Evidence/Letter of Request.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Evidence/Letter of Request.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Muffled Rap Music.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Muffled Rap Music.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Court Record Controllers/CRNormal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Court Record Controllers/CRNormal.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Globals.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Globals.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Investigation/CourtRecordController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Investigation/CourtRecordController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsCourtRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsCourtRoom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/files/Music Data.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/files/Music Data.tsv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +39,6 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scriptable Objects/Tests/Muffled Rap Music.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scriptable Objects/Tests/Muffled Rap Music.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsOpening.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Editor/AssetEditor/InputActionAssetManager.cs" root0="SKIP_HIGHLIGHTING" />
@@ -141,6 +137,7 @@
       <workItem from="1671608697156" duration="1473000" />
       <workItem from="1671697359113" duration="53000" />
       <workItem from="1672468511939" duration="1384000" />
+      <workItem from="1672543485490" duration="4565000" />
     </task>
     <task id="LOCAL-00001" summary="Audio Prefab">
       <created>1668559907702</created>
@@ -240,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671489731210</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Court Record can show profiles now">
+      <created>1672479098098</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1672479098098</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +293,7 @@
     <MESSAGE value="Added more music" />
     <MESSAGE value="Organization Changes" />
     <MESSAGE value="Something's different, I'm sure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Something's different, I'm sure" />
+    <MESSAGE value="Court Record can show profiles now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Court Record can show profiles now" />
   </component>
 </project>

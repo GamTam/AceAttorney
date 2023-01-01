@@ -328,6 +328,8 @@ public class CourtRecordController : MonoBehaviour
             _base.transform.localScale -= new Vector3(0, _speedVector.y);
         }
 
+        _normal.SetControlLabel(_evidence);
+
         _base.transform.localScale = new Vector3(_base.transform.localScale.x, 0, _base.transform.localScale.y);
         EventSystem.current.SetSelectedGameObject(null);
         

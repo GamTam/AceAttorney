@@ -1,11 +1,15 @@
-Name	Intro Point	Loop Point 
+Name	Intro Point	Loop Point
 SteelSamurai	3.209	56.352
 Court	10.536	58.533
 Court_AJAA	8.160	63.028572
 CrossEx	0.715	46.427
+CrossEx_JFA	3.385	42.567
+CrossEx_TT	1.473	96.886
 CrossEx_AJAA	1.353	35.720
 CrossEx_GAA	4.111	63.028
 CrossExFast	1.341	58.656445
+CrossExFast_JFA	2.998	47.572
+CrossExFast_TT	1.385	75.229
 CrossExFast_AJAA	0.938	46.389
 CrossExFast_GAA	11.635342	82.955029
 DetentionCenter	13.705	61.71
