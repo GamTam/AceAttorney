@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: The Autopsy Report
   DialogueSO: {fileID: 11400000, guid: a0d57e50fc8a6cc479f4b0c1d06b2127, type: 2}
+  ConditionFlags: []
