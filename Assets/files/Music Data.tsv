@@ -1,6 +1,3 @@
-#Detention Center
-DetentionCenter	13.705	61.71
-
 #Defendant's Lobby
 Lobby	2.396	35.993
 Lobby_JFA	5.086	43.488
@@ -57,6 +54,9 @@ TwistInvestigation	5.496000	57.495433
 
 #Won the Lawsuit
 Win	1.537	50.771
+
+#Detention Center
+DetentionCenter	13.705	61.71
 
 #Investigation
 Explore	2.397	50.388

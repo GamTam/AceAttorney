@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-[System.Serializable]
+[Serializable]
 public class TBLine
 {
     [SerializeField] private string _name;
@@ -14,9 +14,9 @@ public class TBLine
     [Header("")][SerializeField] private string _blipSound;
     [SerializeField] private bool _thinking;
     [SerializeField] private bool _autoEnd;
-    [SerializeField][Range(-1, 1)] private int _skipFade;
     [SerializeField] private bool _stopMusic;
     [SerializeField] private bool _addToCourtRecord;
+    [SerializeField][Range(-1, 1)] private int _skipFade;
     [SerializeField] private Interjection _interjection;
     [SerializeField] private TextAlignOptions _align;
     [Header("")][SerializeField][TextArea(3, 4)] private string _dialogue;
