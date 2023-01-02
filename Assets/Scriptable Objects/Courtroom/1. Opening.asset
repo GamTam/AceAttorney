@@ -12,797 +12,874 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
   m_Name: 1. Opening
   m_EditorClassIdentifier: 
-  dialogueIndex: 0
   dialogueText:
-  - _name: 
-    _knownName: 0
-    _char: NaN
-    _anim: 
+  - _nameTagText: 
+    _charOnScreen: 
+    _animPlaying: normal
     _blipSound: typewriter
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 1
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 2
     _dialogue: '<color=green><sp:10><p:read><p:long>September 21, 10:00 AM
 
       District
       Court
 
       Courtroom No. 2'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 1
+      SkipFade: 1
+      Interjection: 0
+      Align: 2
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Judge
-    _knownName: 1
-    _char: Judge
-    _anim: normal
+  - _nameTagText: Judge
+    _charOnScreen: Judge
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: '<sp:2><music:Court>Court is now in session for
 
       the trial of
       Ms. Lyla Tetrum.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Edgeworth
-    _knownName: 1
-    _char: Edgeworth
-    _anim: normal
+  - _nameTagText: Edgeworth
+    _charOnScreen: Edgeworth
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'The prosecution is ready,
 
       Your Honor.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Phoenix
-    _knownName: 1
-    _char: Phoenix
-    _anim: normal
+  - _nameTagText: Phoenix
+    _charOnScreen: Phoenix
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'The defense is ready,
 
       Your Honor.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Judge
-    _knownName: 1
-    _char: Judge
-    _anim: normal
+  - _nameTagText: Judge
+    _charOnScreen: Judge
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'Mr. Edgeworth.
 
       Please give the court
 
       your opening statement.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Edgeworth
-    _knownName: 1
-    _char: Edgeworth
-    _anim: normal
+  - _nameTagText: Edgeworth
+    _charOnScreen: Edgeworth
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'Thank you, Your Honor.<p:short>
 
       The defendant,<p:tiny> Ms.
       Lyla Tetrum,<p:tiny>
 
       was at the scene of the crime.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Edgeworth
-    _knownName: 1
-    _char: Edgeworth
-    _anim: normal
+  - _nameTagText: Edgeworth
+    _charOnScreen: Edgeworth
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'The prosecution has definitive
 
       evidence that she''s the one
       who
 
       commited the crime.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Edgeworth
-    _knownName: 1
-    _char: Edgeworth
-    _anim: normal
+  - _nameTagText: Edgeworth
+    _charOnScreen: Edgeworth
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'And we have an eye witness
 
       testimony who saw the crime
 
       occur.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Edgeworth
-    _knownName: 1
-    _char: Edgeworth
-    _anim: normal
+  - _nameTagText: Edgeworth
+    _charOnScreen: Edgeworth
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'The prosecution sees
 
       no reason to believe that
 
       it could
       be any other person.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Phoenix
-    _knownName: 1
-    _char: Phoenix
-    _anim: normal
+  - _nameTagText: Phoenix
+    _charOnScreen: Phoenix
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 1
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: "<color=#6ebdf0>(Great...<p:short> Edgeworth's \nalready laying on
       the heat...)"
+    _metadata:
+      Unknown: 0
+      Thinking: 1
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Judge
-    _knownName: 1
-    _char: Judge
-    _anim: normal
+  - _nameTagText: Judge
+    _charOnScreen: Judge
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'Thank you, Mr. Edgeworth.<p:short>
 
       Let''s begin then.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Edgeworth
-    _knownName: 1
-    _char: Edgeworth
-    _anim: normal
+  - _nameTagText: Edgeworth
+    _charOnScreen: Edgeworth
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'If we may call our first
 
       witness, Your Honor.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Edgeworth
-    _knownName: 1
-    _char: Edgeworth
-    _anim: normal
+  - _nameTagText: Edgeworth
+    _charOnScreen: Edgeworth
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'The prosecution calls the
 
       chief officer at the scene,
 
       Detective
       Dick Gumshoe.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: 
-    _knownName: 1
-    _char: Gumshoe
-    _anim: happy
+  - _nameTagText: 
+    _charOnScreen: Gumshoe
+    _animPlaying: normal
     _blipSound: 
-    _thinking: 1
-    _autoEnd: 1
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: '<p:long> '
+    _metadata:
+      Unknown: 0
+      Thinking: 1
+      AutoEnd: 1
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 1
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Edgeworth
-    _knownName: 1
-    _char: Edgeworth
-    _anim: normal
+  - _nameTagText: Edgeworth
+    _charOnScreen: Edgeworth
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'Witness, please state your
 
       name and occupation.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Gumshoe
-    _knownName: 1
-    _char: Gumshoe
-    _anim: happy
+  - _nameTagText: Gumshoe
+    _charOnScreen: Gumshoe
+    _animPlaying: happy
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: Dick Gumshoe!<p:short>
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Gumshoe
-    _knownName: 1
-    _char: Gumshoe
-    _anim: happy
+  - _nameTagText: Gumshoe
+    _charOnScreen: Gumshoe
+    _animPlaying: happy
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'I''m the detective in
 
       charge of homicides
 
       down at the
       precinct!'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Edgeworth
-    _knownName: 1
-    _char: Edgeworth
-    _anim: normal
+  - _nameTagText: Edgeworth
+    _charOnScreen: Edgeworth
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: Mr. Gumshoe.
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Edgeworth
-    _knownName: 1
-    _char: Edgeworth
-    _anim: normal
+  - _nameTagText: Edgeworth
+    _charOnScreen: Edgeworth
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'Please explain to the court
 
       the details of the crime.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Gumshoe
-    _knownName: 1
-    _char: Gumshoe
-    _anim: happy
+  - _nameTagText: Gumshoe
+    _charOnScreen: Gumshoe
+    _animPlaying: happy
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
-    _dialogue: Very well,<music:fadeout><p:short> sir!
+    _dialogue: Very well,<music:fadeout><p:tiny> sir!
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Gumshoe
-    _knownName: 1
-    _char: Gumshoe
-    _anim: happy
+  - _nameTagText: Gumshoe
+    _charOnScreen: Gumshoe
+    _animPlaying: happy
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: '<music:Explain>The two bodies were found
 
       in their chairs.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Gumshoe
-    _knownName: 1
-    _char: Gumshoe
-    _anim: happy
+  - _nameTagText: Gumshoe
+    _charOnScreen: Gumshoe
+    _animPlaying: happy
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'The murder weapon,<p:short> this gun,<p:short>
 
       was found in
       the abandoned building
 
       across the street.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Gumshoe
-    _knownName: 1
-    _char: Gumshoe
-    _anim: happy
+  - _nameTagText: Gumshoe
+    _charOnScreen: Gumshoe
+    _animPlaying: happy
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'We tested the weapon for prints,<p:tiny>
 
       and they match with
       the defendant.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Gumshoe
-    _knownName: 1
-    _char: Gumshoe
-    _anim: happy
+  - _nameTagText: Gumshoe
+    _charOnScreen: Gumshoe
+    _animPlaying: happy
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'And,<p:short> we''ve gotten an
 
       eye witness report of the defendant
 
       leaving
       the abandoned building.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Judge
-    _knownName: 1
-    _char: Judge
-    _anim: normal
+  - _nameTagText: Judge
+    _charOnScreen: Judge
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: <music:fadeout>I see...
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Judge
-    _knownName: 1
-    _char: Judge
-    _anim: normal
+  - _nameTagText: Judge
+    _charOnScreen: Judge
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'The court accepts the murder weapon
 
       into evidence.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: 
-    _knownName: 1
-    _char: 
-    _anim: normal
+  - _nameTagText: 
+    _charOnScreen: Judge
+    _animPlaying: normal
     _blipSound: 
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 1
-    _interjection: 0
-    _align: 0
     _dialogue: '<color=#6ebdf0>Gun added to
 
       the Court Record.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 1
+      HideOptions: 1
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 11400000, guid: 1a853311dfd6397448122d4d60b4aa8a, type: 2}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Edgeworth
-    _knownName: 1
-    _char: Edgeworth
-    _anim: normal
+  - _nameTagText: Edgeworth
+    _charOnScreen: Edgeworth
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: Now, Mr. Gumshoe.
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Edgeworth
-    _knownName: 1
-    _char: Edgeworth
-    _anim: normal
+  - _nameTagText: Edgeworth
+    _charOnScreen: Edgeworth
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'Could you testify to the court as
 
       to the details of the arrest?'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Gumshoe
-    _knownName: 1
-    _char: Gumshoe
-    _anim: happy
+  - _nameTagText: Gumshoe
+    _charOnScreen: Gumshoe
+    _animPlaying: happy
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
-    _dialogue: Sure thing, pal!
+    _dialogue: Sure thing, Mr. Edgeworth sir!
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: 
-    _knownName: 1
-    _char: Gumshoe
-    _anim: normal
+  - _nameTagText: 
+    _charOnScreen: Gumshoe
+    _animPlaying: normal
     _blipSound: 
-    _thinking: 1
-    _autoEnd: 0
-    _skipFade: -1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 2
     _dialogue: '<se:cross examination>
 
       <color=red>--The Night of the Arrest--'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 1
+      SkipFade: 2
+      Interjection: 0
+      Align: 2
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Gumshoe
-    _knownName: 1
-    _char: Gumshoe
-    _anim: happy
+  - _nameTagText: Gumshoe
+    _charOnScreen: Gumshoe
+    _animPlaying: happy
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: <music:CrossEx>We got the call around 5:00 PM.
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Gumshoe
-    _knownName: 1
-    _char: Gumshoe
-    _anim: happy
+  - _nameTagText: Gumshoe
+    _charOnScreen: Gumshoe
+    _animPlaying: happy
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'From there, we rushed over to the
 
       Barbershop as fast as we
       could.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Gumshoe
-    _knownName: 1
-    _char: Gumshoe
-    _anim: happy
+  - _nameTagText: Gumshoe
+    _charOnScreen: Gumshoe
+    _animPlaying: happy
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'Once we reached the shop,
 
       it was clear that the killer wasn''t
 
       in
       the building at the time of the crime.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Gumshoe
-    _knownName: 1
-    _char: Gumshoe
-    _anim: happy
+  - _nameTagText: Gumshoe
+    _charOnScreen: Gumshoe
+    _animPlaying: happy
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'We eventually found the defendant
 
       at a nearby cafe, where
       we arrested her.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Judge
-    _knownName: 1
-    _char: Judge
-    _anim: normal
+  - _nameTagText: Judge
+    _charOnScreen: Judge
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: <music:fadeout>Hmm...
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Judge
-    _knownName: 1
-    _char: Judge
-    _anim: normal
+  - _nameTagText: Judge
+    _charOnScreen: Judge
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'Mr. Wright, would you like to
 
       cross examine the witness?'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Phoenix
-    _knownName: 1
-    _char: Phoenix
-    _anim: normal
+  - _nameTagText: Phoenix
+    _charOnScreen: Phoenix
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: Yes, Your Honor.
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: 
-    _knownName: 1
-    _char: Gumshoe
-    _anim: normal
+  - _nameTagText: 
+    _charOnScreen: Gumshoe
+    _animPlaying: normal
     _blipSound: 
-    _thinking: 1
-    _autoEnd: 0
-    _skipFade: -1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 2
     _dialogue: '<se:cross examination>
 
       <color=red>--The Night of the Arrest--'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 1
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}

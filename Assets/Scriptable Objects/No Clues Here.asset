@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
   m_Name: No Clues Here
   m_EditorClassIdentifier: 
-  dialogueIndex: 0
   dialogueText:
-  - _name: Phoenix
-    _knownName: 1
-    _char: NaN
-    _anim: 
+  - _nameTagText: Phoenix
+    _charOnScreen: NaN
+    _animPlaying: 
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: No clues here.
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}

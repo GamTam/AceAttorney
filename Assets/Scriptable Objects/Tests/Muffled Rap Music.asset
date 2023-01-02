@@ -13,157 +13,165 @@ MonoBehaviour:
   m_Name: Muffled Rap Music
   m_EditorClassIdentifier: 
   dialogueText:
-  - _name: 
-    _knownName: 0
-    _char: NaN
-    _anim: 
+  - _nameTagText: 
+    _charOnScreen: 
+    _animPlaying: 
     _blipSound: typewriter
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 1
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 2
     _dialogue: '<lp:full><color=green><sp:10><p:read><p:long>September 21, 10:00
       AM
 
       District Court
 
       Courtroom No. 2'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 3
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Judge
-    _knownName: 1
-    _char: Judge
-    _anim: normal
+  - _nameTagText: Judge
+    _charOnScreen: Judge
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: '<sp:2><music:Eminem>Court is now in session for
 
       the trial
       of Ms. Maya Fey.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Judge
-    _knownName: 1
-    _char: Judge
-    _anim: normal
+  - _nameTagText: Judge
+    _charOnScreen: Judge
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: ...
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Judge
-    _knownName: 1
-    _char: Judge
-    _anim: normal
+  - _nameTagText: Judge
+    _charOnScreen: Judge
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'Where is that music
 
       coming from?'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Phoenix
-    _knownName: 1
-    _char: Phoenix
-    _anim: normal
+  - _nameTagText: Phoenix
+    _charOnScreen: Phoenix
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: I'm not 100% sure...
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Phoenix
-    _knownName: 1
-    _char: Phoenix
-    _anim: normal
+  - _nameTagText: Phoenix
+    _charOnScreen: Phoenix
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: "But it seems like the \nmusic is coming from\n<se:reveal><color=red>Edgeworth</color>."
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Edgeworth
-    _knownName: 1
-    _char: Edgeworth
-    _anim: normal
+  - _nameTagText: Edgeworth
+    _charOnScreen: Edgeworth
+    _animPlaying: normal
     _blipSound: 
-    _thinking: 1
-    _autoEnd: 1
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: '<lp:none><p:normal> '
+    _metadata:
+      Unknown: 0
+      Thinking: 1
+      AutoEnd: 1
+      StopMusic: 0
+      AddToCourtRecord: 0
+      SkipFade: 1
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Edgeworth
-    _knownName: 1
-    _char: Edgeworth
-    _anim: normal
+  - _nameTagText: Edgeworth
+    _charOnScreen: Edgeworth
+    _animPlaying: normal
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'I have no idea what you''re
 
       talking about.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}

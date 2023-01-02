@@ -12,6 +12,11 @@ public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private GameObject _textBoxPrefab;
     [SerializeField] private GameObject _courtRecordPrefab;
+    [SerializeField] private GameObject _courtRecord;
+    [SerializeField] private SwapCharacters _swap;
+    [SerializeField] private GameObject _interjectionObj;
+    [SerializeField] private GameObject _controlFlag;
+    
     private GameObject _tempCourtRecord;
     [HideInInspector] public GameObject _tempBox;
     private Animator _advanceButton;
@@ -22,11 +27,10 @@ public class DialogueManager : MonoBehaviour
     private PlayerInput _playerInput;
     [HideInInspector] public string _prevActionMap;
     private string _typingClip = "blipmale";
-    [SerializeField] private GameObject _courtRecord;
     private bool _presenting;
 
     [HideInInspector] public DialogueVertexAnimator dialogueVertexAnimator;
-    private bool movingText;
+    private bool _hideOptions;
     private InputAction _advanceText;
     private InputAction _cr;
     private MusicManager _musicManager;
@@ -40,7 +44,6 @@ public class DialogueManager : MonoBehaviour
     private Animator _prevChar;
     private string _currentAnim;
 
-    [SerializeField] private SwapCharacters _swap;
     private bool _startedText = true;
     private bool _skipFade;
 
@@ -48,7 +51,6 @@ public class DialogueManager : MonoBehaviour
     private bool _autoEnd;
     private bool _mute;
     
-    [SerializeField] private GameObject _interjectionObj;
 
     public bool _doneTalking;
 
@@ -63,6 +65,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartText(DialogueSO linesIn, bool quickEnd = false, int startingLine = 0, string prevActionMap = null)
     {
+        _controlFlag.SetActive(true);
         _doneTalking = false;
         _crossEx = linesIn.isCrossExamination;
         _shownResponses = false;
@@ -135,7 +138,7 @@ public class DialogueManager : MonoBehaviour
                 }
             }
 
-            if (!dialogueVertexAnimator.textAnimating && _cr.triggered)
+            if (!dialogueVertexAnimator.textAnimating && _cr.triggered && !_hideOptions)
             {
                 StartCoroutine(CourtRecord());
             }
@@ -244,11 +247,6 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (movingText)
-        {
-            return;
-        }
-
         _skipFade = false;
         TBLine line = lines[_currentLine];
         _currentLine += 1;
@@ -262,7 +260,8 @@ public class DialogueManager : MonoBehaviour
         String faceInfo = line.Char;
         String emotionInfo = line.Anim;
         Interjection interjection = line.Interjection;
-        _skipFade = line.SkipFade;
+        _hideOptions = line.HideOptions;
+        _skipFade = line.FadeType == FadeTypes.SkipFade;
         
         _autoEnd = line.AutoEnd;
         if (line.AutoEnd)
@@ -327,10 +326,10 @@ public class DialogueManager : MonoBehaviour
             dialogueVertexAnimator.QuickEnd();
             return;
         }
-        StartCoroutine(StartText(commands, totalTextMessage, line.Name, faceInfo, interjection, addToCourtRecord, line.Thinking, line.ForceFade));
+        StartCoroutine(StartText(commands, totalTextMessage, line.Name, faceInfo, interjection, addToCourtRecord, line.Thinking, line.FadeType));
     }
 
-    private IEnumerator StartText(List<DialogueCommand> commands, string totalTextMessage, string name, string faceInfo, Interjection interjection, bool addToCourtRecord, bool Thinking, bool forceFade)
+    private IEnumerator StartText(List<DialogueCommand> commands, string totalTextMessage, string name, string faceInfo, Interjection interjection, bool addToCourtRecord, bool Thinking, FadeTypes fadeType)
     {
         if (_tempCourtRecord != null) _tempCourtRecord.GetComponent<Animator>().Play("Fade Out");
         while (_tempCourtRecord != null)
@@ -388,16 +387,21 @@ public class DialogueManager : MonoBehaviour
 
         if (!skip)
         {
+            _controlFlag.SetActive(false);
             _tempBox.SetActive(false);
             yield return new WaitForSeconds(1);
             Destroy(obj);
         }
         
-        if (_prevChar != _char && (_char != null || faceInfo == "NaN") || forceFade)
+        if (_prevChar != _char && (_char != null || faceInfo == "NaN") || fadeType == FadeTypes.ForceFade)
         {
             _prevChar = _char;
             _swap.StartSwap(faceInfo, fadeIn:faceInfo != "NaN", skipFade:_skipFade);
-            if (!_skipFade) _tempBox.SetActive(false);
+            if (!_skipFade)
+            {
+                _controlFlag.SetActive(false);
+                _tempBox.SetActive(false);
+            }
             
             while (!_swap._done)
             {
@@ -410,6 +414,8 @@ public class DialogueManager : MonoBehaviour
             }
         }
         
+        if (_hideOptions) _controlFlag.SetActive(false);
+        else _controlFlag.SetActive(true);
         _tempBox.SetActive(true);
 
         _advanceButton.gameObject.SetActive(false);
@@ -426,9 +432,7 @@ public class DialogueManager : MonoBehaviour
             _tempCourtRecord.gameObject.GetComponentsInChildren<TMP_Text>()[0].SetText(Globals.Evidence[Globals.Evidence.Count - 1].Name);
             _tempCourtRecord.gameObject.GetComponentsInChildren<TMP_Text>()[1].SetText(Globals.Evidence[Globals.Evidence.Count - 1].Description);
             
-            _tempBox.transform.SetParent(_tempCourtRecord.transform, true);
-            yield return null;
-            _tempBox.transform.SetParent(GameObject.FindWithTag("UI").transform, true); 
+            _tempCourtRecord.transform.SetSiblingIndex(_tempBox.transform.GetSiblingIndex() - 1);
         }
         
         if (name != null)
@@ -445,6 +449,7 @@ public class DialogueManager : MonoBehaviour
 
         if (String.Concat(totalTextMessage.Where(c => !Char.IsWhiteSpace(c))) == "")
         {
+            _controlFlag.SetActive(false);
             _tempBox.SetActive(false);
             _mute = true;
         }
@@ -472,6 +477,7 @@ public class DialogueManager : MonoBehaviour
             yield return null;
         }
         StartCoroutine(dialogueVertexAnimator.AnimateTextIn(new List<DialogueCommand>(), "", _typingClip, null));
+        _controlFlag.SetActive(false);
         Destroy(_tempBox);
         _playerInput.SwitchCurrentActionMap(_prevActionMap);
     }

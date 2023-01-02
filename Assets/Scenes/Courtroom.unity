@@ -2890,13 +2890,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textBoxPrefab: {fileID: 3409057346996304509, guid: 4e89df09d9b03544bb8ec808070b80e5, type: 3}
   _courtRecordPrefab: {fileID: 4007864071899059607, guid: b92b62b510101f0438c3ee608b87439f, type: 3}
+  _courtRecord: {fileID: 7298867464423827332, guid: 1e8a966404fbe024797533a0fcc1c0bd, type: 3}
+  _swap: {fileID: 133155567}
+  _interjectionObj: {fileID: 3255038459366842304, guid: 506530a5bd7489f4c830768b5f8d10ac, type: 3}
+  _controlFlag: {fileID: 1667261797}
   _tempBox: {fileID: 0}
   _currentLine: 0
   _prevActionMap: 
-  _courtRecord: {fileID: 7298867464423827332, guid: 1e8a966404fbe024797533a0fcc1c0bd, type: 3}
   _responseHandler: {fileID: 0}
-  _swap: {fileID: 133155567}
-  _interjectionObj: {fileID: 3255038459366842304, guid: 506530a5bd7489f4c830768b5f8d10ac, type: 3}
   _doneTalking: 0
 --- !u!4 &1691393259
 Transform:
@@ -3447,7 +3448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67dfdd853c824d6a953f88c22bb4bd0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogue: {fileID: 11400000, guid: ee69f160698339b418fe68257144b2dd, type: 2}
+  _dialogue: {fileID: 11400000, guid: bb69af12376cf9c4d8a7b3edc26eebe9, type: 2}
   _evidence:
   - {fileID: 11400000, guid: ae8fe674f9f3a484a8a51e11a1a1c1ef, type: 2}
   - {fileID: 11400000, guid: 80cb3ac9c93f83c4297941e627008d3f, type: 2}
