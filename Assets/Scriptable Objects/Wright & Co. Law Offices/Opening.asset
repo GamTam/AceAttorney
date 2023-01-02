@@ -12,488 +12,537 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
   m_Name: Opening
   m_EditorClassIdentifier: 
-  dialogueIndex: 0
   dialogueText:
-  - _name: 
-    _knownName: 1
-    _char: NaN
-    _anim: 
+  - _nameTagText: 
+    _charOnScreen: NaN
+    _animPlaying: 
     _blipSound: typewriter
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 1
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 2
     _dialogue: '<lp:full><color=green><sp:10><p:read>September 20, 10:00 AM
 
       Wright
       & Co. Law Offices'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 1
+      SkipFade: 1
+      Interjection: 0
+      Align: 2
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 11400000, guid: ae8fe674f9f3a484a8a51e11a1a1c1ef, type: 2}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: TV
-    _knownName: 1
-    _char: 
-    _anim: 
+  - _nameTagText: TV
+    _charOnScreen: 
+    _animPlaying: 
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: '<color=green><sp:2><music:Saul>I had a good job until <color=red>My
 
       Boss<color=green>
       accused me of stealing!'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: TV
-    _knownName: 1
-    _char: 
-    _anim: 
+  - _nameTagText: TV
+    _charOnScreen: 
+    _animPlaying: 
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: <color=green>I'd <color=red>Better Call Saul!
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Maya
-    _knownName: 1
-    _char: Maya
-    _anim: think
+  - _nameTagText: Maya
+    _charOnScreen: Maya
+    _animPlaying: think
     _blipSound: blipfemale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'Hey Nick,<p:short> what''s that on
 
       the TV?'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Phoenix
-    _knownName: 1
-    _char: Maya
-    _anim: think
+  - _nameTagText: Phoenix
+    _charOnScreen: Maya
+    _animPlaying: think
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'It''s an ad for some new personal
 
       defense lawyer.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Maya
-    _knownName: 1
-    _char: Maya
-    _anim: think
+  - _nameTagText: Maya
+    _charOnScreen: Maya
+    _animPlaying: think
     _blipSound: blipfemale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: ...
+    _metadata:
+      Unknown: 0
+      Thinking: 1
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Maya
-    _knownName: 1
-    _char: Maya
-    _anim: think
+  - _nameTagText: Maya
+    _charOnScreen: Maya
+    _animPlaying: think
     _blipSound: blipfemale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: He seems like a scam.
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Maya
-    _knownName: 1
-    _char: Maya
-    _anim: think
+  - _nameTagText: Maya
+    _charOnScreen: Maya
+    _animPlaying: think
     _blipSound: blipfemale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'Like, the kind of lawyer a guilty person
 
       would hire.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Phoenix
-    _knownName: 1
-    _char: Maya
-    _anim: think
+  - _nameTagText: Phoenix
+    _charOnScreen: Maya
+    _animPlaying: think
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: '<shake:>Maya!<p:normal> Don''t say that about a fellow
 
       defense
       lawyer!'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: TV
-    _knownName: 1
-    _char: Maya
-    _anim: think
+  - _nameTagText: TV
+    _charOnScreen: Maya
+    _animPlaying: think
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: '<color=green>Hi, I''m Saul Goodman.<p:short>
 
       Did you know
       that you have rights?<p:short>
 
       The constitution says you do!'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Phoenix
-    _knownName: 1
-    _char: Maya
-    _anim: think
+  - _nameTagText: Phoenix
+    _charOnScreen: Maya
+    _animPlaying: smug
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: Even if you are...<p:short> Correct...
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Maya
-    _knownName: 1
-    _char: Maya
-    _anim: think
+  - _nameTagText: Maya
+    _charOnScreen: Maya
+    _animPlaying: smug
     _blipSound: blipfemale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: Anyways...
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Maya
-    _knownName: 1
-    _char: Maya
-    _anim: smug
+  - _nameTagText: Maya
+    _charOnScreen: Maya
+    _animPlaying: think
     _blipSound: blipfemale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: You got any new cases recently?
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Phoenix
-    _knownName: 1
-    _char: Maya
-    _anim: smug
+  - _nameTagText: Phoenix
+    _charOnScreen: Maya
+    _animPlaying: think
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: Nope.<p:short> None in a while,<p:short> actually.
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Phoenix
-    _knownName: 1
-    _char: Maya
-    _anim: smug
+  - _nameTagText: Phoenix
+    _charOnScreen: Maya
+    _animPlaying: think
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'I''m starting to get kinda worried about
 
       how we''re going
       to pay rent this month.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Cellphone
-    _knownName: 1
-    _char: Maya
-    _anim: smug
+  - _nameTagText: Cellphone
+    _charOnScreen: Maya
+    _animPlaying: think
     _blipSound: 
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 0
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: "<lp:none><music:Ringtone><color=red><sp:1>Brrrrrriiiiing......\n         
       Brrrrrriiiiing......\n                    Brrrrrriiiiing......"
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Phoenix
-    _knownName: 1
-    _char: NaN
-    _anim: 
+  - _nameTagText: Phoenix
+    _charOnScreen: NaN
+    _animPlaying: 
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 1
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: <sp:2>Hello?
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 1
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Lyla
-    _knownName: 0
-    _char: NaN
-    _anim: 
+  - _nameTagText: Lyla
+    _charOnScreen: 
+    _animPlaying: 
     _blipSound: blipfemale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 1
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: <color=green>Hello?<p:short> Are you Saul Goodman?<p:short>
+    _metadata:
+      Unknown: 1
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Phoenix
-    _knownName: 1
-    _char: NaN
-    _anim: smug
+  - _nameTagText: Phoenix
+    _charOnScreen: 
+    _animPlaying: 
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 1
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: I-<p:short> No. No I'm not.
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Lyla
-    _knownName: 0
-    _char: NaN
-    _anim: smug
+  - _nameTagText: Lyla
+    _charOnScreen: 
+    _animPlaying: 
     _blipSound: blipfemale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 1
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: <color=green>Aww... Oh well, thanks anyways.
+    _metadata:
+      Unknown: 1
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Phoenix
-    _knownName: 1
-    _char: NaN
-    _anim: smug
+  - _nameTagText: Phoenix
+    _charOnScreen: 
+    _animPlaying: 
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 1
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: '<shake:>Wait!<p:short> I''m also a defense lawyer!<p:short>
 
       I
       could help!'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Lyla
-    _knownName: 0
-    _char: NaN
-    _anim: smug
+  - _nameTagText: Lyla
+    _charOnScreen: 
+    _animPlaying: 
     _blipSound: blipfemale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 1
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: <color=green>You sure?
+    _metadata:
+      Unknown: 1
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Lyla
-    _knownName: 0
-    _char: NaN
-    _anim: smug
+  - _nameTagText: Lyla
+    _charOnScreen: 
+    _animPlaying: 
     _blipSound: blipfemale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 1
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: '<color=green>Well, then can you come down to
 
       the Detention
       Center?<p:short> I''m in a
 
       bit of a pickle.'
+    _metadata:
+      Unknown: 1
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Phoenix
-    _knownName: 1
-    _char: NaN
-    _anim: smug
+  - _nameTagText: Phoenix
+    _charOnScreen: 
+    _animPlaying: 
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 1
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: On my way!
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _name: Phoenix
-    _knownName: 1
-    _char: Maya
-    _anim: think
+  - _nameTagText: Phoenix
+    _charOnScreen: Maya
+    _animPlaying: think
     _blipSound: blipmale
-    _thinking: 0
-    _autoEnd: 0
-    _skipFade: 0
-    _stopMusic: 1
-    _addToCourtRecord: 0
-    _interjection: 0
-    _align: 0
     _dialogue: 'Maya,<p:tiny> get your stuff ready.<p:short>
 
       We''re going
       to the Detention Center.'
+    _metadata:
+      Unknown: 0
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideOptions: 0
+      SkipFade: 0
+      Interjection: 0
+      Align: 0
     _stateChange:
       StoryFlag: Opening Monalogue
       EvidenceToAdd: {fileID: 0}

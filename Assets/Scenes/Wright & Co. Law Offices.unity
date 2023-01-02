@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ccdc3b7069cf34a9d1d90235b15cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogue: {fileID: 11400000, guid: 08660af70610aac4185c83f26f7a2475, type: 2}
+  _dialogue: {fileID: 11400000, guid: d0dfb6037c260c0418d533c585fa33fe, type: 2}
   _inspected: 0
 --- !u!212 &122437845
 SpriteRenderer:
@@ -1105,17 +1105,13 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3947108759830423511, guid: 7414b34839310a442b2f259db727dd81, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -6.56
-      objectReference: {fileID: 0}
     - target: {fileID: 3947108760989920368, guid: 7414b34839310a442b2f259db727dd81, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3947108760989920368, guid: 7414b34839310a442b2f259db727dd81, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.84
+      value: -2752.63
       objectReference: {fileID: 0}
     - target: {fileID: 3947108760989920368, guid: 7414b34839310a442b2f259db727dd81, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1454,13 +1450,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _textBoxPrefab: {fileID: 3409057346996304509, guid: 4e89df09d9b03544bb8ec808070b80e5, type: 3}
   _courtRecordPrefab: {fileID: 4007864071899059607, guid: b92b62b510101f0438c3ee608b87439f, type: 3}
+  _courtRecord: {fileID: 7298867464423827332, guid: 1e8a966404fbe024797533a0fcc1c0bd, type: 3}
+  _swap: {fileID: 1991476421}
+  _interjectionObj: {fileID: 3255038459366842304, guid: 506530a5bd7489f4c830768b5f8d10ac, type: 3}
+  _controlFlag: {fileID: 480321680}
   _tempBox: {fileID: 0}
   _currentLine: 0
   _prevActionMap: 
-  _courtRecord: {fileID: 7298867464423827332, guid: 1e8a966404fbe024797533a0fcc1c0bd, type: 3}
   _responseHandler: {fileID: 0}
-  _swap: {fileID: 1991476421}
-  _interjectionObj: {fileID: 3255038459366842304, guid: 506530a5bd7489f4c830768b5f8d10ac, type: 3}
   _doneTalking: 0
 --- !u!1 &1343139307
 GameObject:
@@ -2433,7 +2430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3947108760989920368, guid: ba3440121be8c3c428a96e9d113a01f1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1019.63
       objectReference: {fileID: 0}
     - target: {fileID: 3947108760989920368, guid: ba3440121be8c3c428a96e9d113a01f1, type: 3}
       propertyPath: m_LocalPosition.y
