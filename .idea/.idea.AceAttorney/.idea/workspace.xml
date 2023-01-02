@@ -1,15 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="Backing up thing in case something goes horribly wrong when refactoring">
+    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="Refactored Dialogue Options">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Courtroom/1. Opening.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Courtroom/1. Opening.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/No Clues Here.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/No Clues Here.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Muffled Rap Music.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Muffled Rap Music.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Globals.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Globals.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Text Box/Dialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Text Box/Dialogue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Court.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Court.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Court_AJAA.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Court_AJAA.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Court_JFA.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Court_JFA.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Court_TT.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Court_TT.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/CrossEx.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/CrossEx.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/CrossExFast.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/CrossExFast.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/CrossExFast_AJAA.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/CrossExFast_AJAA.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/CrossExFast_GAA.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/CrossExFast_GAA.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/CrossExFast_JFA.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/CrossExFast_JFA.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/CrossExFast_TT.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/CrossExFast_TT.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/CrossEx_AJAA.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/CrossEx_AJAA.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/CrossEx_GAA.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/CrossEx_GAA.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/CrossEx_JFA.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/CrossEx_JFA.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/CrossEx_TT.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/CrossEx_TT.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/DetentionCenter.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/DetentionCenter.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Eminem.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Eminem.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Explain.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Explain.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Explain_JFA.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Explain_JFA.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Explore.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Explore.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Gumshoe.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Gumshoe.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Lobby.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Lobby.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Lobby_JFA.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Lobby_JFA.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Maya.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Maya.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Objection.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Objection.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Opening.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Opening.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Pursuit.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Pursuit.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/PursuitVariation.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/PursuitVariation.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/PursuitVariation_AJAA.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/PursuitVariation_AJAA.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/PursuitVariation_GAA.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/PursuitVariation_GAA.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/PursuitVariation_JFA.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/PursuitVariation_JFA.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/PursuitVariation_TT.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/PursuitVariation_TT.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Pursuit_AJAA.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Pursuit_AJAA.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Pursuit_GAA.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Pursuit_GAA.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Pursuit_JFA.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Pursuit_JFA.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Pursuit_TT.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Pursuit_TT.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Saul.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Saul.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/SteelSamurai.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/SteelSamurai.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Suspense.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Suspense.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Title.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Title.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Twist.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Twist.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/TwistInvestigation.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/TwistInvestigation.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/Win.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/Win.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Music/ringtone.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Music/ringtone.wav.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +82,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/5f/12757df7/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/60dfa7f0f0ea4433a6899568b622c56ffe00/23/3471859b/AudioClip.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scriptable Objects/Courtroom/1. Opening.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scriptable Objects/Tests/Muffled Rap Music.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scriptable Objects/Tests/Muffled Rap Music.asset" root0="SKIP_HIGHLIGHTING" />
@@ -152,7 +189,7 @@
       <workItem from="1672468511939" duration="1384000" />
       <workItem from="1672543485490" duration="11909000" />
       <workItem from="1672601505441" duration="4404000" />
-      <workItem from="1672630773786" duration="8743000" />
+      <workItem from="1672630773786" duration="10818000" />
     </task>
     <task id="LOCAL-00001" summary="Audio Prefab">
       <created>1668559907702</created>
@@ -287,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672636178736</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Refactored Dialogue Options">
+      <created>1672641138621</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1672641138621</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,6 +385,7 @@
     <MESSAGE value="Cleaned up story flags a bit and got rid of unusable scriptable objects" />
     <MESSAGE value="Refactored TSV file" />
     <MESSAGE value="Backing up thing in case something goes horribly wrong when refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Backing up thing in case something goes horribly wrong when refactoring" />
+    <MESSAGE value="Refactored Dialogue Options" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored Dialogue Options" />
   </component>
 </project>
