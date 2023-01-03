@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UIElements;
 
 [Serializable]
@@ -11,25 +12,27 @@ public class TBLine
     [SerializeField] private string _charOnScreen;
     [SerializeField] private string _animPlaying;
     [SerializeField] private string _blipSound;
+    [SerializeField] private string _background;
     [Header("")][SerializeField][TextArea(3, 4)] private string _dialogue;
-    [SerializeField] private Metadata _metadata;
+    [FormerlySerializedAs("_metadata")] [SerializeField] private Metadata _extras;
     [SerializeField] private StateChange _stateChange;
 
     public string Name => _nameTagText;
     public string Char => _charOnScreen;
     public string Anim => _animPlaying;
-    public bool KnownName => !_metadata.Unknown;
-    public bool Thinking => _metadata.Thinking;
-    public bool AutoEnd => _metadata.AutoEnd;
-    public bool AddToCourtRecord => _metadata.AddToCourtRecord;
+    public bool KnownName => !_extras.Unknown;
+    public bool Thinking => _extras.Thinking;
+    public bool AutoEnd => _extras.AutoEnd;
+    public bool AddToCourtRecord => _extras.AddToCourtRecord;
     public string BlipSound => _blipSound;
-    public Interjection Interjection => _metadata.Interjection;
-    public TextAlignOptions Align => _metadata.Align;
+    public Interjection Interjection => _extras.Interjection;
+    public TextAlignOptions Align => _extras.Align;
     public StateChange StateChange => _stateChange;
-    public FadeTypes FadeType => _metadata.SkipFade;
-    public bool HideOptions => _metadata.HideOptions;
-    public bool StopMusic => _metadata.StopMusic;
+    public FadeTypes FadeType => _extras.SkipFade;
+    public bool HideOptions => _extras.HideOptions;
+    public bool StopMusic => _extras.StopMusic;
     public string Dialogue => _dialogue;
+    public string Background => _background;
 }
 
 [Serializable]

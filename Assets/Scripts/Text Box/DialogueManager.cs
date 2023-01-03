@@ -16,6 +16,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private SwapCharacters _swap;
     [SerializeField] private GameObject _interjectionObj;
     [SerializeField] private GameObject _controlFlag;
+    [SerializeField] private SpriteRenderer _background;
+    [SerializeField] private SpriteRenderer _foreground;
     
     private GameObject _tempCourtRecord;
     [HideInInspector] public GameObject _tempBox;
@@ -262,7 +264,25 @@ public class DialogueManager : MonoBehaviour
         Interjection interjection = line.Interjection;
         _hideOptions = line.HideOptions;
         _skipFade = line.FadeType == FadeTypes.SkipFade;
-        
+
+        if (line.Background == "NaN")
+        {
+            _background.sprite = null;
+            _foreground.sprite = null;
+        }
+        else if (line.Background != "")
+        {
+            Debug.Log("Sprites/Backgrounds/" + line.Background);
+            _background.sprite = Resources.Load<Sprite>("Sprites/Backgrounds/" + line.Background);
+            try
+            {
+                _foreground.sprite = Resources.Load<Sprite>("Sprites/Backgrounds/" + line.Background + "_fg");
+            }
+            catch
+            {
+            }
+        }
+
         _autoEnd = line.AutoEnd;
         if (line.AutoEnd)
         {

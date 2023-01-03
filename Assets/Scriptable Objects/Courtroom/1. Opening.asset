@@ -17,13 +17,14 @@ MonoBehaviour:
     _charOnScreen: 
     _animPlaying: normal
     _blipSound: typewriter
+    _background: 
     _dialogue: '<color=green><sp:10><p:read><p:long>September 21, 10:00 AM
 
       District
       Court
 
       Courtroom No. 2'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -42,11 +43,12 @@ MonoBehaviour:
     _charOnScreen: Judge
     _animPlaying: normal
     _blipSound: blipmale
+    _background: Judge
     _dialogue: '<sp:2><music:Court>Court is now in session for
 
       the trial of
       Ms. Lyla Tetrum.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -65,10 +67,11 @@ MonoBehaviour:
     _charOnScreen: Edgeworth
     _animPlaying: normal
     _blipSound: blipmale
+    _background: Prosecution
     _dialogue: 'The prosecution is ready,
 
       Your Honor.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -87,10 +90,11 @@ MonoBehaviour:
     _charOnScreen: Phoenix
     _animPlaying: normal
     _blipSound: blipmale
+    _background: Defense
     _dialogue: 'The defense is ready,
 
       Your Honor.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -109,12 +113,13 @@ MonoBehaviour:
     _charOnScreen: Judge
     _animPlaying: normal
     _blipSound: blipmale
+    _background: Judge
     _dialogue: 'Mr. Edgeworth.
 
       Please give the court
 
       your opening statement.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -133,13 +138,14 @@ MonoBehaviour:
     _charOnScreen: Edgeworth
     _animPlaying: normal
     _blipSound: blipmale
+    _background: Prosecution
     _dialogue: 'Thank you, Your Honor.<p:short>
 
       The defendant,<p:tiny> Ms.
       Lyla Tetrum,<p:tiny>
 
       was at the scene of the crime.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -158,13 +164,14 @@ MonoBehaviour:
     _charOnScreen: Edgeworth
     _animPlaying: normal
     _blipSound: blipmale
+    _background: Prosecution
     _dialogue: 'The prosecution has definitive
 
       evidence that she''s the one
       who
 
       commited the crime.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -183,12 +190,13 @@ MonoBehaviour:
     _charOnScreen: Edgeworth
     _animPlaying: normal
     _blipSound: blipmale
+    _background: Prosecution
     _dialogue: 'And we have an eye witness
 
       testimony who saw the crime
 
       occur.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -207,13 +215,14 @@ MonoBehaviour:
     _charOnScreen: Edgeworth
     _animPlaying: normal
     _blipSound: blipmale
+    _background: Prosecution
     _dialogue: 'The prosecution sees
 
       no reason to believe that
 
       it could
       be any other person.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -232,9 +241,10 @@ MonoBehaviour:
     _charOnScreen: Phoenix
     _animPlaying: normal
     _blipSound: blipmale
+    _background: Defense
     _dialogue: "<color=#6ebdf0>(Great...<p:short> Edgeworth's \nalready laying on
       the heat...)"
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 1
       AutoEnd: 0
@@ -253,10 +263,11 @@ MonoBehaviour:
     _charOnScreen: Judge
     _animPlaying: normal
     _blipSound: blipmale
+    _background: Judge
     _dialogue: 'Thank you, Mr. Edgeworth.<p:short>
 
       Let''s begin then.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -275,10 +286,11 @@ MonoBehaviour:
     _charOnScreen: Edgeworth
     _animPlaying: normal
     _blipSound: blipmale
+    _background: Prosecution
     _dialogue: 'If we may call our first
 
       witness, Your Honor.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -297,13 +309,14 @@ MonoBehaviour:
     _charOnScreen: Edgeworth
     _animPlaying: normal
     _blipSound: blipmale
+    _background: Prosecution
     _dialogue: 'The prosecution calls the
 
       chief officer at the scene,
 
       Detective
       Dick Gumshoe.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -320,10 +333,11 @@ MonoBehaviour:
       PersonToAdd: {fileID: 0}
   - _nameTagText: 
     _charOnScreen: Gumshoe
-    _animPlaying: normal
+    _animPlaying: happy
     _blipSound: 
+    _background: Witness
     _dialogue: '<p:long> '
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 1
       AutoEnd: 1
@@ -342,10 +356,11 @@ MonoBehaviour:
     _charOnScreen: Edgeworth
     _animPlaying: normal
     _blipSound: blipmale
+    _background: Prosecution
     _dialogue: 'Witness, please state your
 
       name and occupation.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -364,8 +379,9 @@ MonoBehaviour:
     _charOnScreen: Gumshoe
     _animPlaying: happy
     _blipSound: blipmale
+    _background: Witness
     _dialogue: Dick Gumshoe!<p:short>
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -384,13 +400,14 @@ MonoBehaviour:
     _charOnScreen: Gumshoe
     _animPlaying: happy
     _blipSound: blipmale
+    _background: Witness
     _dialogue: 'I''m the detective in
 
       charge of homicides
 
       down at the
       precinct!'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -409,8 +426,9 @@ MonoBehaviour:
     _charOnScreen: Edgeworth
     _animPlaying: normal
     _blipSound: blipmale
+    _background: Prosecution
     _dialogue: Mr. Gumshoe.
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -429,10 +447,11 @@ MonoBehaviour:
     _charOnScreen: Edgeworth
     _animPlaying: normal
     _blipSound: blipmale
+    _background: Prosecution
     _dialogue: 'Please explain to the court
 
       the details of the crime.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -451,8 +470,9 @@ MonoBehaviour:
     _charOnScreen: Gumshoe
     _animPlaying: happy
     _blipSound: blipmale
+    _background: Witness
     _dialogue: Very well,<music:fadeout><p:tiny> sir!
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -471,10 +491,11 @@ MonoBehaviour:
     _charOnScreen: Gumshoe
     _animPlaying: happy
     _blipSound: blipmale
+    _background: Witness
     _dialogue: '<music:Explain>The two bodies were found
 
       in their chairs.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -493,13 +514,14 @@ MonoBehaviour:
     _charOnScreen: Gumshoe
     _animPlaying: happy
     _blipSound: blipmale
+    _background: Witness
     _dialogue: 'The murder weapon,<p:short> this gun,<p:short>
 
       was found in
       the abandoned building
 
       across the street.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -518,11 +540,12 @@ MonoBehaviour:
     _charOnScreen: Gumshoe
     _animPlaying: happy
     _blipSound: blipmale
+    _background: Witness
     _dialogue: 'We tested the weapon for prints,<p:tiny>
 
       and they match with
       the defendant.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -541,13 +564,14 @@ MonoBehaviour:
     _charOnScreen: Gumshoe
     _animPlaying: happy
     _blipSound: blipmale
+    _background: Witness
     _dialogue: 'And,<p:short> we''ve gotten an
 
       eye witness report of the defendant
 
       leaving
       the abandoned building.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -566,8 +590,9 @@ MonoBehaviour:
     _charOnScreen: Judge
     _animPlaying: normal
     _blipSound: blipmale
+    _background: Judge
     _dialogue: <music:fadeout>I see...
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -586,10 +611,11 @@ MonoBehaviour:
     _charOnScreen: Judge
     _animPlaying: normal
     _blipSound: blipmale
+    _background: Judge
     _dialogue: 'The court accepts the murder weapon
 
       into evidence.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -608,10 +634,11 @@ MonoBehaviour:
     _charOnScreen: Judge
     _animPlaying: normal
     _blipSound: 
+    _background: 
     _dialogue: '<color=#6ebdf0>Gun added to
 
       the Court Record.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -630,8 +657,9 @@ MonoBehaviour:
     _charOnScreen: Edgeworth
     _animPlaying: normal
     _blipSound: blipmale
+    _background: Prosecution
     _dialogue: Now, Mr. Gumshoe.
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -650,10 +678,11 @@ MonoBehaviour:
     _charOnScreen: Edgeworth
     _animPlaying: normal
     _blipSound: blipmale
+    _background: 
     _dialogue: 'Could you testify to the court as
 
       to the details of the arrest?'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -672,8 +701,9 @@ MonoBehaviour:
     _charOnScreen: Gumshoe
     _animPlaying: happy
     _blipSound: blipmale
+    _background: Witness
     _dialogue: Sure thing, Mr. Edgeworth sir!
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -692,10 +722,11 @@ MonoBehaviour:
     _charOnScreen: Gumshoe
     _animPlaying: normal
     _blipSound: 
+    _background: 
     _dialogue: '<se:cross examination>
 
       <color=red>--The Night of the Arrest--'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -714,8 +745,9 @@ MonoBehaviour:
     _charOnScreen: Gumshoe
     _animPlaying: happy
     _blipSound: blipmale
+    _background: 
     _dialogue: <music:CrossEx>We got the call around 5:00 PM.
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -734,11 +766,12 @@ MonoBehaviour:
     _charOnScreen: Gumshoe
     _animPlaying: happy
     _blipSound: blipmale
+    _background: 
     _dialogue: 'From there, we rushed over to the
 
       Barbershop as fast as we
       could.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -757,13 +790,14 @@ MonoBehaviour:
     _charOnScreen: Gumshoe
     _animPlaying: happy
     _blipSound: blipmale
+    _background: 
     _dialogue: 'Once we reached the shop,
 
       it was clear that the killer wasn''t
 
       in
       the building at the time of the crime.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -782,11 +816,12 @@ MonoBehaviour:
     _charOnScreen: Gumshoe
     _animPlaying: happy
     _blipSound: blipmale
+    _background: 
     _dialogue: 'We eventually found the defendant
 
       at a nearby cafe, where
       we arrested her.'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -805,8 +840,9 @@ MonoBehaviour:
     _charOnScreen: Judge
     _animPlaying: normal
     _blipSound: blipmale
+    _background: Judge
     _dialogue: <music:fadeout>Hmm...
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -825,10 +861,11 @@ MonoBehaviour:
     _charOnScreen: Judge
     _animPlaying: normal
     _blipSound: blipmale
+    _background: 
     _dialogue: 'Mr. Wright, would you like to
 
       cross examine the witness?'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -847,8 +884,9 @@ MonoBehaviour:
     _charOnScreen: Phoenix
     _animPlaying: normal
     _blipSound: blipmale
+    _background: Defense
     _dialogue: Yes, Your Honor.
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -867,10 +905,11 @@ MonoBehaviour:
     _charOnScreen: Gumshoe
     _animPlaying: normal
     _blipSound: 
+    _background: Witness
     _dialogue: '<se:cross examination>
 
       <color=red>--The Night of the Arrest--'
-    _metadata:
+    _extras:
       Unknown: 0
       Thinking: 0
       AutoEnd: 0
@@ -879,7 +918,7 @@ MonoBehaviour:
       HideOptions: 1
       SkipFade: 0
       Interjection: 0
-      Align: 0
+      Align: 2
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}

@@ -1,39 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="">
+    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="Court record works in cross examination!">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Edgeworth/normal_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Edgeworth/normal_idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Edgeworth/normal_talk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Edgeworth/normal_talk.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Gumshoe/happy_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Gumshoe/happy_idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Gumshoe/happy_talk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Gumshoe/happy_talk.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Judge/normal_talk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Judge/normal_talk.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Phoenix/Normal_Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Phoenix/Normal_Idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Anim/Phoenix/normal_talk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Phoenix/normal_talk.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Bo/Bo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Bo/Bo.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Edgeworth/Edgeworth.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Edgeworth/Edgeworth.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Gumshoe/Gumshoe.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Gumshoe/Gumshoe.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Herman/Herman.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Herman/Herman.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Judge/Judge.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Judge/Judge.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Lyla/Lyla.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Lyla/Lyla.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Phoenix/Phoenix.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Phoenix/Phoenix.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Defense Desk.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Defense Desk.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Defense.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Defense.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Judge.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Judge.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Lobby.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Lobby.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Prosecution Desk.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Prosecution Desk.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Prosecution.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Prosecution.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Sidebar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Sidebar.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Wide Shot.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Wide Shot.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Witness Stand.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Witness Stand.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Witness.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Witness.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/edgeworth_idle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/edgeworth_idle.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/judge.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/judge.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/phoenix_normal_think_shake_head.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/phoenix_normal_think_shake_head.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/sahwit_normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/characters/sahwit_normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/a.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/a.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Courtroom/1. Opening.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Courtroom/1. Opening.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Text Box/Dialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Text Box/Dialogue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Defense Desk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Defense Desk.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Defense.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Defense.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Judge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Judge.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Lobby.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Lobby.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Prosecution Desk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Prosecution Desk.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Prosecution.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Prosecution.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Sidebar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Sidebar.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Wide Shot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Wide Shot.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Witness Stand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Witness Stand.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Witness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Courtroom/Witness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Title Screen/Cutting Edge 4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Title Screen/Cutting Edge 4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Title Screen/title_back.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Title Screen/title_back.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +45,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="david-dev" />
+        <entry key="$PROJECT_DIR$" value="2d0362716fd0aa20a885cc78d4b528c010fe01c1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,6 +71,7 @@
     <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Anim/Phoenix/Normal_Idle.anim" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Prefabs/Characters/Bo/Bo.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scripts/Globals.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scriptable Objects/DialogueSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsOpening.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Sprites/characters/edgeworth_idle.png.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
@@ -391,5 +389,24 @@
     <MESSAGE value="Updated music (again)! fast load times and it loops right! Wooooo!" />
     <MESSAGE value="Updated Character Rendering (It looks nearly identical and took forever to implement!) (But at least now it'll be faster to add animations)" />
     <option name="LAST_COMMIT_MESSAGE" value="Updated Character Rendering (It looks nearly identical and took forever to implement!) (But at least now it'll be faster to add animations)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs</url>
+          <line>289</line>
+          <properties documentPath="C:\Users\lucca\RiderProjects\AceAttorney\Assets\Scripts\Text Box\DialogueManager.cs" initialLine="274" containingFunctionPresentation="method 'NextLine'">
+            <startOffsets>
+              <option value="9462" />
+            </startOffsets>
+            <endOffsets>
+              <option value="9463" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
