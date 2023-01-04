@@ -63,6 +63,7 @@ public struct Metadata
 public struct BackgroundFade
 {
     public FadeTypes CharFade;
+    public BGFadeTypes BackgroundFadeType;
     public BGFadePos BackgroundFadePos;
     public float LengthInSeconds;
     public Color Color;
@@ -75,9 +76,16 @@ public enum FadeTypes
     ForceFade
 }
 
+public enum BGFadeTypes
+{
+    None,
+    FadeIn,
+    FadeOut,
+    FadeOutThenIn
+}
+
 public enum BGFadePos
 {
-    None = 0,
     BackgroundGone = -2,
     SceneNoUI = -10,
     Everything = -15

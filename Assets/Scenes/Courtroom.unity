@@ -2412,7 +2412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67dfdd853c824d6a953f88c22bb4bd0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogue: {fileID: 11400000, guid: 2e984f445d4e2f14e89e9707c71fa1b9, type: 2}
+  _dialogue: {fileID: 11400000, guid: bb69af12376cf9c4d8a7b3edc26eebe9, type: 2}
   _evidence:
   - {fileID: 11400000, guid: ae8fe674f9f3a484a8a51e11a1a1c1ef, type: 2}
   - {fileID: 11400000, guid: 80cb3ac9c93f83c4297941e627008d3f, type: 2}

@@ -263,6 +263,7 @@ public class DialogueManager : MonoBehaviour
         String faceInfo = line.Char;
         String emotionInfo = line.Anim;
         Interjection interjection = line.Interjection;
+        BackgroundFade bg = line.FadeDetails;
         _hideOptions = line.HideOptions;
         _skipFade = line.FadeType == FadeTypes.SkipFade;
 
@@ -298,6 +299,8 @@ public class DialogueManager : MonoBehaviour
         {
             textBox.alignment = TextAlignmentOptions.TopRight;
         }
+        _fade.transform.position = new Vector3(_fade.transform.position.x, _fade.transform.position.y,
+            (int) bg.BackgroundFadePos);
 
         if (line.StopMusic) _musicManager.fadeOut();
         
@@ -401,6 +404,29 @@ public class DialogueManager : MonoBehaviour
         }
         #endregion
         
+        #region Screen Fade Out
+        
+        if (bg.BackgroundFadeType == BGFadeTypes.FadeOut || bg.BackgroundFadeType == BGFadeTypes.FadeOutThenIn)
+        {
+            SpriteRenderer spr = _fade.GetComponent<SpriteRenderer>();
+            Color startColor = spr.color;
+            Color endColor = new Color(startColor.r, startColor.g, startColor.b, 1);
+            float time = 0;
+
+            while (time < bg.LengthInSeconds)
+            {
+                time += Time.deltaTime;
+                Debug.Log(spr.color.a);
+                spr.color = Color.Lerp(startColor, endColor, time / bg.LengthInSeconds);
+                if (Math.Abs(spr.color.a - endColor.a) < 0.0001) break;
+                yield return null;
+            }
+
+            spr.color = bg.Color;
+        }
+
+        #endregion
+        
         #region Swap Characters
         if (_prevChar != _char && (_char != null || faceInfo == "NaN") || line.FadeType == FadeTypes.ForceFade)
         {
@@ -441,23 +467,6 @@ public class DialogueManager : MonoBehaviour
         }
         #endregion
 
-        #region Screen Fade
-
-        BackgroundFade bg = line.FadeDetails;
-        SpriteRenderer spr = _fade.GetComponent<SpriteRenderer>();
-        Color startColor = spr.color;
-        _fade.transform.position = new Vector3(_fade.transform.position.x, _fade.transform.position.y,  (int) bg.BackgroundFadePos);
-        float time = 0;
-
-        while (time < bg.LengthInSeconds)
-        {
-            time += Time.deltaTime;
-            spr.color = Color.Lerp(startColor, bg.Color, time / bg.LengthInSeconds);
-            yield return null;
-        }
-
-        #endregion
-        
         #region Set Background
         if (line.Background == "NaN")
         {
@@ -475,6 +484,26 @@ public class DialogueManager : MonoBehaviour
             {
             }
         }
+        #endregion
+        
+        #region Screen Fade In
+        
+        if (bg.BackgroundFadeType == BGFadeTypes.FadeIn || bg.BackgroundFadeType == BGFadeTypes.FadeOutThenIn)
+        {
+            SpriteRenderer spr = _fade.GetComponent<SpriteRenderer>();
+            Color startColor = spr.color;
+            float time = 0;
+            Color endColor = new Color(startColor.r, startColor.g, startColor.b, 0);
+                
+            while (time < bg.LengthInSeconds)
+            {
+                time += Time.deltaTime;
+                spr.color = Color.Lerp(startColor, endColor, time / bg.LengthInSeconds);
+                if (Math.Abs(spr.color.a - endColor.a) < 0.0001) break;
+                yield return null;
+            }
+        }
+
         #endregion
 
         #region Show Textbox

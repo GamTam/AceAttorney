@@ -35,10 +35,10 @@ MonoBehaviour:
       Align: 2
       FadeOptions:
         CharFade: 1
-        BackgroundFadeType: 0
-        BackgroundFadePos: 0
+        BackgroundFadeType: 2
+        BackgroundFadePos: -10
         LengthInSeconds: 0
-        Color: {r: 0, g: 0, b: 0, a: 0}
+        Color: {r: 0, g: 0, b: 0, a: 1}
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -64,10 +64,10 @@ MonoBehaviour:
       Align: 0
       FadeOptions:
         CharFade: 1
-        BackgroundFadeType: 2
-        BackgroundFadePos: -15
-        LengthInSeconds: 0
-        Color: {r: 0, g: 0, b: 0, a: 0}
+        BackgroundFadeType: 1
+        BackgroundFadePos: -10
+        LengthInSeconds: 1
+        Color: {r: 0, g: 0, b: 0, a: 1}
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -93,9 +93,9 @@ MonoBehaviour:
       FadeOptions:
         CharFade: 1
         BackgroundFadeType: 0
-        BackgroundFadePos: 0
-        LengthInSeconds: 0
-        Color: {r: 0, g: 0, b: 0, a: 0}
+        BackgroundFadePos: -10
+        LengthInSeconds: 1
+        Color: {r: 0, g: 0, b: 0, a: 1}
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -413,10 +413,10 @@ MonoBehaviour:
       Align: 0
       FadeOptions:
         CharFade: 1
-        BackgroundFadeType: 0
-        BackgroundFadePos: 0
-        LengthInSeconds: 0
-        Color: {r: 0, g: 0, b: 0, a: 0}
+        BackgroundFadeType: 3
+        BackgroundFadePos: -10
+        LengthInSeconds: 1
+        Color: {r: 0, g: 0, b: 0, a: 1}
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
