@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="Don't trust past me. She's a liar. Fade to black is working now.">
+    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sound/gallery.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sound/gallery.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Backgrounds/Gallery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Backgrounds/Gallery.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dialogue/Text Box.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dialogue/Text Box.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Backgrounds/Wide.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Backgrounds/Wide.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Muffled Rap Music.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Muffled Rap Music.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextBox/Flash.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextBox/Flash.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/files/Sound Data.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/files/Sound Data.tsv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,36 +51,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/5f/12757df7/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/60dfa7f0f0ea4433a6899568b622c56ffe00/23/3471859b/AudioClip.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Anim/Bo/Bo.controller" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Anim/Judge/Judge.controller" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Anim/Judge/Judge.controller" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Anim/UI/Added to Court Record/Added To Court Record.controller" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Anim/UI/Button.controller" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Anim/UI/Button.controller" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Anim/UI/Button.controller" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Anim/UI/Button.controller" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Anim/UI/Court Record/Left.controller" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Prefabs/Characters/Lyla/Lyla.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Prefabs/Interjection.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Prefabs/Interjection.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scenes/Barber Shop.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scenes/Wright &amp; Co. Law Offices.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scenes/Wright &amp; Co. Law Offices.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scenes/Wright &amp; Co. Law Offices.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scenes/Wright &amp; Co. Law Offices.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scenes/Wright &amp; Co. Law Offices.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scenes/Wright &amp; Co. Law Offices.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scriptable Objects/Courtroom/1. Opening.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scriptable Objects/Tests/Fade Test.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scriptable Objects/Tests/Muffled Rap Music.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scriptable Objects/DialogueSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsOpening.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scripts/Text Box/Dialogue.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scripts/Text Box/Dialogue.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scripts/Text Box/DialogueManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scripts/Text Box/DialogueManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scripts/Text Box/DialogueManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/lucca/RiderProjects/AceAttorney/Assets/Scripts/Text Box/DialogueManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextBoxController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Editor/AssetEditor/InputActionAssetManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/InputManagerStateMonitors.cs" root0="SKIP_HIGHLIGHTING" />
@@ -175,7 +156,8 @@
       <workItem from="1672601505441" duration="4404000" />
       <workItem from="1672630773786" duration="15795000" />
       <workItem from="1672720873820" duration="1260000" />
-      <workItem from="1672800533519" duration="15342000" />
+      <workItem from="1672800533519" duration="15786000" />
+      <workItem from="1672868408010" duration="1707000" />
     </task>
     <task id="LOCAL-00001" summary="Audio Prefab">
       <created>1668559907702</created>
@@ -352,7 +334,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672821746583</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Minor Changes">
+      <created>1672825131004</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1672825131004</updated>
+    </task>
+    <task id="LOCAL-00027" summary="mhm">
+      <created>1672825140442</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1672825140442</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,8 +398,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Audio Prefab" />
-    <MESSAGE value="Dialogue Sounds!" />
     <MESSAGE value="Textbox advance button now doesn't show up when a character appears!" />
     <MESSAGE value="Minor Optimisations" />
     <MESSAGE value="This is a Prefabricated Object" />
@@ -427,6 +421,8 @@
     <MESSAGE value="Refactored how backgrounds work" />
     <MESSAGE value="Fade to black working!" />
     <MESSAGE value="Don't trust past me. She's a liar. Fade to black is working now." />
-    <option name="LAST_COMMIT_MESSAGE" value="Don't trust past me. She's a liar. Fade to black is working now." />
+    <MESSAGE value="Minor Changes" />
+    <MESSAGE value="mhm" />
+    <option name="LAST_COMMIT_MESSAGE" value="mhm" />
   </component>
 </project>

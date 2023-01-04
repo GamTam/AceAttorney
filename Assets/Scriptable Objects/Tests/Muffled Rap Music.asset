@@ -35,10 +35,36 @@ MonoBehaviour:
       Align: 2
       FadeOptions:
         CharFade: 1
-        BackgroundFadeType: 2
+        BackgroundFadeType: 0
         BackgroundFadePos: -10
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 1}
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: 
+    _animPlaying: normal
+    _blipSound: 
+    _background: Gallery
+    _dialogue: '<se:gallery><p:long> <p:read> '
+    _extras:
+      Thinking: 0
+      AutoEnd: 1
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 0
+        BackgroundFadePos: -10
+        LengthInSeconds: 1
+        Color: {r: 0, g: 0, b: 0, a: 0}
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -48,10 +74,10 @@ MonoBehaviour:
     _animPlaying: normal
     _blipSound: blipmale
     _background: Judge
-    _dialogue: '<sp:2><music:Eminem>Court is now in session for
+    _dialogue: '<sp:2><music:stop>Court is now in session for
 
-      the trial
-      of Ms. Maya Fey.'
+      the trial of
+      Ms. Maya Fey.'
     _extras:
       Thinking: 0
       AutoEnd: 0
@@ -64,7 +90,7 @@ MonoBehaviour:
       Align: 0
       FadeOptions:
         CharFade: 1
-        BackgroundFadeType: 1
+        BackgroundFadeType: 0
         BackgroundFadePos: -10
         LengthInSeconds: 1
         Color: {r: 0, g: 0, b: 0, a: 0}

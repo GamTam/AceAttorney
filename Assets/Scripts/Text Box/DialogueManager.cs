@@ -20,7 +20,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private SpriteRenderer _foreground;
     
     private GameObject _tempCourtRecord;
-    [HideInInspector] public GameObject _tempBox;
+    [HideInInspector] public TextBoxController _tempBox;
     private Animator _advanceButton;
     private TMP_Text textBox;
     private TMP_Text _nameBox;
@@ -84,7 +84,7 @@ public class DialogueManager : MonoBehaviour
             _prevChar = _char;
         } catch {}
 
-        _tempBox = Instantiate(_textBoxPrefab);
+        _tempBox = Instantiate(_textBoxPrefab).GetComponent<TextBoxController>();
         _tempBox.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
         _tempBox.transform.SetSiblingIndex(_tempBox.transform.parent.childCount - 2);
 
@@ -148,7 +148,7 @@ public class DialogueManager : MonoBehaviour
             if (!dialogueVertexAnimator.textAnimating && !_advanceButton.gameObject.activeSelf)
             {
                 if (_char != null) _char.Play($"{_currentAnim}_idle");
-                if (_currentLine == lines.Count && _dialogue.HasResponses) return;
+                if ((_currentLine == lines.Count && _dialogue.HasResponses) || _tempBox.IsHidden) return;
                 _advanceButton.gameObject.SetActive(true);
                 if (_crossEx)
                 {
@@ -319,7 +319,7 @@ public class DialogueManager : MonoBehaviour
         }
         
         _controlFlag.SetActive(false);
-        _tempBox.SetActive(false);
+        _tempBox.HideAll();
         #endregion
 
         #region Reset Scene
@@ -398,7 +398,7 @@ public class DialogueManager : MonoBehaviour
         if (!skip)
         {
             _controlFlag.SetActive(false);
-            _tempBox.SetActive(false);
+            _tempBox.HideAll();
             yield return new WaitForSeconds(1);
             Destroy(obj);
         }
@@ -435,7 +435,7 @@ public class DialogueManager : MonoBehaviour
             if (!_skipFade)
             {
                 _controlFlag.SetActive(false);
-                _tempBox.SetActive(false);
+                _tempBox.HideAll();
             }
             
             while (!_swap._done)
@@ -511,7 +511,7 @@ public class DialogueManager : MonoBehaviour
         #region Show Textbox
         if (_hideOptions) _controlFlag.SetActive(false);
         else _controlFlag.SetActive(true);
-        _tempBox.SetActive(true);
+        _tempBox.ShowAll();
         
         _advanceButton.gameObject.SetActive(false);
         #endregion
@@ -520,13 +520,16 @@ public class DialogueManager : MonoBehaviour
         if (String.Concat(totalTextMessage.Where(c => !Char.IsWhiteSpace(c))) == "")
         {
             _controlFlag.SetActive(false);
-            _tempBox.SetActive(false);
+            _tempBox.HideAll();
             _mute = true;
+        }
+        else
+        {
+            _nameBox.text = nameInfo;
+            _nameBox.transform.parent.gameObject.SetActive(!line.HideNameTag);
         }
         
         if (_char != null && !line.Thinking) _char.Play($"{_currentAnim}_talk");
-        _nameBox.text = nameInfo;
-        _nameBox.transform.parent.gameObject.SetActive(!line.HideNameTag);
         
         typeRoutine = StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, _typingClip, null));
         _startedText = true;
@@ -553,7 +556,7 @@ public class DialogueManager : MonoBehaviour
         }
         StartCoroutine(dialogueVertexAnimator.AnimateTextIn(new List<DialogueCommand>(), "", _typingClip, null));
         _controlFlag.SetActive(false);
-        Destroy(_tempBox);
+        Destroy(_tempBox.gameObject);
         _playerInput.SwitchCurrentActionMap(_prevActionMap);
     }
 }
