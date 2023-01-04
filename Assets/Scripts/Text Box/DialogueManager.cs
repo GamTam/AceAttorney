@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Assertions;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -16,6 +15,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private SwapCharacters _swap;
     [SerializeField] private GameObject _interjectionObj;
     [SerializeField] private GameObject _controlFlag;
+    [SerializeField] private GameObject _fade;
     [SerializeField] private SpriteRenderer _background;
     [SerializeField] private SpriteRenderer _foreground;
     
@@ -120,7 +120,7 @@ public class DialogueManager : MonoBehaviour
 
         lines = linesIn.dialogueText.ToList();
         
-        NextLine(true, quickEnd);
+        StartCoroutine(NextLine(true, quickEnd));
     }
 
     private void Update()
@@ -129,14 +129,14 @@ public class DialogueManager : MonoBehaviour
         {
             if (_advanceText.triggered)
             {
-                NextLine();
+                StartCoroutine(NextLine());
             }
             else if (!dialogueVertexAnimator.textAnimating &&
                      (_currentLine == lines.Count && _dialogue.HasResponses && !_shownResponses) || _autoEnd)
             {
                 if (!dialogueVertexAnimator.textAnimating)
                 {
-                    NextLine();   
+                    StartCoroutine(NextLine());   
                 }
             }
 
@@ -207,14 +207,16 @@ public class DialogueManager : MonoBehaviour
     }
     
     private Coroutine typeRoutine = null;
-    public void NextLine(bool firstTime = false, bool quickEnd = false)
+    public IEnumerator NextLine(bool firstTime = false, bool quickEnd = false)
     {
-        if (_shownResponses) return;
+        #region Variable Setup
+        
+        if (_shownResponses) yield break;
 
         if (dialogueVertexAnimator.textAnimating)
         {
             dialogueVertexAnimator.QuickEnd();
-            return;
+            yield break;
         }
 
         if (!firstTime && !_mute)
@@ -246,7 +248,7 @@ public class DialogueManager : MonoBehaviour
                 StartCoroutine(EndDialogue());
                 _doneTalking = true;
             }
-            return;
+            yield break;
         }
 
         _skipFade = false;
@@ -256,32 +258,13 @@ public class DialogueManager : MonoBehaviour
         dialogueVertexAnimator.textAnimating = false;
         List<DialogueCommand> commands =
             DialogueUtility.ProcessInputString(line.Dialogue, out string totalTextMessage);
-        TextAlignOptions[] textAlignInfo = SeparateOutTextAlignInfo(commands);
-        String nameInfo = line.KnownName ? line.Name : "???";
+        String nameInfo = line.Name;
         String soundInfo = line.BlipSound;
         String faceInfo = line.Char;
         String emotionInfo = line.Anim;
         Interjection interjection = line.Interjection;
         _hideOptions = line.HideOptions;
         _skipFade = line.FadeType == FadeTypes.SkipFade;
-
-        if (line.Background == "NaN")
-        {
-            _background.sprite = null;
-            _foreground.sprite = null;
-        }
-        else if (line.Background != "")
-        {
-            Debug.Log("Sprites/Backgrounds/" + line.Background);
-            _background.sprite = Resources.Load<Sprite>("Sprites/Backgrounds/" + line.Background);
-            try
-            {
-                _foreground.sprite = Resources.Load<Sprite>("Sprites/Backgrounds/" + line.Background + "_fg");
-            }
-            catch
-            {
-            }
-        }
 
         _autoEnd = line.AutoEnd;
         if (line.AutoEnd)
@@ -332,11 +315,15 @@ public class DialogueManager : MonoBehaviour
             }
         }
         
+        _controlFlag.SetActive(false);
+        _tempBox.SetActive(false);
+        #endregion
+
+        #region Reset Scene
+
         if (emotionInfo != null) _currentAnim = emotionInfo;
         if (_char != null) _char.Play($"{_currentAnim}_idle");
-        
-        _nameBox.text = nameInfo;
-        
+
         _tempBox.transform.SetSiblingIndex(_tempBox.transform.parent.transform.Find("Controls").GetSiblingIndex() - 1);
 
         if (quickEnd)
@@ -344,13 +331,9 @@ public class DialogueManager : MonoBehaviour
             typeRoutine = StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, null, null));
             _swap.StartSwap(faceInfo, skipFade:true);
             dialogueVertexAnimator.QuickEnd();
-            return;
+            yield break;
         }
-        StartCoroutine(StartText(commands, totalTextMessage, line.Name, faceInfo, interjection, addToCourtRecord, line.Thinking, line.FadeType));
-    }
-
-    private IEnumerator StartText(List<DialogueCommand> commands, string totalTextMessage, string name, string faceInfo, Interjection interjection, bool addToCourtRecord, bool Thinking, FadeTypes fadeType)
-    {
+        
         if (_tempCourtRecord != null) _tempCourtRecord.GetComponent<Animator>().Play("Fade Out");
         while (_tempCourtRecord != null)
         {
@@ -360,6 +343,10 @@ public class DialogueManager : MonoBehaviour
         _startedText = false;
         GameObject obj = null;
         RawImage img;
+
+        #endregion
+        
+        #region Interjection
         
         bool skip = false;
         switch (interjection)
@@ -412,8 +399,10 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(1);
             Destroy(obj);
         }
+        #endregion
         
-        if (_prevChar != _char && (_char != null || faceInfo == "NaN") || fadeType == FadeTypes.ForceFade)
+        #region Swap Characters
+        if (_prevChar != _char && (_char != null || faceInfo == "NaN") || line.FadeType == FadeTypes.ForceFade)
         {
             _prevChar = _char;
             _swap.StartSwap(faceInfo, fadeIn:faceInfo != "NaN", skipFade:_skipFade);
@@ -434,13 +423,9 @@ public class DialogueManager : MonoBehaviour
             }
         }
         
-        if (_hideOptions) _controlFlag.SetActive(false);
-        else _controlFlag.SetActive(true);
-        _tempBox.SetActive(true);
-
-        _advanceButton.gameObject.SetActive(false);
-        if (_char != null && name == faceInfo && !Thinking) _char.Play($"{_currentAnim}_talk");
+        #endregion
         
+        #region Add To Court Record
         if (addToCourtRecord)
         {
             _soundManager.Play("court record");
@@ -454,27 +439,67 @@ public class DialogueManager : MonoBehaviour
             
             _tempCourtRecord.transform.SetSiblingIndex(_tempBox.transform.GetSiblingIndex() - 1);
         }
-        
-        if (name != null)
+        #endregion
+
+        #region Screen Fade
+
+        BackgroundFade bg = line.FadeDetails;
+        SpriteRenderer spr = _fade.GetComponent<SpriteRenderer>();
+        Color startColor = spr.color;
+        _fade.transform.position = new Vector3(_fade.transform.position.x, _fade.transform.position.y,  (int) bg.BackgroundFadePos);
+        float time = 0;
+
+        while (time < bg.LengthInSeconds)
         {
-            if (name == "")
-            {
-                _nameBox.transform.parent.gameObject.SetActive(false);
-            }
-            else
-            {
-                _nameBox.transform.parent.gameObject.SetActive(true);
-            }
+            time += Time.deltaTime;
+            spr.color = Color.Lerp(startColor, bg.Color, time / bg.LengthInSeconds);
+            yield return null;
         }
 
+        #endregion
+        
+        #region Set Background
+        if (line.Background == "NaN")
+        {
+            _background.sprite = null;
+            _foreground.sprite = null;
+        }
+        else if (line.Background != "")
+        {
+            _background.sprite = Resources.Load<Sprite>("Sprites/Backgrounds/" + line.Background);
+            try
+            {
+                _foreground.sprite = Resources.Load<Sprite>("Sprites/Backgrounds/" + line.Background + "_fg");
+            }
+            catch
+            {
+            }
+        }
+        #endregion
+
+        #region Show Textbox
+        if (_hideOptions) _controlFlag.SetActive(false);
+        else _controlFlag.SetActive(true);
+        _tempBox.SetActive(true);
+        
+        _advanceButton.gameObject.SetActive(false);
+        #endregion
+        
+        #region Start Text
         if (String.Concat(totalTextMessage.Where(c => !Char.IsWhiteSpace(c))) == "")
         {
             _controlFlag.SetActive(false);
             _tempBox.SetActive(false);
             _mute = true;
         }
+        
+        if (_char != null && !line.Thinking) _char.Play($"{_currentAnim}_talk");
+        _nameBox.text = nameInfo;
+        _nameBox.transform.parent.gameObject.SetActive(!line.HideNameTag);
+        
         typeRoutine = StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, _typingClip, null));
         _startedText = true;
+        #endregion
     }
     
     private TextAlignOptions[] SeparateOutTextAlignInfo(List<DialogueCommand> commands) {

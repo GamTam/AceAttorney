@@ -10,48 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
-  m_Name: Muffled Rap Music
+  m_Name: Fade Test
   m_EditorClassIdentifier: 
   dialogueText:
-  - _charOnScreen: 
-    _animPlaying: 
-    _blipSound: typewriter
-    _background: 
-    _dialogue: '<lp:full><color=green><sp:10><p:read><p:long>September 21, 10:00
-      AM
-
-      District Court
-
-      Courtroom No. 2'
-    _extras:
-      Thinking: 0
-      AutoEnd: 0
-      StopMusic: 0
-      AddToCourtRecord: 0
-      HideNameTag: 1
-      HideOptions: 1
-      CustomName: 
-      Interjection: 0
-      Align: 3
-      FadeOptions:
-        CharFade: 0
-        BackgroundFadeType: 0
-        BackgroundFadePos: 0
-        LengthInSeconds: 0
-        Color: {r: 0, g: 0, b: 0, a: 0}
-    _stateChange:
-      StoryFlag: 
-      EvidenceToAdd: {fileID: 0}
-      EvidenceToRemove: {fileID: 0}
-      PersonToAdd: {fileID: 0}
-  - _charOnScreen: Judge
+  - _charOnScreen: Phoenix
     _animPlaying: normal
     _blipSound: blipmale
-    _background: Judge
-    _dialogue: '<sp:2><music:Eminem>Court is now in session for
+    _background: Defense
+    _dialogue: 'Okay, there shouldn''t be
 
-      the trial
-      of Ms. Maya Fey.'
+      any kind of blackness visible.'
     _extras:
       Thinking: 0
       AutoEnd: 0
@@ -63,62 +31,7 @@ MonoBehaviour:
       Interjection: 0
       Align: 0
       FadeOptions:
-        CharFade: 0
-        BackgroundFadeType: 0
-        BackgroundFadePos: 0
-        LengthInSeconds: 0
-        Color: {r: 0, g: 0, b: 0, a: 0}
-    _stateChange:
-      StoryFlag: 
-      EvidenceToAdd: {fileID: 0}
-      EvidenceToRemove: {fileID: 0}
-      PersonToAdd: {fileID: 0}
-  - _charOnScreen: Judge
-    _animPlaying: normal
-    _blipSound: blipmale
-    _background: Judge
-    _dialogue: ...
-    _extras:
-      Thinking: 0
-      AutoEnd: 0
-      StopMusic: 0
-      AddToCourtRecord: 0
-      HideNameTag: 0
-      HideOptions: 0
-      CustomName: 
-      Interjection: 0
-      Align: 0
-      FadeOptions:
-        CharFade: 0
-        BackgroundFadeType: 0
-        BackgroundFadePos: 0
-        LengthInSeconds: 0
-        Color: {r: 0, g: 0, b: 0, a: 0}
-    _stateChange:
-      StoryFlag: 
-      EvidenceToAdd: {fileID: 0}
-      EvidenceToRemove: {fileID: 0}
-      PersonToAdd: {fileID: 0}
-  - _charOnScreen: Judge
-    _animPlaying: normal
-    _blipSound: blipmale
-    _background: Judge
-    _dialogue: 'Where is that music
-
-      coming from?'
-    _extras:
-      Thinking: 0
-      AutoEnd: 0
-      StopMusic: 0
-      AddToCourtRecord: 0
-      HideNameTag: 0
-      HideOptions: 0
-      CustomName: 
-      Interjection: 0
-      Align: 0
-      FadeOptions:
-        CharFade: 0
-        BackgroundFadeType: 0
+        CharFade: 1
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
@@ -131,7 +44,36 @@ MonoBehaviour:
     _animPlaying: normal
     _blipSound: blipmale
     _background: Defense
-    _dialogue: I'm not 100% sure...
+    _dialogue: 'And now the background should
+
+      be gone.'
+    _extras:
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadePos: -2
+        LengthInSeconds: 1
+        Color: {r: 0, g: 0, b: 0, a: 1}
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: Phoenix
+    _animPlaying: normal
+    _blipSound: blipmale
+    _background: Defense
+    _dialogue: 'Now, only the textbox should
+
+      be visible.'
     _extras:
       Thinking: 0
       AutoEnd: 0
@@ -144,8 +86,61 @@ MonoBehaviour:
       Align: 0
       FadeOptions:
         CharFade: 0
-        BackgroundFadeType: 0
-        BackgroundFadePos: 0
+        BackgroundFadePos: -10
+        LengthInSeconds: 1
+        Color: {r: 1, g: 0, b: 0, a: 1}
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: Phoenix
+    _animPlaying: normal
+    _blipSound: blipmale
+    _background: Defense
+    _dialogue: 'And if you''re reading this,
+
+      something''s gone wrong.'
+    _extras:
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 0
+        BackgroundFadePos: -15
+        LengthInSeconds: 1
+        Color: {r: 0.020272732, g: 1, b: 0, a: 1}
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: Edgeworth
+    _animPlaying: normal
+    _blipSound: blipmale
+    _background: Prosecution
+    _dialogue: 'Wright, what the hell
+
+      are you doing?'
+    _extras:
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadePos: 2
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
     _stateChange:
@@ -157,7 +152,7 @@ MonoBehaviour:
     _animPlaying: normal
     _blipSound: blipmale
     _background: Defense
-    _dialogue: "But it seems like the \nmusic is coming from\n<se:reveal><color=red>Edgeworth</color>."
+    _dialogue: Don't worry about it.
     _extras:
       Thinking: 0
       AutoEnd: 0
@@ -169,63 +164,8 @@ MonoBehaviour:
       Interjection: 0
       Align: 0
       FadeOptions:
-        CharFade: 0
-        BackgroundFadeType: 0
-        BackgroundFadePos: 0
-        LengthInSeconds: 0
-        Color: {r: 0, g: 0, b: 0, a: 0}
-    _stateChange:
-      StoryFlag: 
-      EvidenceToAdd: {fileID: 0}
-      EvidenceToRemove: {fileID: 0}
-      PersonToAdd: {fileID: 0}
-  - _charOnScreen: Edgeworth
-    _animPlaying: normal
-    _blipSound: 
-    _background: Prosecution
-    _dialogue: '<lp:none><p:normal> '
-    _extras:
-      Thinking: 1
-      AutoEnd: 1
-      StopMusic: 0
-      AddToCourtRecord: 0
-      HideNameTag: 0
-      HideOptions: 0
-      CustomName: 
-      Interjection: 0
-      Align: 0
-      FadeOptions:
-        CharFade: 0
-        BackgroundFadeType: 0
-        BackgroundFadePos: 0
-        LengthInSeconds: 0
-        Color: {r: 0, g: 0, b: 0, a: 0}
-    _stateChange:
-      StoryFlag: 
-      EvidenceToAdd: {fileID: 0}
-      EvidenceToRemove: {fileID: 0}
-      PersonToAdd: {fileID: 0}
-  - _charOnScreen: Edgeworth
-    _animPlaying: normal
-    _blipSound: blipmale
-    _background: Prosecution
-    _dialogue: 'I have no idea what you''re
-
-      talking about.'
-    _extras:
-      Thinking: 0
-      AutoEnd: 0
-      StopMusic: 0
-      AddToCourtRecord: 0
-      HideNameTag: 0
-      HideOptions: 0
-      CustomName: 
-      Interjection: 0
-      Align: 0
-      FadeOptions:
-        CharFade: 0
-        BackgroundFadeType: 0
-        BackgroundFadePos: 0
+        CharFade: 1
+        BackgroundFadePos: 2
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
     _stateChange:
