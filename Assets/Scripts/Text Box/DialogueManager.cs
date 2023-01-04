@@ -422,7 +422,7 @@ public class DialogueManager : MonoBehaviour
                 yield return null;
             }
 
-            spr.color = bg.Color;
+            spr.color = endColor;
         }
 
         #endregion
@@ -502,6 +502,8 @@ public class DialogueManager : MonoBehaviour
                 if (Math.Abs(spr.color.a - endColor.a) < 0.0001) break;
                 yield return null;
             }
+
+            spr.color = endColor;
         }
 
         #endregion
@@ -541,7 +543,6 @@ public class DialogueManager : MonoBehaviour
         }
         return tempResult.ToArray();
     }
-    
 
     IEnumerator EndDialogue()
     {

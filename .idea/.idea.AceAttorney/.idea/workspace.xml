@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="Fade to black working!">
+    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="Don't trust past me. She's a liar. Fade to black is working now.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Courtroom/1. Opening.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Courtroom/1. Opening.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Fade Test.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Fade Test.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Muffled Rap Music.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Muffled Rap Music.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Text Box/Dialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Text Box/Dialogue.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +175,7 @@
       <workItem from="1672601505441" duration="4404000" />
       <workItem from="1672630773786" duration="15795000" />
       <workItem from="1672720873820" duration="1260000" />
-      <workItem from="1672800533519" duration="12346000" />
+      <workItem from="1672800533519" duration="15342000" />
     </task>
     <task id="LOCAL-00001" summary="Audio Prefab">
       <created>1668559907702</created>
@@ -348,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672817589615</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Don't trust past me. She's a liar. Fade to black is working now.">
+      <created>1672821746583</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1672821746583</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,6 +426,7 @@
     <MESSAGE value="Updated Character Rendering (It looks nearly identical and took forever to implement!) (But at least now it'll be faster to add animations)" />
     <MESSAGE value="Refactored how backgrounds work" />
     <MESSAGE value="Fade to black working!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fade to black working!" />
+    <MESSAGE value="Don't trust past me. She's a liar. Fade to black is working now." />
+    <option name="LAST_COMMIT_MESSAGE" value="Don't trust past me. She's a liar. Fade to black is working now." />
   </component>
 </project>

@@ -32,9 +32,9 @@ MonoBehaviour:
       HideOptions: 1
       CustomName: 
       Interjection: 0
-      Align: 3
+      Align: 2
       FadeOptions:
-        CharFade: 0
+        CharFade: 1
         BackgroundFadeType: 2
         BackgroundFadePos: -10
         LengthInSeconds: 0
@@ -63,7 +63,7 @@ MonoBehaviour:
       Interjection: 0
       Align: 0
       FadeOptions:
-        CharFade: 0
+        CharFade: 1
         BackgroundFadeType: 1
         BackgroundFadePos: -10
         LengthInSeconds: 1
@@ -89,10 +89,10 @@ MonoBehaviour:
       Interjection: 0
       Align: 0
       FadeOptions:
-        CharFade: 0
+        CharFade: 1
         BackgroundFadeType: 0
-        BackgroundFadePos: 0
-        LengthInSeconds: 0
+        BackgroundFadePos: -10
+        LengthInSeconds: 1
         Color: {r: 0, g: 0, b: 0, a: 0}
     _stateChange:
       StoryFlag: 
@@ -117,10 +117,10 @@ MonoBehaviour:
       Interjection: 0
       Align: 0
       FadeOptions:
-        CharFade: 0
+        CharFade: 1
         BackgroundFadeType: 0
-        BackgroundFadePos: 0
-        LengthInSeconds: 0
+        BackgroundFadePos: -10
+        LengthInSeconds: 1
         Color: {r: 0, g: 0, b: 0, a: 0}
     _stateChange:
       StoryFlag: 
@@ -143,7 +143,7 @@ MonoBehaviour:
       Interjection: 0
       Align: 0
       FadeOptions:
-        CharFade: 0
+        CharFade: 1
         BackgroundFadeType: 0
         BackgroundFadePos: 0
         LengthInSeconds: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
       Interjection: 0
       Align: 0
       FadeOptions:
-        CharFade: 0
+        CharFade: 1
         BackgroundFadeType: 0
         BackgroundFadePos: 0
         LengthInSeconds: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
       Interjection: 0
       Align: 0
       FadeOptions:
-        CharFade: 0
+        CharFade: 1
         BackgroundFadeType: 0
         BackgroundFadePos: 0
         LengthInSeconds: 0
@@ -223,10 +223,175 @@ MonoBehaviour:
       Interjection: 0
       Align: 0
       FadeOptions:
-        CharFade: 0
+        CharFade: 1
         BackgroundFadeType: 0
         BackgroundFadePos: 0
         LengthInSeconds: 0
+        Color: {r: 0, g: 0, b: 0, a: 0}
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: Edgeworth
+    _animPlaying: normal
+    _blipSound: 
+    _background: Prosecution
+    _dialogue: '<p:normal> <music:stop><se:deskSlam><p:short> '
+    _extras:
+      Thinking: 0
+      AutoEnd: 1
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 2
+        BackgroundFadePos: -10
+        LengthInSeconds: 1
+        Color: {r: 0, g: 0, b: 0, a: 0}
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: NaN
+    _animPlaying: normal
+    _blipSound: 
+    _background: Prosecution
+    _dialogue: '<p:short> <se:realization><shake:><flash><p:normal> '
+    _extras:
+      Thinking: 0
+      AutoEnd: 1
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 1
+        BackgroundFadePos: -10
+        LengthInSeconds: 1
+        Color: {r: 0, g: 0, b: 0, a: 0}
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: NaN
+    _animPlaying: normal
+    _blipSound: blipmale
+    _background: Prosecution
+    _dialogue: '<music:Suspense>Edgeworth?<p:short>
+
+      Edgeworth!'
+    _extras:
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: Phoenix
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 0
+        BackgroundFadePos: -10
+        LengthInSeconds: 1
+        Color: {r: 0, g: 0, b: 0, a: 0}
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: Judge
+    _animPlaying: normal
+    _blipSound: blipmale
+    _background: Judge
+    _dialogue: 'It would seem that Mr. Edgeworth
+
+      has gone missing...'
+    _extras:
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 1
+        BackgroundFadePos: -10
+        LengthInSeconds: 1
+        Color: {r: 0, g: 0, b: 0, a: 0}
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: Judge
+    _animPlaying: normal
+    _blipSound: blipmale
+    _background: Judge
+    _dialogue: 'Bailiff!<p:tiny> Find out where Edgeworth
+
+      is, and return him
+      to the
+
+      courtroom at once!'
+    _extras:
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 1
+        BackgroundFadePos: -10
+        LengthInSeconds: 1
+        Color: {r: 0, g: 0, b: 0, a: 0}
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: Judge
+    _animPlaying: normal
+    _blipSound: blipmale
+    _background: Judge
+    _dialogue: Right away, Your Honor.
+    _extras:
+      Thinking: 1
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: Bailiff
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 1
+        BackgroundFadePos: -10
+        LengthInSeconds: 1
         Color: {r: 0, g: 0, b: 0, a: 0}
     _stateChange:
       StoryFlag: 
