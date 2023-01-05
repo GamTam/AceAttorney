@@ -74,10 +74,10 @@ MonoBehaviour:
     _animPlaying: normal
     _blipSound: blipmale
     _background: Judge
-    _dialogue: '<sp:2><music:stop>Court is now in session for
+    _dialogue: '<sp:2><music:Eminem>Court is now in session for
 
-      the trial of
-      Ms. Maya Fey.'
+      the trial
+      of Ms. Maya Fey.'
     _extras:
       Thinking: 0
       AutoEnd: 0
@@ -209,7 +209,7 @@ MonoBehaviour:
     _animPlaying: normal
     _blipSound: 
     _background: Prosecution
-    _dialogue: '<lp:none><p:normal> '
+    _dialogue: '<lp:none><p:read> '
     _extras:
       Thinking: 1
       AutoEnd: 1
@@ -263,7 +263,7 @@ MonoBehaviour:
     _animPlaying: normal
     _blipSound: 
     _background: Prosecution
-    _dialogue: '<p:normal> <music:stop><se:deskSlam><p:short> '
+    _dialogue: '<p:normal> <music:stop><se:deskSlam><p:long> '
     _extras:
       Thinking: 0
       AutoEnd: 1
@@ -289,7 +289,7 @@ MonoBehaviour:
     _animPlaying: normal
     _blipSound: 
     _background: Prosecution
-    _dialogue: '<p:short> <se:realization><shake:><flash><p:normal> '
+    _dialogue: '<p:normal> <se:realization><shake:><flash><p:normal> '
     _extras:
       Thinking: 0
       AutoEnd: 1

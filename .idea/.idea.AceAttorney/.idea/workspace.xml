@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sound/gallery.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sound/gallery.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Backgrounds/Gallery.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Backgrounds/Gallery.png.meta" afterDir="false" />
+    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="Everything now works as intended when the textbox disappears. No clue how I never noticed it before.">
+      <change afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Evidence/Evidence/Second Gun.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Evidence/Evidence/Second Gun.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dialogue/Text Box.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dialogue/Text Box.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Backgrounds/Wide.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Backgrounds/Wide.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Muffled Rap Music.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Muffled Rap Music.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/TextBox/Flash.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/TextBox/Flash.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/files/Sound Data.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/files/Sound Data.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Investigation/CourtRecordController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Investigation/CourtRecordController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +151,7 @@
       <workItem from="1672630773786" duration="15795000" />
       <workItem from="1672720873820" duration="1260000" />
       <workItem from="1672800533519" duration="15786000" />
-      <workItem from="1672868408010" duration="1707000" />
+      <workItem from="1672868408010" duration="3876000" />
     </task>
     <task id="LOCAL-00001" summary="Audio Prefab">
       <created>1668559907702</created>
@@ -348,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672825140442</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Everything now works as intended when the textbox disappears. No clue how I never noticed it before.">
+      <created>1672870231833</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1672870231833</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,7 +399,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Textbox advance button now doesn't show up when a character appears!" />
     <MESSAGE value="Minor Optimisations" />
     <MESSAGE value="This is a Prefabricated Object" />
     <MESSAGE value="Removed Debug.Logs" />
@@ -423,6 +423,7 @@
     <MESSAGE value="Don't trust past me. She's a liar. Fade to black is working now." />
     <MESSAGE value="Minor Changes" />
     <MESSAGE value="mhm" />
-    <option name="LAST_COMMIT_MESSAGE" value="mhm" />
+    <MESSAGE value="Everything now works as intended when the textbox disappears. No clue how I never noticed it before." />
+    <option name="LAST_COMMIT_MESSAGE" value="Everything now works as intended when the textbox disappears. No clue how I never noticed it before." />
   </component>
 </project>

@@ -159,30 +159,19 @@ public class CourtRecordController : MonoBehaviour
 
             masterList = _evidence ? Globals.Evidence : Globals.Profiles;
             
-            foreach (Image icon in images)
+            int index = images.IndexOf(
+                EventSystem.current.currentSelectedGameObject.GetComponentsInChildren<Image>()[1]) + (_page - 1) * 10;
+            
+            _bigEvidenceIcon.sprite = masterList[index].Icon;
+            _bigEvidenceIcon.SetNativeSize();
+
+            _title.SetText(masterList[index].Name);
+            _description.SetText(masterList[index].Description);
+
+            _checkSprite.enabled = true;
+            if (masterList[index].CheckImage == null)
             {
-                if (icon.gameObject.transform.parent.gameObject == EventSystem.current.currentSelectedGameObject)
-                {
-                    foreach (EvidenceSO evidence in masterList)
-                    {
-                        if (evidence.Icon == icon.sprite)
-                        {
-                            _bigEvidenceIcon.sprite = evidence.Icon;
-                            _bigEvidenceIcon.SetNativeSize();
-
-                            _title.SetText(evidence.Name);
-                            _description.SetText(evidence.Description);
-
-                            _checkSprite.enabled = true;
-                            if (evidence.CheckImage == null)
-                            {
-                                _checkSprite.enabled = false;
-                            }
-
-                            break;
-                        }
-                    }
-                }
+                _checkSprite.enabled = false;
             }
         }
     }
