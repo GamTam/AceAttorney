@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="Everything now works as intended when the textbox disappears. No clue how I never noticed it before.">
-      <change afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Evidence/Evidence/Second Gun.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Evidence/Evidence/Second Gun.asset.meta" afterDir="false" />
+    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Muffled Rap Music.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Muffled Rap Music.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Investigation/CourtRecordController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Investigation/CourtRecordController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineAsset_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineAsset_Renderer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="2d0362716fd0aa20a885cc78d4b528c010fe01c1" />
+        <entry key="$PROJECT_DIR$" value="d68df8a22e2e583c10c9ab52b7b72a3c1e7eed17" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,12 +44,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/5f/12757df7/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/60dfa7f0f0ea4433a6899568b622c56ffe00/23/3471859b/AudioClip.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scriptable Objects/DialogueSO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Story Flags/FlagsOpening.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TextBoxController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Actions/InputBindingResolver.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Editor/AssetEditor/InputActionAssetManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/InputManagerStateMonitors.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Investigation/CourtRecordController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Investigation/MenuCursor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_CoroutineTween.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Dropdown.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -152,6 +147,8 @@
       <workItem from="1672720873820" duration="1260000" />
       <workItem from="1672800533519" duration="15786000" />
       <workItem from="1672868408010" duration="3876000" />
+      <workItem from="1672892750714" duration="2234000" />
+      <workItem from="1672980202559" duration="254000" />
     </task>
     <task id="LOCAL-00001" summary="Audio Prefab">
       <created>1668559907702</created>
@@ -349,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672870231833</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="The way evidence is loaded is no longer bad. It is now good.">
+      <created>1672892800807</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1672892800807</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,7 +403,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Minor Optimisations" />
     <MESSAGE value="This is a Prefabricated Object" />
     <MESSAGE value="Removed Debug.Logs" />
     <MESSAGE value="Updated Autopsy Report" />
@@ -424,6 +427,7 @@
     <MESSAGE value="Minor Changes" />
     <MESSAGE value="mhm" />
     <MESSAGE value="Everything now works as intended when the textbox disappears. No clue how I never noticed it before." />
-    <option name="LAST_COMMIT_MESSAGE" value="Everything now works as intended when the textbox disappears. No clue how I never noticed it before." />
+    <MESSAGE value="The way evidence is loaded is no longer bad. It is now good." />
+    <option name="LAST_COMMIT_MESSAGE" value="The way evidence is loaded is no longer bad. It is now good." />
   </component>
 </project>

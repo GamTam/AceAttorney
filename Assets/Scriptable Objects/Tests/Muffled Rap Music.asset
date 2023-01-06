@@ -424,6 +424,32 @@ MonoBehaviour:
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
+  - _charOnScreen: 
+    _animPlaying: 
+    _blipSound: 
+    _background: 
+    _dialogue: 
+    _extras:
+      Thinking: 1
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: Bailiff
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 2
+        BackgroundFadePos: -10
+        LengthInSeconds: 1
+        Color: {r: 0, g: 0, b: 0, a: 0}
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
   nextLine: {fileID: 0}
   responses: []
   isCrossExamination: 0
