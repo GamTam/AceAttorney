@@ -48,7 +48,33 @@ MonoBehaviour:
     _animPlaying: normal
     _blipSound: 
     _background: Gallery
-    _dialogue: '<se:gallery><p:long> <p:read> '
+    _dialogue: '<se:gallery><p:read> <p:tiny> '
+    _extras:
+      Thinking: 0
+      AutoEnd: 1
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 0
+        BackgroundFadePos: -10
+        LengthInSeconds: 1
+        Color: {r: 0, g: 0, b: 0, a: 0}
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: Judge
+    _animPlaying: hammer
+    _blipSound: 
+    _background: Judge
+    _dialogue: ' '
     _extras:
       Thinking: 0
       AutoEnd: 1

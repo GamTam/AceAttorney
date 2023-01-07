@@ -44,7 +44,8 @@ public class DialogueManager : MonoBehaviour
 
     private Animator _char;
     private Animator _prevChar;
-    private string _currentAnim;
+    private AnimationClip _currentAnim;
+    private string _currentAnimName;
 
     private bool _startedText = true;
     private bool _skipFade;
@@ -147,7 +148,7 @@ public class DialogueManager : MonoBehaviour
             
             if (!dialogueVertexAnimator.textAnimating && !_advanceButton.gameObject.activeSelf)
             {
-                if (_char != null) _char.Play($"{_currentAnim}_idle");
+                if (_char != null) _char.Play($"{_currentAnimName}_idle");
                 if ((_currentLine == lines.Count && _dialogue.HasResponses) || _tempBox.IsHidden) return;
                 _advanceButton.gameObject.SetActive(true);
                 if (_crossEx)
@@ -325,8 +326,8 @@ public class DialogueManager : MonoBehaviour
 
         #region Reset Scene
 
-        if (emotionInfo != null) _currentAnim = emotionInfo;
-        if (_char != null) _char.Play($"{_currentAnim}_idle");
+        if (emotionInfo != null) _currentAnimName = emotionInfo;
+        if (_char != null) _char.Play($"{_currentAnimName}_idle");
 
         _tempBox.transform.SetSiblingIndex(_tempBox.transform.parent.transform.Find("Controls").GetSiblingIndex() - 1);
 
@@ -509,6 +510,22 @@ public class DialogueManager : MonoBehaviour
 
         #endregion
 
+        #region Play Opening Animation
+        if (_char != null)
+        {
+            if (!_char.HasState(0, Animator.StringToHash($"{_currentAnimName}_opening"))) goto SkipIf;
+            
+            _char.Play($"{_currentAnimName}_opening");
+            yield return null;
+
+            while (Globals.IsAnimationPlaying(_char, $"{_currentAnimName}_opening"))
+            {
+                yield return null;
+            }
+        }
+        SkipIf:
+        #endregion
+
         #region Show Textbox
         if (_hideOptions) _controlFlag.SetActive(false);
         else _controlFlag.SetActive(true);
@@ -530,7 +547,7 @@ public class DialogueManager : MonoBehaviour
             _nameBox.transform.parent.gameObject.SetActive(!line.HideNameTag);
         }
         
-        if (_char != null && !line.Thinking) _char.Play($"{_currentAnim}_talk");
+        if (_char != null && !line.Thinking) _char.Play($"{_currentAnimName}_talk");
         
         typeRoutine = StartCoroutine(dialogueVertexAnimator.AnimateTextIn(commands, totalTextMessage, _typingClip, null));
         _startedText = true;

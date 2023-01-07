@@ -60,6 +60,7 @@ public class DialogueUtility : MonoBehaviour
     private static readonly Dictionary<string, float> pauseDictionary = new Dictionary<string, float>{
         { "tiny", .1f },
         { "short", .25f },
+        { "half", 0.5f},
         { "normal", 0.666f },
         { "long", 1f },
         { "read", 2f },
