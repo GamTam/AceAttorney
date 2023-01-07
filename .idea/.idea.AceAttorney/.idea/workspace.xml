@@ -1,10 +1,232 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="One time animations!!!">
+    <list default="true" id="34251346-9915-4285-8f21-9cc42a983f88" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Anim/Gallery.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Anim/Gallery/Gallery.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Anim/Gallery/Gallery.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Anim/Gallery/talking_idle.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Anim/Gallery/talking_idle.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Gallery.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Gallery/Gallery.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Gallery/Gallery.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Gallery/GalleryRT.renderTexture" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Gallery/GalleryRT.renderTexture.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Material/GalleryMat.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Material/GalleryMat.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Gallery.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Gallery/Edgeworth.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Gallery/Edgeworth.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Gallery/Judge.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Gallery/Judge.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Gallery/Maya.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Gallery/Maya.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Gallery/Phoenix.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Gallery/Phoenix.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Backgrounds/houscr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Backgrounds/houscr.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Screenshot_20230106_112725.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Screenshot_20230106_112725.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/angel starr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/angel starr.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/april.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/april.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/cody.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/cody.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/edgeworth - stand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/edgeworth - stand.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/edgeworth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/edgeworth.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/ema - stand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/ema - stand.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/ema.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/ema.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/gallery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/gallery.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/gant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/gant.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/gumshoe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/gumshoe.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/judge.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/judge.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/lana skye.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/lana skye.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/larry.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/larry.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/lotta.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/lotta.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/marshall.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/marshall.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/maya - mia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/maya - mia.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/maya - stand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/maya - stand.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/maya.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/maya.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/meekins.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/meekins.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/mia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/mia.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/oldbag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/oldbag.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/payne.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/payne.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/phoenix.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/phoenix.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/powers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/powers.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/sahwit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/sahwit.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/sal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/sal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/vasquez.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/vasquez.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/von karma.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/von karma.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/white.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/yanni.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Gallery/yanni.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Bo.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Bo/blink man.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Bo/blink man.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Bo/confusion man.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Bo/confusion man.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Bo/half  blink man.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Bo/half  blink man.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Bo/half mouth man.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Bo/half mouth man.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Bo/mouth open man.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Bo/mouth open man.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Bo/pose 1 man.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Bo/pose 1 man.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Bo/pose 2 man.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Bo/pose 2 man.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Herman.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Herman/Herman_Idle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Herman/Herman_Idle.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Herman/Herman_Pose_2_Headless.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Herman/Herman_Pose_2_Headless.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Herman/Herman_Tears_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Herman/Herman_Tears_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Herman/Herman_Tears_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Herman/Herman_Tears_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Herman/Herman_Tears_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Herman/Herman_Tears_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Herman/Sad_Herman_No_Tears.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Herman/Sad_Herman_No_Tears.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Lyla.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Lyla/Spreadsheet sprite .png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Lyla/Spreadsheet sprite .png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Lyla/Spreadsheet sprite 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Lyla/Spreadsheet sprite 2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Lyla/Spreadsheet sprite 3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/Lyla/Spreadsheet sprite 3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/edgeworth_idle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/edgeworth_idle.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/edgeworth_idle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/edgeworth_idle.xml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/gumshoe_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/gumshoe_normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/gumshoe_normal.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/gumshoe_normal.xml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/judge.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/judge.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/judge.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/judge.xml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/judge_hammer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/judge_hammer.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/maya_smug.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/maya_smug.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/maya_smug.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/maya_smug.xml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/maya_think.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/maya_think.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/maya_think.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/maya_think.xml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/phoenix_normal_think_shake_head.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/phoenix_normal_think_shake_head.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/phoenix_normal_think_shake_head.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/phoenix_normal_think_shake_head.xml.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/sahwit_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/sahwit_normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/sahwit_normal.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/characters/Normal/sahwit_normal.xml.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AceAttorney/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Anim/Judge/hammer.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Anim/Judge/hammer.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Edgeworth/Edgeworth.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Edgeworth/Edgeworth.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Courtroom.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Muffled Rap Music.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Tests/Muffled Rap Music.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Globals.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Globals.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Text Box/Dialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Text Box/Dialogue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Text Box/DialogueManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/blink man.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/blink man.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/confusion man.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/confusion man.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/half  blink man.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/half  blink man.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/half mouth man.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/half mouth man.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/mouth open man.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/mouth open man.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/pose 1 man.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/pose 1 man.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/pose 2 man.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Bo/pose 2 man.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Herman.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Herman_Idle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Herman_Idle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Herman_Pose_2_Headless.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Herman_Pose_2_Headless.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Herman_Tears_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Herman_Tears_1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Herman_Tears_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Herman_Tears_2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Herman_Tears_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Herman_Tears_3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Sad_Herman_No_Tears.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Herman/Sad_Herman_No_Tears.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Lyla.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Lyla/Spreadsheet sprite .png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Lyla/Spreadsheet sprite .png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Lyla/Spreadsheet sprite 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Lyla/Spreadsheet sprite 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Lyla/Spreadsheet sprite 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/Lyla/Spreadsheet sprite 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/edgeworth_idle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/edgeworth_idle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/edgeworth_idle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/edgeworth_idle.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/gumshoe_normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/gumshoe_normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/gumshoe_normal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/gumshoe_normal.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/judge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/judge.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/judge.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/judge.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/judge_hammer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/judge_hammer.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/maya_smug.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/maya_smug.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/maya_smug.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/maya_smug.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/maya_think.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/maya_think.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/maya_think.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/maya_think.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/phoenix_normal_think_shake_head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/phoenix_normal_think_shake_head.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/phoenix_normal_think_shake_head.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/phoenix_normal_think_shake_head.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/sahwit_normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/sahwit_normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/sahwit_normal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/characters/sahwit_normal.xml.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +369,8 @@
       <workItem from="1672868408010" duration="3876000" />
       <workItem from="1672892750714" duration="2234000" />
       <workItem from="1672980202559" duration="1128000" />
-      <workItem from="1673045914108" duration="4560000" />
+      <workItem from="1673045914108" duration="4802000" />
+      <workItem from="1673067842091" duration="3610000" />
     </task>
     <task id="LOCAL-00001" summary="Audio Prefab">
       <created>1668559907702</created>
@@ -366,7 +589,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673062324298</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Minor Changes">
+      <created>1673064574159</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1673064574159</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -435,12 +665,12 @@
     <MESSAGE value="Refactored how backgrounds work" />
     <MESSAGE value="Fade to black working!" />
     <MESSAGE value="Don't trust past me. She's a liar. Fade to black is working now." />
-    <MESSAGE value="Minor Changes" />
     <MESSAGE value="mhm" />
     <MESSAGE value="Everything now works as intended when the textbox disappears. No clue how I never noticed it before." />
     <MESSAGE value="The way evidence is loaded is no longer bad. It is now good." />
     <MESSAGE value="cannot skip auto end" />
     <MESSAGE value="One time animations!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="One time animations!!!" />
+    <MESSAGE value="Minor Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor Changes" />
   </component>
 </project>

@@ -33,6 +33,7 @@ public class TBLine
     public string Background => _background;
     public bool HideNameTag => _extras.HideNameTag;
     public BackgroundFade FadeDetails => _extras.FadeOptions;
+    public List<GameObject> ObjectsToSpawn => _extras.ObjectsToSpawn;
 }
 
 [Serializable]
@@ -57,6 +58,7 @@ public struct Metadata
     public Interjection Interjection;
     public TextAlignOptions Align;
     public BackgroundFade FadeOptions;
+    public List<GameObject> ObjectsToSpawn;
 }
 
 [Serializable]

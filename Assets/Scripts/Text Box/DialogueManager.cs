@@ -37,6 +37,7 @@ public class DialogueManager : MonoBehaviour
     private InputAction _cr;
     private MusicManager _musicManager;
     private SoundManager _soundManager;
+    private List<GameObject> _galleryObjects = new List<GameObject>();
 
     [HideInInspector] public ResponseHandler _responseHandler;
     private DialogueSO _dialogue;
@@ -273,6 +274,17 @@ public class DialogueManager : MonoBehaviour
         if (line.AutoEnd)
         {
             _mute = true;
+        }
+
+        foreach (GameObject person in _galleryObjects)
+        {
+            Destroy(person);
+        }
+
+        _galleryObjects = new List<GameObject>();
+        foreach (GameObject person in line.ObjectsToSpawn)
+        {
+            _galleryObjects.Add(Instantiate(person));
         }
 
         StateChange state = line.StateChange;
