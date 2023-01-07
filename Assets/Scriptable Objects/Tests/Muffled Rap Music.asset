@@ -48,7 +48,7 @@ MonoBehaviour:
     _animPlaying: normal
     _blipSound: 
     _background: Gallery
-    _dialogue: '<se:gallery><p:read> <p:tiny> '
+    _dialogue: '<se:gallery><p:read> <p:short> '
     _extras:
       Thinking: 0
       AutoEnd: 1
