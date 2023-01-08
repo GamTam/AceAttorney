@@ -35,10 +35,96 @@ MonoBehaviour:
       Align: 2
       FadeOptions:
         CharFade: 1
-        BackgroundFadeType: 2
+        BackgroundFadeType: 0
         BackgroundFadePos: -10
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 1}
+      ObjectsToSpawn: []
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: 
+    _animPlaying: 
+    _blipSound: 
+    _background: 
+    _dialogue: '<p:short> '
+    _extras:
+      Thinking: 0
+      AutoEnd: 1
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 1
+      HideOptions: 1
+      CustomName: 
+      Interjection: 0
+      Align: 2
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 0
+        BackgroundFadePos: -10
+        LengthInSeconds: 0
+        Color: {r: 0, g: 0, b: 0, a: 1}
+      ObjectsToSpawn: []
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: Gallery
+    _animPlaying: talking
+    _blipSound: 
+    _background: Gallery
+    _dialogue: '<se:gallery><p:read> <p:short> '
+    _extras:
+      Thinking: 0
+      AutoEnd: 1
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 0
+        BackgroundFadePos: -10
+        LengthInSeconds: 1
+        Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn:
+      - {fileID: 2521627253534002410, guid: cfeca26d67415a24eba2d10337a0fa65, type: 3}
+      - {fileID: 6753117859596473800, guid: 6895e74d017d7d4458124700415b501b, type: 3}
+      - {fileID: 7449130183700099213, guid: af0742713838bec47976cede53ed5b7c, type: 3}
+      - {fileID: 6655391449027046908, guid: 8746c2e3583fa3040bc68243c4412d07, type: 3}
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: Judge
+    _animPlaying: hammer
+    _blipSound: 
+    _background: Judge
+    _dialogue: ' '
+    _extras:
+      Thinking: 0
+      AutoEnd: 1
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 0
+        BackgroundFadePos: -10
+        LengthInSeconds: 1
+        Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -68,6 +154,7 @@ MonoBehaviour:
         BackgroundFadePos: -10
         LengthInSeconds: 1
         Color: {r: 0, g: 0, b: 0, a: 1}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -96,6 +183,7 @@ MonoBehaviour:
         BackgroundFadePos: -10
         LengthInSeconds: 1
         Color: {r: 0, g: 0, b: 0, a: 1}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -124,6 +212,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -154,6 +243,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -185,6 +275,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -216,6 +307,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -246,6 +338,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -277,6 +370,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -304,6 +398,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -332,6 +427,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -360,6 +456,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -391,6 +488,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -400,7 +498,7 @@ MonoBehaviour:
     _animPlaying: happy
     _blipSound: 
     _background: Witness
-    _dialogue: '<p:long> '
+    _dialogue: '<p:read> '
     _extras:
       Thinking: 1
       AutoEnd: 1
@@ -417,6 +515,7 @@ MonoBehaviour:
         BackgroundFadePos: -10
         LengthInSeconds: 1
         Color: {r: 0, g: 0, b: 0, a: 1}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -445,6 +544,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -471,6 +571,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -502,6 +603,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -528,6 +630,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -556,6 +659,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -582,6 +686,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -610,6 +715,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -641,6 +747,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -670,6 +777,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -701,6 +809,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -727,6 +836,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -755,6 +865,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -783,6 +894,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 11400000, guid: 1a853311dfd6397448122d4d60b4aa8a, type: 2}
@@ -809,6 +921,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -837,6 +950,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -863,6 +977,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -891,6 +1006,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -917,6 +1033,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -946,6 +1063,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -977,6 +1095,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -1006,6 +1125,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -1032,6 +1152,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -1060,6 +1181,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -1086,6 +1208,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}
@@ -1114,6 +1237,7 @@ MonoBehaviour:
         BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
       EvidenceToAdd: {fileID: 0}

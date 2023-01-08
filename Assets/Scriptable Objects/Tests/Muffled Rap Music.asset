@@ -17,7 +17,7 @@ MonoBehaviour:
     _animPlaying: 
     _blipSound: typewriter
     _background: 
-    _dialogue: '<lp:none><color=green><sp:10><p:read><p:long>September 21, 10:00
+    _dialogue: '<lp:full><color=green><sp:10><p:read><p:long>September 21, 10:00
       AM
 
       District Court
@@ -133,10 +133,10 @@ MonoBehaviour:
     _animPlaying: normal
     _blipSound: blipmale
     _background: Judge
-    _dialogue: '<sp:2><music:Court>Court is now in session for
+    _dialogue: '<sp:2><music:Eminem>Court is now in session for
 
-      the trial of
-      Ms. Maya Fey.'
+      the trial
+      of Ms. Maya Fey.'
     _extras:
       Thinking: 0
       AutoEnd: 0
