@@ -547,7 +547,7 @@ public class DialogueManager : MonoBehaviour
         #endregion
         
         #region Start Text
-        if (String.Concat(totalTextMessage.Where(c => !Char.IsWhiteSpace(c))) == "")
+        if (String.Concat(totalTextMessage.Where(c => !Char.IsWhiteSpace(c))) == "" || totalTextMessage == null)
         {
             _controlFlag.SetActive(false);
             _tempBox.HideAll();

@@ -10,17 +10,134 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
-  m_Name: Fade Test
+  m_Name: Flumbus
   m_EditorClassIdentifier: 
   dialogueText:
-  - _charOnScreen: Phoenix
+  - _charOnScreen: 
+    _animPlaying: 
+    _blipSound: typewriter
+    _background: 
+    _dialogue: '<color=green><sp:10><p:short>August 17th, 10:00 AM
+
+      District
+      Court
+
+      Courtroom No. 1'
+    _extras:
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 1
+      HideOptions: 1
+      CustomName: 
+      Interjection: 0
+      Align: 2
+      FadeOptions:
+        CharFade: 0
+        BackgroundFadeType: 0
+        BackgroundFadePos: 0
+        LengthInSeconds: 0
+        Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: 
+    _animPlaying: 
+    _blipSound: 
+    _background: 
+    _dialogue: '<sp:2><p:short> '
+    _extras:
+      Thinking: 0
+      AutoEnd: 1
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 1
+      HideOptions: 1
+      CustomName: 
+      Interjection: 0
+      Align: 2
+      FadeOptions:
+        CharFade: 0
+        BackgroundFadeType: 0
+        BackgroundFadePos: 0
+        LengthInSeconds: 0
+        Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: Gallery
+    _animPlaying: talking
+    _blipSound: 
+    _background: Gallery
+    _dialogue: '<se:gallery><p:read> <p:short> '
+    _extras:
+      Thinking: 0
+      AutoEnd: 1
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: 
+      Interjection: 0
+      Align: 2
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 0
+        BackgroundFadePos: 0
+        LengthInSeconds: 0
+        Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn:
+      - {fileID: 7449130183700099213, guid: af0742713838bec47976cede53ed5b7c, type: 3}
+      - {fileID: 2521627253534002410, guid: cfeca26d67415a24eba2d10337a0fa65, type: 3}
+      - {fileID: 6655391449027046908, guid: 8746c2e3583fa3040bc68243c4412d07, type: 3}
+      - {fileID: 6753117859596473800, guid: 6895e74d017d7d4458124700415b501b, type: 3}
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: Judge
+    _animPlaying: hammer
+    _blipSound: 
+    _background: Judge
+    _dialogue: ' '
+    _extras:
+      Thinking: 0
+      AutoEnd: 1
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 0
+        BackgroundFadePos: 0
+        LengthInSeconds: 0
+        Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: Judge
     _animPlaying: normal
     _blipSound: blipmale
-    _background: Defense
-    _dialogue: '<music:Pursuit>Okay, there shouldn''t be
+    _background: Judge
+    _dialogue: '<music:Court>Court is now in session for
 
-      any kind of blackness
-      visible.'
+      the trial of Mr.
+      Ronnie Jonnie.'
     _extras:
       Thinking: 0
       AutoEnd: 0
@@ -34,7 +151,7 @@ MonoBehaviour:
       FadeOptions:
         CharFade: 1
         BackgroundFadeType: 0
-        BackgroundFadePos: -2
+        BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
       ObjectsToSpawn: []
@@ -47,9 +164,7 @@ MonoBehaviour:
     _animPlaying: normal
     _blipSound: blipmale
     _background: Defense
-    _dialogue: '<music:fadeout>And now the background should
-
-      be gone.'
+    _dialogue: Y-<p:short>you can't be serious, right?
     _extras:
       Thinking: 0
       AutoEnd: 0
@@ -62,68 +177,10 @@ MonoBehaviour:
       Align: 0
       FadeOptions:
         CharFade: 1
-        BackgroundFadeType: 2
-        BackgroundFadePos: -2
-        LengthInSeconds: 1
-        Color: {r: 0, g: 0, b: 0, a: 1}
-      ObjectsToSpawn: []
-    _stateChange:
-      StoryFlag: 
-      EvidenceToAdd: {fileID: 0}
-      EvidenceToRemove: {fileID: 0}
-      PersonToAdd: {fileID: 0}
-  - _charOnScreen: Phoenix
-    _animPlaying: normal
-    _blipSound: blipmale
-    _background: Defense
-    _dialogue: '<music:PursuitVariation><flash><shake:><se:deskSlam>Now, only the
-      textbox should
-
-      be visible!!!'
-    _extras:
-      Thinking: 0
-      AutoEnd: 0
-      StopMusic: 0
-      AddToCourtRecord: 0
-      HideNameTag: 0
-      HideOptions: 0
-      CustomName: 
-      Interjection: 0
-      Align: 0
-      FadeOptions:
-        CharFade: 0
-        BackgroundFadeType: 2
-        BackgroundFadePos: -10
-        LengthInSeconds: 1
-        Color: {r: 0, g: 0, b: 0, a: 1}
-      ObjectsToSpawn: []
-    _stateChange:
-      StoryFlag: 
-      EvidenceToAdd: {fileID: 0}
-      EvidenceToRemove: {fileID: 0}
-      PersonToAdd: {fileID: 0}
-  - _charOnScreen: Phoenix
-    _animPlaying: normal
-    _blipSound: blipmale
-    _background: Defense
-    _dialogue: "You can't see,<p:short> but I'm doing\nsomething that most people
-      \nwould consider inappropriate!"
-    _extras:
-      Thinking: 0
-      AutoEnd: 0
-      StopMusic: 0
-      AddToCourtRecord: 0
-      HideNameTag: 0
-      HideOptions: 0
-      CustomName: 
-      Interjection: 0
-      Align: 0
-      FadeOptions:
-        CharFade: 0
         BackgroundFadeType: 0
-        BackgroundFadePos: -10
-        LengthInSeconds: 1
-        Color: {r: 0, g: 0, b: 0, a: 1}
+        BackgroundFadePos: 0
+        LengthInSeconds: 0
+        Color: {r: 0, g: 0, b: 0, a: 0}
       ObjectsToSpawn: []
     _stateChange:
       StoryFlag: 
@@ -134,34 +191,7 @@ MonoBehaviour:
     _animPlaying: normal
     _blipSound: blipmale
     _background: Prosecution
-    _dialogue: <flash><se:realization><p:long>Wright, what are you doing?
-    _extras:
-      Thinking: 0
-      AutoEnd: 0
-      StopMusic: 1
-      AddToCourtRecord: 0
-      HideNameTag: 0
-      HideOptions: 0
-      CustomName: 
-      Interjection: 0
-      Align: 0
-      FadeOptions:
-        CharFade: 1
-        BackgroundFadeType: 0
-        BackgroundFadePos: 2
-        LengthInSeconds: 0
-        Color: {r: 0, g: 0, b: 0, a: 0}
-      ObjectsToSpawn: []
-    _stateChange:
-      StoryFlag: 
-      EvidenceToAdd: {fileID: 0}
-      EvidenceToRemove: {fileID: 0}
-      PersonToAdd: {fileID: 0}
-  - _charOnScreen: Phoenix
-    _animPlaying: normal
-    _blipSound: blipmale
-    _background: Defense
-    _dialogue: Um...
+    _dialogue: "Are you seriously saying\nthe man's name is \nRonnie Jonnie?"
     _extras:
       Thinking: 0
       AutoEnd: 0
@@ -175,7 +205,7 @@ MonoBehaviour:
       FadeOptions:
         CharFade: 1
         BackgroundFadeType: 0
-        BackgroundFadePos: 2
+        BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
       ObjectsToSpawn: []
@@ -184,11 +214,11 @@ MonoBehaviour:
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _charOnScreen: Phoenix
+  - _charOnScreen: Judge
     _animPlaying: normal
     _blipSound: blipmale
-    _background: Defense
-    _dialogue: Don't worry about it.
+    _background: Judge
+    _dialogue: Yes.<p:normal> Yes I am.
     _extras:
       Thinking: 0
       AutoEnd: 0
@@ -202,7 +232,7 @@ MonoBehaviour:
       FadeOptions:
         CharFade: 1
         BackgroundFadeType: 0
-        BackgroundFadePos: 2
+        BackgroundFadePos: 0
         LengthInSeconds: 0
         Color: {r: 0, g: 0, b: 0, a: 0}
       ObjectsToSpawn: []

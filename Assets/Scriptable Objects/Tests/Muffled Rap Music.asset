@@ -17,10 +17,10 @@ MonoBehaviour:
     _animPlaying: 
     _blipSound: typewriter
     _background: 
-    _dialogue: '<lp:full><color=#00f000><sp:10><p:read><p:long>September 21, 10:00
-      AM
+    _dialogue: '<lp:full><color=#00f000><sp:10><p:read>September 21, 10:00 AM
 
-      District Court
+      District
+      Court
 
       Courtroom No. 2'
     _extras:
