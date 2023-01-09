@@ -424,7 +424,7 @@ public class DialogueManager : MonoBehaviour
         {
             SpriteRenderer spr = _fade.GetComponent<SpriteRenderer>();
             Color startColor = spr.color;
-            Color endColor = new Color(startColor.r, startColor.g, startColor.b, 1);
+            Color endColor = new Color(bg.Color.r, bg.Color.g, bg.Color.b, 1);
             float time = 0;
 
             while (time < bg.LengthInSeconds)
@@ -498,6 +498,9 @@ public class DialogueManager : MonoBehaviour
             {
             }
         }
+        
+        if (line.CustomForeground != "")
+            _foreground.sprite = Resources.Load<Sprite>("Sprites/Backgrounds/" + line.CustomForeground + "_fg");
         #endregion
         
         #region Screen Fade In
@@ -507,7 +510,7 @@ public class DialogueManager : MonoBehaviour
             SpriteRenderer spr = _fade.GetComponent<SpriteRenderer>();
             Color startColor = spr.color;
             float time = 0;
-            Color endColor = new Color(startColor.r, startColor.g, startColor.b, 0);
+            Color endColor = new Color(bg.Color.r, bg.Color.g, bg.Color.b, 0);
                 
             while (time < bg.LengthInSeconds)
             {

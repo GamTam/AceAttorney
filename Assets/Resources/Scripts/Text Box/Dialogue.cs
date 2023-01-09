@@ -34,6 +34,7 @@ public class TBLine
     public bool HideNameTag => _extras.HideNameTag;
     public BackgroundFade FadeDetails => _extras.FadeOptions;
     public List<GameObject> ObjectsToSpawn => _extras.ObjectsToSpawn;
+    public String CustomForeground => _extras.CustomForeground;
 }
 
 [Serializable]
@@ -55,6 +56,7 @@ public struct Metadata
     public bool HideNameTag;
     public bool HideOptions;
     public string CustomName;
+    public string CustomForeground;
     public Interjection Interjection;
     public TextAlignOptions Align;
     public BackgroundFade FadeOptions;

@@ -2035,7 +2035,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      down: 4532582141210981306
+      pagedown: 7192405588791529551
       3: 7695566600791544787
       0: 1327233477228216407
       F1: 2420414408939336237
@@ -2111,9 +2111,9 @@ TextureImporter:
       symbol_pc_73: -6393986503204068030
       symbol_pc_74: -5547304794742236599
       enter: 5233574166244034336
-      N: 1695984921477025839
-      pagedown: 7192405588791529551
       left: -2476252492821042660
+      N: 1695984921477025839
+      down: 4532582141210981306
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

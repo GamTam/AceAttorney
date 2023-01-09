@@ -1,0 +1,376 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef205bdccf1c88e489a707ddb0722209, type: 3}
+  m_Name: Images As Background
+  m_EditorClassIdentifier: 
+  dialogueText:
+  - _charOnScreen: 
+    _animPlaying: 
+    _blipSound: typewriter
+    _background: 
+    _dialogue: '<color=green><sp:10><p:short>August 17th, 11:24 AM
+
+      District
+      Court
+
+      Courtroom No. 1<sp:2>'
+    _extras:
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 1
+      HideOptions: 1
+      CustomName: 
+      CustomForeground: 
+      Interjection: 0
+      Align: 2
+      FadeOptions:
+        CharFade: 0
+        BackgroundFadeType: 2
+        BackgroundFadePos: -2
+        LengthInSeconds: 0
+        Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: 
+    _animPlaying: 
+    _blipSound: 
+    _background: 
+    _dialogue: '<p:short> '
+    _extras:
+      Thinking: 0
+      AutoEnd: 1
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 1
+      HideOptions: 1
+      CustomName: 
+      CustomForeground: 
+      Interjection: 0
+      Align: 2
+      FadeOptions:
+        CharFade: 0
+        BackgroundFadeType: 2
+        BackgroundFadePos: -2
+        LengthInSeconds: 0
+        Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: Edgeworth
+    _animPlaying: normal
+    _blipSound: blipmale
+    _background: Prosecution
+    _dialogue: So, Wright...
+    _extras:
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: 
+      CustomForeground: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 1
+        BackgroundFadePos: -10
+        LengthInSeconds: 1
+        Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: Edgeworth
+    _animPlaying: normal
+    _blipSound: blipmale
+    _background: Prosecution
+    _dialogue: 'Do you have any final
+
+      objections before Ms. Fey
+
+      is
+      declared guilty?'
+    _extras:
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: 
+      CustomForeground: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 0
+        BackgroundFadePos: 0
+        LengthInSeconds: 0
+        Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: Phoenix
+    _animPlaying: normal
+    _blipSound: blipmale
+    _background: Defense
+    _dialogue: ...
+    _extras:
+      Thinking: 1
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: 
+      CustomForeground: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 0
+        BackgroundFadePos: 0
+        LengthInSeconds: 0
+        Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: Edgeworth
+    _animPlaying: normal
+    _blipSound: blipmale
+    _background: Prosecution
+    _dialogue: 'Um,<p:short> Wright?<p:long>
+
+      Hello?'
+    _extras:
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: 
+      CustomForeground: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 0
+        BackgroundFadePos: 0
+        LengthInSeconds: 0
+        Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: Phoenix
+    _animPlaying: normal
+    _blipSound: blipmale
+    _background: Defense
+    _dialogue: ...
+    _extras:
+      Thinking: 1
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: 
+      CustomForeground: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 0
+        BackgroundFadePos: 0
+        LengthInSeconds: 0
+        Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: Judge
+    _animPlaying: normal
+    _blipSound: blipmale
+    _background: Judge
+    _dialogue: 'Mr. Wright?<p:normal> Maya will be declared
+
+      guilty unless
+      you speak up.'
+    _extras:
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: 
+      CustomForeground: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 0
+        BackgroundFadePos: 0
+        LengthInSeconds: 0
+        Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: Phoenix
+    _animPlaying: normal
+    _blipSound: blipmale
+    _background: Defense
+    _dialogue: ...
+    _extras:
+      Thinking: 1
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: 
+      CustomForeground: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 0
+        BackgroundFadePos: 0
+        LengthInSeconds: 0
+        Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: Phoenix
+    _animPlaying: normal
+    _blipSound: blipmale
+    _background: Defense
+    _dialogue: '<color=#6ebdf0>(Oh my god...<p:short>
+
+      I just remembered...)'
+    _extras:
+      Thinking: 1
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: 
+      CustomForeground: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 2
+        BackgroundFadePos: -2
+        LengthInSeconds: 1
+        Color: {r: 0, g: 0, b: 0, a: 0}
+      ObjectsToSpawn: []
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: NaN
+    _animPlaying: normal
+    _blipSound: blipmale
+    _background: Office
+    _dialogue: <color=#6ebdf0>(At our office...)
+    _extras:
+      Thinking: 0
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: Phoenix
+      CustomForeground: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 3
+        BackgroundFadePos: -15
+        LengthInSeconds: 0.1
+        Color: {r: 1, g: 1, b: 1, a: 1}
+      ObjectsToSpawn: []
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  - _charOnScreen: NaN
+    _animPlaying: normal
+    _blipSound: blipmale
+    _background: Office
+    _dialogue: <flash><shake:><color=#6ebdf0>(I left the stove on!)
+    _extras:
+      Thinking: 1
+      AutoEnd: 0
+      StopMusic: 0
+      AddToCourtRecord: 0
+      HideNameTag: 0
+      HideOptions: 0
+      CustomName: Phoenix
+      CustomForeground: 
+      Interjection: 0
+      Align: 0
+      FadeOptions:
+        CharFade: 1
+        BackgroundFadeType: 0
+        BackgroundFadePos: -2
+        LengthInSeconds: 0
+        Color: {r: 0, g: 0, b: 0, a: 1}
+      ObjectsToSpawn: []
+    _stateChange:
+      StoryFlag: 
+      EvidenceToAdd: {fileID: 0}
+      EvidenceToRemove: {fileID: 0}
+      PersonToAdd: {fileID: 0}
+  nextLine: {fileID: 0}
+  responses: []
+  isCrossExamination: 0
+  prevLine: {fileID: 0}
+  pressSequence: {fileID: 0}
+  wrongPresentSequence: {fileID: 0}
+  presentSequence: {fileID: 0}
+  evidence: []
