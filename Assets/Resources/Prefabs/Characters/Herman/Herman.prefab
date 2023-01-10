@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 3947108760989920369}
   - component: {fileID: 3947108760989920372}
   - component: {fileID: 4365636216073985715}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Herman
   m_TagString: NPC
   m_Icon: {fileID: 0}

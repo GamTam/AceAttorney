@@ -43,7 +43,7 @@ public class DialogueManager : MonoBehaviour
     private DialogueSO _dialogue;
     private bool _shownResponses;
 
-    private Animator _char;
+    [SerializeField] private Animator _char;
     private Animator _prevChar;
     private AnimationClip _currentAnim;
     private string _currentAnimName;
@@ -79,12 +79,6 @@ public class DialogueManager : MonoBehaviour
         {
             Destroy(_tempBox.gameObject);
         }
-
-        try
-        {
-            _char = GameObject.Find(_swap._charName).GetComponent<Animator>();
-            _prevChar = _char;
-        } catch {}
 
         _tempBox = Instantiate(_textBoxPrefab).GetComponent<TextBoxController>();
         _tempBox.transform.SetParent(GameObject.FindWithTag("UI").transform, false);
@@ -320,16 +314,13 @@ public class DialogueManager : MonoBehaviour
         
         if (soundInfo != null) _typingClip = soundInfo;
         
-        if (faceInfo != null)
+        try
         {
-            try
-            {
-                _char = GameObject.Find(faceInfo).GetComponent<Animator>();
-            }
-            catch
-            {
-                _char = null;
-            }
+            _char = GameObject.Find(faceInfo).GetComponent<Animator>();
+        }
+        catch
+        {
+            _char = null;
         }
         
         _controlFlag.SetActive(false);
@@ -442,7 +433,7 @@ public class DialogueManager : MonoBehaviour
         #endregion
         
         #region Swap Characters
-        if (_prevChar != _char && (_char != null || faceInfo == "NaN") || line.FadeType == FadeTypes.ForceFade)
+        if (_char == null || line.FadeType == FadeTypes.ForceFade)
         {
             _prevChar = _char;
             _swap.StartSwap(faceInfo, fadeIn:faceInfo != "NaN", skipFade:_skipFade);
@@ -455,6 +446,15 @@ public class DialogueManager : MonoBehaviour
             while (!_swap._done)
             {
                 yield return null;
+            }
+            
+            try
+            {
+                _char = GameObject.Find(faceInfo).GetComponent<Animator>();
+            }
+            catch
+            {
+                _char = null;
             }
 
             if (!_skipFade)

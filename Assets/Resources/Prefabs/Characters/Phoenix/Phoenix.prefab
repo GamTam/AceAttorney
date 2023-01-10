@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 3947108760989920372}
   - component: {fileID: 4365636216073985715}
   - component: {fileID: 5561079656307819393}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Phoenix
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 55
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: cdea7f12f848b3e42b462cefb4f90574, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: bb8bd60d806675b46a3b887e22ed6b64, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 0
   m_HDR: 1

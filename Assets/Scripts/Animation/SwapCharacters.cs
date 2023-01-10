@@ -10,6 +10,8 @@ public class SwapCharacters : MonoBehaviour
     public bool _done;
     public string _charName;
 
+    [SerializeField] private GameObject _char;
+
     private void Awake()
     {
         _mesh.material.color = Color.white;
@@ -46,6 +48,11 @@ public class SwapCharacters : MonoBehaviour
 
         if (newChar != "NaN")
         {
+            if (_char != null)
+            {
+                Destroy(_char.gameObject);
+            }
+            _char = Instantiate(Resources.Load($"Prefabs/Characters/{newChar}/{newChar}", typeof(GameObject))) as GameObject;
             _mesh.material = Resources.Load($"Material/{newChar}Mat", typeof(Material)) as Material;
             _mesh.material.color = new Color(1f, 1f, 1f, 0f);
             _charName = newChar;

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Images As Background
   m_EditorClassIdentifier: 
   dialogueText:
-  - _charOnScreen: 
+  - _charOnScreen: NaN
     _animPlaying: 
     _blipSound: typewriter
     _background: 
@@ -46,7 +46,7 @@ MonoBehaviour:
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _charOnScreen: 
+  - _charOnScreen: NaN
     _animPlaying: 
     _blipSound: 
     _background: 
