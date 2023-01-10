@@ -316,7 +316,7 @@ public class DialogueManager : MonoBehaviour
         
         try
         {
-            _char = GameObject.Find(faceInfo).GetComponent<Animator>();
+            _char = GameObject.Find($"{faceInfo}(Clone)").GetComponent<Animator>();
         }
         catch
         {
@@ -450,7 +450,7 @@ public class DialogueManager : MonoBehaviour
             
             try
             {
-                _char = GameObject.Find(faceInfo).GetComponent<Animator>();
+                _char = GameObject.Find($"{faceInfo}(Clone)").GetComponent<Animator>();
             }
             catch
             {

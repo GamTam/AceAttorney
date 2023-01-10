@@ -238,6 +238,7 @@ MonoBehaviour:
   _speed: 5
   _done: 0
   _charName: N/A
+  _char: {fileID: 0}
 --- !u!1 &544993445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,6 +1219,7 @@ MonoBehaviour:
   _currentLine: 0
   _prevActionMap: 
   _responseHandler: {fileID: 0}
+  _char: {fileID: 0}
   _doneTalking: 0
 --- !u!4 &1691393259
 Transform:
@@ -1485,7 +1487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67dfdd853c824d6a953f88c22bb4bd0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialogue: {fileID: 11400000, guid: 5d7caa0154b06ea4ba03a5e681ee63fb, type: 2}
+  _dialogue: {fileID: 11400000, guid: ee69f160698339b418fe68257144b2dd, type: 2}
   _evidence:
   - {fileID: 11400000, guid: ae8fe674f9f3a484a8a51e11a1a1c1ef, type: 2}
   - {fileID: 11400000, guid: 80cb3ac9c93f83c4297941e627008d3f, type: 2}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Flumbus
   m_EditorClassIdentifier: 
   dialogueText:
-  - _charOnScreen: 
+  - _charOnScreen: NaN
     _animPlaying: 
     _blipSound: typewriter
     _background: 
@@ -31,6 +31,7 @@ MonoBehaviour:
       HideNameTag: 1
       HideOptions: 1
       CustomName: 
+      CustomForeground: 
       Interjection: 0
       Align: 2
       FadeOptions:
@@ -45,7 +46,7 @@ MonoBehaviour:
       EvidenceToAdd: {fileID: 0}
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
-  - _charOnScreen: 
+  - _charOnScreen: NaN
     _animPlaying: 
     _blipSound: 
     _background: 
@@ -58,6 +59,7 @@ MonoBehaviour:
       HideNameTag: 1
       HideOptions: 1
       CustomName: 
+      CustomForeground: 
       Interjection: 0
       Align: 2
       FadeOptions:
@@ -85,6 +87,7 @@ MonoBehaviour:
       HideNameTag: 0
       HideOptions: 0
       CustomName: 
+      CustomForeground: 
       Interjection: 0
       Align: 2
       FadeOptions:
@@ -116,6 +119,7 @@ MonoBehaviour:
       HideNameTag: 0
       HideOptions: 0
       CustomName: 
+      CustomForeground: 
       Interjection: 0
       Align: 0
       FadeOptions:
@@ -146,6 +150,7 @@ MonoBehaviour:
       HideNameTag: 0
       HideOptions: 0
       CustomName: 
+      CustomForeground: 
       Interjection: 0
       Align: 0
       FadeOptions:
@@ -173,6 +178,7 @@ MonoBehaviour:
       HideNameTag: 0
       HideOptions: 0
       CustomName: 
+      CustomForeground: 
       Interjection: 0
       Align: 0
       FadeOptions:
@@ -200,6 +206,7 @@ MonoBehaviour:
       HideNameTag: 0
       HideOptions: 0
       CustomName: 
+      CustomForeground: 
       Interjection: 0
       Align: 0
       FadeOptions:
@@ -227,6 +234,7 @@ MonoBehaviour:
       HideNameTag: 0
       HideOptions: 0
       CustomName: 
+      CustomForeground: 
       Interjection: 0
       Align: 0
       FadeOptions:
