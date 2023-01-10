@@ -10,7 +10,7 @@ public class SwapCharacters : MonoBehaviour
     public bool _done;
     public string _charName;
 
-    [SerializeField] private GameObject _char;
+    private GameObject _char;
 
     private void Awake()
     {
@@ -52,26 +52,25 @@ public class SwapCharacters : MonoBehaviour
             {
                 Destroy(_char.gameObject);
             }
-            _char = Instantiate(Resources.Load($"Prefabs/Characters/{newChar}/{newChar}", typeof(GameObject))) as GameObject;
-            _mesh.material = Resources.Load($"Material/{newChar}Mat", typeof(Material)) as Material;
+            _char = Instantiate(Resources.Load($"Prefabs/Characters/{newChar}", typeof(GameObject))) as GameObject;
             _mesh.material.color = new Color(1f, 1f, 1f, 0f);
             _charName = newChar;
             if (!skipFade) yield return new WaitForSeconds(0.1f);
-        }
-        
-        if (_mesh.material.color.a != 1 && fadeIn)
-        {
-            if (!skipFade)
+            
+            if (Math.Abs(_mesh.material.color.a - 1) > 0.001f && fadeIn)
             {
-                while (_mesh.material.color.a <= 1)
+                if (!skipFade)
                 {
-                    float a = _mesh.material.color.a;
-                    _mesh.material.color = new Color(1f, 1f, 1f, a + (speed * Time.deltaTime));
-                    yield return null;
+                    while (_mesh.material.color.a <= 1)
+                    {
+                        float a = _mesh.material.color.a;
+                        _mesh.material.color = new Color(1f, 1f, 1f, a + (speed * Time.deltaTime));
+                        yield return null;
+                    }
                 }
-            }
 
-            _mesh.material.color = new Color(1f, 1f, 1f, 1f);
+                _mesh.material.color = new Color(1f, 1f, 1f, 1f);
+            }
         }
 
         _done = true;

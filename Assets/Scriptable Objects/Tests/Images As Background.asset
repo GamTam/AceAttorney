@@ -367,7 +367,7 @@ MonoBehaviour:
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
   - _charOnScreen: Maya
-    _animPlaying: smug
+    _animPlaying: think
     _blipSound: blipfemale
     _background: Office
     _dialogue: 'But, you''re still going to
@@ -388,7 +388,7 @@ MonoBehaviour:
       Interjection: 0
       Align: 0
       FadeOptions:
-        CharFade: 1
+        CharFade: 0
         BackgroundFadeType: 0
         BackgroundFadePos: -2
         LengthInSeconds: 0
@@ -400,7 +400,7 @@ MonoBehaviour:
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
   - _charOnScreen: Maya
-    _animPlaying: smug
+    _animPlaying: think
     _blipSound: blipmale
     _background: Office
     _dialogue: ...

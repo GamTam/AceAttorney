@@ -238,7 +238,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 55
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: 107876c0147036542ab78925252fa518, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: 232887f2e5f278041b3ff3357dd1f2a5, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 0
   m_HDR: 1
