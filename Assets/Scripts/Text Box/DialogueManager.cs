@@ -44,7 +44,6 @@ public class DialogueManager : MonoBehaviour
     private bool _shownResponses;
 
     [SerializeField] private Animator _char;
-    private Animator _prevChar;
     private AnimationClip _currentAnim;
     private string _currentAnimName;
 
@@ -435,7 +434,6 @@ public class DialogueManager : MonoBehaviour
         #region Swap Characters
         if (_char == null || line.FadeType == FadeTypes.ForceFade)
         {
-            _prevChar = _char;
             _swap.StartSwap(faceInfo, fadeIn:faceInfo != "NaN", skipFade:_skipFade);
             if (!_skipFade)
             {
@@ -445,16 +443,32 @@ public class DialogueManager : MonoBehaviour
             
             while (!_swap._done)
             {
+                if (_char == null && _swap._swapped)
+                {
+                    try
+                    {
+                        _char = GameObject.Find($"{faceInfo}(Clone)").GetComponent<Animator>();
+                        _char.Play($"{_currentAnimName}_idle");
+                    }
+                    catch
+                    {
+                        _char = null;
+                    }
+                }
+                
                 yield return null;
             }
             
-            try
+            if (_char == null && _swap._swapped)
             {
-                _char = GameObject.Find($"{faceInfo}(Clone)").GetComponent<Animator>();
-            }
-            catch
-            {
-                _char = null;
+                try
+                {
+                    _char = GameObject.Find($"{faceInfo}(Clone)").GetComponent<Animator>();
+                }
+                catch
+                {
+                    _char = null;
+                }
             }
 
             if (!_skipFade)

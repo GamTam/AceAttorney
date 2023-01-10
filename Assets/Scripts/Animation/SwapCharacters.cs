@@ -8,6 +8,7 @@ public class SwapCharacters : MonoBehaviour
     [SerializeField] private MeshRenderer _mesh;
     [SerializeField] private float _speed = 5;
     public bool _done;
+    public bool _swapped;
     public string _charName;
 
     private GameObject _char;
@@ -29,6 +30,7 @@ public class SwapCharacters : MonoBehaviour
     public IEnumerator Swap(string newChar, float speed, bool fadeIn, bool skipFade)
     {
         _done = false;
+        _swapped = false;
         
         if (_mesh.material.color.a != 0)
         {
@@ -55,6 +57,7 @@ public class SwapCharacters : MonoBehaviour
             _char = Instantiate(Resources.Load($"Prefabs/Characters/{newChar}", typeof(GameObject))) as GameObject;
             _mesh.material.color = new Color(1f, 1f, 1f, 0f);
             _charName = newChar;
+            _swapped = true;
             if (!skipFade) yield return new WaitForSeconds(0.1f);
             
             if (Math.Abs(_mesh.material.color.a - 1) > 0.001f && fadeIn)

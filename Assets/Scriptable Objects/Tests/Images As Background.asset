@@ -367,7 +367,7 @@ MonoBehaviour:
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
   - _charOnScreen: Maya
-    _animPlaying: think
+    _animPlaying: smug
     _blipSound: blipfemale
     _background: Office
     _dialogue: 'But, you''re still going to
@@ -400,7 +400,7 @@ MonoBehaviour:
       EvidenceToRemove: {fileID: 0}
       PersonToAdd: {fileID: 0}
   - _charOnScreen: Maya
-    _animPlaying: think
+    _animPlaying: smug
     _blipSound: blipmale
     _background: Office
     _dialogue: ...
