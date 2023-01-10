@@ -205,7 +205,6 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator NextLine(bool firstTime = false, bool quickEnd = false)
     {
         #region Variable Setup
-
         if (_autoEnd && dialogueVertexAnimator.textAnimating) yield break;
         if (_shownResponses) yield break;
 
