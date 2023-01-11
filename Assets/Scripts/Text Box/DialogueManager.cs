@@ -237,6 +237,11 @@ public class DialogueManager : MonoBehaviour
             {
                 _shownResponses = true;
                 _responseHandler.ShowResponses(_dialogue.responses);
+            } 
+            else if (_dialogue.evidence.Length > 0 && !_dialogue.isCrossExamination)
+            {
+                _shownResponses = true;
+                _responseHandler.ShowResponses(_dialogue.responses);
             }
             else
             {

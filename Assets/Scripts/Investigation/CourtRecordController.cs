@@ -49,6 +49,7 @@ public class CourtRecordController : MonoBehaviour
     private DialogueManager _dialogueManager;
 
     private CRNormal _normal;
+    private CRPrompt _prompt;
 
     private Vector3 _speedVector = new Vector3(0.15f, 0.15f, 1);
     
@@ -201,19 +202,9 @@ public class CourtRecordController : MonoBehaviour
             images = _oddEvidence;
         }
         
-        foreach (Image icon in images)
-        {
-            if (icon.gameObject.transform.parent.gameObject == EventSystem.current.currentSelectedGameObject)
-            {
-                foreach (EvidenceSO evidence in Globals.Evidence)
-                {
-                    if (evidence.Icon == icon.sprite)
-                    {
-                        HasPresented?.Invoke(evidence);
-                    }
-                }
-            }
-        }
+        int index = images.IndexOf(
+            EventSystem.current.currentSelectedGameObject.GetComponentsInChildren<Image>()[1]) + (_page - 1) * 10;
+        HasPresented?.Invoke(Globals.Evidence[index]);
     }
 
     public IEnumerator WaitThenLoop(EvidenceSO evidence, InvestigationMenu.EvidenceTalkPair[] pairs, DialogueSO wrongEvidence)
@@ -317,7 +308,8 @@ public class CourtRecordController : MonoBehaviour
             _base.transform.localScale -= new Vector3(0, _speedVector.y);
         }
 
-        _normal.SetControlLabel(_evidence);
+        if (_normal.enabled) _normal.SetControlLabel(_evidence);
+        else if (_prompt.enabled) _prompt.SetControlLabel(_evidence);
 
         _base.transform.localScale = new Vector3(_base.transform.localScale.x, 0, _base.transform.localScale.y);
         EventSystem.current.SetSelectedGameObject(null);
